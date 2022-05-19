@@ -245,6 +245,43 @@ a:not([href]):not([class]):hover {
   text-decoration: none;
 }
 
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  text-align: center;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+
+  background-color: #f1f1f1;
+  color: black;
+
+}
+
+.next {
+
+  background-color: rgb(70, 70, 173);
+  color: white;
+
+}
+
+a.next {
+  float: right;
+}
+
+a.next {
+  float: right;
+}
+
+
+
+
 pre,
 code,
 kbd,
@@ -4574,6 +4611,11 @@ fieldset:disabled .btn {
     border-color 0.15s ease-in-out;
 }
 
+.nav .current {
+  background-color: lavender;
+  width: 200px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
     transition: none;
@@ -4583,6 +4625,7 @@ fieldset:disabled .btn {
 .nav-link:hover,
 .nav-link:focus {
   color: #173b67;
+
 }
 
 .nav-link.disabled {

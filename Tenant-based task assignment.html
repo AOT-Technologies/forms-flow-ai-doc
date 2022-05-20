@@ -88,7 +88,8 @@
                     <li class="nav-item"><a href="index.html" style="color:  #566573">Introduction</a></li>
                     <li class="nav-item"><a href="architecture.html" style="color:  #566573">System Architecture</a>
                     </li>
-                    <li class="nav-item"><a href="aboutproject.html" style="color:  #566573">About The Project</a>
+                    <li class="nav-item"><a href="aboutproject.html" style="color:  #566573">About The
+                            Project</a>
                     </li>
                     <li class="nav-item"><a href="features.html" style="color:  #566573">Features</a></li>
                     <!-- main heading -->
@@ -110,7 +111,7 @@
                     <li class="nav-item"><a href="Internationalization.html"
                             style="color:  #566573">Internationalization</a></li>
                     <li class="nav-item"><a href="Listeners.html" style="color:  #566573">Listeners</a></li>
-                    <li class="nav-item"><a href="Tenant-based task assignment.html"
+                    <li class="nav-item"><a class="current" href="Tenant-based task assignment.html"
                             style="color:  #566573">Tenant-based task assignment</a></li>
                     <li class="nav-item"><a href="AnonymousForm.html" style="color:  #566573">Anonymous</a></li>
                     <li class="nav-item"><a href="Taskvariables.html" style="color:  #566573">Task
@@ -139,55 +140,40 @@
 
 
                         <br>
+
                         <section class="docs-section" id="item-1-1">
                             <div>
-                                <h2 id="bpm-form-data-pipeline-listener">BPM Form Data Pipeline Listener</h2>
-                                <p><strong>org.camunda.bpm.extension.hooks.listeners.BPMFormDataPipelineListener</strong>
-                                </p>
-                                <p>This component can be used on any event of task/execution listener. Upon
-                                    configuration, it copies
-                                    camunda variables to form (formio) data.</p>
-                                <h3 id="table-of-content">Table of Content</h3>
-                                <ul>
-                                    <li><a href="#type">Type</a></li>
-                                    <li><a href="#how-it-works">How it Works</a></li>
-                                    <li><a href="#how-to-use">How to Use</a></li>
-                                </ul>
-                                <h4 id="type">Type</h4>
-                                <p>Task/Execution Listener</p>
-                                <h4 id="how-it-works">How it Works</h4>
-                                <p>This component from CAM variables prepares the data for formio submission and,
-                                    invokes the
-                                    <strong>formio Rest based submission endpoint</strong> for updates.
-                                </p>
-                                <h4 id="how-to-use">How to Use</h4>
-                                <p>This component relies on listed parameters.</p>
-                                <ul>
-                                    <li>fields (Listener field of type expression). Takes in cam variables as array. For
-                                        example.
-                                        [&quot;pid&quot;,&quot;applicationId&quot;,&quot;task_id&quot;]. It would
-                                        populate data from cam
-                                        variables to form. <code>Mandatory = Yes</code></li>
-                                </ul>
-                                <p>Below snapshot shows how to configure the
-                                    <strong>BPMFormDataPipelineListener</strong> to an
-                                    execution.
-                                </p>
-                                <p><img src="./assets/images/bpmformdatapipeline-listener-snp1.jpg"
-                                        alt="Form DataPipeline listener - Snapshot" height="500" width="1000"></p>
-                                <br><br>
-                                Click here <a href="Email Attributes Listener.html">Email Attributes Listener</a>
+                                <h2 id="camunda-bpm-tenant-based-task-assignment">Camunda BPM: Tenant-based task
+                                    assignment</h2>
+                                <p>In a tenant-based environment, the user task is assigned to the tenant&#39;s
+                                    reviewer/approver group. An example process is provided below that demonstrates how
+                                    a user task is assigned using a process variable.</p>
+                                <h3 id="example-process">Example process</h3>
+                                <p>The candidateGroups attribute in the user task is associated to a process variable
+                                    using {$candidateGroup}. This allows us to let the task assignment depend on the
+                                    output of variable &quot;candidateGroup&quot;.</p>
+                                <p><img src="./assets/images/user-task.png" alt="User-Task - Snapshot" height="500"
+                                        width="1000"></p><br>
+                                <p>Inline script is added to the sequence flow before the user task to determine
+                                    candidate group.</p>
+                                <p><img src="./assets/images/task-assignment-script.png"
+                                        alt="User-Task-assignment - Snapshot" height="500" width="1000">
+                                </p><br>
+                                <p>The script uses the process variable &quot;tenantKey&quot; to determine the candidate
+                                    group.</p>
+                                <pre><code><span class="hljs-attr">tenantKey</span> = execution.getVariable(<span class="hljs-string">"tenantKey"</span>);
+                                <span class="hljs-keyword">if</span> (tenantKey){        
+                                    <span class="hljs-attr">candidateGroup</span> = tenantKey + <span class="hljs-string">"-formsflow-reviewer"</span>;
+                                }
+                                <span class="hljs-keyword">else</span>{
+                                    <span class="hljs-attr">candidateGroup</span> = <span class="hljs-string">"formsflow/formsflow-reviewer"</span>;
+                                }
+                                execution.setVariable(<span class="hljs-string">"candidateGroup"</span>, candidateGroup);
+                                </code></pre>
                             </div>
-
-                        </section>
-                        <br>
-                        <a href="#" class="previous">&laquo; Previous</a>
-                        <a href="architecture.html" class="next">Next &raquo;</a>
-
-
-
-
-
+                        </section><br>
+                        <a href="Listeners.html" class="previous">&laquo; Previous</a>
+                        <a href="AnonymousForm.html" class="next">Next &raquo;</a>
 
             </div>
             <!--//docs-code-block-->

@@ -88,7 +88,8 @@
                     <li class="nav-item"><a href="index.html" style="color:  #566573">Introduction</a></li>
                     <li class="nav-item"><a href="architecture.html" style="color:  #566573">System Architecture</a>
                     </li>
-                    <li class="nav-item"><a href="aboutproject.html" style="color:  #566573">About The Project</a>
+                    <li class="nav-item"><a href="aboutproject.html" style="color:  #566573">About The
+                            Project</a>
                     </li>
                     <li class="nav-item"><a href="features.html" style="color:  #566573">Features</a></li>
                     <!-- main heading -->
@@ -114,7 +115,7 @@
                             style="color:  #566573">Tenant-based task assignment</a></li>
                     <li class="nav-item"><a href="AnonymousForm.html" style="color:  #566573">Anonymous</a></li>
                     <li class="nav-item"><a href="Taskvariables.html" style="color:  #566573">Task
-                            variable workflow</a></li>
+                            variable workflow</a>
                     <li class="nav-item"><a href="Webevents.html" style="color:  #566573">Formsflow-Web Events</a>
                     </li>
                     <li class="nav-item"><a href="UsageInstructions.html" style="color:  #566573">Usage-instructions</a>
@@ -140,55 +141,104 @@
 
 
                         <br>
+
                         <section class="docs-section" id="item-1-1">
                             <div>
-                                <h2 id="bpm-form-data-pipeline-listener">BPM Form Data Pipeline Listener</h2>
-                                <p><strong>org.camunda.bpm.extension.hooks.listeners.BPMFormDataPipelineListener</strong>
-                                </p>
-                                <p>This component can be used on any event of task/execution listener. Upon
-                                    configuration, it copies
-                                    camunda variables to form (formio) data.</p>
-                                <h3 id="table-of-content">Table of Content</h3>
-                                <ul>
-                                    <li><a href="#type">Type</a></li>
-                                    <li><a href="#how-it-works">How it Works</a></li>
-                                    <li><a href="#how-to-use">How to Use</a></li>
-                                </ul>
-                                <h4 id="type">Type</h4>
-                                <p>Task/Execution Listener</p>
-                                <h4 id="how-it-works">How it Works</h4>
-                                <p>This component from CAM variables prepares the data for formio submission and,
-                                    invokes the
-                                    <strong>formio Rest based submission endpoint</strong> for updates.
-                                </p>
-                                <h4 id="how-to-use">How to Use</h4>
-                                <p>This component relies on listed parameters.</p>
-                                <ul>
-                                    <li>fields (Listener field of type expression). Takes in cam variables as array. For
-                                        example.
-                                        [&quot;pid&quot;,&quot;applicationId&quot;,&quot;task_id&quot;]. It would
-                                        populate data from cam
-                                        variables to form. <code>Mandatory = Yes</code></li>
-                                </ul>
-                                <p>Below snapshot shows how to configure the
-                                    <strong>BPMFormDataPipelineListener</strong> to an
-                                    execution.
-                                </p>
-                                <p><img src="./assets/images/bpmformdatapipeline-listener-snp1.jpg"
-                                        alt="Form DataPipeline listener - Snapshot" height="500" width="1000"></p>
-                                <br><br>
-                                Click here <a href="Email Attributes Listener.html">Email Attributes Listener</a>
+                                <h2 id="forms-flow-web-events">forms-flow-web Events</h2>
+                                <blockquote>
+                                    <p>This section elaborates events used in forms-flow-web.
+                                        The Form.io renderer uses the <a
+                                            href="https://github.com/primus/eventemitter3">EventEmitter3</a> library to
+                                        manage all of the event handling that occurs within the renderer.
+                                        Custom events are triggered for button components and are fired when they are
+                                        clicked. More details are <a
+                                            href="https://docs.form.io/developers/form-renderer#form-events">here</a>
+                                    </p>
+                                    <h2 id="events">Events</h2>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Description &nbsp;&nbsp;&nbsp;</th>
+                                                <th>Arguments &nbsp;&nbsp;&nbsp;</th>
+                                                <th>Example</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><code>reloadTasks</code></td>
+                                                <td>
+                                                    <li>Used in the task page</li>
+                                                    <li>Triggered for button components</li>
+                                                    <li>Refresh the Task List and remove the selected task from RHS.
+                                                    </li>
+                                                </td>
+                                                <td>
+                                                    <li> type:The configured event type </li>
+                                                </td>
+                                                <td>form.emit(&#39;customEvent&#39;, { type: &quot;reloadTasks&quot;});
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>reloadCurrentTask</code></td>
+                                                <td>
+                                                    <li>Used in the task page</li>
+                                                    <li>Triggered for button components</li>
+                                                    <li>Refreshes the current task selected</li>
+                                                </td>
+                                                <td>
+                                                    <li>type:The configured event type</li>
+                                                </td>
+                                                <td>form.emit(&#39;customEvent&#39;, { type:
+                                                    &quot;reloadCurrentTask&quot;});</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>customSubmitDone</code></td>
+                                                <td>
+                                                    <li>Used in the create form page</li>
+                                                    <li>Triggered for button components</li>
+                                                    <li>Similar to submit button to implement custom logic</li>
+                                                </td>
+                                                <td>
+                                                    <li>type:The configured event type</li>
+                                                </td>
+                                                <td>form.emit(&#39;customEvent&#39;, {type:
+                                                    &quot;customSubmitDone&quot;});</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>actionComplete</code></td>
+                                                <td>
+                                                    <li>Triggered for button components</li>
+                                                </td>
+                                                <td>
+                                                    <li>type:The configured event type</li>
+                                                    <li>component:The component json</li>
+                                                    <li>actionType: Form submit action values</li>
+                                                </td>
+                                                <td>form.emit(&#39;customEvent&#39;, { type: &quot;actionComplete&quot;,
+                                                    component: component, actionType: actionType });</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>cancelSubmission</code></td>
+                                                <td>
+                                                    <li>Used in the create form page</li>
+                                                    <li>Triggered for button components</li>
+                                                    <li>Used for Canceling current submission and goin back to Form List
+                                                        Page</li>
+                                                </td>
+                                                <td>
+                                                    <li>type:The configured event type</li>
+                                                </td>
+                                                <td>form.emit(&#39;customEvent&#39;, {type:
+                                                    &quot;cancelSubmission&quot;});</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </blockquote>
                             </div>
-
-                        </section>
-                        <br>
-                        <a href="#" class="previous">&laquo; Previous</a>
-                        <a href="architecture.html" class="next">Next &raquo;</a>
-
-
-
-
-
+                        </section><br><br>
+                        <a href="architecture.html" class="previous">&laquo; Previous</a>
+                        <a href="features.html" class="next">Next &raquo;</a>
 
             </div>
             <!--//docs-code-block-->

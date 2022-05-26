@@ -292,6 +292,7 @@ samp {
     /* rtl:ignore */
   ;
   unicode-bidi: bidi-override;
+  padding-left: 0%;
 }
 
 pre {

@@ -88,38 +88,41 @@
                     <li class="nav-item"><a href="index.html" style="color:  #566573">Introduction</a></li>
                     <li class="nav-item"><a href="architecture.html" style="color:  #566573">System Architecture</a>
                     </li>
-                    <li class="nav-item"><a class="current" href="aboutproject.html" style="color:  #566573">About The
-                            Project</a>
-                    </li>
-                    <li class="nav-item"><a href="features.html" style="color:  #566573">Features</a></li>
-                    <!-- main heading -->
-                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span
-                                class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Installation</a>
-                    </li>
-                    <li class="nav-item"><a href="quick installation.html" style="color:  #566573">Quick
-                            Installation</a></li>
-                    <li class="nav-item"><a href="Openshift.html" style="color:  #566573">Openshift
-                            Installation</a></li>
-                    <li class="nav-item"><a href="download and installation.html" style="color:  #566573">Docker Based
-                            Installation</a></li>
-                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span
-                                class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Other
-                            Features</a>
-                    </li>
-                    <li class="nav-item"><a href="AdminPageDashboard.html" style="color:  #566573">AdminPage
-                            Dashboard</a></li>
-                    <li class="nav-item"><a href="Internationalization.html"
-                            style="color:  #566573">Internationalization</a></li>
-                    <li class="nav-item"><a href="Listeners.html" style="color:  #566573">Camunda Listeners</a></li>
-                    <li class="nav-item"><a href="Tenant-based task assignment.html"
-                            style="color:  #566573">Tenant-based task assignment</a></li>
-                    <li class="nav-item"><a href="AnonymousForm.html" style="color:  #566573">Anonymous</a></li>
-                    <li class="nav-item"><a href="Taskvariables.html" style="color:  #566573">Task
-                            variable workflow</a></li>
-                    <li class="nav-item"><a href="Webevents.html" style="color:  #566573">Formsflow-Web Events</a>
-                    </li>
-                    <li class="nav-item"><a href="UsageInstructions.html" style="color:  #566573">Usage-instructions</a>
-                    </li>
+                    <li class="nav-item"><a class="current" href="aboutproject.html" style="color:  #566573">About The Project</a>
+					</li>
+					<li class="nav-item"><a href="UsageInstructions.html" style="color:  #566573">Usage-instructions</a>
+					</li>
+					<!-- main heading -->
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span
+								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Installation</a>
+					</li>
+					<li class="nav-item"><a href="quick installation.html" style="color:  #566573">Quick
+							Installation</a></li>
+
+					<li class="nav-item"><a href="download and installation.html" style="color:  #566573">Docker Based
+							Installation</a></li>
+					
+					<li class="nav-item"><a href="Openshift.html" style="color:  #566573">Openshift
+							Installation</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span
+								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Features</a></li>
+							
+					
+					<li class="nav-item"><a href="Internationalization.html"
+							style="color:  #566573">Internationalization</a></li>
+					<li class="nav-item"><a href="Listeners.html" style="color:  #566573">Camunda Listeners</a></li>
+					
+					<li class="nav-item"><a href="Taskvariables.html" style="color:  #566573">Task
+							variable workflow</a></li>
+					<li class="nav-item"><a href="Webevents.html" style="color:  #566573">Web Events</a></li>
+					<li class="nav-item"><a href="AnonymousForm.html" style="color:  #566573">Anonymous Forms</a></li>
+					<li class="nav-item"><a href="AdminPageDashboard.html" style="color:  #566573">AdminPage
+						Dashboard</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
+						class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Multi Tenancy</a></li>
+						<li class="nav-item"><a href="Tenant-based task assignment.html"
+							style="color:  #566573">Tenant-based task assignment</a></li>
+			
                     <!-- main heading -->
                     <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span
                                 class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
@@ -143,9 +146,13 @@
                         <br>
 
                         <section class="docs-section" id="item-1-1">
+                            <h1 class="section-heading">About the Project</h1>
                             <div>
-                                <h1 class="section-heading">About the Project</h1>
+
                                 <hr>
+                                <p>The project was initiated by AOT Technologies as a means of addressing the general
+                                    situation whereby end-users fill in a form, the form is processed and there may be a
+                                    requirement to report on the form metrics or data.</p>
                                 <p>Some use cases of formsflow are:</p>
                                 <ul>
                                     <li>Applications for licenses</li>
@@ -166,9 +173,28 @@
 
                                         </p>
                             </div>
+                            <div>
+                                <ul>
+                                    <h2 id="features">Features</h2>
+                                    <hr>
+                                    <li>Drag-and-drop forms-builder with rich UI components</li>
+                                    <li>Lightweight server-based workflow engine with full capabilities including human,
+                                        parallel, asynchronous and timed flows, decision engine, and graphical designer
+                                    </li>
+                                    <li>Notifications engine for notifications, reminders, and alerts on tasks and even
+                                        data thresholds.</li>
+                                    <li>Metrics and data visualization dashboards for the display of key workflow and
+                                        form data</li>
+                                    <li>(future) Multi-tenancy isolation</li>
+                                    <li>Containerized deployment with docker, docker-compose, and Openshift</li>
+                                    <li>Flexible Identity Management uses existing IDM systems for authentication and
+                                        single sign-on</li>
+                                </ul>
+
+                            </div>
                         </section><br><br>
                         <a href="architecture.html" class="previous">&laquo; Previous</a>
-                        <a href="features.html" class="next">Next &raquo;</a>
+                        <a href="UsageInstructions.html" class="next">Next &raquo;</a>
 
             </div>
             <!--//docs-code-block-->

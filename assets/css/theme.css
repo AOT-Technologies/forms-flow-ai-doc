@@ -12771,6 +12771,7 @@ a.text-link:hover {
   border-radius: 0.5rem;
 }
 
+
 @media (prefers-reduced-motion: reduce) {
   .docs-sidebar {
     transition: none;

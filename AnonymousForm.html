@@ -89,37 +89,40 @@
                     <li class="nav-item"><a href="architecture.html" style="color:  #566573">System Architecture</a>
                     </li>
                     <li class="nav-item"><a href="aboutproject.html" style="color:  #566573">About The Project</a>
-                    </li>
-                    <li class="nav-item"><a href="features.html" style="color:  #566573">Features</a></li>
-                    <!-- main heading -->
-                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span
-                                class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Installation</a>
-                    </li>
-                    <li class="nav-item"><a href="quick installation.html" style="color:  #566573">Quick
-                            Installation</a></li>
-                    <li class="nav-item"><a href="Openshift.html" style="color:  #566573">Openshift
-                            Installation</a></li>
-                    <li class="nav-item"><a href="download and installation.html" style="color:  #566573">Docker Based
-                            Installation</a></li>
-                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span
-                                class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Other
-                            Features</a>
-                    </li>
-                    <li class="nav-item"><a href="AdminPageDashboard.html" style="color:  #566573">AdminPage
-                            Dashboard</a></li>
-                    <li class="nav-item"><a href="Internationalization.html"
-                            style="color:  #566573">Internationalization</a></li>
-                    <li class="nav-item"><a href="Listeners.html" style="color:  #566573">Camunda Listeners</a></li>
-                    <li class="nav-item"><a href="Tenant-based task assignment.html"
-                            style="color:  #566573">Tenant-based task assignment</a></li>
-                    <li class="nav-item"><a class="current" href="AnonymousForm.html"
-                            style="color:  #566573">Anonymous</a></li>
-                    <li class="nav-item"><a href="Taskvariables.html" style="color:  #566573">Task
-                            variable workflow</a></li>
-                    <li class="nav-item"><a href="Webevents.html" style="color:  #566573">Formsflow-Web Events</a>
-                    </li>
-                    <li class="nav-item"><a href="UsageInstructions.html" style="color:  #566573">Usage-instructions</a>
-                    </li>
+					</li>
+					<li class="nav-item"><a href="UsageInstructions.html" style="color:  #566573">Usage-instructions</a>
+					</li>
+					<!-- main heading -->
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span
+								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Installation</a>
+					</li>
+					<li class="nav-item"><a href="quick installation.html" style="color:  #566573">Quick
+							Installation</a></li>
+
+					<li class="nav-item"><a href="download and installation.html" style="color:  #566573">Docker Based
+							Installation</a></li>
+					
+					<li class="nav-item"><a href="Openshift.html" style="color:  #566573">Openshift
+							Installation</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span
+								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Features</a></li>
+							
+					
+					<li class="nav-item"><a href="Internationalization.html"
+							style="color:  #566573">Internationalization</a></li>
+					<li class="nav-item"><a href="Listeners.html" style="color:  #566573">Camunda Listeners</a></li>
+					
+					<li class="nav-item"><a href="Taskvariables.html" style="color:  #566573">Task
+							variable workflow</a></li>
+					<li class="nav-item"><a href="Webevents.html" style="color:  #566573">Web Events</a></li>
+					<li class="nav-item"><a class="current"  href="AnonymousForm.html" style="color:  #566573">Anonymous Forms</a></li>
+					<li class="nav-item"><a href="AdminPageDashboard.html" style="color:  #566573">AdminPage
+						Dashboard</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
+						class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Multi Tenancy</a></li>
+						<li class="nav-item"><a href="Tenant-based task assignment.html"
+							style="color:  #566573">Tenant-based task assignment</a></li>
+			
                     <!-- main heading -->
                     <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span
                                 class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
@@ -143,31 +146,41 @@
                         <br>
                         <section class="docs-section" id="installation-3">
 
-                            <h1 id="anonymous-workflow">Anonymous workflow</h1>
+                            <h1 id="anonymous-workflow">Anonymous Forms</h1>
                             <hr><br>
-                            <p>Create a new form or Edit an already created form .Check the field asking whether you
-                                want to
-                                make the form public?
-                                <img src="./assets/images/166641751-b7f4df20-959d-485a-ac41-cc688e9f6762 (1).png" </p>
-                            <p>2.Assosiate a workflow if you want and move to the next stage.</p>
-                            <p>3.In this stage, you can copy the anonymous form url and publish the form to the client.
+                            <p>
+                                An anonymous form allows users to submit form entries anonymously. Users can access the form using the form url without login to the application.
+
                             </p>
-                            <p><img src="./assets/images/166641111-41401eb1-4c42-4198-99b5-e66200d20498.png"
-                                    alt="image"></p>
+                            <p>Below steps describes how you can design a form anonymous</p>
                             <ol>
-                                <li>For anonymous users,form will display on pasting the copied url.There will be a
-                                    login option
-                                    too</li>
+                                <li>Create a new form or Edit an already created form. Check the field asking whether you want to make the form public to make the form available to public.
+                                </li><br><br>
+                                <img src="./assets/images/166641751-b7f4df20-959d-485a-ac41-cc688e9f6762 (1).png" height="500" width="1000"> </p>
+                            <li>Assosiate a workflow if you want and move to the next stage.</li><br><br>
+                            <img src="./assets/images/Screenshot 2022-06-01 142611.png" height="500" width="1000"><br><br>
+                            <li>In this stage, you can copy the anonymous form url and publish the form to the client.Forms that are made anonymous and public will only appear publicly.</li>
+                            <br><br>
+                        
+                            <p><img src="./assets/images/166641111-41401eb1-4c42-4198-99b5-e66200d20498.png"
+                                    alt="image" height="500" width="1000"></p>
+                                    <strong>
+                                        Note-Forms will not be available to anonymous users if its not published
+                                        </strong>
+                                        <br><br>
+                                        <img src="./assets/images/Screenshot 2022-06-01 143337.png" height="300" width="1000">
+                            <br><br>
+                                <li>Designers can share the copied URL to other users for submitting anonymous forms.</li>
+                                <br>
+                                        <img src="./assets/images/Screenshot 2022-06-01 143743.png" height="500" width="1000">
+                            <br><br>
                             </ol>
-                            <p>Note- forms that are made anonymous and public will only appear publicly.
-                                <img src="https://user-images.githubusercontent.com/86649870/166641457-2cfd059f-26f4-4eed-bcd5-3737d5516049.png"
-                                    alt="image" width="1000" height="500">
-                            </p>
+                            
 
                         </section>
                         <br>
-                        <a href="Tenant-based task assignment.html" class="previous">&laquo; Previous</a>
-                        <a href="Taskvariables.html" class="next">Next &raquo;</a>
+                        <a href="Webevents.html" class="previous">&laquo; Previous</a>
+                        <a href="AdminPageDashboard.html" class="next">Next &raquo;</a>
 
 
 

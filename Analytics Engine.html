@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Forms flow ai documentation">
+    <meta name="author" content="formsflow.ai">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Welcome to formsflow.ai</title>
+
+    <!-- Google Font -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+    <link id="theme-style" rel="stylesheet" href="assets/css/atom-one-dark.min.css">
+
+
+
+</head>
+
+<body>
+
+    <header class="header fixed-top">
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+                        type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2"
+                                src="assets/images/formsflow.ai-logo.svg" alt="logo"><span
+                                class="logo-text">formsflow.ai</span></a></div>
+                </div>
+                <!--//docs-logo-wrapper-->
+                <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+                    <div class="top-search-box d-none d-lg-flex">
+                        <form class="search-form">
+                            <input type="text" placeholder="Search the docs..." name="search"
+                                class="form-control search-input">
+                            <button type="submit" class="btn search-btn" value="Search"><i
+                                    class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+
+                    <ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+                        <li class="list-inline-item"><a href="https://github.com/AOT-Technologies/forms-flow-ai"><i
+                                    class="fab fa-github fa-fw"></i></a></li>
+                    </ul>
+                    <!--//social-list-->
+                    <a href="https://github.com/AOT-Technologies/forms-flow-ai"
+                        class="btn btn-primary d-none d-lg-flex">Download</a>
+                </div>
+                <!--//docs-top-utilities-->
+            </div>
+            <!--//container-->
+        </div>
+        <!--//branding-->
+    </header>
+    <!--//header-->
+
+    <div class="docs-wrapper">
+        <div id="docs-sidebar" class="docs-sidebar">
+            <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+                    <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+                    <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <nav id="docs-nav" class="docs-nav navbar">
+                <ul class="section-items list-unstyled nav flex-column pb-3">
+                    <!-- main heading -->
+                    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Getting
+                            started</a></li>
+                    <li class="nav-item"><a href="index.html" style="color:  #566573">Introduction</a></li>
+                    <li class="nav-item"><a href="architecture.html" style="color:  #566573">System Architecture</a>
+                    </li>
+                    <li class="nav-item"><a href="aboutproject.html" style="color:  #566573">About The Project</a>
+					</li>
+					<li class="nav-item"><a href="UsageInstructions.html" style="color:  #566573">Usage-instructions</a>
+					</li>
+					<!-- main heading -->
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span
+								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Installation</a>
+					</li>
+					<li class="nav-item"><a href="quick installation.html" style="color:  #566573">Quick
+							Installation</a></li>
+
+					<details>
+								<summary><a href="download and installation.html" style="color:  #566573">Install Using Containers</a></summary>
+								<ul>
+								  <li class="nav-item"><a href="keycloak setup.html" style="color:  #566573">Keycloak</a></li>
+								  <li class="nav-item"><a href="Form Management Platform.html" style="color:  #566573">Form Management Platform</a></li>
+								  <li class="nav-item"><a href="Analytics Engine.html" style="color:  #566573">Analytics Engine</a></li>
+								  <li class="nav-item"><a href="formsflow.ai Web Application.html" style="color:  #566573">Formsflow.ai Web Application</a></li>
+								  <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">Formsflow.ai API</a></li>
+								  <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">Workflow Engine</a></li>
+								</ul>
+							  </details>
+					
+					<li class="nav-item"><a href="Openshift.html" style="color:  #566573">Openshift
+							Installation</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span
+								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Features</a></li>
+							
+					
+					<li class="nav-item"><a href="Internationalization.html"
+							style="color:  #566573">Internationalization</a></li>
+					<li class="nav-item"><a href="Listeners.html" style="color:  #566573">Camunda Listeners</a></li>
+					
+					<li class="nav-item"><a href="Taskvariables.html" style="color:  #566573">Task
+							variable workflow</a></li>
+					<li class="nav-item"><a href="Webevents.html" style="color:  #566573">Web Events</a></li>
+					<li class="nav-item"><a href="AnonymousForm.html" style="color:  #566573">Anonymous Forms</a></li>
+					<li class="nav-item"><a href="AdminPageDashboard.html" style="color:  #566573">AdminPage
+						Dashboard</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
+						class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Multi Tenancy</a></li>
+						<li class="nav-item"><a href="Tenant-based task assignment.html"
+							style="color:  #566573">Tenant-based task assignment</a></li>
+			
+                    <!-- main heading -->
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-1">Section Item 9.1</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-2">Section Item 9.2</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-3">Section Item 9.3</a></li>
+                </ul>
+
+            </nav>
+            <!--//docs-nav-->
+        </div>
+        <!--//docs-sidebar-->
+        <div class="docs-content">
+            <div class="container">
+                <article class="docs-article" id="section-1">
+                    <!-- main heading content -->
+                    <header class="docs-header">
+
+
+
+                        <br>
+
+                        <section class="docs-section" id="item-1-1">
+                            <div>
+                                <h1 id="analytics-engine">Analytics Engine</h1>
+                                <p><img src="https://img.shields.io/badge/Redash-10.1.0-blue" alt="Redash"></p>
+                                <p><strong>formsflow.ai</strong> leverages <a
+                                        href="https://github.com/getredash/redash">Redash</a> to build interactive
+                                    dashboards and gain insights. To create meaningful visualization for
+                                    your use case with formsflow.ai checkout <a href="https://redash.io/help/">Redash
+                                        Knowledge base</a>.</p>
+
+                                <h2 id="prerequisites">Prerequisites</h2>
+                                <ul>
+                                    <li>For docker based installation <a href="https://docker.com">Docker</a> need to be
+                                        installed.</li>
+                                    <li>Admin access to <a href="../forms-flow-idm/keycloak">Keycloak</a> server.</li>
+                                </ul>
+                                <h2 id="solution-setup">Solution Setup</h2>
+                                <h3 id="keycloak-setup">Keycloak Setup</h3>
+                                <blockquote>
+                                    <p>NOTE: Skip below steps and go to Installation if you are already configured
+                                        Keycloak.</p>
+                                </blockquote>
+                                <ul>
+                                    <li>If you have a Keycloak Instance and yet to configure it then login to KeyCloak
+                                        with admin credentials.</li>
+                                    <li>Follow the instructions given <a
+                                            href="../forms-flow-idm/keycloak/README.md#create-keycloak-setup-for-formsflow-analytics">here</a>
+                                        to configure <strong>forms-flow-analytics</strong> client.</li>
+                                </ul>
+                                <h3 id="installation">Installation</h3>
+                                <ul>
+                                    <li>Make sure you have a Docker machine up and running.</li>
+                                    <li>Make sure your current working directory is
+                                        &quot;forms-flow-ai/forms-flow-analytics&quot;.</li>
+                                    <li>Rename the file <a href="./sample.env">sample.env</a> to <strong>.env</strong>.
+                                    </li>
+                                    <li>Modify the environment variables inside <a href="./sample.env">.env</a> file if
+                                        needed. Environment variables are given in the table below</li>
+                                    <li><strong>NOTE : <code>{your-ip-address}</code> given inside the <a
+                                                href="./sample.env">.env</a> file should be changed to your host system
+                                            IP address. Please take special care to identify the correct IP address if
+                                            your system has multiple network cards</strong></li>
+                                </ul>
+                                <blockquote>
+                                    <p>:information_source: Variables with trailing :triangular_flag_on_post: in below
+                                        table should be updated in the <code>.env</code> file</p>
+                                </blockquote>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Variable name</th>
+                                            <th>Meaning</th>
+                                            <th>Possible values</th>
+                                            <th>Default value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>REDASH_HOST</code>:triangular_flag_on_post:</td>
+                                            <td>Base address of your Redash instance (the DNS name or IP) with the
+                                                protocol</td>
+                                            <td></td>
+                                            <td><a
+                                                    href="http://{your-ip-address}:7000/redash">http://{your-ip-address}:7000/redash</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>PYTHONUNBUFFERED</code></td>
+                                            <td>Log buffering setup</td>
+                                            <td>1 or 0</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>REDASH_LOG_LEVEL</code></td>
+                                            <td>Logging level</td>
+                                            <td><code>CRITICAL, ERROR, WARNING, INFO, DEBUG, NOTSET</code></td>
+                                            <td>ERROR</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>REDASH_REDIS_URL</code></td>
+                                            <td>Redis URL</td>
+                                            <td>Used on installation to create the database.Choose your own.</td>
+                                            <td><code>redis://redis:6379/0</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>REDASH_DATABASE_URL</code></td>
+                                            <td>Postgres database URL</td>
+                                            <td>Used on installation to create the database.Choose your own.</td>
+                                            <td><code>postgresql://postgres@postgres/postgres</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>POSTGRES_PASSWORD</code></td>
+                                            <td>Postgres database Password</td>
+                                            <td>Used on installation to create the database.Choose your own.</td>
+                                            <td><code>postgres</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>REDASH_COOKIE_SECRET</code></td>
+                                            <td>Encryption for all configuration</td>
+                                            <td>Used on installation to create the database.Choose your own.</td>
+                                            <td><code>redash-selfhosted</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>REDASH_SECRET_KEY</code></td>
+                                            <td>Encryption for datasource configuration</td>
+                                            <td>Used on installation to create the database.Choose your own.</td>
+                                            <td><code>redash-selfhosted</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>REDASH_CORS_ACCESS_CONTROL_ALLOW_ORIGIN</code></td>
+                                            <td>To set allow origins to access Redash</td>
+                                            <td><code>your-domain.com</code></td>
+                                            <td><code>*</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>REDASH_REFERRER_POLICY</code></td>
+                                            <td>To control how much referrer information should be included with Redash
+                                                API requests</td>
+                                            <td>Choose your own.</td>
+                                            <td><code>no-referrer-when-downgrade</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>REDASH_CORS_ACCESS_CONTROL_ALLOW_HEADERS</code></td>
+                                            <td>To control allowed headers to access Reash</td>
+                                            <td>Choose on your own</td>
+                                            <td><code>Content-Type, Authorization</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table><br>
+                                <h3 id="running-the-application">Running the application</h3>
+                                <ul>
+                                    <li>Analytics service uses port 7000, make sure the port is available.</li>
+                                    <li><code>cd {Your Directory}/forms-flow-ai/forms-flow-analytics</code></li>
+                                </ul>
+                                <blockquote>
+                                    <p>The forked version of redash is being used to overcome the limited cors support
+                                        in redash. The forked repo fixes the cors issues. But if the environment is
+                                        setup in such a way that redash resides in the same url origin as forms web
+                                        application , redash can be built from any redash images.</p>
+                                </blockquote>
+                                <ul>
+                                    <li>For Linux,<ul>
+                                            <li>Run
+                                                <code>docker-compose -f docker-compose-linux.yml run --rm server create_db</code>
+                                                to setup database and to create tables.
+                                            </li>
+                                            <li>Run <code>docker-compose -f docker-compose-linux.yml up -d</code> to
+                                                start.</li>
+                                        </ul>
+                                    </li>
+                                    <li>For Windows,<ul>
+                                            <li>Run
+                                                <code>docker-compose -f docker-compose-windows.yml run --rm server create_db</code>
+                                                to setup database and to create tables.
+                                            </li>
+                                            <li>Run <code>docker-compose -f docker-compose-windows.yml up -d</code> to
+                                                start.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <p><em>NOTE: Use --build command with the start command to reflect any future
+                                        <strong>.env</strong> changes eg :
+                                        <code>docker-compose -f docker-compose-windows.yml up --build -d</code></em></p>
+                                <h4 id="to-stop-the-application">To stop the application</h4>
+                                <ul>
+                                    <li>For Linux,<ul>
+                                            <li>Run <code>docker-compose -f docker-compose-linux.yml stop</code> to
+                                                stop.</li>
+                                        </ul>
+                                    </li>
+                                    <li>For Windows,<ul>
+                                            <li>Run <code>docker-compose -f docker-compose-windows.yml stop</code> to
+                                                stop.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <h3 id="health-check">Health Check</h3>
+                                <ul>
+                                    <li>Check the public endpoint : <code>{your-ip-address}:7000/ping</code></li>
+                                </ul>
+                                <pre><code>RESPONSE
+PONG.
+</code></pre>
+                                <ul>
+                                    <li>The application should be up and available for use at port defaulted to 7000 in
+                                        <a href="http://localhost:7000/">http://localhost:7000/</a> and register with
+                                        any valid credentials.
+                                    </li>
+                                </ul>
+                                <h3 id="configuration-of-keycloak-saml-setup">Configuration of Keycloak SAML Setup</h3>
+                                <ul>
+                                    <li>Post registration, login to the application with admin credentials.</li>
+                                    <li>Click the menu icon to the left of the username and navigate to <strong>Edit
+                                            Profile</strong>.</li>
+                                    <li>Go to tab &quot;Settings&quot;, and then navigate to &quot;General&quot;. Under
+                                        &quot;Authentication&quot;.<ul>
+                                            <li>Check the option &quot;Enabled(dynamic)&quot;.</li>
+                                            <li>Set the field &quot;SAML Metadata URL&quot; with value of Keycloak SAML
+                                                descriptor URL. Example. <a
+                                                    href="http://{your-ip-address}:8080/auth/realms/forms-flow-ai/protocol/saml/descriptor">http://{your-ip-address}:8080/auth/realms/forms-flow-ai/protocol/saml/descriptor</a>.
+                                                {your-ip-address} should be changed to your host system IP address.
+                                                Please take special care to identify the correct IP address if your
+                                                system has multiple network cards</li>
+                                            <li>Set the field &quot;SAML Entity ID&quot; value to be
+                                                <code>forms-flow-analytics</code>.
+                                            </li>
+                                            <li>Set the field &quot;SAML NameID Format&quot; value to be
+                                                <code>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</code>.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>Logout and login again using valid formsflow.ai keycloak user credentials.
+                                        Default user credentials are provided <a
+                                            href="../forms-flow-idm/keycloak/README.md#formsflow-ai-user-credentials">here</a>.
+                                    </li>
+                                </ul>
+                                <blockquote>
+                                    <p>forms-flow-analytic (REDASH) setup is successfully completed now. You can skip
+                                        remaining sections in this page and continue with other installation steps.</p>
+                                </blockquote>
+                                <h2 id="get-the-redash-api-key">Get the Redash API Key</h2>
+                                <ul>
+                                    <li>Login to redash hosted instance (i.e. <a
+                                            href="http://localhost:7000/">http://localhost:7000/</a>) using the admin
+                                        credentials passed for registration / SAML credentials</li>
+                                    <li>Go to User Icon -&gt; Profile -&gt; Settings<ul>
+                                            <li>Go to Account Section</li>
+                                            <li>Copy API Key to Clipboard</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <h2 id="redash-how-to-use-guide">Redash how to use guide</h2>
+                                <ul>
+                                    <li>
+                                        <p>Check our guide on <a href="./docs/README.md">how to configure Redash and
+                                                come up with awesome visualization using redash</a>.</p>
+                                    </li>
+                                    <li>
+                                        <p>If you want to visualize based on data in formsflow.ai, <a
+                                                href="./docs/sample_queries.md">a few sample queries for default forms
+                                                are available</a>.</p>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </section><br><br>
+                        <a href="architecture.html" class="previous">&laquo; Previous</a>
+                        <a href="UsageInstructions.html" class="next">Next &raquo;</a>
+
+            </div>
+            <!--//docs-code-block-->
+
+
+            </header>
+
+
+            </article>
+
+
+
+
+            <!-- Javascript -->
+            <script src="assets/plugins/popper.min.js"></script>
+            <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+            <!-- Page Specific JS -->
+            <script src="assets/plugins/smoothscroll.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+            <script src="assets/js/highlight-custom.js"></script>
+            <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+            <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+            <script src="assets/js/docs.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Forms flow ai documentation">
+    <meta name="author" content="formsflow.ai">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Welcome to formsflow.ai</title>
+
+    <!-- Google Font -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+    <link id="theme-style" rel="stylesheet" href="assets/css/atom-one-dark.min.css">
+
+
+
+</head>
+
+<body>
+
+    <header class="header fixed-top">
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+                        type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2"
+                                src="assets/images/formsflow.ai-logo.svg" alt="logo"><span
+                                class="logo-text">formsflow.ai</span></a></div>
+                </div>
+                <!--//docs-logo-wrapper-->
+                <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+                    <div class="top-search-box d-none d-lg-flex">
+                        <form class="search-form">
+                            <input type="text" placeholder="Search the docs..." name="search"
+                                class="form-control search-input">
+                            <button type="submit" class="btn search-btn" value="Search"><i
+                                    class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+
+                    <ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+                        <li class="list-inline-item"><a href="https://github.com/AOT-Technologies/forms-flow-ai"><i
+                                    class="fab fa-github fa-fw"></i></a></li>
+                    </ul>
+                    <!--//social-list-->
+                    <a href="https://github.com/AOT-Technologies/forms-flow-ai"
+                        class="btn btn-primary d-none d-lg-flex">Download</a>
+                </div>
+                <!--//docs-top-utilities-->
+            </div>
+            <!--//container-->
+        </div>
+        <!--//branding-->
+    </header>
+    <!--//header-->
+
+    <div class="docs-wrapper">
+        <div id="docs-sidebar" class="docs-sidebar">
+            <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+                    <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+                    <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <nav id="docs-nav" class="docs-nav navbar">
+                <ul class="section-items list-unstyled nav flex-column pb-3">
+                    <!-- main heading -->
+                    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Getting
+                            started</a></li>
+                    <li class="nav-item"><a href="index.html" style="color:  #566573">Introduction</a></li>
+                    <li class="nav-item"><a href="architecture.html" style="color:  #566573">System Architecture</a>
+                    </li>
+                    <li class="nav-item"><a href="aboutproject.html" style="color:  #566573">About The Project</a>
+					</li>
+					<li class="nav-item"><a href="UsageInstructions.html" style="color:  #566573">Usage-instructions</a>
+					</li>
+					<!-- main heading -->
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span
+								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Installation</a>
+					</li>
+					<li class="nav-item"><a href="quick installation.html" style="color:  #566573">Quick
+							Installation</a></li>
+
+					<details>
+								<summary><a href="download and installation.html" style="color:  #566573">Install Using Containers</a></summary>
+								<ul>
+								  <li class="nav-item"><a href="keycloak setup.html" style="color:  #566573">Keycloak</a></li>
+								  <li class="nav-item"><a href="Form Management Platform.html" style="color:  #566573">Form Management Platform</a></li>
+								  <li class="nav-item"><a href="Analytics Engine.html" style="color:  #566573">Analytics Engine</a></li>
+								  <li class="nav-item"><a href="formsflow.ai Web Application.html" style="color:  #566573">Formsflow.ai Web Application</a></li>
+								  <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">Formsflow.ai API</a></li>
+								  <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">Workflow Engine</a></li>
+								</ul>
+							  </details>
+					
+					<li class="nav-item"><a href="Openshift.html" style="color:  #566573">Openshift
+							Installation</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span
+								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Features</a></li>
+							
+					
+					<li class="nav-item"><a href="Internationalization.html"
+							style="color:  #566573">Internationalization</a></li>
+					<li class="nav-item"><a href="Listeners.html" style="color:  #566573">Camunda Listeners</a></li>
+					
+					<li class="nav-item"><a href="Taskvariables.html" style="color:  #566573">Task
+							variable workflow</a></li>
+					<li class="nav-item"><a href="Webevents.html" style="color:  #566573">Web Events</a></li>
+					<li class="nav-item"><a href="AnonymousForm.html" style="color:  #566573">Anonymous Forms</a></li>
+					<li class="nav-item"><a href="AdminPageDashboard.html" style="color:  #566573">AdminPage
+						Dashboard</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
+						class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Multi Tenancy</a></li>
+						<li class="nav-item"><a href="Tenant-based task assignment.html"
+							style="color:  #566573">Tenant-based task assignment</a></li>
+			
+                    <!-- main heading -->
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-1">Section Item 9.1</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-2">Section Item 9.2</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-3">Section Item 9.3</a></li>
+                </ul>
+
+            </nav>
+            <!--//docs-nav-->
+        </div>
+        <!--//docs-sidebar-->
+        <div class="docs-content">
+            <div class="container">
+                <article class="docs-article" id="section-1">
+                    <!-- main heading content -->
+                    <header class="docs-header">
+
+
+
+                        <br>
+
+                        <section>
+                            <div>
+                                <h1 id="formsflow-ai-web-application">formsflow.ai Web Application</h1>
+                                <p><img src="https://img.shields.io/badge/React-17.0.2-blue" alt="React"></p>
+                                <p><strong>formsflow.ai</strong> delivers progressive web application with React version
+                                    <code>17.0.2</code> and <code>create-react-app</code>. Also currently uses <a
+                                        href="https://github.com/formio/formio">form.io</a> version <code>2.3.0</code>.
+                                </p>
+                                <p>A React library for rendering out forms based on the form.io platform.</p>
+                                <p>Also <strong>formsflow.ai</strong> provides a Vue.js based web user interface for
+                                    easy integration of <strong>formsflow.ai with your existing UI based on
+                                        Vue</strong>. To know more details checkout
+                                    <a
+                                        href="https://github.com/AOT-Technologies/forms-flow-ai-extensions/tree/master/camunda-formio-tasklist-vue">formsflow-ai-extension
+                                        repository</a>, which can be easily intergrated
+                                    with your project by installing our <a
+                                        href="https://www.npmjs.com/package/camunda-formio-tasklist-vue">npm
+                                        package</a>.
+                                </p>
+
+                                <h2 id="prerequisites">Prerequisites</h2>
+                                <ul>
+                                    <li>For docker based installation <a href="https://docker.com">Docker</a> need to be
+                                        installed.</li>
+                                    <li>Admin access to a <a href="https://www.keycloak.org/">Keycloak</a> server. For
+                                        local development / testing follow <a href="../forms-flow-idm/keycloak">Keycloak
+                                            installation</a>.</li>
+                                    <li>Please make sure the <a href="../forms-flow-forms/">Formio server</a> is up and
+                                        running.</li>
+                                </ul>
+                                <h2 id="solution-setup">Solution Setup</h2>
+                                <h3 id="keycloak-setup">Keycloak Setup</h3>
+                                <p><strong><em>Skip this step if you are already having a setup ready.</em></strong></p>
+                                <ul>
+                                    <li>Detailed instructions on setting up Keycloak for <strong>formsflow.ai web
+                                            application</strong>
+                                        is mentioned on the <a
+                                            href="../forms-flow-idm/keycloak/README.md#create-forms-flow-web-client">link</a>.
+                                    </li>
+                                </ul>
+                                <h3 id="installation">Installation</h3>
+                                <ul>
+                                    <li>Make sure you have a Docker machine up and running.</li>
+                                    <li>Make sure your current working directory is
+                                        &quot;forms-flow-ai/forms-flow-web&quot;.</li>
+                                    <li><em>Skip this if forms-flow-analytics setup is completed</em> - Start the
+                                        <strong>analytics server</strong> by following the instructions given on <a
+                                            href="../forms-flow-analytics/README.md">readme</a>
+                                    </li>
+                                    <li>Rename the file <a href="./sample.env">sample.env</a> to <strong>.env</strong>.
+                                    </li>
+                                    <li>Modify the environment variables in the newly created <strong>.env</strong> file
+                                        if needed. Environment variables are given in the table below,</li>
+                                    <li><strong>NOTE : {your-ip-address} given inside the .env file should be changed to
+                                            your host system IP address. Please take special care to identify the
+                                            correct IP address if your system has multiple network cards</strong></li>
+                                </ul>
+                                <blockquote>
+                                    <p>:information_source: Variables with trailing :triangular_flag_on_post: in below
+                                        table should be updated in the .env file</p>
+                                </blockquote>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Variable name</th>
+                                            <th>Meaning</th>
+                                            <th>Possible values</th>
+                                            <th>Default value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> <code>NODE_ENV</code></td>
+                                            <td>Define project level configuration</td>
+                                            <td><code>development, test, production</code></td>
+                                            <td><code>development</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>FORMIO_DEFAULT_PROJECT_URL</code>:triangular_flag_on_post:</td>
+                                            <td>The URL of the form.io server</td>
+                                            <td></td>
+                                            <td><code>http://{your-ip-address}:3001</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>FORMSFLOW_API_URL</code>:triangular_flag_on_post:</td>
+                                            <td>formsflow Rest API URL</td>
+                                            <td></td>
+                                            <td><code>http://{your-ip-address}:5000/api</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>CAMUNDA_API_URL</code>:triangular_flag_on_post:</td>
+                                            <td>Camunda Rest API URL</td>
+                                            <td></td>
+                                            <td><code>http://{your-ip-address}:8000/camunda</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>KEYCLOAK_URL</code>:triangular_flag_on_post:</td>
+                                            <td>URL to your Keycloak server</td>
+                                            <td></td>
+                                            <td><code>http://{your-ip-address}:8080</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>KEYCLOAK_URL_REALM</code></td>
+                                            <td>The Keycloak realm to use</td>
+                                            <td>eg. forms-flow-ai</td>
+                                            <td><code>forms-flow-ai</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>KEYCLOAK_WEB_CLIENTID</code></td>
+                                            <td>Your Keycloak Client ID within the realm</td>
+                                            <td>eg. forms-flow-web</td>
+                                            <td><code>forms-flow-web</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>WEBSOCKET_ENCRYPT_KEY</code></td>
+                                            <td>Camunda task event streaming. AES encryption of token</td>
+                                            <td></td>
+                                            <td><code>giert989jkwrgb@DR55</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>APPLICATION_NAME</code></td>
+                                            <td>Application name is used to provide clients application name</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>WEB_BASE_CUSTOM_URL</code></td>
+                                            <td>Clients can use WEB_BASE_CUSTOM_URL env variable to provide their custom
+                                                URL</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>USER_ACCESS_PERMISSIONS</code></td>
+                                            <td>JSON formatted permissions to enable / disable few access on user login.
+                                            </td>
+                                            <td></td>
+                                            <td><code>{&quot;accessAllowApplications&quot;:false,&quot;accessAllowSubmissions&quot;:false}</code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td><code>FORMIO_JWT_SECRET</code></td>
+                                            <td>forms-flow-forms jwt secret</td>
+                                            <td></td>
+                                            <td><code>--- change me now ---</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <ul>
+                                    <li>
+                                        <p>NOTE - While configuring USER_ACCESS_PERMISSIONS the accessAllowApplications
+                                            will hide / show application tab, the same way accessAllowSubmissions does
+                                            for viewSubmission button. To enable this feature you need to add
+                                            access-allow-applications, access-allow-submissions with the respective user
+                                            group in keycloak.</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="">STEP 1</a>: Getting <strong>ROLE_ID</strong> and
+                                            <strong>RESOURCE_ID</strong> are mandatory for role based access. To
+                                            generate ID go to <a
+                                                href="../forms-flow-forms/README.md#formsflow-forms-api-requesting">&quot;Formsflow-forms
+                                                user/role API&quot;</a> and follow the steps.
+                                        </p>
+                                    </li>
+                                    <li><a href="">STEP 2</a>: Modify the environment variables using the values from
+                                        step 1.</li>
+                                </ul>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Variable name</th>
+                                            <th>Meaning</th>
+                                            <th>Possible values</th>
+                                            <th>Default value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>CLIENT_ROLE</code></td>
+                                            <td>The role name used for client users</td>
+                                            <td></td>
+                                            <td><code>formsflow-client</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>CLIENT_ROLE_ID</code>:triangular_flag_on_post:</td>
+                                            <td>forms-flow-forms client role Id</td>
+                                            <td>eg. 10121d8f7fadb18402a4c</td>
+                                            <td><code>must get the client role Id value from Prerequisites step 1 above.</code>)
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>REVIEWER_ROLE</code></td>
+                                            <td>The role name used for reviewer users</td>
+                                            <td></td>
+                                            <td><code>formsflow-reviewer</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>REVIEWER_ROLE_ID</code>:triangular_flag_on_post:</td>
+                                            <td>forms-flow-forms reviewer role Id</td>
+                                            <td>eg. 5ee10121d8f7fa03b3402a4d</td>
+                                            <td><code>must get the reviewer role Id value from Prerequisites step 1 above..</code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>DESIGNER_ROLE</code></td>
+                                            <td>The role name used for designer users</td>
+                                            <td></td>
+                                            <td><code>formsflow-designer</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>DESIGNER_ROLE_ID</code>:triangular_flag_on_post:</td>
+                                            <td>forms-flow-forms administrator role Id</td>
+                                            <td>eg. 5ee090afee045f1597609cae</td>
+                                            <td><code>must get the administrator role Id value from Prerequisites step 1 above..</code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>ANONYMOUS_ID</code></td>
+                                            <td>forms-flow-forms anonymous role Id</td>
+                                            <td>eg. 5ee090b0ee045f28ad609cb0</td>
+                                            <td><code>must get the anonymous role Id value from Prerequisites step 1 above..</code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>USER_RESOURCE_ID</code>:triangular_flag_on_post:</td>
+                                            <td>User forms form-Id</td>
+                                            <td>eg. 5ee090b0ee045f51c5609cb1</td>
+                                            <td><code>must get the value from the step 1 above..</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <h3 id="running-the-application">Running the application</h3>
+                                <ul>
+                                    <li>forms-flow-web service uses port 5000, make sure the port is available.</li>
+                                    <li><code>cd {Your Directory}/forms-flow-ai/forms-flow-web</code></li>
+                                    <li>Run <code>docker-compose up -d</code> to start.</li>
+                                </ul>
+                                <p><em>NOTE: Use --build command with the start command to reflect any future
+                                        <strong>.env</strong> changes eg :
+                                        <code>docker-compose up --build -d</code></em></p>
+                                <h4 id="to-stop-the-application">To stop the application</h4>
+                                <ul>
+                                    <li>Run <code>docker-compose stop</code> to stop.</li>
+                                </ul>
+                                <h3 id="health-check">Health Check</h3>
+                                <ul>
+                                    <li>The application should be up and available for use at port defaulted to 3000 in
+                                        <a href="http://localhost:3000/">http://localhost:3000/</a>
+                                    </li>
+                                    <li>Default user credentials are provided <a
+                                            href="../forms-flow-idm/keycloak/README.md#formsflow-ai-user-credentials">here</a>.
+                                    </li>
+                                </ul>
+                                <h3 id="how-to-create-your-first-form">How to Create Your First Form</h3>
+                                <ul>
+                                    <li>Login to <strong><a
+                                                href="http://localhost:3000/">http://localhost:3000/</a></strong> using
+                                        valid <a
+                                            href="../forms-flow-idm/keycloak/README.md#default-user-credentials">designer</a>
+                                        credentials</li>
+                                    <li>Navigate to menu <strong>Forms</strong></li>
+                                    <li>Click the button <strong>+ Create Form</strong> to launch the form designer
+                                        studio.</li>
+                                    <li>Design the form using <strong>Drag and Drop</strong> of components from LHS to
+                                        RHS and publish by clicking the button <strong>Create Form</strong>.</li>
+                                </ul>
+                                <h3 id="logo-change">Logo change</h3>
+                                <ul>
+                                    <li>Default Logo can be changed to the users logo by replacing the logo.svg in
+                                        public folder of forms-flow-web.
+                                        The default width and height of the logo is 50 and 55 also the image format is
+                                        svg</li>
+                                    <li>The icon can also be replaced to the users icon by replacing the favicon in the
+                                        public folder of forms-flow-web</li>
+                                </ul>
+                                <h3 id="code-coverage">Code coverage</h3>
+                                <ul>
+                                    <li>Test cases for the files are provided at forms-flow-web using <a
+                                            href="https://testing-library.com/docs/ecosystem-jest-dom/">testing-library/jest-dom</a>
+                                        , <a
+                                            href="https://testing-library.com/docs/react-testing-library/intro/">testing-library/react</a>
+                                        , <a href="https://mswjs.io/">msw</a> and <a
+                                            href="https://www.npmjs.com/package/redux-mock-store">redux-mock-store</a>.
+                                    </li>
+                                    <li><code>cd {Your Directory}/forms-flow-ai/forms-flow-web</code>.</li>
+                                    <li>Test files are available at
+                                        <code>forms-flow-ai\forms-flow-web\src\_tests_</code>
+                                    </li>
+                                    <li>Run the command <code>npm run coverage</code> to get the total coverage and for
+                                        individual files run <code>npm test --&lt;test file name&gt;</code>.</li>
+                                    <li>Total code coverage can obtain by opening
+                                        <code>forms-flow-ai\forms-flow-web\coverage\lcov-report\index.html</code> with
+                                        browser.
+                                    </li>
+                                </ul>
+                                <h2 id="forms-flow-web-events">forms-flow-web Events</h2>
+                                <blockquote>
+                                    <p>This section elaborates events used in forms-flow-web.
+                                        The Form.io renderer uses the <a
+                                            href="https://github.com/primus/eventemitter3">EventEmitter3</a> library to
+                                        manage all of the event handling that occurs within the renderer.
+                                        Custom events are triggered for button components and are fired when they are
+                                        clicked. More details are <a
+                                            href="https://docs.form.io/developers/form-renderer#form-events">here</a>
+                                    </p>
+                                    <h2 id="events">Events</h2>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Description &nbsp;&nbsp;&nbsp;</th>
+                                                <th>Arguments &nbsp;&nbsp;&nbsp;</th>
+                                                <th>Example</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><code>reloadTasks</code></td>
+                                                <td>
+                                                    <li>Used in the task page</li>
+                                                    <li>Triggered for button components</li>
+                                                    <li>Refresh the Task List and remove the selected task from RHS.
+                                                    </li>
+                                                </td>
+                                                <td>
+                                                    <li> type:The configured event type </li>
+                                                </td>
+                                                <td>form.emit(&#39;customEvent&#39;, { type: &quot;reloadTasks&quot;});
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>reloadCurrentTask</code></td>
+                                                <td>
+                                                    <li>Used in the task page</li>
+                                                    <li>Triggered for button components</li>
+                                                    <li>Refreshes the current task selected</li>
+                                                </td>
+                                                <td>
+                                                    <li>type:The configured event type</li>
+                                                </td>
+                                                <td>form.emit(&#39;customEvent&#39;, { type:
+                                                    &quot;reloadCurrentTask&quot;});</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>customSubmitDone</code></td>
+                                                <td>
+                                                    <li>Used in the create form page</li>
+                                                    <li>Triggered for button components</li>
+                                                    <li>Similar to submit button to implement custom logic</li>
+                                                </td>
+                                                <td>
+                                                    <li>type:The configured event type</li>
+                                                </td>
+                                                <td>form.emit(&#39;customEvent&#39;, {type:
+                                                    &quot;customSubmitDone&quot;});</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>actionComplete</code></td>
+                                                <td>
+                                                    <li>Triggered for button components</li>
+                                                </td>
+                                                <td>
+                                                    <li>type:The configured event type</li>
+                                                    <li>component:The component json</li>
+                                                    <li>actionType: Form submit action values</li>
+                                                </td>
+                                                <td>form.emit(&#39;customEvent&#39;, { type: &quot;actionComplete&quot;,
+                                                    component: component, actionType: actionType });</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>cancelSubmission</code></td>
+                                                <td>
+                                                    <li>Used in the create form page</li>
+                                                    <li>Triggered for button components</li>
+                                                    <li>Used for Canceling current submission and goin back to Form List
+                                                        Page</li>
+                                                </td>
+                                                <td>
+                                                    <li>type:The configured event type</li>
+                                                </td>
+                                                <td>form.emit(&#39;customEvent&#39;, {type:
+                                                    &quot;cancelSubmission&quot;});</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </blockquote>
+
+                            </div>
+                            
+                        </section><br><br>
+                        <a href="architecture.html" class="previous">&laquo; Previous</a>
+                        <a href="UsageInstructions.html" class="next">Next &raquo;</a>
+
+            </div>
+            <!--//docs-code-block-->
+
+
+            </header>
+
+
+            </article>
+
+
+
+
+            <!-- Javascript -->
+            <script src="assets/plugins/popper.min.js"></script>
+            <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+            <!-- Page Specific JS -->
+            <script src="assets/plugins/smoothscroll.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+            <script src="assets/js/highlight-custom.js"></script>
+            <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+            <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+            <script src="assets/js/docs.js"></script>
+
+</body>
+
+</html>

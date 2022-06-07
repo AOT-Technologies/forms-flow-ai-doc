@@ -185,6 +185,58 @@ ul ol {
   margin-bottom: 0;
 }
 
+
+
+
+
+
+
+
+/* Added for sidebar dropdown */
+
+details {
+  
+  
+  width: 300px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  color: #566573;
+}
+summary {
+  padding: 10px;
+}
+summary:focus {
+  outline: none;
+}
+details ul {
+  
+  margin: 0;
+  
+  padding: 10px;
+  border-radius: 0 0 4px 4px;
+}
+
+details li {
+  margin-left: 30px;
+  margin-top: 10px;
+  color: #566573;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 dt {
   font-weight: 700;
 }

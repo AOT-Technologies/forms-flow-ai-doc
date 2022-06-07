@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Forms flow ai documentation">
+    <meta name="author" content="formsflow.ai">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Welcome to formsflow.ai</title>
+
+    <!-- Google Font -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+    <link id="theme-style" rel="stylesheet" href="assets/css/atom-one-dark.min.css">
+
+
+
+</head>
+
+<body>
+
+    <header class="header fixed-top">
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+                        type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2"
+                                src="assets/images/formsflow.ai-logo.svg" alt="logo"><span
+                                class="logo-text">formsflow.ai</span></a></div>
+                </div>
+                <!--//docs-logo-wrapper-->
+                <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+                    <div class="top-search-box d-none d-lg-flex">
+                        <form class="search-form">
+                            <input type="text" placeholder="Search the docs..." name="search"
+                                class="form-control search-input">
+                            <button type="submit" class="btn search-btn" value="Search"><i
+                                    class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+
+                    <ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+                        <li class="list-inline-item"><a href="https://github.com/AOT-Technologies/forms-flow-ai"><i
+                                    class="fab fa-github fa-fw"></i></a></li>
+                    </ul>
+                    <!--//social-list-->
+                    <a href="https://github.com/AOT-Technologies/forms-flow-ai"
+                        class="btn btn-primary d-none d-lg-flex">Download</a>
+                </div>
+                <!--//docs-top-utilities-->
+            </div>
+            <!--//container-->
+        </div>
+        <!--//branding-->
+    </header>
+    <!--//header-->
+
+    <div class="docs-wrapper">
+        <div id="docs-sidebar" class="docs-sidebar">
+            <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+                    <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+                    <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <nav id="docs-nav" class="docs-nav navbar">
+                <ul class="section-items list-unstyled nav flex-column pb-3">
+                    <!-- main heading -->
+                    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Getting
+                            started</a></li>
+                    <li class="nav-item"><a href="index.html" style="color:  #566573">Introduction</a></li>
+                    <li class="nav-item"><a href="architecture.html" style="color:  #566573">System Architecture</a>
+                    </li>
+                    <li class="nav-item"><a class="current" href="aboutproject.html" style="color:  #566573">About The Project</a>
+					</li>
+					<li class="nav-item"><a href="UsageInstructions.html" style="color:  #566573">Usage-instructions</a>
+					</li>
+					<!-- main heading -->
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span
+								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Installation</a>
+					</li>
+					<li class="nav-item"><a href="quick installation.html" style="color:  #566573">Quick
+							Installation</a></li>
+
+					<details>
+								<summary><a href="download and installation.html" style="color:  #566573">Install Using Containers</a></summary>
+								<ul>
+								  <li class="nav-item"><a href="keycloak setup.html" style="color:  #566573">Keycloak</a></li>
+								  <li class="nav-item"><a href="Form Management Platform.html" style="color:  #566573">Form Management Platform</a></li>
+								  <li class="nav-item"><a href="Analytics Engine.html" style="color:  #566573">Analytics Engine</a></li>
+								  <li class="nav-item"><a href="formsflow.ai Web Application.html" style="color:  #566573">Formsflow.ai Web Application</a></li>
+								  <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">Formsflow.ai API</a></li>
+								  <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">Workflow Engine</a></li>
+								</ul>
+							  </details>
+					
+					<li class="nav-item"><a href="Openshift.html" style="color:  #566573">Openshift
+							Installation</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span
+								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Features</a></li>
+							
+					
+					<li class="nav-item"><a href="Internationalization.html"
+							style="color:  #566573">Internationalization</a></li>
+					<li class="nav-item"><a href="Listeners.html" style="color:  #566573">Camunda Listeners</a></li>
+					
+					<li class="nav-item"><a href="Taskvariables.html" style="color:  #566573">Task
+							variable workflow</a></li>
+					<li class="nav-item"><a href="Webevents.html" style="color:  #566573">Web Events</a></li>
+					<li class="nav-item"><a href="AnonymousForm.html" style="color:  #566573">Anonymous Forms</a></li>
+					<li class="nav-item"><a href="AdminPageDashboard.html" style="color:  #566573">AdminPage
+						Dashboard</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
+						class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Multi Tenancy</a></li>
+						<li class="nav-item"><a href="Tenant-based task assignment.html"
+							style="color:  #566573">Tenant-based task assignment</a></li>
+			
+                    <!-- main heading -->
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-1">Section Item 9.1</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-2">Section Item 9.2</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-3">Section Item 9.3</a></li>
+                </ul>
+
+            </nav>
+            <!--//docs-nav-->
+        </div>
+        <!--//docs-sidebar-->
+        <div class="docs-content">
+            <div class="container">
+                <article class="docs-article" id="section-1">
+                    <!-- main heading content -->
+                    <header class="docs-header">
+
+
+
+                        <br>
+
+                        <section>
+                            <div>
+                                <h1 id="formsflow-ai-api">formsflow.ai API</h1>
+                                <p><a href="https://github.com/AOT-Technologies/forms-flow-ai-dev/actions"><img
+                                            src="https://github.com/AOT-Technologies/forms-flow-ai-dev/actions/workflows/forms-flow-api-ci.yml/badge.svg?branch=develop"
+                                            alt="FormsFlow API CI"></a>
+                                    <img src="https://img.shields.io/badge/python-3.9-blue" alt="Python"> <img
+                                        src="https://img.shields.io/badge/Flask-1.1.4-blue" alt="Flask"> <img
+                                        src="https://img.shields.io/badge/postgres-11.0-blue" alt="postgres">
+                                    <a href="https://pycqa.github.io/isort/"><img
+                                            src="https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&amp;labelColor=ef8336"
+                                            alt="Imports: isort"></a> <a href="https://github.com/psf/black"><img
+                                            src="https://img.shields.io/badge/code%20style-black-000000.svg"
+                                            alt="Code style: black"></a><a href="https://github.com/PyCQA/pylint"><img
+                                            src="https://img.shields.io/badge/linting-pylint-yellowgreen"
+                                            alt="linting: pylint"></a>
+                                </p>
+                                <p><strong>formsflow.ai</strong> has built this adaptive tier for correlating form
+                                    management, BPM and analytics together.</p>
+                                <p>The goal of the REST API is to provide access to all relevant interfaces of
+                                    the system. It is built using Python :snake: .</p>
+
+                                <h2 id="prerequisites">Prerequisites</h2>
+                                <ul>
+                                    <li>For docker based installation <a href="https://docker.com">Docker</a> need to be
+                                        installed.</li>
+                                    <li>Admin access to <a href="../forms-flow-idm/keycloak">Keycloak</a> server and
+                                        ensure audience(camunda-rest-api) is setup in Keycloak-bpm server.</li>
+                                </ul>
+                                <h2 id="solution-setup">Solution Setup</h2>
+                                <h3 id="installation">Installation</h3>
+                                <p>If you are interested in contributing to the project, you can install through docker
+                                    or locally.</p>
+                                <p>It&#39;s recommended to download dev-packages to follow Python coding standards for
+                                    project like PEP8 if you are interested in contributing to project.
+                                    You installing dev-packages using pip as follows:</p>
+                                <p><code>python3 -m pip install -r requirements/dev.txt</code></p>
+                                <h3 id="keycloak-setup">Keycloak Setup</h3>
+                                <p>No specific client creation is required. Audience has been added for clients
+                                    <strong>forms-flow-web</strong> and <strong>forms-flow-bpm</strong>.
+                                </p>
+                                <h3 id="environment-configuration">Environment Configuration</h3>
+                                <ul>
+                                    <li>Make sure you have a Docker machine up and running.</li>
+                                    <li>Make sure your current working directory is
+                                        &quot;forms-flow-ai/forms-flow-api&quot;.</li>
+                                    <li>Rename the file <a href="./sample.env">sample.env</a> to <strong>.env</strong>.
+                                    </li>
+                                    <li>Modify the environment variables in the newly created <strong>.env</strong> file
+                                        if needed. Environment variables are given in the table below,</li>
+                                    <li><strong>NOTE : {your-ip-address} given inside the .env file should be changed to
+                                            your host system IP address. Please take special care to identify the
+                                            correct IP address if your system has multiple network cards</strong></li>
+                                </ul>
+                                <blockquote>
+                                    <p>:information_source: Variables with trailing :triangular_flag_on_post: in below
+                                        table should be updated in the .env file</p>
+                                </blockquote>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Variable name</th>
+                                            <th>Meaning</th>
+                                            <th>Possible values</th>
+                                            <th>Default value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>INSIGHT_API_URL</code>:triangular_flag_on_post:</td>
+                                            <td>The forms-flow-analytics Api base end-point</td>
+                                            <td></td>
+                                            <td><a
+                                                    href="http://{your-ip-address}:7000">http://{your-ip-address}:7000</a>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>INSIGHT_API_KEY</code> :triangular_flag_on_post:</td>
+                                            <td>The forms-flow-analytics admin API key</td>
+                                            <td></td>
+                                            <td><code>Get the api key from forms-flow-analytics (REDASH) by following the &#39;Get the Redash API Key&#39; steps from [here](../forms-flow-analytics/README.md#get-the-redash-api-key)</code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>FORMSFLOW_API_DB_USER</code></td>
+                                            <td>formsflow database postgres user</td>
+                                            <td>Used on installation to create the database.Choose your own</td>
+                                            <td><code>postgres</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>FORMSFLOW_API_DB_PASSWORD</code></td>
+                                            <td>formsflow database postgres password</td>
+                                            <td>Used on installation to create the database.Choose your own</td>
+                                            <td><code>changeme</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>FORMSFLOW_API_DB_NAME</code></td>
+                                            <td>formsflow database name</td>
+                                            <td>Used on installation to create the database.Choose your own</td>
+                                            <td><code>FORMSFLOW_API_DB</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>FORMSFLOW_API_DB_URL</code></td>
+                                            <td>JDBC DB Connection URL for formsflow</td>
+                                            <td></td>
+                                            <td><code>postgresql://postgres:changeme@forms-flow-webapi-db:5432/webapi</code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>KEYCLOAK_URL</code>:triangular_flag_on_post:</td>
+                                            <td>URL to your Keycloak server</td>
+                                            <td></td>
+                                            <td><code>http://{your-ip-address}:8080</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>KEYCLOAK_URL_REALM</code></td>
+                                            <td>The Keycloak realm to use</td>
+                                            <td>eg. forms-flow-ai</td>
+                                            <td><code>forms-flow-ai</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>KEYCLOAK_BPM_CLIENT_ID</code></td>
+                                            <td>Client ID for Camunda to register with Keycloak</td>
+                                            <td>eg. forms-flow-bpm</td>
+                                            <td><code>forms-flow-bpm</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>KEYCLOAK_BPM_CLIENT_SECRET</code></td>
+                                            <td>Client Secret of Camunda client in realm</td>
+                                            <td>eg. 22ce6557-6b86-4cf4-ac3b-42338c7b1ac12</td>
+                                            <td><code>e4bdbd25-1467-4f7f-b993-bc4b1944c943</code>
+                                                <br><br><code>To generate a new keycloak client seceret by yourself follow the steps from</code>
+                                                <a
+                                                    href="../forms-flow-idm/keycloak/README.md#getting-the-client-secret">here</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>KEYCLOAK_WEB_CLIENT_ID</code></td>
+                                            <td>Client ID for formsflow to register with Keycloak</td>
+                                            <td>eg. forms-flow-web</td>
+                                            <td><code>forms-flow-web</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>CAMUNDA_API_URL</code>:triangular_flag_on_post:</td>
+                                            <td>Camunda Rest API URL</td>
+                                            <td></td>
+                                            <td><code>http://{your-ip-address}:8000/camunda</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>FORMSFLOW_API_URL</code>:triangular_flag_on_post:</td>
+                                            <td>formsflow.ai Rest API URL</td>
+                                            <td></td>
+                                            <td><code>http://{your-ip-address}:5000</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>FORMSFLOW_API_CORS_ORIGINS</code></td>
+                                            <td>formsflow.ai Rest API allowed origins, for allowing multiple origins you
+                                                can separate host address using a comma seperated string or use * to
+                                                allow all origins</td>
+                                            <td>eg:<code>host1, host2, host3</code></td>
+                                            <td><code>*</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p><strong>NOTE : Default realm is <code>forms-flow-ai</code></strong></p>
+                                <h3 id="running-the-application">Running the Application</h3>
+                                <ul>
+                                    <li>forms-flow-api service uses port 5000, make sure the port is available.</li>
+                                    <li>
+                                        <p><code>cd {Your Directory}/forms-flow-ai/forms-flow-api</code></p>
+                                    </li>
+                                    <li>
+                                        <p>For Linux,</p>
+                                        <ul>
+                                            <li>Run <code>docker-compose -f docker-compose-linux.yml up -d</code> to
+                                                start.</li>
+                                        </ul>
+                                    </li>
+                                    <li>For Windows,<ul>
+                                            <li>Run <code>docker-compose -f docker-compose-windows.yml up -d</code> to
+                                                start.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <p><em>NOTE: Use --build command with the start command to reflect any future
+                                        <strong>.env</strong> changes eg :
+                                        <code>docker-compose -f docker-compose-windows.yml up --build -d</code></em></p>
+                                <h4 id="to-stop-the-application">To Stop the Application</h4>
+                                <ul>
+                                    <li>For Linux,<ul>
+                                            <li>Run <code>docker-compose -f docker-compose-linux.yml stop</code> to
+                                                stop.</li>
+                                        </ul>
+                                    </li>
+                                    <li>For Windows,<ul>
+                                            <li>Run <code>docker-compose -f docker-compose-windows.yml stop</code> to
+                                                stop.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <h3 id="verify-the-application-status">Verify the Application Status</h3>
+                                <p> The application should be up and available for use at port defaulted to 5000 in <a
+                                        href="http://localhost:5000/">http://localhost:5000/</a></p>
+                                <ul>
+                                    <li>Access the <strong>/checkpoint</strong> endpoint for a Health Check on API to
+                                        see it&#39;s up and running.</li>
+                                </ul>
+                                <pre><code>GET <span class="hljs-string">http:</span><span class="hljs-comment">//localhost:5000/checkpoint</span>
+
+RESPONSE
+
+{
+    <span class="hljs-string">"message"</span>: <span class="hljs-string">"Welcome to formsflow.ai API"</span>
+}
+</code></pre>
+                                <ul>
+                                    <li>Get the access token</li>
+                                </ul>
+                                <pre><code><span class="hljs-class">POST </span>{Keycloak URL}<span class="hljs-meta-keyword">/auth/</span>realms/<span class="hljs-params">&lt;realm&gt;</span><span class="hljs-meta-keyword">/protocol/</span>openid-connect/token
+<span class="hljs-symbol">
+Body:</span>
+<span class="hljs-symbol">grant_type:</span> client_credentials
+<span class="hljs-symbol">client_secret:</span> {set client token}
+<span class="hljs-symbol">client_id:</span> forms-flow-bpm
+<span class="hljs-symbol">
+Headers:</span>
+Content-Type : application/x-www-form-urlencoded
+</code></pre>
+                                <ul>
+                                    <li>Access the <strong>/task</strong> endpoint and verify response. Ensure Bearer
+                                        token is passed along</li>
+                                </ul>
+                                <pre><code>GET http://localhost:<span class="hljs-number">5000</span>/<span class="hljs-keyword">task</span>
+
+Headers:
+Content-<span class="hljs-keyword">Type</span> <span class="hljs-type">: </span>application/json
+Authorization: Bearer {<span class="hljs-keyword">access</span> token}
+</code></pre>
+                                <h2 id="api-documentation">API Documentation</h2>
+                                <p>The API docs can be accessed by checking the <strong>/</strong> root endpoint.</p>
+                                <p><img src="https://user-images.githubusercontent.com/70306694/130730233-cf443a84-7716-4be6-b196-cb340509c495.png"
+                                        alt="image" height="500" width="1000"></p>
+                                <p>Further documentation and associated postman collection for API endpoint
+                                    can found in the <a href="./docs">docs folder</a></p>
+                                <h2 id="unit-testing">Unit Testing</h2>
+                                <p>We have implemented unit tests with pytest.</p>
+                                <ul>
+                                    <li>Test cases are provided in the <a href="./tests">tests folder</a>.</li>
+                                    <li>Run the tests by ensuring appropriate test environment variables are
+                                        setup in the <a href=".sample.env">.env file</a>.</li>
+                                    <li>Using the make command, run the tests by running <code>make test</code>.</li>
+                                </ul>
+                                <p>Things to note when writing tests:</p>
+                                <ul>
+                                    <li>Isolated: Each test should be an introvert, working in their own isolated
+                                        bubble. You should never have to think about what other tests have put in the
+                                        database.</li>
+                                    <li>Tests functions should contain always <code>app, client, session</code></li>
+                                </ul>
+                                <h4 id="references-for-testing-in-python">References for Testing in Python</h4>
+                                <ul>
+                                    <li><a href="https://docs.pytest.org/en/latest/getting-started.html">pytest</a></li>
+                                    <li><a href="https://realpython.com/pytest-python-testing/">Real Python Unit Testing
+                                            with Pytest</a></li>
+                                    <li><a href="http://alexmic.net/flask-sqlalchemy-pytest/">More about similar test
+                                            config we have used</a></li>
+                                </ul>
+
+                            </div>
+                        </section><br><br>
+                        <a href="architecture.html" class="previous">&laquo; Previous</a>
+                        <a href="UsageInstructions.html" class="next">Next &raquo;</a>
+
+            </div>
+            <!--//docs-code-block-->
+
+
+            </header>
+
+
+            </article>
+
+
+
+
+            <!-- Javascript -->
+            <script src="assets/plugins/popper.min.js"></script>
+            <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+            <!-- Page Specific JS -->
+            <script src="assets/plugins/smoothscroll.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+            <script src="assets/js/highlight-custom.js"></script>
+            <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+            <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+            <script src="assets/js/docs.js"></script>
+
+</body>
+
+</html>

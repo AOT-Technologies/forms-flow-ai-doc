@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Forms flow ai documentation">
+    <meta name="author" content="formsflow.ai">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Welcome to formsflow.ai</title>
+
+    <!-- Google Font -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+    <link id="theme-style" rel="stylesheet" href="assets/css/atom-one-dark.min.css">
+
+
+
+</head>
+
+<body>
+
+    <header class="header fixed-top">
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+                        type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2"
+                                src="assets/images/formsflow.ai-logo.svg" alt="logo"><span
+                                class="logo-text">formsflow.ai</span></a></div>
+                </div>
+                <!--//docs-logo-wrapper-->
+                <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+                    <div class="top-search-box d-none d-lg-flex">
+                        <form class="search-form">
+                            <input type="text" placeholder="Search the docs..." name="search"
+                                class="form-control search-input">
+                            <button type="submit" class="btn search-btn" value="Search"><i
+                                    class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+
+                    <ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+                        <li class="list-inline-item"><a href="https://github.com/AOT-Technologies/forms-flow-ai"><i
+                                    class="fab fa-github fa-fw"></i></a></li>
+                    </ul>
+                    <!--//social-list-->
+                    <a href="https://github.com/AOT-Technologies/forms-flow-ai"
+                        class="btn btn-primary d-none d-lg-flex">Download</a>
+                </div>
+                <!--//docs-top-utilities-->
+            </div>
+            <!--//container-->
+        </div>
+        <!--//branding-->
+    </header>
+    <!--//header-->
+
+    <div class="docs-wrapper">
+        <div id="docs-sidebar" class="docs-sidebar">
+            <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+                    <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+                    <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <nav id="docs-nav" class="docs-nav navbar">
+                <ul class="section-items list-unstyled nav flex-column pb-3">
+                    <!-- main heading -->
+                    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Getting
+                            started</a></li>
+                    <li class="nav-item"><a href="index.html" style="color:  #566573">Introduction</a></li>
+                    <li class="nav-item"><a href="architecture.html" style="color:  #566573">System Architecture</a>
+                    </li>
+                    <li class="nav-item"><a href="aboutproject.html" style="color:  #566573">About The Project</a>
+					</li>
+					<li class="nav-item"><a href="UsageInstructions.html" style="color:  #566573">Usage-instructions</a>
+					</li>
+					<!-- main heading -->
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span
+								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Installation</a>
+					</li>
+					<li class="nav-item"><a href="quick installation.html" style="color:  #566573">Quick
+							Installation</a></li>
+
+					<details>
+								<summary><a href="download and installation.html" style="color:  #566573">Install Using Containers</a></summary>
+								<ul>
+								  <li class="nav-item"><a href="keycloak setup.html" style="color:  #566573">Keycloak</a></li>
+								  <li class="nav-item"><a href="Form Management Platform.html" style="color:  #566573">Form Management Platform</a></li>
+								  <li class="nav-item"><a href="Analytics Engine.html" style="color:  #566573">Analytics Engine</a></li>
+								  <li class="nav-item"><a href="formsflow.ai Web Application.html" style="color:  #566573">Formsflow.ai Web Application</a></li>
+								  <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">Formsflow.ai API</a></li>
+								  <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">Workflow Engine</a></li>
+								</ul>
+							  </details>
+								
+					
+					<li class="nav-item"><a href="Openshift.html" style="color:  #566573">Openshift
+							Installation</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span
+								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Features</a></li>
+							
+					
+					<li class="nav-item"><a href="Internationalization.html"
+							style="color:  #566573">Internationalization</a></li>
+					<li class="nav-item"><a href="Listeners.html" style="color:  #566573">Camunda Listeners</a></li>
+					
+					<li class="nav-item"><a href="Taskvariables.html" style="color:  #566573">Task
+							variable workflow</a></li>
+					<li class="nav-item"><a href="Webevents.html" style="color:  #566573">Web Events</a></li>
+					<li class="nav-item"><a href="AnonymousForm.html" style="color:  #566573">Anonymous Forms</a></li>
+					<li class="nav-item"><a href="AdminPageDashboard.html" style="color:  #566573">AdminPage
+						Dashboard</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
+						class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Multi Tenancy</a></li>
+						<li class="nav-item"><a href="Tenant-based task assignment.html"
+							style="color:  #566573">Tenant-based task assignment</a></li>
+			
+                    <!-- main heading -->
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-1">Section Item 9.1</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-2">Section Item 9.2</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-3">Section Item 9.3</a></li>
+                </ul>
+
+            </nav>
+            <!--//docs-nav-->
+        </div>
+        <!--//docs-sidebar-->
+        <div class="docs-content">
+            <div class="container">
+                <article class="docs-article" id="section-1">
+                    <!-- main heading content -->
+                    <header class="docs-header">
+                        <section>
+                            <div>
+                                <h1 id="workflow-engine">Workflow Engine</h1>
+                                <p><a href="https://github.com/AOT-Technologies/forms-flow-ai-dev/actions"><img
+                                            src="https://github.com/AOT-Technologies/forms-flow-ai-dev/actions/workflows/forms-flow-api-ci.yml/badge.svg?branch=develop"
+                                            alt="FormsFlow BPM CI"></a>
+                                    <img src="https://img.shields.io/badge/Camunda-7.15.0-blue" alt="Camunda"> <img
+                                        src="https://img.shields.io/badge/Spring_Boot-2.4.8.RELEASE-blue"
+                                        alt="Spring Boot"> <img src="https://img.shields.io/badge/postgres-latest-blue"
+                                        alt="postgres"><br><strong>formsflow.ai</strong> leverages Camunda for workflow
+                                    and decision automation.
+                                </p>
+                                <p>To know more about Camunda, visit <a
+                                        href="https://camunda.com/">https://camunda.com/</a>.</p>
+
+                                <h2 id="prerequisites">Prerequisites</h2>
+                                <ul>
+                                    <li>For docker based installation <a href="https://docker.com">Docker</a> need to be
+                                        installed.</li>
+                                    <li>Admin access to <a href="../forms-flow-idm/keycloak">Keycloak</a> server.</li>
+                                </ul>
+                                <h2 id="solution-setup">Solution Setup</h2>
+                                <h3 id="keycloak-configuration">Keycloak Configuration</h3>
+                                <p><strong><em>Skip this step if you are already having a setup ready.</em></strong></p>
+                                <ol>
+                                    <li>Login to KeyCloak Realm with admin privileges</li>
+                                    <li>For client <strong>forms-flow-bpm</strong> creation, follow the instructions
+                                        given on <a href="../forms-flow-idm/keycloak/README.md">link</a> </li>
+                                </ol>
+                                <h3 id="installation">Installation</h3>
+                                <ul>
+                                    <li>Make sure you have a Docker machine up and running.</li>
+                                    <li>Make sure your current working directory is
+                                        &quot;forms-flow-ai/forms-flow-bpm&quot;.</li>
+                                    <li>Rename the file <a href="./sample.env">sample.env</a> to <strong>.env</strong>.
+                                    </li>
+                                    <li>Modify the environment variables in the newly created <strong>.env</strong> file
+                                        if needed. Environment variables are given in the table below,</li>
+                                    <li><strong>NOTE : {your-ip-address} given inside the .env file should be changed to
+                                            your host system IP address. Please take special care to identify the
+                                            correct IP address if your system has multiple network cards</strong></li>
+                                </ul>
+                                <blockquote>
+                                    <p>:information_source: Variables with trailing :triangular_flag_on_post: in below
+                                        table should be updated in the .env file</p>
+                                </blockquote>
+                                <h4 id="keycloak-integration">Keycloak Integration</h4>
+                                <hr>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Variable name</th>
+                                            <th>Meaning</th>
+                                            <th>Possible values</th>
+                                            <th>Default value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> <code>KEYCLOAK_URL</code>:triangular_flag_on_post:</td>
+                                            <td>URL to your Keycloak server</td>
+                                            <td></td>
+                                            <td><code>http://{your-ip-address}:8080</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>KEYCLOAK_URL_REALM</code></td>
+                                            <td>The Keycloak realm to use</td>
+                                            <td>eg. forms-flow-ai</td>
+                                            <td><code>forms-flow-ai</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>KEYCLOAK_BPM_CLIENT_ID</code></td>
+                                            <td>Your Keycloak Client ID within the realm</td>
+                                            <td>eg. forms-flow-bpm</td>
+                                            <td><code>forms-flow-bpm</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>KEYCLOAK_BPM_CLIENT_SECRET</code>:triangular_flag_on_post:</td>
+                                            <td>The secret for your Keycloak Client Id</td>
+                                            <td>eg. 22ce6557-6b86-4cf4-ac3b-42338c7b1ac12</td>
+                                            <td><code>must be set to your Keycloak client secret</code>go to <a
+                                                    href="../forms-flow-idm/keycloak/README.md#get-the-keycloak-client-secret">link</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>KEYCLOAK_WEB_CLIENTID</code></td>
+                                            <td>The Keycloak client id used by forms-flow-web, used only if Client based
+                                                authorization is enabled in keycloak.</td>
+                                            <td>eg. forms-flow-web</td>
+                                            <td><code>forms-flow-web</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>KEYCLOAK_ENABLE_CLIENT_AUTH</code></td>
+                                            <td>Boolean flag to enable client based authorization in keycloak.</td>
+                                            <td>eg. true</td>
+                                            <td>false</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <h5 id="camunda_jdbc-dedicated-camunda-database-prefixed-with-camunda_-">CAMUNDA<em>JDBC
+                                        : Dedicated camunda database (Prefixed with CAMUNDA</em>).</h5>
+                                <hr>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Variable name</th>
+                                            <th>Meaning</th>
+                                            <th>Possible values</th>
+                                            <th>Default value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> <code>CAMUNDA_JDBC_URL</code></td>
+                                            <td>Postgres JDBC DB Connection URL</td>
+                                            <td>Used on installation to create the database. Choose your own</td>
+                                            <td><code>jdbc:postgresql://forms-flow-bpm-db:5432/formsflow-bpm</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>CAMUNDA_JDBC_DRIVER</code></td>
+                                            <td>Postgres JDBC Database Driver</td>
+                                            <td></td>
+                                            <td><code>org.postgresql.Driver</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>CAMUNDA_POSTGRES_USER</code></td>
+                                            <td>Postgres Database Username</td>
+                                            <td>Used on installation to create the database. Choose your own</td>
+                                            <td><code>admin</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>CAMUNDA_POSTGRES_PASSWORD</code></td>
+                                            <td>Postgres Database Password</td>
+                                            <td>Used on installation to create the database. Choose your own</td>
+                                            <td><code>changeme</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>CAMUNDA_JDBC_DB_NAME</code></td>
+                                            <td>Postgres Database Name</td>
+                                            <td>Used on installation to create the database. Choose your own</td>
+                                            <td><code>formsflow-bpm</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>CAMUNDA_HIKARI_CONN_TIMEOUT</code></td>
+                                            <td>Hikari Connection optimization setting</td>
+                                            <td></td>
+                                            <td><code>30000</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>CAMUNDA_HIKARI_IDLE_TIMEOUT</code></td>
+                                            <td>Hikari Connection optimization setting</td>
+                                            <td></td>
+                                            <td><code>600000</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>CAMUNDA_HIKARI_MAX_POOLSIZE</code></td>
+                                            <td>Hikari Connection optimization setting</td>
+                                            <td></td>
+                                            <td><code>10</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>CAMUNDA_HIKARI_VALID_TIMEOUT</code></td>
+                                            <td>Hikari Connection optimization setting</td>
+                                            <td></td>
+                                            <td><code>5000</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <h4 id="camunda-system-tuning">Camunda System Tuning</h4>
+                                <hr>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Variable name</th>
+                                            <th>Meaning</th>
+                                            <th>Possible values</th>
+                                            <th>Default value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> <code>CAMUNDA_JOB_CORE_POOL_SIZE</code></td>
+                                            <td>Job-Executor Configuration Properties</td>
+                                            <td></td>
+                                            <td><code>10</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>CAMUNDA_JOB_MAX_POOL_SIZE</code></td>
+                                            <td>Job-Executor Configuration Properties</td>
+                                            <td></td>
+                                            <td><code>20</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>CAMUNDA_JOB_QUEUE_SIZE</code></td>
+                                            <td>Job-Executor Configuration Properties</td>
+                                            <td></td>
+                                            <td><code>10</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>CAMUNDA_JOB_LOCK_TIME_MILLIS</code></td>
+                                            <td>Job-Executor Configuration Properties</td>
+                                            <td></td>
+                                            <td><code>300000</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>CAMUNDA_JOB_MAXJOBS_PER_ACQUISITION</code></td>
+                                            <td>Job-Executor Configuration Properties</td>
+                                            <td></td>
+                                            <td><code>10</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>CAMUNDA_JOB_WAIT_TIME_MILLIS</code></td>
+                                            <td>Job-Executor Configuration Properties</td>
+                                            <td></td>
+                                            <td><code>5000</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>CAMUNDA_JOB_MAX_WAIT</code></td>
+                                            <td>Job-Executor Configuration Properties</td>
+                                            <td></td>
+                                            <td><code>60000</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>CAMUNDA_METRICS_FLAG</code></td>
+                                            <td>Job-Executor Configuration Properties</td>
+                                            <td></td>
+                                            <td><code>false</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <h4 id="camunda-formsflow-ai-integration-settings">Camunda formsflow.ai Integration
+                                    Settings</h4>
+                                <hr>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Variable name</th>
+                                            <th>Meaning</th>
+                                            <th>Possible values</th>
+                                            <th>Default value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> <code>FORMSFLOW_API_URL</code>:triangular_flag_on_post:</td>
+                                            <td>formsflow.ai Rest API URI</td>
+                                            <td></td>
+                                            <td><code>http://{your-ip-address}:5000</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>FORMIO_DEFAULT_PROJECT_URL</code>:triangular_flag_on_post:</td>
+                                            <td>The URL of the forms-flow-forms server</td>
+                                            <td></td>
+                                            <td><code>http://{your-ip-address}:3001</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>FORMIO_ROOT_EMAIL</code></td>
+                                            <td>forms-flow-forms admin login</td>
+                                            <td>eg. admin@example.com</td>
+                                            <td><code>admin@example.com</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>FORMIO_ROOT_PASSWORD</code></td>
+                                            <td>forms-flow-forms admin password</td>
+                                            <td>eg.changeme</td>
+                                            <td><code>changeme</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>WEBSOCKET_SECURITY_ORIGIN</code> :triangular_flag_on_post:</td>
+                                            <td>Camunda task event streaming, for multiple origins you can separate them
+                                                using a comma</td>
+                                            <td>eg:<code>host1, host2</code></td>
+                                            <td><code>http://{your-ip-address}:3000</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>WEBSOCKET_MESSAGE_TYPE</code></td>
+                                            <td>Camunda task event streaming. Message type</td>
+                                            <td></td>
+                                            <td><code>TASK_EVENT</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>WEBSOCKET_ENCRYPT_KEY</code></td>
+                                            <td>Camunda task event streaming. AES encryption of token</td>
+                                            <td></td>
+                                            <td><code>giert989jkwrgb@DR55</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <h4 id="mail-configuration">Mail Configuration</h4>
+                                <ul>
+                                    <li>Modify the file <strong>mail-config.properties</strong> (under
+                                        forms-flow-bpm/src/main/resources/). The default settings provided are for the
+                                        Gmail server, and you need to change the credentials at the bottom of the file.
+                                        Note that you want to configure your own Gmail setting to allow unsecure apps
+                                        first. </li>
+                                </ul>
+                                <h4 id="camunda-general-settings">Camunda - General Settings</h4>
+                                <hr>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Variable name</th>
+                                            <th>Meaning</th>
+                                            <th>Possible values</th>
+                                            <th>Default value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> <code>APP_SECURITY_ORIGIN</code></td>
+                                            <td>CORS setup, for multiple origins you can separate them using a comma
+                                            </td>
+                                            <td>eg:<code>host1, host2</code></td>
+                                            <td><code>*</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>CAMUNDA_APP_ROOT_LOG_FLAG</code></td>
+                                            <td>Log level setting</td>
+                                            <td></td>
+                                            <td><code>error</code> </td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>DATA_BUFFER_SIZE</code></td>
+                                            <td>Configure a limit on the number of bytes that can be buffered for
+                                                webclient</td>
+                                            <td></td>
+                                            <td><code>2  (In MB)</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>IDENTITY_PROVIDER_MAX_RESULT_SIZE</code></td>
+                                            <td>Maximum result size for Keycloak user queries</td>
+                                            <td></td>
+                                            <td><code>250</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td> <code>BPM_CLIENT_CONN_TIMEOUT</code></td>
+                                            <td>Webclient Connection timeout in milli seconds</td>
+                                            <td></td>
+                                            <td><code>5000</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p> <strong>Additionally, you may want to change these</strong> </p>
+                                <ul>
+                                    <li>The value of Datastore credentials (especially if this instance is not just for
+                                        testing purposes)</li>
+                                </ul>
+                                <h3 id="running-the-application">Running the application</h3>
+                                <ul>
+                                    <li>forms-flow-bpm service uses port 8000, make sure the port is available.</li>
+                                    <li>
+                                        <p><code>cd {Your Directory}/forms-flow-ai/forms-flow-bpm</code></p>
+                                    </li>
+                                    <li>
+                                        <p>For Linux,</p>
+                                        <ul>
+                                            <li>Run <code>docker-compose -f docker-compose-linux.yml up -d</code> to
+                                                start.</li>
+                                        </ul>
+                                    </li>
+                                    <li>For Windows,<ul>
+                                            <li>Run <code>docker-compose -f docker-compose-windows.yml up -d</code> to
+                                                start.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <p><em>NOTE: Use --build command with the start command to reflect any future
+                                        <strong>.env</strong> changes eg :
+                                        <code>docker-compose -f docker-compose-windows.yml up --build -d</code></em></p>
+                                <h4 id="to-stop-the-application">To stop the application</h4>
+                                <ul>
+                                    <li>For Linux,<ul>
+                                            <li>Run <code>docker-compose -f docker-compose-linux.yml stop</code> to
+                                                stop.</li>
+                                        </ul>
+                                    </li>
+                                    <li>For Windows,<ul>
+                                            <li>Run <code>docker-compose -f docker-compose-windows.yml stop</code> to
+                                                stop.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <h3 id="health-check">Health Check</h3>
+                                <p> The application should be up and available for use at port defaulted to 8000 in <a
+                                        href="http://localhost:8000/camunda/">http://localhost:8000/camunda/</a></p>
+                                <h2 id="how-to-deploy-process">How to Deploy Process</h2>
+                                <p> REST service <strong>/camunda/engine-rest/deployment/create</strong> will be used
+                                    for deployment of process.</p>
+                                <p> CURL commands are leveraged for this action. </p>
+                                <h5 id="1-generate-token-using-elevated-user-or-service-client-credentials">1. Generate
+                                    token using elevated user or service-client credentials</h5>
+                                <pre><code>      <span class="hljs-built_in">export</span> token=`curl -X POST <span class="hljs-string">"{your keycloak url}/auth/realms/{realm}/protocol/openid-connect/token"</span> -H <span class="hljs-string">"Content-Type: application/x-www-form-urlencoded"</span> <span class="hljs-_">-d</span> <span class="hljs-string">"username=test"</span> <span class="hljs-_">-d</span> <span class="hljs-string">"password=test"</span> <span class="hljs-_">-d</span> <span class="hljs-string">"grant_type=password"</span> <span class="hljs-_">-d</span> <span class="hljs-string">"client_id=forms-flow-bpm"</span> <span class="hljs-_">-d</span> <span class="hljs-string">"client_secret=xxxxxxxxxxxxxx"</span> | jq -r <span class="hljs-string">".access_token"</span>`
+</code></pre>
+                                <h5 id="2-post-the-process-as-file-with-http-verb-post-">2. Post the process as file
+                                    with HTTP verb POST.</h5>
+                                <pre><code>   curl -H <span class="hljs-string">"Authorization: Bearer ${token}"</span> -H <span class="hljs-string">"Accept: application/json"</span> -<span class="hljs-literal">F</span> <span class="hljs-string">"deployment-name=One Step Approval"</span> -<span class="hljs-literal">F</span> <span class="hljs-string">"enable-duplicate-filtering=false"</span> -<span class="hljs-literal">F</span> <span class="hljs-string">"deploy-changed-only=falses"</span> -<span class="hljs-literal">F</span> <span class="hljs-string">"one_step_approval.bpmnn=@one_step_approval.bpmn"</span>  http://{your-ip-address}:<span class="hljs-number">8000</span>/camunda/engine-rest/deployment/create
+</code></pre>
+                                <ul>
+                                    <li><strong>NOTE: If POST request fails with permission issue, login to Camunda and
+                                            go to Admin -&gt; Authorizations -&gt; Deployment. Then, verify the account
+                                            existence under &quot;deployment&quot; service. If does not, please add it
+                                            manually.</strong></li>
+                                </ul>
+                                <h2 id="how-to-enable-ssl">How to Enable SSL</h2>
+                                <h5
+                                    id="1-generate-domain-specific-pem-format-and-convert-into-pkcs12-using-below-commands-">
+                                    1. Generate domain specific pem format and convert into pkcs12 using below commands.
+                                </h5>
+                                <pre><code>openssl pkcs12 -export -out bpm1<span class="hljs-selector-class">.pkcs12</span> -<span class="hljs-keyword">in</span> combined<span class="hljs-selector-class">.pem</span>
+keytool -genkey -keyalg RSA -alias tomcat -keystore truststore<span class="hljs-selector-class">.ks</span>
+keytool -delete -alias tomcat -keystore truststore<span class="hljs-selector-class">.ks</span>
+
+keytool -import -v -trustcacerts -alias tomcat -file fullchain<span class="hljs-selector-class">.pem</span> -keystore truststore<span class="hljs-selector-class">.ks</span>
+keytool -genkey -keyalg RSA -alias tomcat -keystore keystore<span class="hljs-selector-class">.ks</span>
+
+keytool -v -importkeystore -srckeystore bpm1<span class="hljs-selector-class">.pkcs12</span> -srcstoretype PKCS12 -destkeystore keystore<span class="hljs-selector-class">.ks</span> -des
+</code></pre>
+                                <h5 id="2-place-the-generated-keystore-ks-file-under-cert-path-certs-keystore-ks-">2.
+                                    Place the generated keystore.ks file under cert path ~/certs/keystore.ks.</h5>
+                                <h5
+                                    id="3-include-the-below-ssl-configuration-in-application-yaml-present-in-path-forms-flow-bpm-src-main-resources-">
+                                    3. Include the below <strong>ssl configuration</strong> in application.yaml present
+                                    in path /forms-flow-bpm/src/main/resources.</h5>
+                                <pre><code><span class="hljs-attribute">server</span>:
+  <span class="hljs-attribute">port</span>: <span class="hljs-number">8443</span>
+  <span class="hljs-attribute">ssl</span>:
+    <span class="hljs-attribute">key-store</span>: <span class="hljs-attribute">file</span>:/certs/keystore.ks
+    <span class="hljs-attribute">key-store-password</span>: password
+    <span class="hljs-attribute">key-store-type</span>: pkcs12
+    <span class="hljs-attribute">key-alias</span>: tomcat
+    <span class="hljs-attribute">key-password</span>: password
+  servlet.<span class="hljs-attribute">context-path</span>: /camunda
+</code></pre>
+                                <ul>
+                                    <li><strong>NOTE: Alternatively, you can directly place your ssl cert under the
+                                            classpath &quot;/forms-flow-bpm/src/main/resources&quot;. Your configuration
+                                            for the key-store in application.yaml would be
+                                            <code>key-store: classpath:/keystore.ks</code>.</strong></li>
+                                </ul>
+                                <h2 id="forms-flow-bpm-listeners">forms-flow-bpm Listeners</h2>
+                                <blockquote>
+                                    <p>This section elaborates on listeners created for use.</p>
+                                </blockquote>
+                                <ul>
+                                    <li>The complete usage instructions on Listeners used with information on purpose,
+                                        how-it-works and how-to-use is mentioned <a
+                                            href="./starter-examples/listeners/listeners-readme.md#listeners">here</a>.
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </section>
+                        <a href="architecture.html" class="previous">&laquo; Previous</a>
+                        <a href="features.html" class="next">Next &raquo;</a>
+
+            </div>
+            <!--//docs-code-block-->
+
+
+            </header>
+
+
+            </article>
+
+
+
+
+            <!-- Javascript -->
+            <script src="assets/plugins/popper.min.js"></script>
+            <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+            <!-- Page Specific JS -->
+            <script src="assets/plugins/smoothscroll.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+            <script src="assets/js/highlight-custom.js"></script>
+            <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+            <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+            <script src="assets/js/docs.js"></script>
+
+</body>
+
+</html>

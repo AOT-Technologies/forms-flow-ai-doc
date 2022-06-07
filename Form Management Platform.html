@@ -1,0 +1,536 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Forms flow ai documentation">
+    <meta name="author" content="formsflow.ai">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Welcome to formsflow.ai</title>
+
+    <!-- Google Font -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+    <link id="theme-style" rel="stylesheet" href="assets/css/atom-one-dark.min.css">
+
+
+
+</head>
+
+<body>
+
+    <header class="header fixed-top">
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+                        type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2"
+                                src="assets/images/formsflow.ai-logo.svg" alt="logo"><span
+                                class="logo-text">formsflow.ai</span></a></div>
+                </div>
+                <!--//docs-logo-wrapper-->
+                <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+                    <div class="top-search-box d-none d-lg-flex">
+                        <form class="search-form">
+                            <input type="text" placeholder="Search the docs..." name="search"
+                                class="form-control search-input">
+                            <button type="submit" class="btn search-btn" value="Search"><i
+                                    class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+
+                    <ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+                        <li class="list-inline-item"><a href="https://github.com/AOT-Technologies/forms-flow-ai"><i
+                                    class="fab fa-github fa-fw"></i></a></li>
+                    </ul>
+                    <!--//social-list-->
+                    <a href="https://github.com/AOT-Technologies/forms-flow-ai"
+                        class="btn btn-primary d-none d-lg-flex">Download</a>
+                </div>
+                <!--//docs-top-utilities-->
+            </div>
+            <!--//container-->
+        </div>
+        <!--//branding-->
+    </header>
+    <!--//header-->
+
+    <div class="docs-wrapper">
+        <div id="docs-sidebar" class="docs-sidebar">
+            <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+                    <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+                    <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <nav id="docs-nav" class="docs-nav navbar">
+                <ul class="section-items list-unstyled nav flex-column pb-3">
+                    <!-- main heading -->
+                    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Getting
+                            started</a></li>
+                    <li class="nav-item"><a href="index.html" style="color:  #566573">Introduction</a></li>
+                    <li class="nav-item"><a href="architecture.html" style="color:  #566573">System Architecture</a>
+                    </li>
+                    <li class="nav-item"><a href="aboutproject.html" style="color:  #566573">About The Project</a>
+					</li>
+					<li class="nav-item"><a href="UsageInstructions.html" style="color:  #566573">Usage-instructions</a>
+					</li>
+					<!-- main heading -->
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span
+								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Installation</a>
+					</li>
+					<li class="nav-item"><a href="quick installation.html" style="color:  #566573">Quick
+							Installation</a></li>
+
+					<details>
+								<summary><a href="download and installation.html" style="color:  #566573">Install Using Containers</a></summary>
+								<ul>
+								  <li class="nav-item"><a href="keycloak setup.html" style="color:  #566573">Keycloak</a></li>
+								  <li class="nav-item"><a href="Form Management Platform.html" style="color:  #566573">Form Management Platform</a></li>
+								  <li class="nav-item"><a href="Analytics Engine.html" style="color:  #566573">Analytics Engine</a></li>
+								  <li class="nav-item"><a href="formsflow.ai Web Application.html" style="color:  #566573">Formsflow.ai Web Application</a></li>
+								  <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">Formsflow.ai API</a></li>
+								  <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">Workflow Engine</a></li>
+								</ul>
+							  </details>
+					
+					<li class="nav-item"><a href="Openshift.html" style="color:  #566573">Openshift
+							Installation</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span
+								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Features</a></li>
+							
+					
+					<li class="nav-item"><a href="Internationalization.html"
+							style="color:  #566573">Internationalization</a></li>
+					<li class="nav-item"><a href="Listeners.html" style="color:  #566573">Camunda Listeners</a></li>
+					
+					<li class="nav-item"><a href="Taskvariables.html" style="color:  #566573">Task
+							variable workflow</a></li>
+					<li class="nav-item"><a href="Webevents.html" style="color:  #566573">Web Events</a></li>
+					<li class="nav-item"><a href="AnonymousForm.html" style="color:  #566573">Anonymous Forms</a></li>
+					<li class="nav-item"><a href="AdminPageDashboard.html" style="color:  #566573">AdminPage
+						Dashboard</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
+						class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Multi Tenancy</a></li>
+						<li class="nav-item"><a href="Tenant-based task assignment.html"
+							style="color:  #566573">Tenant-based task assignment</a></li>
+			
+                    <!-- main heading -->
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-1">Section Item 9.1</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-2">Section Item 9.2</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-3">Section Item 9.3</a></li>
+                </ul>
+
+            </nav>
+            <!--//docs-nav-->
+        </div>
+        <!--//docs-sidebar-->
+        <div class="docs-content">
+            <div class="container">
+                <article class="docs-article" id="section-1">
+                    <!-- main heading content -->
+                    <header class="docs-header">
+
+
+
+                        <br>
+
+                        <section class="docs-section" id="item-1-1">
+                            <div>
+                                <h1 id="form-management-platform">Form Management Platform</h1>
+                                <p><img src="https://img.shields.io/badge/formio-2.3.0-blue" alt="Formio"></p>
+                                <p><strong>formsflow.ai</strong> leverages form.io to build &quot;serverless&quot; data
+                                    management applications using a simple drag-and-drop form builder interface.</p>
+                                <p>To know more about form.io, go to <a href="https://form.io">https://form.io</a>.</p>
+                            
+                                <h2 id="prerequisites">Prerequisites</h2>
+                                <ul>
+                                    <li>For docker based installation <a href="https://docker.com">Docker</a> need to be
+                                        installed.</li>
+                                </ul>
+                                <h2 id="solution-setup">Solution Setup</h2>
+                                <h3 id="keycloak-setup">Keycloak Setup</h3>
+                                <p>Not applicable.<br><strong>Please note that the forms-flow-forms server is accessed
+                                        using root user account.</strong></p>
+                                <h3 id="installation">Installation</h3>
+                                <ul>
+                                    <li>Make sure you have a Docker machine up and running.</li>
+                                    <li>Make sure your current working directory is
+                                        &quot;forms-flow-ai/forms-flow-forms&quot;.</li>
+                                    <li>Rename the file <a href="./sample.env">sample.env</a> to <strong>.env</strong>.
+                                    </li>
+                                    <li>Modify the environment variables in the newly created <strong>.env</strong> file
+                                        if needed. Environment variables are given in the table below,</li>
+                                    <li><strong>NOTE : <code>{your-ip-address}</code> given inside the .env file should
+                                            be changed to your host system IP address. Please take special care to
+                                            identify the correct IP address if your system has multiple network
+                                            cards</strong></li>
+                                </ul>
+                                <blockquote>
+                                    <p>:information_source: Variables with trailing :triangular_flag_on_post: in below
+                                        table should be updated in the .env file</p>
+                                </blockquote>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Variable name</th>
+                                            <th>Meaning</th>
+                                            <th>Possible values</th>
+                                            <th>Default value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>FORMIO_DB_USERNAME</code></td>
+                                            <td>Mongo Root Username. Used on installation to create the database.Choose
+                                                your own</td>
+                                            <td></td>
+                                            <td><code>admin</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>FORMIO_DB_PASSWORD</code></td>
+                                            <td>Mongo Root Password</td>
+                                            <td></td>
+                                            <td><code>changeme</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>FORMIO_DB_NAME</code></td>
+                                            <td>Mongo Database Name. Used on installation to create the database.Choose
+                                                your own</td>
+                                            <td></td>
+                                            <td><code>formio</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>FORMIO_ROOT_EMAIL</code></td>
+                                            <td>forms-flow-forms admin login</td>
+                                            <td>eg. admin@example.com</td>
+                                            <td><code>admin@example.com</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>FORMIO_ROOT_PASSWORD</code></td>
+                                            <td>forms-flow-forms admin password</td>
+                                            <td>eg.changeme</td>
+                                            <td><code>changeme</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>FORMIO_DEFAULT_PROJECT_URL</code>:triangular_flag_on_post:</td>
+                                            <td>forms-flow-forms default url</td>
+                                            <td></td>
+                                            <td><code>http://{your-ip-address}:3001</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>FORMIO_JWT_SECRET</code></td>
+                                            <td>forms-flow-forms jwt secret</td>
+                                            <td></td>
+                                            <td><code>--- change me now ---</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table><br>
+                                <p><strong>Additionally, you may want to change these</strong></p>
+                                <ul>
+                                    <li>The value of Mongo database details (especially if this instance is not just for
+                                        testing purposes)</li>
+                                    <li>The value of ROOT user account details (especially if this instance is not just
+                                        for testing purposes)</li>
+                                </ul>
+                                <h3 id="running-the-application">Running the application</h3>
+                                <ul>
+                                    <li>forms-flow-forms service uses port 3001, make sure the port is available.</li>
+                                    <li>
+                                        <p><code>cd {Your Directory}/forms-flow-ai/forms-flow-forms</code></p>
+                                    </li>
+                                    <li>
+                                        <p>For Linux,</p>
+                                        <ul>
+                                            <li>Run <code>docker-compose -f docker-compose-linux.yml up -d</code> to
+                                                start.</li>
+                                        </ul>
+                                    </li>
+                                    <li>For Windows,<ul>
+                                            <li>Run <code>docker-compose -f docker-compose-windows.yml up -d</code> to
+                                                start.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <p><em>NOTE: Use --build command with the start command to reflect any future
+                                        <strong>.env</strong> changes eg :
+                                        <code>docker-compose -f docker-compose-windows.yml up --build -d</code></em></p>
+                                <h4 id="to-stop-the-application">To stop the application</h4>
+                                <ul>
+                                    <li>For Linux,<ul>
+                                            <li>Run <code>docker-compose -f docker-compose-linux.yml stop</code> to
+                                                stop.</li>
+                                        </ul>
+                                    </li>
+                                    <li>For Windows,<ul>
+                                            <li>Run <code>docker-compose -f docker-compose-windows.yml stop</code> to
+                                                stop.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <h3 id="health-check">Health Check</h3>
+                                <p> The application should be up and available for use at port defaulted to 3001 in
+                                    (i.e. <a href="http://localhost:3001/">http://localhost:3001/</a>)</p>
+                                <pre><code>    Default Login Credentials
+                            <span class="hljs-comment">-----------------</span>
+                            User Name / Email : <span class="hljs-type">admin</span>@example.com
+                            Password  : <span class="hljs-type">changeme</span>
+                            </code></pre>
+                                <h2 id="formsflow-forms-user-role-api">Formsflow-forms user/role API</h2>
+                                <p>There are two ways in which you can access data from the formsflow-forms end points.
+                                </p>
+                                <ul>
+                                    <li><a href="#using-curl-command">Using curl command</a></li>
+                                    <li><a href="#using-postman-api-client">Using POSTMAN API client</a></li>
+                                </ul>
+                                <h3 id="using-curl-command">Using curl command</h3>
+                                <ul>
+                                    <li>
+                                        <p>Download and install <a href="https://curl.se/download.html">curl</a>.</p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#step-1">Step 1</a> Go to <code>forms-flow-forms/script</code>
+                                            directory.</p>
+                                    </li>
+                                    <li><a href="#step-2">Step 2</a>
+                                        <ul>
+                                            <li><strong>For windows</strong>
+                                                <ul>
+                                                    <li>Open command prompt and run
+                                                        <code>resourceId_windows.bat {user email} {password}</code> eg:
+                                                        <code>resourceId_windows.bat admin@example.com changeme</code>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>For Linux and Mac</strong>
+                                                <ul>
+                                                    <li>Open command prompt and run
+                                                        <code>./resourceId_linux.sh {user email} {password}</code> eg:
+                                                        <code>./resourceId_linux.sh admin@example.com changeme</code>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#step-3">Step 3</a> Copy the ID corresponding to Role Name from <a
+                                            href="./README.md#step-2">Step 2</a> and paste it against the Environment
+                                        Variable name from the below table.</li>
+                                </ul>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Role Name</th>
+                                            <th>Environment Variable Name</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Administrator</td>
+                                            <td>DESIGNER_ROLE_ID</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Anonymous</td>
+                                            <td>ANONYMOUS_ID</td>
+                                        </tr>
+                                        <tr>
+                                            <td>formsflow Client</td>
+                                            <td>CLIENT_ROLE_ID</td>
+                                        </tr>
+                                        <tr>
+                                            <td>formsflow Reviewer</td>
+                                            <td>REVIEWER_ROLE_ID</td>
+                                        </tr>
+                                        <tr>
+                                            <td>User</td>
+                                            <td>USER_RESOURCE_ID</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <blockquote><br>
+                                    <p><strong>curl requests are successfully completed. You can skip the remaining
+                                            sections in this page and continue with other installation steps.</strong>
+                                    </p>
+                                </blockquote>
+                                <h3 id="using-postman-api-client">Using POSTMAN API client</h3>
+                                <ul>
+                                    <li>Download and install <a href="https://www.postman.com/">Postman API client</a>
+                                    </li>
+                                    <li>Import <a
+                                            href="./config/formsflow-forms-postman-collection.json">formsflow-forms-postman-collection.json</a>
+                                        to your postman client.<ul>
+                                            <li>Open Postman -&gt; Go to File<ul>
+                                                    <li>Import -&gt; Upload <a
+                                                            href="./config/formsflow-forms-postman-collection.json">formsflow-forms-postman-collection.json</a>
+                                                        file</li>
+                                                    <li>Import successful.</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>Follow the instructions given below to fetch the role id&#39;s from <a
+                                            href="http://localhost:3001">forms-flow-forms</a>
+                                        <ul>
+                                            <li>Open Postman -&gt; Go to Workspaces -&gt; My Workspaces<ul>
+                                                    <li>Collections -&gt; Open form.io collection and send the API
+                                                        request in the following order.<ul>
+                                                            <li>Get the jwt token using resource <strong><a
+                                                                        href="http://localhost:3001/user/login">http://localhost:3001/user/login</a></strong>.
+                                                                (<em>Click on Send to make a server request</em>)</li>
+                                                            <li>Get the user resource id using resource <strong><a
+                                                                        href="http://localhost:3001/user">http://localhost:3001/user</a></strong>.
+                                                                (<em>Click on Send to make a server request</em>)<ul>
+                                                                    <li>Copy the <strong>_id</strong> from Response body
+                                                                        and replace value for
+                                                                        <strong>USER_RESOURCE_ID</strong> in the
+                                                                        <strong>.env</strong> file.
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>Get the user role id&#39;s using resource <strong><a
+                                                                        href="http://localhost:3001/role">http://localhost:3001/role</a></strong>.
+                                                                (<em>Click on Send to make a server request</em>)<ul>
+                                                                    <li>Copy the <strong>_id</strong> with title
+                                                                        <em>Administrator</em> from Response body and
+                                                                        replace value for
+                                                                        <strong>DESIGNER_ROLE_ID</strong> in the
+                                                                        <strong>.env</strong> file.
+                                                                    </li>
+                                                                    <li>Copy the <strong>_id</strong> with title
+                                                                        <em>Anonymous</em> from Response body and
+                                                                        replace value for <strong>ANONYMOUS_ID</strong>
+                                                                        in the <strong>.env</strong> file.
+                                                                    </li>
+                                                                    <li>Copy the <strong>_id</strong> with title
+                                                                        <em>formsflow Client</em> from Response body and
+                                                                        replace value for
+                                                                        <strong>CLIENT_ROLE_ID</strong> in the
+                                                                        <strong>.env</strong> file.
+                                                                    </li>
+                                                                    <li>Copy the <strong>_id</strong> with title
+                                                                        <em>formsflow Reviewer</em> from Response body
+                                                                        and replace value for
+                                                                        <strong>REVIEWER_ROLE_ID</strong> in the
+                                                                        <strong>.env</strong> file.
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <blockquote>
+                                    <p><strong>Postman API calls are successfully completed. You can skip the remaining
+                                            sections in this page and continue with other installation steps.</strong>
+                                    </p>
+                                </blockquote>
+                                <h2 id="custom-components">Custom Components</h2>
+                                <p><strong>formsflow.ai</strong> has custom components supported which are created by
+                                    extending the
+                                    base components within forms-flow-forms and then registering them within the core
+                                    renderer.</p>
+                                <p>Custom componets available in <strong>formsflow.ai</strong> are:</p>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Component Name</th>
+                                            <th>About</th>
+                                            <th>How to use</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Text Area with Analytics</strong></td>
+                                            <td>To enable Text fields for sentiment analysis processing</td>
+                                            <td><a
+                                                    href="./custom-components/text-area-with-analytics/README.md">link</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>If you are interested in adding custom components for your use case in
+                                    <strong>formsflow.ai</strong> we highly
+                                    recommend you to take a look at <a
+                                        href="https://formio.github.io/formio.js/app/examples/customcomponent.html">Custom
+                                        Component Docs</a>
+                                    to understand how Form.io renderer allows for the creation of Custom components.
+                                    You can also take a look at <a
+                                        href="https://github.com/formio/contrib">formio.contrib</a>
+                                    to look for examples and even contribute the custom components you create.
+                                </p>
+                                <h2 id="adding-new-indexes">Adding new indexes</h2>
+                                <p>You can add new indexes in Mongodb shell, according to your requirement. You can
+                                    create indexes like below example:</p>
+                                <pre><code>db<span class="hljs-selector-class">.submissions</span><span class="hljs-selector-class">.createIndex</span>({
+                            <span class="hljs-string">"data.applicationStatus "</span>: <span class="hljs-number">1</span>
+                            })
+                            </code></pre>
+                                <p>In this example:</p>
+                                <ul>
+                                    <li><code>submissions</code> is the collection name.</li>
+                                    <li><code>data.applicationStatus</code> is the fields which are to be added in
+                                        index.</li>
+                                </ul>
+                                <h2 id="license">LICENSE</h2>
+                                <p>We have build formsflow.ai form management platform leveraging <a
+                                        href="https://github.com/formio/formio">formio</a>.
+                                    We use the OSL-v3 license similar to formio to ensure appropriate attribution is
+                                    provided to form.io. Please read the <a href="./LICENSE.txt">license</a> for more
+                                    information.</p>
+                            
+                            
+                            </div>
+                        </section><br><br>
+                        <a href="architecture.html" class="previous">&laquo; Previous</a>
+                        <a href="UsageInstructions.html" class="next">Next &raquo;</a>
+
+            </div>
+            <!--//docs-code-block-->
+
+
+            </header>
+
+
+            </article>
+
+
+
+
+            <!-- Javascript -->
+            <script src="assets/plugins/popper.min.js"></script>
+            <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+            <!-- Page Specific JS -->
+            <script src="assets/plugins/smoothscroll.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+            <script src="assets/js/highlight-custom.js"></script>
+            <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+            <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+            <script src="assets/js/docs.js"></script>
+
+</body>
+
+</html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -99,7 +100,7 @@
 					<li class="nav-item"><a href="quick installation.html" style="color:  #566573">Quick
 							Installation</a></li>
 
-					<details>
+					<details open>
 								<summary><a href="download and installation.html" style="color:  #566573">Install Using Containers</a></summary>
 								<ul>
 									<details>
@@ -108,11 +109,11 @@
 										<li class="nav-item"><a href="local keycloak setup.html" style="color:  #566573">Local Keycloak Setup</a></li>
 								  <li class="nav-item"><a href="server keycloak.html" style="color:  #566573">Server Keycloak Setup</a></li>
 									</ul></details>
-									<details>
+									<details open>
 										<summary><a href="Form Management Platform.html" style="color:  #566573">Forms-flow-forms Setup</a></summary>
 										<ul>
 											<li class="nav-item"><a href="Form Management API.html" style="color:  #566573">Formsflow-forms user/role API</a></li>
-									  <li class="nav-item"><a href="Custom components.html" style="color:  #566573">Custom Components</a></li>
+									  <li class="nav-item"><a class="current" href="Custom components.html" style="color:  #566573">Custom Components</a></li>
 										</ul></details>
 								
 								  <li class="nav-item"><a href="Analytics Engine.html" style="color:  #566573">Forms-flow-analytics Setup</a></li>
@@ -164,49 +165,65 @@
 
 
                         <br>
-                        <section class="docs-section" id="item-1-1">
+
+                        <section>
                             <div>
-                                <h2 id="form-bpm-filtered-data-pipeline-listener">Form BPM Filtered Data Pipeline
-                                    Listener</h2>
-                                <hr>
-                                <p><strong>org.camunda.bpm.extension.hooks.listeners.FormBPMFilteredDataPipelineListener</strong>
+                                
+                                
+                                <h2 id="custom-components">Custom Components</h2><br><hr>
+                                <p><strong>formsflow.ai</strong> has custom components supported which are created by
+                                    extending the
+                                    base components within forms-flow-forms and then registering them within the core
+                                    renderer.</p>
+                                <p>Custom componets available in <strong>formsflow.ai</strong> are:</p>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Component Name</th>
+                                            <th>About</th>
+                                            <th>How to use</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Text Area with Analytics</strong></td>
+                                            <td>To enable Text fields for sentiment analysis processing</td>
+                                            <td><a
+                                                    href="./custom-components/text-area-with-analytics/README.md">link</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>If you are interested in adding custom components for your use case in
+                                    <strong>formsflow.ai</strong> we highly
+                                    recommend you to take a look at <a
+                                        href="https://formio.github.io/formio.js/app/examples/customcomponent.html">Custom
+                                        Component Docs</a>
+                                    to understand how Form.io renderer allows for the creation of Custom components.
+                                    You can also take a look at <a
+                                        href="https://github.com/formio/contrib">formio.contrib</a>
+                                    to look for examples and even contribute the custom components you create.
                                 </p>
-                                <p>This component can be used on any event of task/execution listener. Upon
-                                    configuration, it copies
-                                    specific data from form (formio) to camunda variables.</p>
-                                <h3 id="table-of-content">Table of Content</h3>
+                                <h2 id="adding-new-indexes">Adding new indexes</h2>
+                                <p>You can add new indexes in Mongodb shell, according to your requirement. You can
+                                    create indexes like below example:</p>
+                                <pre><code>db<span class="hljs-selector-class">.submissions</span><span class="hljs-selector-class">.createIndex</span>({
+                            <span class="hljs-string">"data.applicationStatus "</span>: <span class="hljs-number">1</span>
+                            })
+                            </code></pre>
+                                <p>In this example:</p>
                                 <ul>
-                                    <li><a href="#type">Type</a></li>
-                                    <li><a href="#how-it-works">How it Works</a></li>
-                                    <li><a href="#how-to-use">How to Use</a></li>
+                                    <li><code>submissions</code> is the collection name.</li>
+                                    <li><code>data.applicationStatus</code> is the fields which are to be added in
+                                        index.</li>
                                 </ul>
-                                <h4 id="type">Type</h4>
-                                <p>Task/Execution Listener</p>
-                                <h4 id="how-it-works">How it Works</h4>
-                                <p>This component identifies the variables from the webapi configuration and copy only
-                                    those variables
-                                    from form (formio) to camunda variables.</p>
-                                <h4 id="how-to-use">How to Use</h4>
-                                <p>Below snapshot shows how to configure the
-                                    <strong>FormBPMFilteredDataPipelineListener</strong> to an
-                                    execution.
-                                </p>
-                                <p><img src="./assets/images/formbpmfiltereddatapipeline-listener-snp1.png" height="500"
-                                        width="1000" alt="Form DataFilteredPipeline listener - Snapshot">
-                                    <br><br>
-                                    Click here <a href="Form Connector Listener.html">Form Connector Listener</a>
-                                </p>
-
+                                
+                            
+                            
                             </div>
-                        </section>
-                        <br>
-                        <a href="Timeout Notification Listener.html" class="previous">&laquo; Previous</a>
-                        <a href="Listeners.html" class="next">Next &raquo;</a>
-
-
-
-
-
+                        </section><br><br>
+                        <a href="keycloak setup.html" class="previous">&laquo; Previous</a>
+                        <a href="Analytics Engine.html" class="next">Next &raquo;</a>
 
             </div>
             <!--//docs-code-block-->

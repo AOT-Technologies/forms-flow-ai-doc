@@ -99,15 +99,26 @@
 					<li class="nav-item"><a href="quick installation.html" style="color:  #566573">Quick
 							Installation</a></li>
 
-					<details>
+					<details open>
 								<summary><a href="download and installation.html" style="color:  #566573">Install Using Containers</a></summary>
 								<ul>
-								  <li class="nav-item"><a href="keycloak setup.html" style="color:  #566573">Keycloak</a></li>
-								  <li class="nav-item"><a href="Form Management Platform.html" style="color:  #566573">Form Management Platform</a></li>
-								  <li class="nav-item"><a class="current" href="Analytics Engine.html" style="color:  #566573">Analytics Engine</a></li>
-								  <li class="nav-item"><a href="formsflow.ai Web Application.html" style="color:  #566573">Formsflow.ai Web Application</a></li>
-								  <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">Formsflow.ai API</a></li>
-								  <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">Workflow Engine</a></li>
+									<details>
+									<summary><a href="#" style="color:  #566573">Keycloak</a></summary>
+									<ul>
+										<li class="nav-item"><a href="local keycloak setup.html" style="color:  #566573">Local Keycloak Setup</a></li>
+								  <li class="nav-item"><a href="server keycloak.html" style="color:  #566573">Server Keycloak Setup</a></li>
+									</ul></details>
+									<details>
+										<summary><a href="Form Management Platform.html" style="color:  #566573">Forms-flow-forms Setup</a></summary>
+										<ul>
+											<li class="nav-item"><a href="Form Management API.html" style="color:  #566573">Formsflow-forms user/role API</a></li>
+									  <li class="nav-item"><a href="Custom components.html" style="color:  #566573">Custom Components</a></li>
+										</ul></details>
+								 
+								  <li class="nav-item"><a href="Analytics Engine.html" style="color:  #566573">Forms-flow-analytics Setup</a></li>
+								  <li class="nav-item"><a href="formsflow.ai Web Application.html" style="color:  #566573">forms-flow-web Setup</a></li>
+								  <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">forms-flow-api Setup</a></li>
+								  <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">forms-flow-bpm Setup</a></li>
 								</ul>
 							  </details>
 					
@@ -157,8 +168,8 @@
                         <section class="docs-section" id="item-1-1">
                             <div>
                                 <h1 id="analytics-engine">Analytics Engine</h1>
-                                <p><img src="https://img.shields.io/badge/Redash-10.1.0-blue" alt="Redash"></p>
-                                <p><strong>formsflow.ai</strong> leverages <a
+                                
+                                <p><strong>Formsflow.ai</strong> leverages <a
                                         href="https://github.com/getredash/redash">Redash</a> to build interactive
                                     dashboards and gain insights. To create meaningful visualization for
                                     your use case with formsflow.ai checkout <a href="https://redash.io/help/">Redash
@@ -170,27 +181,15 @@
                                         installed.</li>
                                     <li>Admin access to <a href="../forms-flow-idm/keycloak">Keycloak</a> server.</li>
                                 </ul>
-                                <h2 id="solution-setup">Solution Setup</h2>
-                                <h3 id="keycloak-setup">Keycloak Setup</h3>
-                                <blockquote>
-                                    <p>NOTE: Skip below steps and go to Installation if you are already configured
-                                        Keycloak.</p>
-                                </blockquote>
-                                <ul>
-                                    <li>If you have a Keycloak Instance and yet to configure it then login to KeyCloak
-                                        with admin credentials.</li>
-                                    <li>Follow the instructions given <a
-                                            href="../forms-flow-idm/keycloak/README.md#create-keycloak-setup-for-formsflow-analytics">here</a>
-                                        to configure <strong>forms-flow-analytics</strong> client.</li>
-                                </ul>
-                                <h3 id="installation">Installation</h3>
+                                
+                                <h3 id="installation">Installation</h3><hr>
                                 <ul>
                                     <li>Make sure you have a Docker machine up and running.</li>
                                     <li>Make sure your current working directory is
                                         &quot;forms-flow-ai/forms-flow-analytics&quot;.</li>
-                                    <li>Rename the file <a href="./sample.env">sample.env</a> to <strong>.env</strong>.
+                                    <li>Rename the file <strong>sample.env</strong> to <strong>.env</strong>.
                                     </li>
-                                    <li>Modify the environment variables inside <a href="./sample.env">.env</a> file if
+                                    <li>Modify the environment variables inside <strong>.env</strong> file if
                                         needed. Environment variables are given in the table below</li>
                                     <li><strong>NOTE : <code>{your-ip-address}</code> given inside the <a
                                                 href="./sample.env">.env</a> file should be changed to your host system
@@ -295,40 +294,29 @@
                                         application , redash can be built from any redash images.</p>
                                 </blockquote>
                                 <ul>
-                                    <li>For Linux,<ul>
+                                    
                                             <li>Run
-                                                <code>docker-compose -f docker-compose-linux.yml run --rm server create_db</code>
+                                                <code>docker-compose run --rm server create_db</code>
                                                 to setup database and to create tables.
                                             </li>
-                                            <li>Run <code>docker-compose -f docker-compose-linux.yml up -d</code> to
+                                            <li>Run <code>docker-compose up -d</code> to
                                                 start.</li>
                                         </ul>
                                     </li>
-                                    <li>For Windows,<ul>
-                                            <li>Run
-                                                <code>docker-compose -f docker-compose-windows.yml run --rm server create_db</code>
-                                                to setup database and to create tables.
-                                            </li>
-                                            <li>Run <code>docker-compose -f docker-compose-windows.yml up -d</code> to
-                                                start.</li>
-                                        </ul>
-                                    </li>
+                                   
                                 </ul>
                                 <p><em>NOTE: Use --build command with the start command to reflect any future
                                         <strong>.env</strong> changes eg :
-                                        <code>docker-compose -f docker-compose-windows.yml up --build -d</code></em></p>
+                                        <code>docker-compose up --build -d
+
+                                        </code></em></p>
                                 <h4 id="to-stop-the-application">To stop the application</h4>
                                 <ul>
-                                    <li>For Linux,<ul>
-                                            <li>Run <code>docker-compose -f docker-compose-linux.yml stop</code> to
+                                    
+                                            <li>Run <code>docker-compose stop</code> to
                                                 stop.</li>
                                         </ul>
-                                    </li>
-                                    <li>For Windows,<ul>
-                                            <li>Run <code>docker-compose -f docker-compose-windows.yml stop</code> to
-                                                stop.</li>
-                                        </ul>
-                                    </li>
+                                    
                                 </ul>
                                 <h3 id="health-check">Health Check</h3>
                                 <ul>
@@ -400,8 +388,8 @@ PONG.
 
                             </div>
                         </section><br><br>
-                        <a href="architecture.html" class="previous">&laquo; Previous</a>
-                        <a href="UsageInstructions.html" class="next">Next &raquo;</a>
+                        <a href="Form Management Platform.html" class="previous">&laquo; Previous</a>
+                        <a href="formsflow.ai Web Application.html" class="next">Next &raquo;</a>
 
             </div>
             <!--//docs-code-block-->

@@ -109,10 +109,10 @@
 										<li class="nav-item"><a href="local keycloak setup.html" style="color:  #566573">Local Keycloak Setup</a></li>
 								  <li class="nav-item"><a href="server keycloak.html" style="color:  #566573">Server Keycloak Setup</a></li>
 									</ul></details>
-									<details>
+									<details open>
 										<summary><a href="Form Management Platform.html" style="color:  #566573">Forms-flow-forms Setup</a></summary>
 										<ul>
-											<li class="nav-item"><a href="Form Management API.html" style="color:  #566573">Formsflow-forms user/role API</a></li>
+											<li class="nav-item"><a class="current" href="Form Management API.html" style="color:  #566573">Formsflow-forms user/role API</a></li>
 									  <li class="nav-item"><a href="Custom components.html" style="color:  #566573">Custom Components</a></li>
 										</ul></details>
 								  
@@ -168,130 +168,157 @@
 
                         <section class="docs-section" id="item-1-1">
                             <div>
-                                <h1 id="form-management-platform">Form Management Platform</h1><br><hr>
                                 
-                                <p><strong>Formsflow.ai</strong> leverages form.io to build &quot;serverless&quot; data
-                                    management applications using a simple drag-and-drop form builder interface.</p>
-                                <p>To know more about form.io, go to <a href="https://form.io">https://form.io</a>.</p>
-                            
-                                <h2 id="prerequisites">Prerequisites</h2>
+                                <h2 id="formsflow-forms-user-role-api">Formsflow-forms user/role API</h2><br><hr>
+                                <p>There are two ways in which you can access data from the formsflow-forms end points.
+                                </p>
                                 <ul>
-                                    <li>For docker based installation <a href="https://docker.com">Docker</a> need to be
-                                        installed.</li>
+                                    <li><a href="#using-curl-command">Using curl command</a></li>
+                                    <li><a href="#using-postman-api-client">Using POSTMAN API client</a></li>
                                 </ul>
-                                
-                                <h3 id="installation">Installation</h3>
+                                <h3 id="using-curl-command">Using curl command</h3>
                                 <ul>
-                                    <li>Make sure you have a Docker machine up and running.</li>
-                                    <li>Make sure your current working directory is
-                                        &quot;forms-flow-ai/forms-flow-forms&quot;.</li>
-                                    <li>Rename the file <strong>sample.env</strong> to <strong>.env</strong>.
+                                    <li>
+                                        <p>Download and install <a href="https://curl.se/download.html">curl</a>.</p>
                                     </li>
-                                    <li>Modify the environment variables in the newly created <strong>.env</strong> file
-                                        if needed. Environment variables are given in the table below,</li>
-                                    <li><strong>NOTE : <code>{your-ip-address}</code> given inside the .env file should
-                                            be changed to your host system IP address. Please take special care to
-                                            identify the correct IP address if your system has multiple network
-                                            cards</strong></li>
+                                    <li>
+                                        <p>Step 1</a> Go to <code>forms-flow-forms/script</code>
+                                            directory.</p>
+                                    </li>
+                                    <li>Step 2</a>
+                                        <ul>
+                                            <li><strong>For windows</strong>
+                                                <ul>
+                                                    <li>Open command prompt and run
+                                                        <code>resourceId_windows.bat {user email} {password}</code> eg:
+                                                        <code>resourceId_windows.bat admin@example.com changeme</code>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>For Linux and Mac</strong>
+                                                <ul>
+                                                    <li>Open command prompt and run
+                                                        <code>./resourceId_linux.sh {user email} {password}</code> eg:
+                                                        <code>./resourceId_linux.sh admin@example.com changeme</code>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>Step 3</a> Copy the ID corresponding to Role Name from Step 2</a> and paste it against the Environment
+                                        Variable name from the below table.</li>
                                 </ul>
-                                <blockquote>
-                                    <p>:information_source: Variables with trailing :triangular_flag_on_post: in below
-                                        table should be updated in the .env file</p>
-                                </blockquote>
                                 <table>
                                     <thead>
                                         <tr>
-                                            <th>Variable name</th>
-                                            <th>Meaning</th>
-                                            <th>Possible values</th>
-                                            <th>Default value</th>
+                                            <th>Role Name</th>
+                                            <th>Environment Variable Name</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><code>FORMIO_DB_USERNAME</code></td>
-                                            <td>Mongo Root Username. Used on installation to create the database.Choose
-                                                your own</td>
-                                            <td></td>
-                                            <td><code>admin</code></td>
+                                            <td>Administrator</td>
+                                            <td>DESIGNER_ROLE_ID</td>
                                         </tr>
                                         <tr>
-                                            <td><code>FORMIO_DB_PASSWORD</code></td>
-                                            <td>Mongo Root Password</td>
-                                            <td></td>
-                                            <td><code>changeme</code></td>
+                                            <td>Anonymous</td>
+                                            <td>ANONYMOUS_ID</td>
                                         </tr>
                                         <tr>
-                                            <td><code>FORMIO_DB_NAME</code></td>
-                                            <td>Mongo Database Name. Used on installation to create the database.Choose
-                                                your own</td>
-                                            <td></td>
-                                            <td><code>formio</code></td>
+                                            <td>formsflow Client</td>
+                                            <td>CLIENT_ROLE_ID</td>
                                         </tr>
                                         <tr>
-                                            <td><code>FORMIO_ROOT_EMAIL</code></td>
-                                            <td>forms-flow-forms admin login</td>
-                                            <td>eg. admin@example.com</td>
-                                            <td><code>admin@example.com</code></td>
+                                            <td>formsflow Reviewer</td>
+                                            <td>REVIEWER_ROLE_ID</td>
                                         </tr>
                                         <tr>
-                                            <td><code>FORMIO_ROOT_PASSWORD</code></td>
-                                            <td>forms-flow-forms admin password</td>
-                                            <td>eg.changeme</td>
-                                            <td><code>changeme</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>FORMIO_DEFAULT_PROJECT_URL</code>:triangular_flag_on_post:</td>
-                                            <td>forms-flow-forms default url</td>
-                                            <td></td>
-                                            <td><code>http://{your-ip-address}:3001</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>FORMIO_JWT_SECRET</code></td>
-                                            <td>forms-flow-forms jwt secret</td>
-                                            <td></td>
-                                            <td><code>--- change me now ---</code></td>
+                                            <td>User</td>
+                                            <td>USER_RESOURCE_ID</td>
                                         </tr>
                                     </tbody>
-                                </table><br>
-                                <p><strong>Additionally, you may want to change these</strong></p>
+                                </table>
+                                <blockquote><br>
+                                    <p><strong>curl requests are successfully completed. You can skip the remaining
+                                            sections in this page and continue with other installation steps.</strong>
+                                    </p>
+                                </blockquote>
+                                <h3 id="using-postman-api-client">Using POSTMAN API client</h3>
                                 <ul>
-                                    <li>The value of Mongo database details (especially if this instance is not just for
-                                        testing purposes)</li>
-                                    <li>The value of ROOT user account details (especially if this instance is not just
-                                        for testing purposes)</li>
-                                </ul>
-                                <h3 id="running-the-application">Running the application</h3>
-                                <ul>
-                                    <li>forms-flow-forms service uses port 3001, make sure the port is available.</li>
-                                    <li>
-                                        <p><code>cd {Your Directory}/forms-flow-ai/forms-flow-forms</code></p>
+                                    <li>Download and install <a href="https://www.postman.com/">Postman API client</a>
                                     </li>
-                                    <li>
-                                        <p>Run <code>docker-compose up -d</code> to start</p>
-                                </ul>
-                                <p><em>NOTE: Use --build command with the start command to reflect any future
-                                        <strong>.env</strong> changes eg :
-                                        <code>docker-compose up --build -d</code></em></p>
-                                <h4 id="to-stop-the-application">To stop the application</h4>
-                                <ul>
-                                    
-                                            <li>Run <code>docker-compose stop</code> to
-                                                stop.</li>
+                                    <li>Import <a
+                                            href="./config/formsflow-forms-postman-collection.json">formsflow-forms-postman-collection.json</a>
+                                        to your postman client.<ul>
+                                            <li>Open Postman -&gt; Go to File<ul>
+                                                    <li>Import -&gt; Upload <a
+                                                            href="./config/formsflow-forms-postman-collection.json">formsflow-forms-postman-collection.json</a>
+                                                        file</li>
+                                                    <li>Import successful.</li>
+                                                </ul>
+                                            </li>
                                         </ul>
-                                   
-                                   
-                                  
-                                <h3 id="health-check">Health Check</h3>
-                                <p> The application should be up and available for use at port defaulted to 3001 in
-                                    (i.e. <a href="http://localhost:3001/">http://localhost:3001/</a>)</p>
-                                <pre><code>    Default Login Credentials
-                            <span class="hljs-comment">-----------------</span>
-                            User Name / Email : <span class="hljs-type">admin</span>@example.com
-                            Password  : <span class="hljs-type">changeme</span>
-                            </code></pre>
+                                    </li>
+                                    <li>Follow the instructions given below to fetch the role id&#39;s from <a
+                                            href="http://localhost:3001">forms-flow-forms</a>
+                                        <ul>
+                                            <li>Open Postman -&gt; Go to Workspaces -&gt; My Workspaces<ul>
+                                                    <li>Collections -&gt; Open form.io collection and send the API
+                                                        request in the following order.<ul>
+                                                            <li>Get the jwt token using resource <strong><a
+                                                                        href="http://localhost:3001/user/login">http://localhost:3001/user/login</a></strong>.
+                                                                (<em>Click on Send to make a server request</em>)</li>
+                                                            <li>Get the user resource id using resource <strong><a
+                                                                        href="http://localhost:3001/user">http://localhost:3001/user</a></strong>.
+                                                                (<em>Click on Send to make a server request</em>)<ul>
+                                                                    <li>Copy the <strong>_id</strong> from Response body
+                                                                        and replace value for
+                                                                        <strong>USER_RESOURCE_ID</strong> in the
+                                                                        <strong>.env</strong> file.
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>Get the user role id&#39;s using resource <strong><a
+                                                                        href="http://localhost:3001/role">http://localhost:3001/role</a></strong>.
+                                                                (<em>Click on Send to make a server request</em>)<ul>
+                                                                    <li>Copy the <strong>_id</strong> with title
+                                                                        <em>Administrator</em> from Response body and
+                                                                        replace value for
+                                                                        <strong>DESIGNER_ROLE_ID</strong> in the
+                                                                        <strong>.env</strong> file.
+                                                                    </li>
+                                                                    <li>Copy the <strong>_id</strong> with title
+                                                                        <em>Anonymous</em> from Response body and
+                                                                        replace value for <strong>ANONYMOUS_ID</strong>
+                                                                        in the <strong>.env</strong> file.
+                                                                    </li>
+                                                                    <li>Copy the <strong>_id</strong> with title
+                                                                        <em>formsflow Client</em> from Response body and
+                                                                        replace value for
+                                                                        <strong>CLIENT_ROLE_ID</strong> in the
+                                                                        <strong>.env</strong> file.
+                                                                    </li>
+                                                                    <li>Copy the <strong>_id</strong> with title
+                                                                        <em>formsflow Reviewer</em> from Response body
+                                                                        and replace value for
+                                                                        <strong>REVIEWER_ROLE_ID</strong> in the
+                                                                        <strong>.env</strong> file.
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <blockquote>
+                                    <p><strong>Postman API calls are successfully completed. You can skip the remaining
+                                            sections in this page and continue with other installation steps.</strong>
+                                    </p>
+                                </blockquote>
                                 
-                               
                             
                             </div>
                         </section><br><br>

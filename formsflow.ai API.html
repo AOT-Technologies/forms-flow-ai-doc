@@ -99,15 +99,26 @@
 					<li class="nav-item"><a href="quick installation.html" style="color:  #566573">Quick
 							Installation</a></li>
 
-					<details>
+					<details open>
 								<summary><a href="download and installation.html" style="color:  #566573">Install Using Containers</a></summary>
 								<ul>
-								  <li class="nav-item"><a href="keycloak setup.html" style="color:  #566573">Keycloak</a></li>
-								  <li class="nav-item"><a href="Form Management Platform.html" style="color:  #566573">Form Management Platform</a></li>
-								  <li class="nav-item"><a href="Analytics Engine.html" style="color:  #566573">Analytics Engine</a></li>
-								  <li class="nav-item"><a href="formsflow.ai Web Application.html" style="color:  #566573">Formsflow.ai Web Application</a></li>
-								  <li class="nav-item"><a class="current" href="formsflow.ai API.html" style="color:  #566573">Formsflow.ai API</a></li>
-								  <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">Workflow Engine</a></li>
+									<details>
+									<summary><a href="#" style="color:  #566573">Keycloak</a></summary>
+									<ul>
+										<li class="nav-item"><a href="local keycloak setup.html" style="color:  #566573">Local Keycloak Setup</a></li>
+								  <li class="nav-item"><a href="server keycloak.html" style="color:  #566573">Server Keycloak Setup</a></li>
+									</ul></details>
+									<details>
+										<summary><a href="Form Management Platform.html" style="color:  #566573">Forms-flow-forms Setup</a></summary>
+										<ul>
+											<li class="nav-item"><a href="Form Management API.html" style="color:  #566573">Formsflow-forms user/role API</a></li>
+									  <li class="nav-item"><a href="Custom components.html" style="color:  #566573">Custom Components</a></li>
+										</ul></details>
+								  
+								  <li class="nav-item"><a href="Analytics Engine.html" style="color:  #566573">Forms-flow-analytics Setup</a></li>
+								  <li class="nav-item"><a href="formsflow.ai Web Application.html" style="color:  #566573">forms-flow-web Setup</a></li>
+								  <li class="nav-item"><a class="current" href="formsflow.ai API.html" style="color:  #566573">forms-flow-api Setup</a></li>
+								  <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">forms-flow-bpm Setup</a></li>
 								</ul>
 							  </details>
 					
@@ -156,34 +167,20 @@
 
                         <section>
                             <div>
-                                <h1 id="formsflow-ai-api">formsflow.ai API</h1>
-                                <p><a href="https://github.com/AOT-Technologies/forms-flow-ai-dev/actions"><img
-                                            src="https://github.com/AOT-Technologies/forms-flow-ai-dev/actions/workflows/forms-flow-api-ci.yml/badge.svg?branch=develop"
-                                            alt="FormsFlow API CI"></a>
-                                    <img src="https://img.shields.io/badge/python-3.9-blue" alt="Python"> <img
-                                        src="https://img.shields.io/badge/Flask-1.1.4-blue" alt="Flask"> <img
-                                        src="https://img.shields.io/badge/postgres-11.0-blue" alt="postgres">
-                                    <a href="https://pycqa.github.io/isort/"><img
-                                            src="https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&amp;labelColor=ef8336"
-                                            alt="Imports: isort"></a> <a href="https://github.com/psf/black"><img
-                                            src="https://img.shields.io/badge/code%20style-black-000000.svg"
-                                            alt="Code style: black"></a><a href="https://github.com/PyCQA/pylint"><img
-                                            src="https://img.shields.io/badge/linting-pylint-yellowgreen"
-                                            alt="linting: pylint"></a>
-                                </p>
-                                <p><strong>formsflow.ai</strong> has built this adaptive tier for correlating form
-                                    management, BPM and analytics together.</p>
-                                <p>The goal of the REST API is to provide access to all relevant interfaces of
-                                    the system. It is built using Python :snake: .</p>
-
-                                <h2 id="prerequisites">Prerequisites</h2>
+                                <h1 id="formsflow-ai-api">Formsflow.ai API</h1><br><hr>
+                                <p><strong>Formsflow.ai</strong> has built this adaptive tier for correlating form management, BPM and analytics together.</p>
+<p>The goal of the REST API is to provide access to all relevant interfaces of
+the system. It is built using Python .</p>
+                               
+                     
+                                <h3 id="prerequisites">Prerequisites</h3>
                                 <ul>
                                     <li>For docker based installation <a href="https://docker.com">Docker</a> need to be
                                         installed.</li>
-                                    <li>Admin access to <a href="../forms-flow-idm/keycloak">Keycloak</a> server and
+                                    <li>Admin access to Keycloak server and
                                         ensure audience(camunda-rest-api) is setup in Keycloak-bpm server.</li>
                                 </ul>
-                                <h2 id="solution-setup">Solution Setup</h2>
+                               
                                 <h3 id="installation">Installation</h3>
                                 <p>If you are interested in contributing to the project, you can install through docker
                                     or locally.</p>
@@ -200,7 +197,7 @@
                                     <li>Make sure you have a Docker machine up and running.</li>
                                     <li>Make sure your current working directory is
                                         &quot;forms-flow-ai/forms-flow-api&quot;.</li>
-                                    <li>Rename the file <a href="./sample.env">sample.env</a> to <strong>.env</strong>.
+                                    <li>Rename the file <strong>sample.env</strong> to <strong>.env</strong>.
                                     </li>
                                     <li>Modify the environment variables in the newly created <strong>.env</strong> file
                                         if needed. Environment variables are given in the table below,</li>
@@ -288,7 +285,7 @@
                                             <td><code>e4bdbd25-1467-4f7f-b993-bc4b1944c943</code>
                                                 <br><br><code>To generate a new keycloak client seceret by yourself follow the steps from</code>
                                                 <a
-                                                    href="../forms-flow-idm/keycloak/README.md#getting-the-client-secret">here</a>
+                                                    href="keycloak setup.html">here</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -318,7 +315,7 @@
                                             <td><code>*</code></td>
                                         </tr>
                                     </tbody>
-                                </table>
+                                </table><br>
                                 <p><strong>NOTE : Default realm is <code>forms-flow-ai</code></strong></p>
                                 <h3 id="running-the-application">Running the Application</h3>
                                 <ul>
@@ -327,33 +324,25 @@
                                         <p><code>cd {Your Directory}/forms-flow-ai/forms-flow-api</code></p>
                                     </li>
                                     <li>
-                                        <p>For Linux,</p>
+                                        
                                         <ul>
-                                            <li>Run <code>docker-compose -f docker-compose-linux.yml up -d</code> to
+                                            <li>Run <code>docker-compose up -d </code> to
                                                 start.</li>
                                         </ul>
-                                    </li>
-                                    <li>For Windows,<ul>
-                                            <li>Run <code>docker-compose -f docker-compose-windows.yml up -d</code> to
-                                                start.</li>
-                                        </ul>
+                                   
                                     </li>
                                 </ul>
                                 <p><em>NOTE: Use --build command with the start command to reflect any future
                                         <strong>.env</strong> changes eg :
-                                        <code>docker-compose -f docker-compose-windows.yml up --build -d</code></em></p>
+                                        <code>docker-compose up --build -d</code></em></p>
                                 <h4 id="to-stop-the-application">To Stop the Application</h4>
                                 <ul>
-                                    <li>For Linux,<ul>
-                                            <li>Run <code>docker-compose -f docker-compose-linux.yml stop</code> to
+                                    
+                                            <li>Run <code>docker-compose stop</code> to
                                                 stop.</li>
                                         </ul>
                                     </li>
-                                    <li>For Windows,<ul>
-                                            <li>Run <code>docker-compose -f docker-compose-windows.yml stop</code> to
-                                                stop.</li>
-                                        </ul>
-                                    </li>
+                                    
                                 </ul>
                                 <h3 id="verify-the-application-status">Verify the Application Status</h3>
                                 <p> The application should be up and available for use at port defaulted to 5000 in <a
@@ -398,13 +387,13 @@ Authorization: Bearer {<span class="hljs-keyword">access</span> token}
                                 <p><img src="https://user-images.githubusercontent.com/70306694/130730233-cf443a84-7716-4be6-b196-cb340509c495.png"
                                         alt="image" height="500" width="1000"></p>
                                 <p>Further documentation and associated postman collection for API endpoint
-                                    can found in the <a href="./docs">docs folder</a></p>
+                                    can found in the <a href="https://github.com/AOT-Technologies/forms-flow-ai/tree/master/forms-flow-api/docs">docs folder</a></p>
                                 <h2 id="unit-testing">Unit Testing</h2>
                                 <p>We have implemented unit tests with pytest.</p>
                                 <ul>
-                                    <li>Test cases are provided in the <a href="./tests">tests folder</a>.</li>
+                                    <li>Test cases are provided in the <a href="https://github.com/AOT-Technologies/forms-flow-ai/tree/master/forms-flow-api/tests">tests folder</a>.</li>
                                     <li>Run the tests by ensuring appropriate test environment variables are
-                                        setup in the <a href=".sample.env">.env file</a>.</li>
+                                        setup in the .env file.</li>
                                     <li>Using the make command, run the tests by running <code>make test</code>.</li>
                                 </ul>
                                 <p>Things to note when writing tests:</p>
@@ -425,8 +414,8 @@ Authorization: Bearer {<span class="hljs-keyword">access</span> token}
 
                             </div>
                         </section><br><br>
-                        <a href="architecture.html" class="previous">&laquo; Previous</a>
-                        <a href="UsageInstructions.html" class="next">Next &raquo;</a>
+                        <a href="formsflow.ai Web Application.html" class="previous">&laquo; Previous</a>
+                        <a href="Workflow Engine.html" class="next">Next &raquo;</a>
 
             </div>
             <!--//docs-code-block-->

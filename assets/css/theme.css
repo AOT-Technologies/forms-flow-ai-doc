@@ -203,7 +203,7 @@ details {
   color: #566573;
 }
 summary {
-  padding: 10px;
+  padding: 1px;
 }
 summary:focus {
   outline: none;
@@ -2237,8 +2237,16 @@ th,
 td {
   border: 1px solid black;
   border-collapse: collapse;
-  padding: 10px;
+  padding: 5px;
 }
+
+
+.scroll
+{
+
+Overflow-x:scroll;
+}
+
 
 @media (max-width: 575.98px) {
   .table-responsive-sm {

@@ -99,14 +99,14 @@
 					<li class="nav-item"><a href="quick installation.html" style="color:  #566573">Quick
 							Installation</a></li>
 
-					<details>
+					<details open>
 								<summary><a href="download and installation.html" style="color:  #566573">Install Using Containers</a></summary>
 								<ul>
-									<details>
+									<details open>
 									<summary><a href="#" style="color:  #566573">Keycloak</a></summary>
 									<ul>
 										<li class="nav-item"><a href="local keycloak setup.html" style="color:  #566573">Local Keycloak Setup</a></li>
-								  <li class="nav-item"><a href="server keycloak.html" style="color:  #566573">Server Keycloak Setup</a></li>
+								  <li class="nav-item"><a class="current" href="server keycloak.html" style="color:  #566573">Server Keycloak Setup</a></li>
 									</ul></details>
 									<details>
 										<summary><a href="Form Management Platform.html" style="color:  #566573">Forms-flow-forms Setup</a></summary>
@@ -167,136 +167,8 @@
                         <section>
 
                             <div>
-                                <h1><a href="formsflow-ai-keycloak-setup"></a>Keycloak Setup</h1>
-                                <hr><br>
-
-                                <h2 id="local-keycloak-setup">Local keycloak setup</h2>
-                                <ul>
-                                    <li>This setup is preferred for local development only. A docker instance will be
-                                        created as part of setup. If you have existing Keycloak instance go to <a
-                                            href="#server-keycloak-setup">Server Keycloak setup</a>.</li>
-                                </ul>
-                                <h3 id="prerequisites">Prerequisites</h3>
-                                <ul>
-                                    <li>For docker based installation <a href="https://docker.com">Docker</a> needs to
-                                        be installed.</li>
-                                </ul>
-                                <h3 id="environment-configuration">Environment Configuration</h3>
-                                <ul>
-                                    <li>Make sure you have a Docker machine up and running.</li>
-                                    <li>Make sure your current working directory is <a
-                                            href="">forms-flow-ai/forms-flow-idm/keycloak</a>.<blockquote>
-                                            <ul>
-                                                <li><em>Optional</em>: Rename the file <a
-                                                        href="./sample.env">sample.env</a> to <strong>.env</strong>.
-                                                    Skip this step if you want to use the default values as mentioned in
-                                                    the table below.</li>
-                                                <li><em>Optional</em>: Modify the environment variables in the newly
-                                                    created <strong>.env</strong> file if needed. Environment variables
-                                                    are given in the table below,</li>
-                                            </ul>
-                                        </blockquote>
-                                    </li>
-                                </ul>
-                                <h3 id="environment-variables">Environment Variables</h3>
-                                <h4 id="keycloak-database-connection-details">Keycloak Database Connection Details</h4>
-                                <hr>
-                                <p><strong><em>Skip this for default setup</em></strong></p>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Variable name</th>
-                                            <th>Meaning</th>
-                                            <th>Possible values</th>
-                                            <th>Default value</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><code>KEYCLOAK_JDBC_DB</code></td>
-                                            <td>keycloak database name</td>
-                                            <td>Used on installation to create the database.Choose your own</td>
-                                            <td><code>keycloak</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>KEYCLOAK_JDBC_USER</code></td>
-                                            <td>keycloak database postgres user</td>
-                                            <td>Used on installation to create the database.Choose your own</td>
-                                            <td><code>postgres</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>KEYCLOAK_JDBC_PASSWORD</code></td>
-                                            <td>keycloak database postgres password</td>
-                                            <td>Used on installation to create the database.Choose your own</td>
-                                            <td><code>changeit</code></td>
-                                        </tr>
-                                    </tbody>
-                                </table><br>
-                                <h4 id="keycloak-admin-details">Keycloak Admin Details</h4>
-                                <hr>
-                                <p><strong><em>Skip this for default setup</em></strong></p>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Variable name</th>
-                                            <th>Meaning</th>
-                                            <th>Possible values</th>
-                                            <th>Default value</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><code>KEYCLOAK_ADMIN_USER</code></td>
-                                            <td>keycloak admin user name</td>
-                                            <td>Choose your own</td>
-                                            <td><code>admin</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>KEYCLOAK_ADMIN_PASSWORD</code></td>
-                                            <td>keycloak admin password</td>
-                                            <td>Choose your own</td>
-                                            <td><code>changeme</code></td>
-                                        </tr>
-                                    </tbody>
-                                </table><br>
-                                <h3 id="starting-or-stopping-keycloak-server">Starting or Stopping Keycloak server</h3>
-                                <ul>
-                                    <li>Keycloak server uses port 8080, make sure the port is available.</li>
-                                    <li><code>cd {Your Directory}/forms-flow-ai/forms-flow-idm/keycloak</code></li>
-                                </ul>
-                                <h4 id="to-start-the-keycloak-server">To start the keycloak server</h4>
-                                <ul>
-                                    <li>Run <code>docker-compose up -d</code> to start.</li>
-                                </ul>
-                                <p><em>NOTE: Use --build command with the start command to reflect any future changes eg
-                                        : <code>docker-compose up --build -d</code></em></p>
-                                <h4 id="to-stop-the-keycloak-server">To stop the keycloak server</h4>
-                                <ul>
-                                    <li>Run <code>docker-compose stop</code> to stop.</li>
-                                </ul>
-                                <h3 id="health-check">Health Check</h3>
-                                <p>The application should be up and available for use in <a
-                                        href="http://localhost:8080">http://localhost:8080</a></p>
-                                <pre><code><span class="hljs-section">Login Credentials
-                                -----------------</span>
-                                User Name : admin
-                                Password  : changeme
-                                </code></pre>
-                                <h3 id="add-custom-login-theme">Add custom login theme</h3>
-                                <ul>
-                                    <li>Log in to <a href="http://localhost:8080">http://localhost:8080</a></li>
-                                    <li>Select Realm settings&gt;Themes&gt;Login Theme&gt;formsflow&gt;Save.</li>
-                                    <li>Run <code>docker-compose up --build -d</code> to verify the changes.</li>
-                                </ul>
-                                
-                                <hr>
                                
-                                
-                                <blockquote>
-                                    <p><strong>Local keycloak set up is successfully completed now.</strong></p>
-                                </blockquote>
-                    
-                                <h2 id="server-keycloak-setup">Server keycloak setup</h2>
+                                <h2 id="server-keycloak-setup">Server keycloak setup</h2><hr>
                                 <ul>
                                     <li>Make sure you downloaded and installed <a
                                             href="https://www.keycloak.org/downloads">Keycloak</a>. </li>

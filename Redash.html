@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Forms flow ai documentation">
+    <meta name="author" content="formsflow.ai">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Welcome to formsflow.ai</title>
+
+    <!-- Google Font -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+    <link id="theme-style" rel="stylesheet" href="assets/css/atom-one-dark.min.css">
+
+
+
+</head>
+
+<body>
+
+    <header class="header fixed-top">
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+                        type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2"
+                                src="assets/images/formsflow.ai-logo.svg" alt="logo"><span
+                                class="logo-text">formsflow.ai</span></a></div>
+                </div>
+                <!--//docs-logo-wrapper-->
+                <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+                    <div class="top-search-box d-none d-lg-flex">
+                        <form class="search-form">
+                            <input type="text" placeholder="Search the docs..." name="search"
+                                class="form-control search-input">
+                            <button type="submit" class="btn search-btn" value="Search"><i
+                                    class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+
+                    <ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+                        <li class="list-inline-item"><a href="https://github.com/AOT-Technologies/forms-flow-ai"><i
+                                    class="fab fa-github fa-fw"></i></a></li>
+                    </ul>
+                    <!--//social-list-->
+                    <a href="https://github.com/AOT-Technologies/forms-flow-ai"
+                        class="btn btn-primary d-none d-lg-flex">Download</a>
+                </div>
+                <!--//docs-top-utilities-->
+            </div>
+            <!--//container-->
+        </div>
+        <!--//branding-->
+    </header>
+    <!--//header-->
+
+    <div class="docs-wrapper">
+        <div id="docs-sidebar" class="docs-sidebar">
+            <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+                    <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+                    <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <nav id="docs-nav" class="docs-nav navbar">
+                <ul class="section-items list-unstyled nav flex-column pb-3">
+                    <!-- main heading -->
+                    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Getting
+                            started</a></li>
+                    <li class="nav-item"><a href="index.html" style="color:  #566573">Introduction</a></li>
+                    <li class="nav-item"><a href="architecture.html" style="color:  #566573">System Architecture</a>
+                    </li>
+                    <li class="nav-item"><a class="current" href="aboutproject.html" style="color:  #566573">About The
+                            Project</a>
+                    </li>
+                    <li class="nav-item"><a href="UsageInstructions.html" style="color:  #566573">Usage-instructions</a>
+                    </li>
+                    <!-- main heading -->
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Installation</a>
+                    </li>
+                    <li class="nav-item"><a href="quick installation.html" style="color:  #566573">Quick
+                            Installation</a></li>
+
+                    <details open>
+                        <summary><a href="download and installation.html" style="color:  #566573">Install Using
+                                Containers</a></summary>
+                        <ul>
+                            <details>
+                                <summary><a href="#" style="color:  #566573">Keycloak</a></summary>
+                                <ul>
+                                    <li class="nav-item"><a href="local keycloak setup.html"
+                                            style="color:  #566573">Local Keycloak Setup</a></li>
+                                    <li class="nav-item"><a href="server keycloak.html" style="color:  #566573">Server
+                                            Keycloak Setup</a></li>
+                                </ul>
+                            </details>
+                            <details>
+                                <summary><a href="Form Management Platform.html"
+                                        style="color:  #566573">Forms-flow-forms Setup</a></summary>
+                                <ul>
+                                    <li class="nav-item"><a href="Form Management API.html"
+                                            style="color:  #566573">Formsflow-forms user/role API</a></li>
+                                    <li class="nav-item"><a href="Custom components.html" style="color:  #566573">Custom
+                                            Components</a></li>
+                                </ul>
+                            </details>
+
+                            <details open>
+									<summary><a href="Analytics Engine.html" style="color:  #566573">Forms-flow-analytics Setup</a></summary>
+									<ul>
+										<li class="nav-item"><a class="current" href="Redash.html" style="color:  #566573">Redash</a></li>
+								  
+									</ul></details>
+                            <li class="nav-item"><a href="formsflow.ai Web Application.html"
+                                    style="color:  #566573">forms-flow-web Setup</a></li>
+                            <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">forms-flow-api
+                                    Setup</a></li>
+                            <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">forms-flow-bpm
+                                    Setup</a></li>
+                        </ul>
+                    </details>
+
+                    <li class="nav-item"><a href="Openshift.html" style="color:  #566573">Openshift
+                            Installation</a></li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Features</a></li>
+
+
+                    <li class="nav-item"><a href="Internationalization.html"
+                            style="color:  #566573">Internationalization</a></li>
+                    <li class="nav-item"><a href="Listeners.html" style="color:  #566573">Camunda Listeners</a></li>
+
+                    <li class="nav-item"><a href="Taskvariables.html" style="color:  #566573">Task
+                            variable workflow</a></li>
+                    <li class="nav-item"><a href="Webevents.html" style="color:  #566573">Web Events</a></li>
+                    <li class="nav-item"><a href="AnonymousForm.html" style="color:  #566573">Anonymous Forms</a></li>
+                    <li class="nav-item"><a href="AdminPageDashboard.html" style="color:  #566573">AdminPage
+                            Dashboard</a></li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Multi Tenancy</a>
+                    </li>
+                    <li class="nav-item"><a href="Tenant-based task assignment.html"
+                            style="color:  #566573">Tenant-based task assignment</a></li>
+
+                    <!-- main heading -->
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-1">Section Item 9.1</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-2">Section Item 9.2</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-3">Section Item 9.3</a></li>
+                </ul>
+
+            </nav>
+            <!--//docs-nav-->
+        </div>
+        <!--//docs-sidebar-->
+        <div class="docs-content">
+            <div class="container">
+                <article class="docs-article" id="section-1">
+                    <!-- main heading content -->
+                    <header class="docs-header">
+
+
+
+                        <br>
+
+                        <section class="docs-section" id="item-1-1">
+                            <div>
+                                <h2 id="get-the-redash-api-key">Get the Redash API Key</h2><hr>
+                                <ul>
+                                    <li>Login to redash hosted instance (i.e. <a
+                                            href="http://localhost:7000/">http://localhost:7000/</a>) using the admin
+                                        credentials passed for registration / SAML credentials</li>
+                                    <li>Go to User Icon -&gt; Profile -&gt; Settings<ul>
+                                            <li>Go to Account Section</li>
+                                            <li>Copy API Key to Clipboard</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <h2 id="redash-how-to-use-guide">How to configure Redash</h2><hr>
+                                <ul>
+                                    <h3 id="forms-flow-analytics-usage-documentation">Forms-flow-analytics Usage
+                                        Documentation</h3>
+                                    <p>The process of how to use Redash is <a href="https://redash.io/help/">well
+                                            documented in official docs</a>. Some of the basic steps for working with
+                                        Redash are:</p>
+                                    <ol>
+                                        <li><em>Add Data sources</em></li>
+                                    </ol>
+                                    <p>You can connect with about 30+ supported data sources mentioned in docs from the
+                                        browser itself.
+                                        <img src="https://user-images.githubusercontent.com/70306694/125465830-2b6d3985-4dc8-423c-9947-5ae3d689cab0.png"
+                                            alt="image"><br>
+                                    </p>
+                                    <ol>
+                                        <li>
+                                            <p><em>Write Queries</em>
+                                                Once data is connected we can write queries. It’s always ideal to create
+                                                individual queries for the necessary visualizations. Writing queries is
+                                                a data preparation step to process data for visualization.</p>
+                                            <p><img src="https://user-images.githubusercontent.com/70306694/125465939-cf68ce67-c589-49d1-9110-067d0e896054.png"
+                                                    alt="image"></p>
+                                        </li>
+                                    </ol>
+                                    <ol>
+                                        <li><em>Create Visualizations</em></li>
+                                    </ol>
+                                    <p>There are a variety of visualizations supported in Redash. Ten different
+                                        categories of visualization can be created with just drag and select features to
+                                        visualize from the queried data. Redash supports visualization types like
+                                        BoxPlot, Counter, BarCharts, Sunburst, Sankey, Word Cloud, line chart, Area
+                                        charts, etc. To learn how to create visualizations checkout Redash visualization
+                                        docs.</p>
+                                    <p><img src="https://user-images.githubusercontent.com/70306694/125466037-7b66530f-235b-4198-8c6f-46d556726963.png"
+                                            alt="image"></p>
+                                    <ol>
+                                        <li><em>Create Dashboards</em></li>
+                                    </ol>
+                                    <p>We can create interactive dashboards that can be embedded anywhere and shared
+                                        with colleagues easily. The queries can be refreshed periodically as more data
+                                        comes in.</p>
+                                    <p><img src="https://user-images.githubusercontent.com/70306694/125466079-02a24f12-58ed-40e4-a669-b88dbb456645.png"
+                                            alt="image"></p>
+                                    <p><em>5. Share Dashboad for public access</em></p>
+                                    <p>After you have created the dashboard to view it inside formsflow.ai solution.
+                                        Share the Dashboard and enable <code>Allow public access</code>.</p>
+                                    <p><img src="https://user-images.githubusercontent.com/70306694/135583411-a7e7ce1d-6792-4884-a133-b9dcd5446cb1.png"
+                                            alt="image"></p>
+                                    <h2 id="sample-queries">Sample Queries</h2>
+                                    <p>To check the sample queries provided with our default forms <a
+                                            href="./sample_queries.md">check our documentation</a></p>
+                                    <p>To learn more about Redash check the <a
+                                            href="https://www.aot-technologies.com/tools-we-love-redash/">Tools we love
+                                            article about Redash</a>.</p>
+
+                                    <li>
+                                        <p>If you want to visualize based on data in formsflow.ai, <a
+                                                href="./docs/sample_queries.md">a few sample queries for default forms
+                                                are available</a>.</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </section><br><br>
+                        <a href="" class="previous">&laquo; Previous</a>
+                        <a href="" class="next">Next &raquo;</a>
+
+            </div>
+            <!--//docs-code-block-->
+
+
+            </header>
+
+
+            </article>
+
+
+
+
+            <!-- Javascript -->
+            <script src="assets/plugins/popper.min.js"></script>
+            <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+            <!-- Page Specific JS -->
+            <script src="assets/plugins/smoothscroll.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+            <script src="assets/js/highlight-custom.js"></script>
+            <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+            <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+            <script src="assets/js/docs.js"></script>
+
+</body>
+
+</html>

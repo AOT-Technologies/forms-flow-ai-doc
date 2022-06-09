@@ -115,7 +115,12 @@
 									  <li class="nav-item"><a href="Custom components.html" style="color:  #566573">Custom Components</a></li>
 										</ul></details>
 								  
-								  <li class="nav-item"><a href="Analytics Engine.html" style="color:  #566573">Forms-flow-analytics Setup</a></li>
+								  <details>
+									<summary><a href="Analytics Engine.html" style="color:  #566573">Forms-flow-analytics Setup</a></summary>
+									<ul>
+										<li class="nav-item"><a href="Redash.html" style="color:  #566573">Redash</a></li>
+								  
+									</ul></details>
 								  <li class="nav-item"><a href="formsflow.ai Web Application.html" style="color:  #566573">forms-flow-web Setup</a></li>
 								  <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">forms-flow-api Setup</a></li>
 								  <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">forms-flow-bpm Setup</a></li>
@@ -288,61 +293,7 @@
                                     <li>Select Realm settings&gt;Themes&gt;Login Theme&gt;formsflow&gt;Save.</li>
                                     <li>Run <code>docker-compose up --build -d</code> to verify the changes.</li>
                                 </ul>
-                                <h4 id="formsflow-ai-user-credentials">formsflow-ai user credentials</h4>
-                                <hr>
-                                <ul>
-                                    <li>Default User credentials are generated when keycloak started for the first time,
-                                        you can modify the values on your keycloak service. </li>
-                                </ul>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>User Role</th>
-                                            <th>User Name</th>
-                                            <th>Password</th>
-                                            <th>User Group</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><code>Designer</code></td>
-                                            <td><code>formsflow-designer</code></td>
-                                            <td><code>changeme</code></td>
-                                            <td><code>formsflow-designer</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>Client</code></td>
-                                            <td><code>formsflow-client</code></td>
-                                            <td><code>changeme</code></td>
-                                            <td><code>formsflow-client</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>Reviewer</code></td>
-                                            <td><code>formsflow-reviewer</code></td>
-                                            <td><code>changeme</code></td>
-                                            <td><code>formsflow-reviewer</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>Clerk</code></td>
-                                            <td><code>formsflow-clerk</code></td>
-                                            <td><code>changeme</code></td>
-                                            <td><code>formsflow-reviewer</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>Approver</code></td>
-                                            <td><code>formsflow-approver</code></td>
-                                            <td><code>changeme</code></td>
-                                            <td><code>formsflow-reviewer</code></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <hr>
-                                <p><strong>NOTE</strong></p>
-                                <p>All the default configurations are imported to keycloak during the startup, so no
-                                    manual changes are required at this stage.
-                                    Redirect uri&#39;s are configured as localhost in the default setup, you can
-                                    configure the ip address (if required) as the redirect uri for the clients by
-                                    logging into Keycloak.</p>
+                                <a href="default user credential.html">Default User Credentials</a>
                                 
                                 
 

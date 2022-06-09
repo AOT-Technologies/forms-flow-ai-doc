@@ -115,7 +115,12 @@
 									  <li class="nav-item"><a href="Custom components.html" style="color:  #566573">Custom Components</a></li>
 										</ul></details>
 							
-								  <li class="nav-item"><a href="Analytics Engine.html" style="color:  #566573">Forms-flow-analytics Setup</a></li>
+								  <details>
+									<summary><a href="Analytics Engine.html" style="color:  #566573">Forms-flow-analytics Setup</a></summary>
+									<ul>
+										<li class="nav-item"><a href="Redash.html" style="color:  #566573">Redash</a></li>
+								  
+									</ul></details>
 								  <li class="nav-item"><a href="formsflow.ai Web Application.html" style="color:  #566573">forms-flow-web Setup</a></li>
 								  <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">forms-flow-api Setup</a></li>
 								  <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">forms-flow-bpm Setup</a></li>
@@ -200,94 +205,7 @@
 
                            
 
-                              <h3 id="application-setup">Application Setup</h3>
-                                    <ul>
-                                        <li>The application will be installed in the following order.</li>
-                                        <li>
-                                            <p>Some of the services have dependencies, mentioned below.</p><br>
-                                            <p>
-                                            <table>
-                                                <tr>
-                                                    <td>Srl No</td>
-                                                    <td>Service Name </td>
-                                                    <td>Usage </td>
-                                                    <td>Access</td>
-                                                    <td>Dependency </td>
-                                                    <td>Details</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td><code>Keycloak</code></td>
-                                                    <td>Authentication</td>
-                                                    <td><code>http://localhost:8080</code></td>
-                                                    <td></td>
-                                                    <td><a
-                                                            href="ApplicationSetup.html#formsflow-ai-keycloak-setup">Keycloak</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td><code>forms-flow-forms</code></td>
-                                                    <td>form.io form building. This must be started earlier for resource
-                                                        role
-                                                        id&#39;s creation
-                                                    <td><code>http:/localhost:3001</code></td>
-                                                    <td></td>
-                                                    <td><a
-                                                            href="ApplicationSetup.html#form-management-platform">forms-flow-forms</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td><code>forms-flow-analytics</code></td>
-                                                    <td>Redash analytics server, This must be started earlier for redash
-                                                        key
-                                                        creation</td>
-                                                    <td><code>http://localhost:7000</code></td>
-                                                    <td><code>Keycloak</code></td>
-                                                    <td><a
-                                                            href="ApplicationSetup.html#analytics-engine">forms-flow-analytics</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>4</td>
-                                                    <td><code>forms-flow-web</code></td>
-                                                    <td>formsflow Landing web app</td>
-                                                    <td><code>http://localhost:3000</code></td>
-                                                    <td><code>Keycloak</code>, <code>forms-flow-forms</code>,
-                                                        <code>forms-flow-analytics</code>
-                                                    </td>
-                                                    <td><a
-                                                            href="ApplicationSetup.html#formsflow-ai-web-application">forms-flow-web</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5</td>
-                                                    <td><code>forms-flow-api</code></td>
-                                                    <td>API services</td>
-                                                    <td><code>http://localhost:5000</code></td>
-                                                    <td><code>Keycloak</code></td>
-                                                    <td><a
-                                                            href="ApplicationSetup.html#formsflow-ai-api">forms-flow-api</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>6</td>
-                                                    <td><code>forms-flow-bpm</code></td>
-                                                    <td>Camunda integration</td>
-                                                    <td><code>http://localhost:8000/camunda</code></td>
-                                                    <td><code>Keycloak</code></td>
-                                                    <td><a
-                                                            href="ApplicationSetup.html#workflow-engine">forms-flow-bpm</a>
-                                                    </td>
-                                                </tr>
-                                            </table>
-
-                                            </p>
-                                        </li>
-                                    </ul>
-                                    <br>
-                                    <hr><br>
+                             
 
 
 
@@ -364,63 +282,8 @@
                                             </tbody>
                                         </table>
                                     </section><br><br>
-                                    <hr>
-                                    <section>
-                                        <div>
-                                            <h4 id="formsflow-ai-user-credentials">formsflow-ai user credentials</h4>
-
-                                            <ul>
-                                                <li>Default User credentials are generated when keycloak started for the
-                                                    first time, you can modify the values on your keycloak service.
-                                                </li>
-                                            </ul>
-                                            <table>
-                                                <thead>
-                                                    <tr>
-                                                        <th>User Role</th>
-                                                        <th>User Name</th>
-                                                        <th>Password</th>
-                                                        <th>User Group</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td><code>Designer</code></td>
-                                                        <td><code>formsflow-designer</code></td>
-                                                        <td><code>changeme</code></td>
-                                                        <td><code>formsflow-designer</code></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><code>Client</code></td>
-                                                        <td><code>formsflow-client</code></td>
-                                                        <td><code>changeme</code></td>
-                                                        <td><code>formsflow-client</code></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><code>Reviewer</code></td>
-                                                        <td><code>formsflow-reviewer</code></td>
-                                                        <td><code>changeme</code></td>
-                                                        <td><code>formsflow-reviewer</code></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><code>Clerk</code></td>
-                                                        <td><code>formsflow-clerk</code></td>
-                                                        <td><code>changeme</code></td>
-                                                        <td><code>formsflow-reviewer</code></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><code>Approver</code></td>
-                                                        <td><code>formsflow-approver</code></td>
-                                                        <td><code>changeme</code></td>
-                                                        <td><code>formsflow-reviewer</code></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-
-                                        </div>
-                                    </section>
-                                    <br><br>
+                                    
+                                    
                                     <a href="quick installation.html" class="previous">&laquo; Previous</a>
                                     <a href="Openshift.html" class="next">Next &raquo;</a>
 

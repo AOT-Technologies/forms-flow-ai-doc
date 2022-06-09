@@ -115,7 +115,12 @@
 									  <li class="nav-item"><a href="Custom components.html" style="color:  #566573">Custom Components</a></li>
 										</ul></details>
 								  
-								  <li class="nav-item"><a href="Analytics Engine.html" style="color:  #566573">Forms-flow-analytics Setup</a></li>
+								  <details>
+									<summary><a href="Analytics Engine.html" style="color:  #566573">Forms-flow-analytics Setup</a></summary>
+									<ul>
+										<li class="nav-item"><a href="Redash.html" style="color:  #566573">Redash</a></li>
+								  
+									</ul></details>
 								  <li class="nav-item"><a class="current"  href="formsflow.ai Web Application.html" style="color:  #566573">forms-flow-web Setup</a></li>
 								  <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">forms-flow-api Setup</a></li>
 								  <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">forms-flow-bpm Setup</a></li>
@@ -409,7 +414,7 @@
                                     <li>The application should be up and available for use at port defaulted to 3000 in
                                         <a href="http://localhost:3000/">http://localhost:3000/</a></li>
                                     <li>Default user credentials are provided <a
-                                            href="local keycloak setup.html#formsflow-ai-user-credentials">here</a>.
+                                            href="default user credential.html">here</a>.
                                     </li>
                                 </ul>
                                 <h3 id="how-to-create-your-first-form">How to Create Your First Form</h3>
@@ -417,7 +422,7 @@
                                     <li>Login to <strong><a
                                                 href="http://localhost:3000/">http://localhost:3000/</a></strong> using
                                         valid <a
-                                            href="local keycloak setup.html">designer</a>
+                                            href="default user credential.html">designer</a>
                                         credentials</li>
                                     <li>Navigate to menu <strong>Forms</strong></li>
                                     <li>Click the button <strong>+ Create Form</strong> to launch the form designer
@@ -452,43 +457,13 @@
                                         <code>forms-flow-ai\forms-flow-web\coverage\lcov-report\index.html</code> with
                                         browser.</li>
                                 </ul>
-                                <h3 id="internationalization">Internationalization</h3>
-                                <ul>
-                                    <li>Default language &#39;English&#39; can be changed to other languages according
-                                        to the user.</li>
-                                    <li>The languages currently provided are
-                                        <code>Chinese,Portuguese,French and Bulgarian</code>.</li>
-                                    <li>User can add more languages by following the steps :<ol>
-                                            <li>Create a folder at <em>forms-flow-web/src/resourceBundles</em> with
-                                                folder name as the abbrevation of the required language.</li>
-                                            <li>Create a file named resourceBundles.js inside the folder.</li>
-                                            <li>Copy the key-value pairs from <em>resourceBundles.js</em> file inside
-                                                <em>en</em> folder and paste it to the new file.</li>
-                                            <li>Translate the value of the keys to the required language using google
-                                                translator and paste the values to the same file</li>
-                                            <li>Import the same file to
-                                                <em>forms-flow-web/src/resourceBundles/i18n.js</em> like rest of the
-                                                languages.</li>
-                                            <li>You should add content of new translation file to
-                                                <em>forms-flow-web/src/resourceBundles/formio_resourceBundles.js</em>
-                                                also.</li>
-                                            <li>Open forms-flow-api/src/formsflow_api/utils/translations/translations.py
-                                                , copy any set of translations ,translate the values and paste it back
-                                                to the file with required language key.</li>
-                                            <li>You should add the proposed name and value of the language to
-                                                <em>forms-flow-web/public/config/languageData.json</em>.</li>
-                                            <li>Login to <strong><a
-                                                        href="http://localhost:3000/">http://localhost:3000/</a></strong>
-                                                to check your updations.</li>
-                                        </ol>
-                                    </li>
-                                </ul>
+                               
 
                             </div>
 
                         </section><br><br>
-                        <a href="Analytics Engine.html" class="previous">&laquo; Previous</a>
-                        <a href="formsflow.ai API.html" class="next">Next &raquo;</a>
+                        <a href="" class="previous">&laquo; Previous</a>
+                        <a href="" class="next">Next &raquo;</a>
 
             </div>
             <!--//docs-code-block-->

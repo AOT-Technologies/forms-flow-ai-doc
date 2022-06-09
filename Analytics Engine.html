@@ -121,10 +121,13 @@
 										<li class="nav-item"><a href="Redash.html" style="color:  #566573">Redash</a></li>
 								  
 									</ul></details>
-								  <li class="nav-item"><a href="formsflow.ai Web Application.html" style="color:  #566573">forms-flow-web Setup</a></li>
-								  <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">forms-flow-api Setup</a></li>
-								  <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">forms-flow-bpm Setup</a></li>
-								</ul>
+								   </ul>
+									<ul style="list-style: none; padding: 0; margin-left: -20px;">
+								  <li class="nav-item"><a href="formsflow.ai Web Application.html" style="color:  #566573">Forms-flow-web Setup</a></li>
+								  <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">Forms-flow-api Setup</a></li>
+								  <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">Forms-flow-bpm Setup</a></li>
+								   
+								   </ul>
 							  </details>
 					
 					<li class="nav-item"><a href="Openshift.html" style="color:  #566573">Openshift
@@ -196,10 +199,20 @@
                                     </li>
                                     <li>Modify the environment variables inside <strong>.env</strong> file if
                                         needed. Environment variables are given in the table below</li>
-                                    <li><strong>NOTE : <code>{your-ip-address}</code> given inside the <a
-                                                href="./sample.env">.env</a> file should be changed to your host system
-                                            IP address. Please take special care to identify the correct IP address if
-                                            your system has multiple network cards</strong></li>
+                                        <div class="callout-block callout-block-info">
+                                            <div class="content">
+                                                <span class="callout-icon-holder me-1"></span>
+                                                
+                                                <i class="fa fa-bullhorn"></i>
+                                                
+                                                <strong>NOTE :</strong> <code>{your-ip-address}</code> given inside the .env file should be changed to your host system
+                                                IP address. Please take special care to identify the correct IP address if
+                                                your system has multiple network cards
+                                                
+                                            </div>
+                                            
+                                        </div>
+                                    
                                 </ul>
                                 <blockquote>
                                     <p>:information_source: Variables with trailing :triangular_flag_on_post: in below
@@ -310,11 +323,22 @@
                                     </li>
                                    
                                 </ul>
-                                <p><em>NOTE: Use --build command with the start command to reflect any future
-                                        <strong>.env</strong> changes eg :
-                                        <code>docker-compose up --build -d
-
-                                        </code></em></p>
+                                <div class="callout-block callout-block-info">
+                                    <div class="content">
+                                        <span class="callout-icon-holder me-1"></span>
+                                        
+                                        <i class="fa fa-bullhorn"></i>
+                                        
+                                        <em>NOTE: Use --build command with the start command to reflect any future
+                                            <strong>.env</strong> changes eg :
+                                            <code>docker-compose up --build -d
+    
+                                            </code></em>  
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
                                 <h4 id="to-stop-the-application">To stop the application</h4>
                                 <ul>
                                     
@@ -360,7 +384,7 @@ PONG.
                                     </li>
                                     <li>Logout and login again using valid formsflow.ai keycloak user credentials.
                                         Default user credentials are provided <a
-                                            href="../forms-flow-idm/keycloak/README.md#formsflow-ai-user-credentials">here</a>.
+                                            href="default user credential.html">here</a>.
                                     </li>
                                 </ul>
                                 <blockquote>

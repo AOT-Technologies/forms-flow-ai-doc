@@ -121,10 +121,13 @@
 										<li class="nav-item"><a href="Redash.html" style="color:  #566573">Redash</a></li>
 								  
 									</ul></details>
-								  <li class="nav-item"><a href="formsflow.ai Web Application.html" style="color:  #566573">forms-flow-web Setup</a></li>
-								  <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">forms-flow-api Setup</a></li>
-								  <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">forms-flow-bpm Setup</a></li>
-								</ul>
+ </ul>
+									<ul style="list-style: none; padding: 0; margin-left: -20px;">
+								  <li class="nav-item"><a href="formsflow.ai Web Application.html" style="color:  #566573">Forms-flow-web Setup</a></li>
+								  <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">Forms-flow-api Setup</a></li>
+								  <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">Forms-flow-bpm Setup</a></li>
+								   
+								   </ul>
 							  </details>
 
                     <li class="nav-item"><a href="Openshift.html" style="color:  #566573">Openshift
@@ -273,8 +276,24 @@
                                 <ul>
                                     <li>Run <code>docker-compose up -d</code> to start.</li>
                                 </ul>
-                                <p><em>NOTE: Use --build command with the start command to reflect any future changes eg
-                                        : <code>docker-compose up --build -d</code></em></p>
+                                <div class="callout-block callout-block-info">
+                                    <div class="content">
+                                        <span class="callout-icon-holder me-1"></span>
+                                        
+                                        <i class="fa fa-bullhorn"></i>
+                                       
+                                        <em>  Use --build command with the start command to reflect any future changes eg
+                                        : <code>docker-compose up --build -d</code></em>
+                                        
+                                    </div>
+                                    
+                                </div>
+
+
+
+
+                                <!-- <p><em>NOTE: Use --build command with the start command to reflect any future changes eg
+                                        : <code>docker-compose up --build -d</code></em></p> -->
                                 <h4 id="to-stop-the-keycloak-server">To stop the keycloak server</h4>
                                 <ul>
                                     <li>Run <code>docker-compose stop</code> to stop.</li>

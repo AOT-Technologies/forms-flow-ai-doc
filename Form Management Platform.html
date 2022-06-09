@@ -122,10 +122,13 @@
 										<li class="nav-item"><a href="Redash.html" style="color:  #566573">Redash</a></li>
 								  
 									</ul></details>
-								  <li class="nav-item"><a href="formsflow.ai Web Application.html" style="color:  #566573">forms-flow-web Setup</a></li>
-								  <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">forms-flow-api Setup</a></li>
-								  <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">forms-flow-bpm Setup</a></li>
-								</ul>
+								   </ul>
+									<ul style="list-style: none; padding: 0; margin-left: -20px;">
+								  <li class="nav-item"><a href="formsflow.ai Web Application.html" style="color:  #566573">Forms-flow-web Setup</a></li>
+								  <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">Forms-flow-api Setup</a></li>
+								  <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">Forms-flow-bpm Setup</a></li>
+								   
+								   </ul>
 							  </details>
 					
 					<li class="nav-item"><a href="Openshift.html" style="color:  #566573">Openshift
@@ -194,15 +197,23 @@
                                     </li>
                                     <li>Modify the environment variables in the newly created <strong>.env</strong> file
                                         if needed. Environment variables are given in the table below,</li>
-                                    <li><strong>NOTE : <code>{your-ip-address}</code> given inside the .env file should
+                                        <div class="callout-block callout-block-info">
+                                            <div class="content">
+                                                <span class="callout-icon-holder me-1"></span>
+                                                
+                                                <i class="fa fa-bullhorn"></i>
+                                                
+                                                <em> NOTE :<code>{your-ip-address}</code> given inside the .env file should
                                             be changed to your host system IP address. Please take special care to
                                             identify the correct IP address if your system has multiple network
-                                            cards</strong></li>
+                                            cards.</em>
+                                                
+                                            </div>
+                                            
+                                        </div>
+                                    
                                 </ul>
-                                <blockquote>
-                                    <p>:information_source: Variables with trailing :triangular_flag_on_post: in below
-                                        table should be updated in the .env file</p>
-                                </blockquote>
+                                <br>
                                 <table>
                                     <thead>
                                         <tr>
@@ -275,9 +286,20 @@
                                     <li>
                                         <p>Run <code>docker-compose up -d</code> to start</p>
                                 </ul>
-                                <p><em>NOTE: Use --build command with the start command to reflect any future
-                                        <strong>.env</strong> changes eg :
-                                        <code>docker-compose up --build -d</code></em></p>
+                                <div class="callout-block callout-block-info">
+                                    <div class="content">
+                                        <span class="callout-icon-holder me-1"></span>
+                                        
+                                        <i class="fa fa-bullhorn"></i>
+                                        
+                                        <em>NOTE: Use --build command with the start command to reflect any future
+                                            <strong>.env</strong> changes eg :
+                                            <code>docker-compose up --build -d</code></em>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
                                 <h4 id="to-stop-the-application">To stop the application</h4>
                                 <ul>
                                     

@@ -102,9 +102,10 @@
                     <details>
                         <summary><a href="download and installation.html" style="color:  #566573">Install Using
                                 Containers</a></summary>
-                        <ul>
+                        <ul style="list-style: none;">
                             <li class="nav-item"><a href="local keycloak setup.html" style="color:  #566573">Keycloak
                                     Setup</a></li>
+
                             <li class="nav-item"></li><a href="Form Management Platform.html"
 								style="color:  #566573">Formsflow forms Setup</a></li>
 
@@ -117,7 +118,7 @@
                                 </ul>
                             </details>
                         </ul>
-                        <ul style="list-style: none; padding: 0; margin-left: -20px;">
+                        <ul style="padding: 0; margin-left: -20px;">
                             <li class="nav-item"><a href="formsflow.ai Web Application.html"
                                     style="color:  #566573">Formsflow web Setup</a></li>
                             <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">Formsflow api
@@ -146,8 +147,7 @@
                             Setup</a></li>
                     <li class="nav-item"><a href="Logo change .html" style="color:  #566573">Logo chane and code
                             coverage</a></li>
-                    <li class="nav-item"><a class="current" href="AnonymousForm.html" style="color:  #566573">Anonymous
-                            Forms</a></li>
+                    <li class="nav-item"><a href="AnonymousForm.html" style="color:  #566573">Anonymous Forms</a></li>
                     <li class="nav-item"><a href="AdminPageDashboard.html" style="color:  #566573">Admin
                             Dashboard</a></li>
                     <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
@@ -177,54 +177,91 @@
 
 
                         <br>
-                        <section class="docs-section" id="installation-3">
 
-                            <h1 id="anonymous-workflow">Anonymous Forms</h1>
-                            <hr><br>
-                            <p>
-                                An anonymous form allows users to submit form entries anonymously. Users can access the
-                                form using the form url without login to the application.
+                        <section class="docs-section" id="item-1-1">
+                            <div>
+                                <h2 id="how-to-deploy-process">How to Deploy Process</h2>
+                                <p> REST service <strong>/camunda/engine-rest/deployment/create</strong> will be used
+                                    for deployment of process.</p>
+                                <p> CURL commands are leveraged for this action. </p>
+                                <h5 id="1-generate-token-using-elevated-user-or-service-client-credentials">1. Generate
+                                    token using elevated user or service-client credentials</h5>
+                                <pre><code>      <span class="hljs-built_in">export</span> token=`curl -X POST <span class="hljs-string">"{your keycloak url}/auth/realms/{realm}/protocol/openid-connect/token"</span> -H <span class="hljs-string">"Content-Type: application/x-www-form-urlencoded"</span> <span class="hljs-_">-d</span> <span class="hljs-string">"username=test"</span> <span class="hljs-_">-d</span> <span class="hljs-string">"password=test"</span> <span class="hljs-_">-d</span> <span class="hljs-string">"grant_type=password"</span> <span class="hljs-_">-d</span> <span class="hljs-string">"client_id=forms-flow-bpm"</span> <span class="hljs-_">-d</span> <span class="hljs-string">"client_secret=xxxxxxxxxxxxxx"</span> | jq -r <span class="hljs-string">".access_token"</span>`
+</code></pre>
+                                <h5 id="2-post-the-process-as-file-with-http-verb-post-">2. Post the process as file
+                                    with HTTP verb POST.</h5>
+                                <pre><code>   curl -H <span class="hljs-string">"Authorization: Bearer ${token}"</span> -H <span class="hljs-string">"Accept: application/json"</span> -<span class="hljs-literal">F</span> <span class="hljs-string">"deployment-name=One Step Approval"</span> -<span class="hljs-literal">F</span> <span class="hljs-string">"enable-duplicate-filtering=false"</span> -<span class="hljs-literal">F</span> <span class="hljs-string">"deploy-changed-only=falses"</span> -<span class="hljs-literal">F</span> <span class="hljs-string">"one_step_approval.bpmnn=@one_step_approval.bpmn"</span>  http://{your-ip-address}:<span class="hljs-number">8000</span>/camunda/engine-rest/deployment/create
+</code></pre>
+                                <ul>
+                                    <div class="callout-block callout-block-info">
+                                        <div class="content">
+                                            <span class="callout-icon-holder me-1"></span>
 
-                            </p>
-                            <p>Below steps describes how you can design a form anonymous</p>
-                            <ol>
-                                <li>Create a new form or Edit an already created form. Check the field asking whether
-                                    you want to make the form public to make the form available to public.
-                                </li><br><br>
-                                <img src="./assets/images/166641751-b7f4df20-959d-485a-ac41-cc688e9f6762 (1).png"
-                                    height="500" width="1000"> </p>
-                                <li>Assosiate a workflow if you want and move to the next stage.</li><br><br>
-                                <img src="./assets/images/Screenshot 2022-06-01 142611.png" height="500"
-                                    width="1000"><br><br>
-                                <li>In this stage, you can copy the anonymous form url and publish the form to the
-                                    client.Forms that are made anonymous and public will only appear publicly.</li>
-                                <br><br>
+                                            <i class="fa fa-bullhorn"></i>
 
-                                <p><img src="./assets/images/166641111-41401eb1-4c42-4198-99b5-e66200d20498.png"
-                                        alt="image" height="500" width="1000"></p>
-                                <strong>
-                                    Note-Forms will not be available to anonymous users if its not published
-                                </strong>
-                                <br><br>
-                                <img src="./assets/images/Screenshot 2022-06-01 143337.png" height="300" width="1000">
-                                <br><br>
-                                <li>Designers can share the copied URL to other users for submitting anonymous forms.
-                                </li>
-                                <br>
-                                <img src="./assets/images/Screenshot 2022-06-01 143743.png" height="500" width="1000">
-                                <br><br>
-                            </ol>
+                                            <strong>NOTE :</strong> If POST request fails with permission issue, login
+                                            to Camunda and
+                                            go to Admin -&gt; Authorizations -&gt; Deployment. Then, verify the account
+                                            existence under &quot;deployment&quot; service. If does not, please add it
+                                            manually.</strong>
 
+                                        </div>
 
-                        </section>
-                        <br>
-                        <a href="Webevents.html" class="previous">&laquo; Previous</a>
-                        <a href="AdminPageDashboard.html" class="next">Next &raquo;</a>
+                                    </div>
 
+                                </ul>
+                                <h2 id="how-to-enable-ssl">How to Enable SSL</h2>
+                                <h5
+                                    id="1-generate-domain-specific-pem-format-and-convert-into-pkcs12-using-below-commands-">
+                                    1. Generate domain specific pem format and convert into pkcs12 using below commands.
+                                </h5>
+                                <pre><code>openssl pkcs12 -export -out bpm1<span class="hljs-selector-class">.pkcs12</span> -<span class="hljs-keyword">in</span> combined<span class="hljs-selector-class">.pem</span>
+keytool -genkey -keyalg RSA -alias tomcat -keystore truststore<span class="hljs-selector-class">.ks</span>
+keytool -delete -alias tomcat -keystore truststore<span class="hljs-selector-class">.ks</span>
 
+keytool -import -v -trustcacerts -alias tomcat -file fullchain<span class="hljs-selector-class">.pem</span> -keystore truststore<span class="hljs-selector-class">.ks</span>
+keytool -genkey -keyalg RSA -alias tomcat -keystore keystore<span class="hljs-selector-class">.ks</span>
 
+keytool -v -importkeystore -srckeystore bpm1<span class="hljs-selector-class">.pkcs12</span> -srcstoretype PKCS12 -destkeystore keystore<span class="hljs-selector-class">.ks</span> -des
+</code></pre>
+                                <h5 id="2-place-the-generated-keystore-ks-file-under-cert-path-certs-keystore-ks-">2.
+                                    Place the generated keystore.ks file under cert path ~/certs/keystore.ks.</h5>
+                                <h5
+                                    id="3-include-the-below-ssl-configuration-in-application-yaml-present-in-path-forms-flow-bpm-src-main-resources-">
+                                    3. Include the below <strong>ssl configuration</strong> in application.yaml present
+                                    in path /forms-flow-bpm/src/main/resources.</h5>
+                                <pre><code><span class="hljs-attribute">server</span>:
+  <span class="hljs-attribute">port</span>: <span class="hljs-number">8443</span>
+  <span class="hljs-attribute">ssl</span>:
+    <span class="hljs-attribute">key-store</span>: <span class="hljs-attribute">file</span>:/certs/keystore.ks
+    <span class="hljs-attribute">key-store-password</span>: password
+    <span class="hljs-attribute">key-store-type</span>: pkcs12
+    <span class="hljs-attribute">key-alias</span>: tomcat
+    <span class="hljs-attribute">key-password</span>: password
+  servlet.<span class="hljs-attribute">context-path</span>: /camunda
+</code></pre>
+                                <ul>
+                                    <div class="callout-block callout-block-info">
+                                        <div class="content">
+                                            <span class="callout-icon-holder me-1"></span>
 
+                                            <i class="fa fa-bullhorn"></i>
 
+                                            <strong>NOTE :</strong> Alternatively, you can directly place your ssl cert
+                                            under the
+                                            classpath &quot;/forms-flow-bpm/src/main/resources&quot;. Your configuration
+                                            for the key-store in application.yaml would be
+                                            <code>key-store: classpath:/keystore.ks</code>.</strong>
+                                        </div>
+
+                                    </div>
+
+                                </ul>
+
+                            </div>
+                        </section><br><br>
+                        <a href="architecture.html" class="previous">&laquo; Previous</a>
+                        <a href="UsageInstructions.html" class="next">Next &raquo;</a>
 
             </div>
             <!--//docs-code-block-->

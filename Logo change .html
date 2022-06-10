@@ -88,7 +88,8 @@
                     <li class="nav-item"><a href="index.html" style="color:  #566573">Introduction</a></li>
                     <li class="nav-item"><a href="architecture.html" style="color:  #566573">System Architecture</a>
                     </li>
-                    <li class="nav-item"><a href="aboutproject.html" style="color:  #566573">About The Project</a>
+                    <li class="nav-item"><a class="current" href="aboutproject.html" style="color:  #566573">About The
+                            Project</a>
                     </li>
                     <li class="nav-item"><a href="UsageInstructions.html" style="color:  #566573">Usage-instructions</a>
                     </li>
@@ -102,9 +103,10 @@
                     <details>
                         <summary><a href="download and installation.html" style="color:  #566573">Install Using
                                 Containers</a></summary>
-                        <ul>
+                        <ul style="list-style: none;">
                             <li class="nav-item"><a href="local keycloak setup.html" style="color:  #566573">Keycloak
                                     Setup</a></li>
+
                             <li class="nav-item"></li><a href="Form Management Platform.html"
 								style="color:  #566573">Formsflow forms Setup</a></li>
 
@@ -117,7 +119,7 @@
                                 </ul>
                             </details>
                         </ul>
-                        <ul style="list-style: none; padding: 0; margin-left: -20px;">
+                        <ul style="padding: 0; margin-left: -20px;">
                             <li class="nav-item"><a href="formsflow.ai Web Application.html"
                                     style="color:  #566573">Formsflow web Setup</a></li>
                             <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">Formsflow api
@@ -144,10 +146,9 @@
                     </li>
                     <li class="nav-item"><a href="Keycloak SAML Setup.html" style="color:  #566573">Keycloak SAML
                             Setup</a></li>
-                    <li class="nav-item"><a href="Logo change .html" style="color:  #566573">Logo chane and code
-                            coverage</a></li>
-                    <li class="nav-item"><a class="current" href="AnonymousForm.html" style="color:  #566573">Anonymous
-                            Forms</a></li>
+                    <li class="nav-item"><a class="current" href="Logo change .html" style="color:  #566573">Logo chane
+                            and code coverage</a></li>
+                    <li class="nav-item"><a href="AnonymousForm.html" style="color:  #566573">Anonymous Forms</a></li>
                     <li class="nav-item"><a href="AdminPageDashboard.html" style="color:  #566573">Admin
                             Dashboard</a></li>
                     <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
@@ -177,54 +178,42 @@
 
 
                         <br>
-                        <section class="docs-section" id="installation-3">
 
-                            <h1 id="anonymous-workflow">Anonymous Forms</h1>
-                            <hr><br>
-                            <p>
-                                An anonymous form allows users to submit form entries anonymously. Users can access the
-                                form using the form url without login to the application.
-
-                            </p>
-                            <p>Below steps describes how you can design a form anonymous</p>
-                            <ol>
-                                <li>Create a new form or Edit an already created form. Check the field asking whether
-                                    you want to make the form public to make the form available to public.
-                                </li><br><br>
-                                <img src="./assets/images/166641751-b7f4df20-959d-485a-ac41-cc688e9f6762 (1).png"
-                                    height="500" width="1000"> </p>
-                                <li>Assosiate a workflow if you want and move to the next stage.</li><br><br>
-                                <img src="./assets/images/Screenshot 2022-06-01 142611.png" height="500"
-                                    width="1000"><br><br>
-                                <li>In this stage, you can copy the anonymous form url and publish the form to the
-                                    client.Forms that are made anonymous and public will only appear publicly.</li>
-                                <br><br>
-
-                                <p><img src="./assets/images/166641111-41401eb1-4c42-4198-99b5-e66200d20498.png"
-                                        alt="image" height="500" width="1000"></p>
-                                <strong>
-                                    Note-Forms will not be available to anonymous users if its not published
-                                </strong>
-                                <br><br>
-                                <img src="./assets/images/Screenshot 2022-06-01 143337.png" height="300" width="1000">
-                                <br><br>
-                                <li>Designers can share the copied URL to other users for submitting anonymous forms.
-                                </li>
-                                <br>
-                                <img src="./assets/images/Screenshot 2022-06-01 143743.png" height="500" width="1000">
-                                <br><br>
-                            </ol>
-
-
-                        </section>
-                        <br>
-                        <a href="Webevents.html" class="previous">&laquo; Previous</a>
-                        <a href="AdminPageDashboard.html" class="next">Next &raquo;</a>
-
-
-
-
-
+                        <section class="docs-section" id="item-1-1">
+                            <div>
+                                <h3 id="logo-change">Logo change</h3>
+                                <ul>
+                                    <li>Default Logo can be changed to the users logo by replacing the logo.svg in
+                                        public folder of forms-flow-web.
+                                        The default width and height of the logo is 50 and 55 also the image format is
+                                        svg</li>
+                                    <li>The icon can also be replaced to the users icon by replacing the favicon in the
+                                        public folder of forms-flow-web</li>
+                                </ul>
+                                <h3 id="code-coverage">Code coverage</h3>
+                                <ul>
+                                    <li>Test cases for the files are provided at forms-flow-web using <a
+                                            href="https://testing-library.com/docs/ecosystem-jest-dom/">testing-library/jest-dom</a>
+                                        , <a
+                                            href="https://testing-library.com/docs/react-testing-library/intro/">testing-library/react</a>
+                                        , <a href="https://mswjs.io/">msw</a> and <a
+                                            href="https://www.npmjs.com/package/redux-mock-store">redux-mock-store</a>.
+                                    </li>
+                                    <li><code>cd {Your Directory}/forms-flow-ai/forms-flow-web</code>.</li>
+                                    <li>Test files are available at
+                                        <code>forms-flow-ai\forms-flow-web\src\_tests_</code>
+                                    </li>
+                                    <li>Run the command <code>npm run coverage</code> to get the total coverage and for
+                                        individual files run <code>npm test --&lt;test file name&gt;</code>.</li>
+                                    <li>Total code coverage can obtain by opening
+                                        <code>forms-flow-ai\forms-flow-web\coverage\lcov-report\index.html</code> with
+                                        browser.
+                                    </li>
+                                </ul>
+                            </div>
+                        </section><br><br>
+                        <a href="architecture.html" class="previous">&laquo; Previous</a>
+                        <a href="UsageInstructions.html" class="next">Next &raquo;</a>
 
             </div>
             <!--//docs-code-block-->

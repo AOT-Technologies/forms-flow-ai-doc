@@ -211,7 +211,7 @@ summary:focus {
 details ul {
   
   margin: 0;
-  
+  list-style: none;
   padding: 10px;
   border-radius: 0 0 4px 4px;
 }

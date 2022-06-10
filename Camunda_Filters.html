@@ -102,9 +102,10 @@
                     <details>
                         <summary><a href="download and installation.html" style="color:  #566573">Install Using
                                 Containers</a></summary>
-                        <ul>
+                        <ul style="list-style: none;">
                             <li class="nav-item"><a href="local keycloak setup.html" style="color:  #566573">Keycloak
                                     Setup</a></li>
+
                             <li class="nav-item"></li><a href="Form Management Platform.html"
 								style="color:  #566573">Formsflow forms Setup</a></li>
 
@@ -117,7 +118,7 @@
                                 </ul>
                             </details>
                         </ul>
-                        <ul style="list-style: none; padding: 0; margin-left: -20px;">
+                        <ul style="padding: 0; margin-left: -20px;">
                             <li class="nav-item"><a href="formsflow.ai Web Application.html"
                                     style="color:  #566573">Formsflow web Setup</a></li>
                             <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">Formsflow api
@@ -146,8 +147,7 @@
                             Setup</a></li>
                     <li class="nav-item"><a href="Logo change .html" style="color:  #566573">Logo chane and code
                             coverage</a></li>
-                    <li class="nav-item"><a class="current" href="AnonymousForm.html" style="color:  #566573">Anonymous
-                            Forms</a></li>
+                    <li class="nav-item"><a href="AnonymousForm.html" style="color:  #566573">Anonymous Forms</a></li>
                     <li class="nav-item"><a href="AdminPageDashboard.html" style="color:  #566573">Admin
                             Dashboard</a></li>
                     <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
@@ -177,79 +177,110 @@
 
 
                         <br>
-                        <section class="docs-section" id="installation-3">
 
-                            <h1 id="anonymous-workflow">Anonymous Forms</h1>
-                            <hr><br>
-                            <p>
-                                An anonymous form allows users to submit form entries anonymously. Users can access the
-                                form using the form url without login to the application.
-
-                            </p>
-                            <p>Below steps describes how you can design a form anonymous</p>
-                            <ol>
-                                <li>Create a new form or Edit an already created form. Check the field asking whether
-                                    you want to make the form public to make the form available to public.
-                                </li><br><br>
-                                <img src="./assets/images/166641751-b7f4df20-959d-485a-ac41-cc688e9f6762 (1).png"
-                                    height="500" width="1000"> </p>
-                                <li>Assosiate a workflow if you want and move to the next stage.</li><br><br>
-                                <img src="./assets/images/Screenshot 2022-06-01 142611.png" height="500"
-                                    width="1000"><br><br>
-                                <li>In this stage, you can copy the anonymous form url and publish the form to the
-                                    client.Forms that are made anonymous and public will only appear publicly.</li>
-                                <br><br>
-
-                                <p><img src="./assets/images/166641111-41401eb1-4c42-4198-99b5-e66200d20498.png"
-                                        alt="image" height="500" width="1000"></p>
-                                <strong>
-                                    Note-Forms will not be available to anonymous users if its not published
-                                </strong>
-                                <br><br>
-                                <img src="./assets/images/Screenshot 2022-06-01 143337.png" height="300" width="1000">
-                                <br><br>
-                                <li>Designers can share the copied URL to other users for submitting anonymous forms.
+                        <section class="docs-section" id="item-1-1">
+                            <h1>Camunda Filters</h1>
+                            <hr><br><br>
+                            <img src="./assets/images/camunda_Filter1.png" height="500" width="1000"></img><br>
+                            <p>In Tasklist, you can create and select filters. You can use these filters to create lists
+                                of tasks, sorted by specified criteria. To create a filter, select Create a Filter. You
+                                will then see a screen as depicted in the above image. You have several options to
+                                configure your filter:</p>
+                            <ul>
+                                <li><strong>General</strong> - Specify the name and description of the filter as well as
+                                    assigning a color. Assign a priority to determine the order in which the filters are
+                                    displayed on the dashboard.
+                                    You can choose to have the filter automatically refresh the filter results by
+                                    selecting the checkbox Auto-Refresh.The default refresh interval is 10 seconds.</li>
+                                <li>
+                                    <strong> Permissions</strong> - Specify which users or groups can see the filter.
+                                    You can set the filter as globally accessible by selecting the checkbox Accessible
+                                    by all users. A permission that is set here is equivalent to a READ permission which
+                                    can also be set in Camunda Admin. In case you want to assign other permissions, you
+                                    can do so in the Authorizations tab in Camunda Admin.
                                 </li>
-                                <br>
-                                <img src="./assets/images/Screenshot 2022-06-01 143743.png" height="500" width="1000">
+                                <li>
+                                    <strong>Criteria</strong> - Specify which tasks will be displayed when selecting the
+                                    filter. A key and a value must be inserted.
+                                </li><br>
+                                <img src="./assets/images/camunda_Filter2.png" height="600" width="1000"></img><br>
+
+                                <div class="callout-block callout-block-info">
+                                    <div class="content">
+                                        <span class="callout-icon-holder me-1"></span>
+
+                                        <i class="fa fa-bullhorn"></i>
+
+                                        <strong>NOTE :</strong>
+                                        Keys marked with a * accept expressions as value.
+                                    </div>
+
+                                </div>
+                                <li>
+                                    <strong>Variables</strong> - Specify which variables are displayed in the filter
+                                    results section of the dashboard. Setting variables here has no influence on which
+                                    tasks are displayed. To set the variables, you need to insert a Name, which is the
+                                    coded name of the variable, and a Label, which defines what the variable will be
+                                    named in the filter results.
+                                </li>
+                            </ul>
+                            <h2>Common Filters</h2>
+                            <ol>
+                                <li>
+                                    <strong>My task</strong> filter
+                                </li>
+                                This filter will display tasks claimed by logged in user.
                                 <br><br>
+                                <img src="./assets/images/camunda_Filter3.png" height="450"
+                                    width="800"></img><br><br><br>
+
+                                <img src="./assets/images/camunda_Filter4.png" height="450"
+                                    width="800"></img><br><br><br>
+                                <img src="./assets/images/camunda_Filter5.png" height="400"
+                                    width="950"></img><br><br><br>
+                                <li>
+                                    <strong>All tasks </strong>filter
+                                </li>
+                                This filter will display all task of the user logged in.
+                                <br><br>
+                                <img src="./assets/images/camunda_Filter6.png" height="450"
+                                    width="800"></img><br><br><br>
+                                <img src="./assets/images/camunda_Filter7.png" height="400"
+                                    width="950"></img><br><br><br>
+                                In the table below we list some of the more common and useful filters that you can
+                                create in Tasklist and how to set them up.
+                                <br><img src="./assets/images/camunda_Filter8.png" height="800"
+                                    width="900"></img><br><br>
                             </ol>
-
-
-                        </section>
-                        <br>
-                        <a href="Webevents.html" class="previous">&laquo; Previous</a>
-                        <a href="AdminPageDashboard.html" class="next">Next &raquo;</a>
-
-
-
-
-
-
             </div>
-            <!--//docs-code-block-->
+            </section><br><br>
+            <a href="" class="previous">&laquo; Previous</a>
+            <a href="" class="next">Next &raquo;</a>
+
+        </div>
+        <!--//docs-code-block-->
 
 
-            </header>
+        </header>
 
 
-            </article>
+        </article>
 
 
 
 
-            <!-- Javascript -->
-            <script src="assets/plugins/popper.min.js"></script>
-            <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <!-- Javascript -->
+        <script src="assets/plugins/popper.min.js"></script>
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
 
-            <!-- Page Specific JS -->
-            <script src="assets/plugins/smoothscroll.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
-            <script src="assets/js/highlight-custom.js"></script>
-            <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
-            <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
-            <script src="assets/js/docs.js"></script>
+        <!-- Page Specific JS -->
+        <script src="assets/plugins/smoothscroll.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+        <script src="assets/js/highlight-custom.js"></script>
+        <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+        <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+        <script src="assets/js/docs.js"></script>
 
 </body>
 

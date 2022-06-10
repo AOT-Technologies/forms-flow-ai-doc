@@ -100,35 +100,33 @@
                             Installation</a></li>
 
                     <details open>
-								<summary><a href="download and installation.html" style="color:  #566573">Install Using Containers</a></summary>
-								<ul>
-									<details>
-									<summary><a href="#" style="color:  #566573">Keycloak</a></summary>
-									<ul>
-										<li class="nav-item"><a href="local keycloak setup.html" style="color:  #566573">Local Keycloak Setup</a></li>
-								  <li class="nav-item"><a href="server keycloak.html" style="color:  #566573">Server Keycloak Setup</a></li>
-									</ul></details>
-									<details>
-										<summary><a href="Form Management Platform.html" style="color:  #566573">Forms-flow-forms Setup</a></summary>
-										<ul>
-											<li class="nav-item"><a href="Form Management API.html" style="color:  #566573">Formsflow-forms user/role API</a></li>
-									  <li class="nav-item"><a href="Custom components.html" style="color:  #566573">Custom Components</a></li>
-										</ul></details>
-								  
-								  <details>
-									<summary><a href="Analytics Engine.html" style="color:  #566573">Forms-flow-analytics Setup</a></summary>
-									<ul>
-										<li class="nav-item"><a href="Redash.html" style="color:  #566573">Redash</a></li>
-								  
-									</ul></details>
-								   </ul>
-									<ul style="list-style: none; padding: 0; margin-left: -20px;">
-								  <li class="nav-item"><a href="formsflow.ai Web Application.html" style="color:  #566573">Forms-flow-web Setup</a></li>
-								  <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">Forms-flow-api Setup</a></li>
-								  <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">Forms-flow-bpm Setup</a></li>
-								   
-								   </ul>
-							  </details>
+                        <summary><a href="download and installation.html" style="color:  #566573">Install Using
+                                Containers</a></summary>
+                        <ul>
+                            <li class="nav-item"><a href="local keycloak setup.html" style="color:  #566573">Keycloak
+                                    Setup</a></li>
+                            <li class="nav-item"></li><a href="Form Management Platform.html"
+								style="color:  #566573">Formsflow forms Setup</a></li>
+
+                            <details>
+                                <summary><a href="Analytics Engine.html" style="color:  #566573">Formsflow analytics
+                                        Setup</a></summary>
+                                <ul>
+                                    <li class="nav-item"><a href="Redash.html" style="color:  #566573">Redash</a></li>
+
+                                </ul>
+                            </details>
+                        </ul>
+                        <ul style="list-style: none; padding: 0; margin-left: -20px;">
+                            <li class="nav-item"><a class="current" href="formsflow.ai Web Application.html"
+                                    style="color:  #566573">Formsflow web Setup</a></li>
+                            <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">Formsflow api
+                                    Setup</a></li>
+                            <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">Formsflow bpm
+                                    Setup</a></li>
+
+                        </ul>
+                    </details>
 
                     <li class="nav-item"><a href="Openshift.html" style="color:  #566573">Openshift
                             Installation</a></li>
@@ -139,12 +137,17 @@
                     <li class="nav-item"><a href="Internationalization.html"
                             style="color:  #566573">Internationalization</a></li>
                     <li class="nav-item"><a href="Listeners.html" style="color:  #566573">Camunda Listeners</a></li>
-
+                    <li class="nav-item"><a href="Camunda_Filters.html" style="color:  #566573">Camunda Filters</a></li>
                     <li class="nav-item"><a href="Taskvariables.html" style="color:  #566573">Task
                             variable workflow</a></li>
-                    <li class="nav-item"><a href="Webevents.html" style="color:  #566573">Web Events</a></li>
+                    <li class="nav-item"><a href="Custom components.html" style="color:  #566573">Custom Components</a>
+                    </li>
+                    <li class="nav-item"><a href="Keycloak SAML Setup.html" style="color:  #566573">Keycloak SAML
+                            Setup</a></li>
+                    <li class="nav-item"><a href="Logo change .html" style="color:  #566573">Logo chane and code
+                            coverage</a></li>
                     <li class="nav-item"><a href="AnonymousForm.html" style="color:  #566573">Anonymous Forms</a></li>
-                    <li class="nav-item"><a href="AdminPageDashboard.html" style="color:  #566573">AdminPage
+                    <li class="nav-item"><a href="AdminPageDashboard.html" style="color:  #566573">Admin
                             Dashboard</a></li>
                     <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
                                 class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Multi Tenancy</a>
@@ -176,7 +179,8 @@
 
                         <section>
                             <div>
-                                <h1 id="formsflow-ai-web-application">formsflow.ai Web Application</h1><br><hr>
+                                <h1 id="formsflow-ai-web-application">formsflow.ai Web Application</h1><br>
+                                <hr>
                                 <p><strong>Formsflow.ai</strong> delivers progressive web application with React version
                                     <code>17.0.2</code> and <code>create-react-app</code>. Also currently uses <a
                                         href="https://github.com/formio/formio">form.io</a> version <code>2.3.0</code>.
@@ -199,7 +203,8 @@
                                     <li>Admin access to a <a href="https://www.keycloak.org/">Keycloak</a> server. For
                                         local development / testing follow <a href="../forms-flow-idm/keycloak">Keycloak
                                             installation</a>.</li>
-                                    <li>Please make sure the <a href="Form Management Platform.html">Formio server</a> is up and
+                                    <li>Please make sure the <a href="Form Management Platform.html">Formio server</a>
+                                        is up and
                                         running.</li>
                                 </ul>
                                 <h3 id="installation">Installation</h3>
@@ -207,262 +212,83 @@
                                     <li>Make sure you have a Docker machine up and running.</li>
                                     <li>Make sure your current working directory is
                                         &quot;forms-flow-ai/forms-flow-web&quot;.</li>
-                                    <li><em>Skip this if forms-flow-analytics setup is completed</em> - Start the
-                                        <strong>analytics server</strong> by following the instructions given on <a
-                                            href="../forms-flow-analytics/README.md">readme</a></li>
+
                                     <li>Rename the file <a href="./sample.env">sample.env</a> to <strong>.env</strong>.
                                     </li>
                                     <li>Modify the environment variables in the newly created <strong>.env</strong> file
-                                        if needed. Environment variables are given in the table below,</li>
-                                    <li><strong>NOTE : {your-ip-address} given inside the .env file should be changed to
-                                            your host system IP address. Please take special care to identify the
-                                            correct IP address if your system has multiple network cards</strong></li>
-                                </ul>
-                                <blockquote>
-                                    <p>:information_source: Variables with trailing :triangular_flag_on_post: in below
-                                        table should be updated in the .env file</p>
-                                </blockquote>
-                                <div class="scroll">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Variable name</th>
-                                            <th>Meaning</th>
-                                            <th>Possible values</th>
-                                            <th>Default value</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td> <code>NODE_ENV</code></td>
-                                            <td>Define project level configuration</td>
-                                            <td><code>development, test, production</code></td>
-                                            <td><code>development</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td> <code>FORMIO_DEFAULT_PROJECT_URL</code>:triangular_flag_on_post:</td>
-                                            <td>The URL of the form.io server</td>
-                                            <td></td>
-                                            <td><code>http://{your-ip-address}:3001</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td> <code>FORMSFLOW_API_URL</code>:triangular_flag_on_post:</td>
-                                            <td>formsflow Rest API URL</td>
-                                            <td></td>
-                                            <td><code>http://{your-ip-address}:5000/api</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td> <code>CAMUNDA_API_URL</code>:triangular_flag_on_post:</td>
-                                            <td>Camunda Rest API URL</td>
-                                            <td></td>
-                                            <td><code>http://{your-ip-address}:8000/camunda</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td> <code>KEYCLOAK_URL</code>:triangular_flag_on_post:</td>
-                                            <td>URL to your Keycloak server</td>
-                                            <td></td>
-                                            <td><code>http://{your-ip-address}:8080</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td> <code>KEYCLOAK_URL_REALM</code></td>
-                                            <td>The Keycloak realm to use</td>
-                                            <td>eg. forms-flow-ai</td>
-                                            <td><code>forms-flow-ai</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td> <code>KEYCLOAK_WEB_CLIENTID</code></td>
-                                            <td>Your Keycloak Client ID within the realm</td>
-                                            <td>eg. forms-flow-web</td>
-                                            <td><code>forms-flow-web</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td> <code>WEBSOCKET_ENCRYPT_KEY</code></td>
-                                            <td>Camunda task event streaming. AES encryption of token</td>
-                                            <td></td>
-                                            <td><code>giert989jkwrgb@DR55</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td> <code>APPLICATION_NAME</code></td>
-                                            <td>Application name is used to provide clients application name</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td> <code>WEB_BASE_CUSTOM_URL</code></td>
-                                            <td>Clients can use WEB_BASE_CUSTOM_URL env variable to provide their custom
-                                                URL</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td> <code>USER_ACCESS_PERMISSIONS</code></td>
-                                            <td>JSON formatted permissions to enable / disable few access on user login.
-                                            </td>
-                                            <td>    </td>
-                                            <td><code>{&quot;accessAllowApplications&quot;:false,&quot;accessAllowSubmissions&quot;:false}</code>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            
-                                            <td> <code>FORMIO_JWT_SECRET</code></td>
-                                            <td>forms-flow-forms jwt secret</td>
-                                            <td></td>
-                                            <td><code>--- change me now ---</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>MULTI_TENANCY_ENABLED</code></td>
-                                            <td>Multi tenancy enabled flag for the environment</td>
-                                            <td>true/false</td>
-                                            <td>false</td>
-                                        </tr>
-                                    </tbody>
-                                </table></div><br>
-                                <ul>
-                                    <li>
-                                        <p>NOTE - While configuring USER_ACCESS_PERMISSIONS the accessAllowApplications
-                                            will hide / show application tab, the same way accessAllowSubmissions does
-                                            for viewSubmission button. To enable this feature you need to add
-                                            access-allow-applications, access-allow-submissions with the respective user
-                                            group in keycloak.</p>
-                                    </li>
-                                    <li>
-                                        <p><a href="">STEP 1</a>: Getting <strong>ROLE_ID</strong> and
-                                            <strong>RESOURCE_ID</strong> are mandatory for role based access. To
-                                            generate ID go to <a
-                                                href="../forms-flow-forms/README.md#formsflow-forms-api-requesting">&quot;Formsflow-forms
-                                                user/role API&quot;</a> and follow the steps.</p>
-                                    </li>
-                                    <li><a href="">STEP 2</a>: Modify the environment variables using the values from
-                                        step 1.</li>
-                                </ul>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Variable name</th>
-                                            <th>Meaning</th>
-                                            <th>Possible values</th>
-                                            <th>Default value</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><code>CLIENT_ROLE</code></td>
-                                            <td>The role name used for client users</td>
-                                            <td></td>
-                                            <td><code>formsflow-client</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>CLIENT_ROLE_ID</code>:triangular_flag_on_post:</td>
-                                            <td>forms-flow-forms client role Id</td>
-                                            <td>eg. 10121d8f7fadb18402a4c</td>
-                                            <td><code>must get the client role Id value from Prerequisites step 1 above.</code>)
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>REVIEWER_ROLE</code></td>
-                                            <td>The role name used for reviewer users</td>
-                                            <td></td>
-                                            <td><code>formsflow-reviewer</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>REVIEWER_ROLE_ID</code>:triangular_flag_on_post:</td>
-                                            <td>forms-flow-forms reviewer role Id</td>
-                                            <td>eg. 5ee10121d8f7fa03b3402a4d</td>
-                                            <td><code>must get the reviewer role Id value from Prerequisites step 1 above..</code>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>DESIGNER_ROLE</code></td>
-                                            <td>The role name used for designer users</td>
-                                            <td></td>
-                                            <td><code>formsflow-designer</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>DESIGNER_ROLE_ID</code>:triangular_flag_on_post:</td>
-                                            <td>forms-flow-forms administrator role Id</td>
-                                            <td>eg. 5ee090afee045f1597609cae</td>
-                                            <td><code>must get the administrator role Id value from Prerequisites step 1 above..</code>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>ANONYMOUS_ID</code></td>
-                                            <td>forms-flow-forms anonymous role Id</td>
-                                            <td>eg. 5ee090b0ee045f28ad609cb0</td>
-                                            <td><code>must get the anonymous role Id value from Prerequisites step 1 above..</code>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>USER_RESOURCE_ID</code>:triangular_flag_on_post:</td>
-                                            <td>User forms form-Id</td>
-                                            <td>eg. 5ee090b0ee045f51c5609cb1</td>
-                                            <td><code>must get the value from the step 1 above..</code></td>
-                                        </tr>
-                                    </tbody>
-                                </table><br>
-                                <h3 id="running-the-application">Running the application</h3>
-                                <ul>
-                                    <li>forms-flow-web service uses port 5000, make sure the port is available.</li>
-                                    <li><code>cd {Your Directory}/forms-flow-ai/forms-flow-web</code></li>
-                                    <li>Run <code>docker-compose up -d</code> to start.</li>
-                                </ul>
-                                <p><em>NOTE: Use --build command with the start command to reflect any future
-                                        <strong>.env</strong> changes eg :
-                                        <code>docker-compose up --build -d</code></em></p>
-                                <h4 id="to-stop-the-application">To stop the application</h4>
-                                <ul>
-                                    <li>Run <code>docker-compose stop</code> to stop.</li>
-                                </ul>
-                                <h3 id="health-check">Health Check</h3>
-                                <ul>
-                                    <li>The application should be up and available for use at port defaulted to 3000 in
-                                        <a href="http://localhost:3000/">http://localhost:3000/</a></li>
-                                    <li>Default user credentials are provided <a
-                                            href="default user credential.html">here</a>.
-                                    </li>
-                                </ul>
-                                <h3 id="how-to-create-your-first-form">How to Create Your First Form</h3>
-                                <ul>
-                                    <li>Login to <strong><a
-                                                href="http://localhost:3000/">http://localhost:3000/</a></strong> using
-                                        valid <a
-                                            href="default user credential.html">designer</a>
-                                        credentials</li>
-                                    <li>Navigate to menu <strong>Forms</strong></li>
-                                    <li>Click the button <strong>+ Create Form</strong> to launch the form designer
-                                        studio.</li>
-                                    <li>Design the form using <strong>Drag and Drop</strong> of components from LHS to
-                                        RHS and publish by clicking the button <strong>Create Form</strong>.</li>
-                                </ul>
-                                <h3 id="logo-change">Logo change</h3>
-                                <ul>
-                                    <li>Default Logo can be changed to the users logo by replacing the logo.svg in
-                                        public folder of forms-flow-web.
-                                        The default width and height of the logo is 50 and 55 also the image format is
-                                        svg</li>
-                                    <li>The icon can also be replaced to the users icon by replacing the favicon in the
-                                        public folder of forms-flow-web</li>
-                                </ul>
-                                <h3 id="code-coverage">Code coverage</h3>
-                                <ul>
-                                    <li>Test cases for the files are provided at forms-flow-web using <a
-                                            href="https://testing-library.com/docs/ecosystem-jest-dom/">testing-library/jest-dom</a>
-                                        , <a
-                                            href="https://testing-library.com/docs/react-testing-library/intro/">testing-library/react</a>
-                                        , <a href="https://mswjs.io/">msw</a> and <a
-                                            href="https://www.npmjs.com/package/redux-mock-store">redux-mock-store</a>.
-                                    </li>
-                                    <li><code>cd {Your Directory}/forms-flow-ai/forms-flow-web</code>.</li>
-                                    <li>Test files are available at
-                                        <code>forms-flow-ai\forms-flow-web\src\_tests_</code></li>
-                                    <li>Run the command <code>npm run coverage</code> to get the total coverage and for
-                                        individual files run <code>npm test --&lt;test file name&gt;</code>.</li>
-                                    <li>Total code coverage can obtain by opening
-                                        <code>forms-flow-ai\forms-flow-web\coverage\lcov-report\index.html</code> with
-                                        browser.</li>
-                                </ul>
-                               
+                                        if needed. Environment variables are given below.</li>
 
-                            </div>
+
+
+
+
+                                </ul>
+
+                                <div class="scroll">
+                                    <img src="./assets/images/Screenshot 2022-06-10 112257.png"></img><br>
+                                    <img src="./assets/images/Screenshot 2022-06-10 112332.png"></img><br>
+                                    <ul>
+
+
+                                        <div class="callout-block callout-block-info">
+                                            <div class="content">
+                                                <span class="callout-icon-holder me-1"></span>
+
+                                                <i class="fa fa-bullhorn"></i>
+
+                                                <strong>NOTE :</strong> <code>FORMIO_DEFAULT_PROJECT_URL</code>*
+                                                ,<code>FORMSFLOW_API_URL</code>* ,<code>CAMUNDA_API_URL</code>*,
+                                                <code>KEYCLOAK_URL</code>*
+
+                                            </div>
+
+                                        </div>
+
+
+
+
+
+                                        <li>
+                                            <p>STEP 1: Getting <strong>ROLE_ID</strong> and
+                                                <strong>RESOURCE_ID</strong> are mandatory for role based access. To
+                                                generate ID go to <a
+                                                    href="Form Management API.html">&quot;Formsflow-forms
+                                                    user/role API&quot;</a> and follow the steps.
+                                            </p>
+                                        </li>
+                                        <li>STEP 2: Modify the below id's using the values from
+                                            step 1.</li>
+                                    </ul>
+                                    <img src="./assets/images/Screenshot 2022-06-10 113304.png"></img><br>
+                                    <br>
+                                    <h3 id="running-the-application">Running the application</h3>
+                                    <ul>
+                                        <li>forms-flow-web service uses port 5000, make sure the port is available.</li>
+                                        <li><code>cd {Your Directory}/forms-flow-ai/forms-flow-web</code></li>
+                                        <li>Run <code>docker-compose up -d</code> to start.</li>
+                                    </ul>
+                                    <p><em>NOTE: Use --build command with the start command to reflect any future
+                                            <strong>.env</strong> changes eg :
+                                            <code>docker-compose up --build -d</code></em></p>
+                                    <h4 id="to-stop-the-application">To stop the application</h4>
+                                    <ul>
+                                        <li>Run <code>docker-compose stop</code> to stop.</li>
+                                    </ul>
+                                    <h3 id="health-check">Health Check</h3>
+                                    <ul>
+                                        <li>The application should be up and available for use at port defaulted to 3000
+                                            in
+                                            <a href="http://localhost:3000/">http://localhost:3000/</a>
+                                        </li>
+                                        <li>Default user credentials are provided <a
+                                                href="default user credential.html">here</a>.
+                                        </li>
+                                    </ul>
+
+
+
+
+                                </div>
 
                         </section><br><br>
                         <a href="" class="previous">&laquo; Previous</a>

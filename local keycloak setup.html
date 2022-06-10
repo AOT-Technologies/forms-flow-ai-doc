@@ -100,35 +100,33 @@
                             Installation</a></li>
 
                     <details open>
-								<summary><a href="download and installation.html" style="color:  #566573">Install Using Containers</a></summary>
-								<ul>
-									<details open>
-									<summary><a href="#" style="color:  #566573">Keycloak</a></summary>
-									<ul>
-										<li class="nav-item"><a class="current" href="local keycloak setup.html" style="color:  #566573">Local Keycloak Setup</a></li>
-								  <li class="nav-item"><a href="server keycloak.html" style="color:  #566573">Server Keycloak Setup</a></li>
-									</ul></details>
-									<details>
-										<summary><a href="Form Management Platform.html" style="color:  #566573">Forms-flow-forms Setup</a></summary>
-										<ul>
-											<li class="nav-item"><a href="Form Management API.html" style="color:  #566573">Formsflow-forms user/role API</a></li>
-									  <li class="nav-item"><a href="Custom components.html" style="color:  #566573">Custom Components</a></li>
-										</ul></details>
-								  
-								  <details>
-									<summary><a href="Analytics Engine.html" style="color:  #566573">Forms-flow-analytics Setup</a></summary>
-									<ul>
-										<li class="nav-item"><a href="Redash.html" style="color:  #566573">Redash</a></li>
-								  
-									</ul></details>
- </ul>
-									<ul style="list-style: none; padding: 0; margin-left: -20px;">
-								  <li class="nav-item"><a href="formsflow.ai Web Application.html" style="color:  #566573">Forms-flow-web Setup</a></li>
-								  <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">Forms-flow-api Setup</a></li>
-								  <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">Forms-flow-bpm Setup</a></li>
-								   
-								   </ul>
-							  </details>
+                        <summary><a href="download and installation.html" style="color:  #566573">Install Using
+                                Containers</a></summary>
+                        <ul>
+                            <li class="nav-item"><a href="local keycloak setup.html" style="color:  #566573">Keycloak
+                                    Setup</a></li>
+                            <li class="nav-item"></li><a href="Form Management Platform.html"
+								style="color:  #566573">Formsflow forms Setup</a></li>
+
+                            <details>
+                                <summary><a href="Analytics Engine.html" style="color:  #566573">Formsflow analytics
+                                        Setup</a></summary>
+                                <ul>
+                                    <li class="nav-item"><a href="Redash.html" style="color:  #566573">Redash</a></li>
+
+                                </ul>
+                            </details>
+                        </ul>
+                        <ul style="list-style: none; padding: 0; margin-left: -20px;">
+                            <li class="nav-item"><a href="formsflow.ai Web Application.html"
+                                    style="color:  #566573">Formsflow web Setup</a></li>
+                            <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">Formsflow api
+                                    Setup</a></li>
+                            <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">Formsflow bpm
+                                    Setup</a></li>
+
+                        </ul>
+                    </details>
 
                     <li class="nav-item"><a href="Openshift.html" style="color:  #566573">Openshift
                             Installation</a></li>
@@ -139,14 +137,19 @@
                     <li class="nav-item"><a href="Internationalization.html"
                             style="color:  #566573">Internationalization</a></li>
                     <li class="nav-item"><a href="Listeners.html" style="color:  #566573">Camunda Listeners</a></li>
-
+                    <li class="nav-item"><a href="Camunda_Filters.html" style="color:  #566573">Camunda Filters</a></li>
                     <li class="nav-item"><a href="Taskvariables.html" style="color:  #566573">Task
                             variable workflow</a></li>
-                    <li class="nav-item"><a href="Webevents.html" style="color:  #566573">Web Events</a></li>
-                    <li class="nav-item"><a class="current" href="AnonymousForm.html" style="color:  #566573">Anonymous
-                            Forms</a></li>
-                    <li class="nav-item"><a href="AdminPageDashboard.html" style="color:  #566573">AdminPage
+                    <li class="nav-item"><a href="Custom components.html" style="color:  #566573">Custom Components</a>
+                    </li>
+                    <li class="nav-item"><a href="Keycloak SAML Setup.html" style="color:  #566573">Keycloak SAML
+                            Setup</a></li>
+                    <li class="nav-item"><a href="Logo change .html" style="color:  #566573">Logo chane and code
+                            coverage</a></li>
+                    <li class="nav-item"><a href="AnonymousForm.html" style="color:  #566573">Anonymous Forms</a></li>
+                    <li class="nav-item"><a href="AdminPageDashboard.html" style="color:  #566573">Admin
                             Dashboard</a></li>
+
                     <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
                                 class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Multi Tenancy</a>
                     </li>
@@ -177,13 +180,12 @@
                         <section>
 
                             <div>
-                               
-                                <h2 id="local-keycloak-setup">Local keycloak setup</h2><hr>
-                                <ul>
-                                    <li>This setup is preferred for local development only. A docker instance will be
-                                        created as part of setup. If you have existing Keycloak instance go to <a
-                                            href="#server-keycloak-setup">Server Keycloak setup</a>.</li>
-                                </ul>
+
+                                <h2 id="local-keycloak-setup">Keycloak setup</h2>
+                                <hr>
+                                <p>This setup is preferred for local development only. A docker instance will be
+                                    created as part of setup.</p>
+
                                 <h3 id="prerequisites">Prerequisites</h3>
                                 <ul>
                                     <li>For docker based installation <a href="https://docker.com">Docker</a> needs to
@@ -199,74 +201,18 @@
                                                         href="./sample.env">sample.env</a> to <strong>.env</strong>.
                                                     Skip this step if you want to use the default values as mentioned in
                                                     the table below.</li>
-                                                <li><em>Optional</em>: Modify the environment variables in the newly
-                                                    created <strong>.env</strong> file if needed. Environment variables
-                                                    are given in the table below,</li>
+
                                             </ul>
                                         </blockquote>
                                     </li>
                                 </ul>
                                 <h3 id="environment-variables">Environment Variables</h3>
-                                <h4 id="keycloak-database-connection-details">Keycloak Database Connection Details</h4>
+
                                 <hr>
-                                <p><strong><em>Skip this for default setup</em></strong></p>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Variable name</th>
-                                            <th>Meaning</th>
-                                            <th>Possible values</th>
-                                            <th>Default value</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><code>KEYCLOAK_JDBC_DB</code></td>
-                                            <td>keycloak database name</td>
-                                            <td>Used on installation to create the database.Choose your own</td>
-                                            <td><code>keycloak</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>KEYCLOAK_JDBC_USER</code></td>
-                                            <td>keycloak database postgres user</td>
-                                            <td>Used on installation to create the database.Choose your own</td>
-                                            <td><code>postgres</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>KEYCLOAK_JDBC_PASSWORD</code></td>
-                                            <td>keycloak database postgres password</td>
-                                            <td>Used on installation to create the database.Choose your own</td>
-                                            <td><code>changeit</code></td>
-                                        </tr>
-                                    </tbody>
-                                </table><br>
-                                <h4 id="keycloak-admin-details">Keycloak Admin Details</h4>
-                                <hr>
-                                <p><strong><em>Skip this for default setup</em></strong></p>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Variable name</th>
-                                            <th>Meaning</th>
-                                            <th>Possible values</th>
-                                            <th>Default value</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><code>KEYCLOAK_ADMIN_USER</code></td>
-                                            <td>keycloak admin user name</td>
-                                            <td>Choose your own</td>
-                                            <td><code>admin</code></td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>KEYCLOAK_ADMIN_PASSWORD</code></td>
-                                            <td>keycloak admin password</td>
-                                            <td>Choose your own</td>
-                                            <td><code>changeme</code></td>
-                                        </tr>
-                                    </tbody>
-                                </table><br>
+                                <img src="./assets/images/Screenshot 2022-06-09 155723.png" width="500">
+
+
+                                <br><br>
                                 <h3 id="starting-or-stopping-keycloak-server">Starting or Stopping Keycloak server</h3>
                                 <ul>
                                     <li>Keycloak server uses port 8080, make sure the port is available.</li>
@@ -279,14 +225,14 @@
                                 <div class="callout-block callout-block-info">
                                     <div class="content">
                                         <span class="callout-icon-holder me-1"></span>
-                                        
+
                                         <i class="fa fa-bullhorn"></i>
-                                       
-                                        <em>  Use --build command with the start command to reflect any future changes eg
-                                        : <code>docker-compose up --build -d</code></em>
-                                        
+
+                                        <em> Use --build command with the start command to reflect any future changes eg
+                                            : <code>docker-compose up --build -d</code></em>
+
                                     </div>
-                                    
+
                                 </div>
 
 
@@ -313,8 +259,8 @@
                                     <li>Run <code>docker-compose up --build -d</code> to verify the changes.</li>
                                 </ul>
                                 <a href="default user credential.html">Default User Credentials</a>
-                                
-                                
+
+
 
                             </div>
 

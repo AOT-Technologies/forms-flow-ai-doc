@@ -102,9 +102,10 @@
                     <details>
                         <summary><a href="download and installation.html" style="color:  #566573">Install Using
                                 Containers</a></summary>
-                        <ul>
+                        <ul style="list-style: none;">
                             <li class="nav-item"><a href="local keycloak setup.html" style="color:  #566573">Keycloak
                                     Setup</a></li>
+
                             <li class="nav-item"></li><a href="Form Management Platform.html"
 								style="color:  #566573">Formsflow forms Setup</a></li>
 
@@ -117,7 +118,7 @@
                                 </ul>
                             </details>
                         </ul>
-                        <ul style="list-style: none; padding: 0; margin-left: -20px;">
+                        <ul style="padding: 0; margin-left: -20px;">
                             <li class="nav-item"><a href="formsflow.ai Web Application.html"
                                     style="color:  #566573">Formsflow web Setup</a></li>
                             <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">Formsflow api
@@ -142,12 +143,11 @@
                             variable workflow</a></li>
                     <li class="nav-item"><a href="Custom components.html" style="color:  #566573">Custom Components</a>
                     </li>
-                    <li class="nav-item"><a href="Keycloak SAML Setup.html" style="color:  #566573">Keycloak SAML
-                            Setup</a></li>
+                    <li class="nav-item"><a class="current" href="Keycloak SAML Setup.html"
+                            style="color:  #566573">Keycloak SAML Setup</a></li>
                     <li class="nav-item"><a href="Logo change .html" style="color:  #566573">Logo chane and code
                             coverage</a></li>
-                    <li class="nav-item"><a class="current" href="AnonymousForm.html" style="color:  #566573">Anonymous
-                            Forms</a></li>
+                    <li class="nav-item"><a href="AnonymousForm.html" style="color:  #566573">Anonymous Forms</a></li>
                     <li class="nav-item"><a href="AdminPageDashboard.html" style="color:  #566573">Admin
                             Dashboard</a></li>
                     <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
@@ -177,54 +177,47 @@
 
 
                         <br>
-                        <section class="docs-section" id="installation-3">
 
-                            <h1 id="anonymous-workflow">Anonymous Forms</h1>
-                            <hr><br>
-                            <p>
-                                An anonymous form allows users to submit form entries anonymously. Users can access the
-                                form using the form url without login to the application.
-
-                            </p>
-                            <p>Below steps describes how you can design a form anonymous</p>
-                            <ol>
-                                <li>Create a new form or Edit an already created form. Check the field asking whether
-                                    you want to make the form public to make the form available to public.
-                                </li><br><br>
-                                <img src="./assets/images/166641751-b7f4df20-959d-485a-ac41-cc688e9f6762 (1).png"
-                                    height="500" width="1000"> </p>
-                                <li>Assosiate a workflow if you want and move to the next stage.</li><br><br>
-                                <img src="./assets/images/Screenshot 2022-06-01 142611.png" height="500"
-                                    width="1000"><br><br>
-                                <li>In this stage, you can copy the anonymous form url and publish the form to the
-                                    client.Forms that are made anonymous and public will only appear publicly.</li>
-                                <br><br>
-
-                                <p><img src="./assets/images/166641111-41401eb1-4c42-4198-99b5-e66200d20498.png"
-                                        alt="image" height="500" width="1000"></p>
-                                <strong>
-                                    Note-Forms will not be available to anonymous users if its not published
-                                </strong>
-                                <br><br>
-                                <img src="./assets/images/Screenshot 2022-06-01 143337.png" height="300" width="1000">
-                                <br><br>
-                                <li>Designers can share the copied URL to other users for submitting anonymous forms.
-                                </li>
-                                <br>
-                                <img src="./assets/images/Screenshot 2022-06-01 143743.png" height="500" width="1000">
-                                <br><br>
-                            </ol>
-
-
-                        </section>
-                        <br>
-                        <a href="Webevents.html" class="previous">&laquo; Previous</a>
-                        <a href="AdminPageDashboard.html" class="next">Next &raquo;</a>
+                        <section class="docs-section" id="item-1-1">
+                            <div>
+                                <h3 id="configuration-of-keycloak-saml-setup">Configuration of Keycloak SAML Setup</h3>
+                                <hr>
+                                <ul>
+                                    <li>Post registration, login to the application with admin credentials.</li>
+                                    <li>Click the menu icon to the left of the username and navigate to <strong>Edit
+                                            Profile</strong>.</li>
+                                    <li>Go to tab &quot;Settings&quot;, and then navigate to &quot;General&quot;. Under
+                                        &quot;Authentication&quot;.<ul>
+                                            <li>Check the option &quot;Enabled(dynamic)&quot;.</li>
+                                            <li>Set the field &quot;SAML Metadata URL&quot; with value of Keycloak SAML
+                                                descriptor URL. Example. <a
+                                                    href="http://{your-ip-address}:8080/auth/realms/forms-flow-ai/protocol/saml/descriptor">http://{your-ip-address}:8080/auth/realms/forms-flow-ai/protocol/saml/descriptor</a>.
+                                                {your-ip-address} should be changed to your host system IP address.
+                                                Please take special care to identify the correct IP address if your
+                                                system has multiple network cards</li>
+                                            <li>Set the field &quot;SAML Entity ID&quot; value to be
+                                                <code>forms-flow-analytics</code>.
+                                            </li>
+                                            <li>Set the field &quot;SAML NameID Format&quot; value to be
+                                                <code>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</code>.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>Logout and login again using valid formsflow.ai keycloak user credentials.
+                                        Default user credentials are provided <a
+                                            href="default user credential.html">here</a>.
+                                    </li>
+                                </ul>
+                                <blockquote>
+                                    <p>forms-flow-analytic (REDASH) setup is successfully completed now. You can skip
+                                        remaining sections in this page and continue with other installation steps.</p>
+                                </blockquote>
+                            </div>
 
 
-
-
-
+                        </section><br><br>
+                        <a href="" class="previous">&laquo; Previous</a>
+                        <a href="" class="next">Next &raquo;</a>
 
             </div>
             <!--//docs-code-block-->

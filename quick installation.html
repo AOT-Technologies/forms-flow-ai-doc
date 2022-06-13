@@ -163,78 +163,82 @@
                         <section class="docs-section" id="installation-1">
                             <h1 class="section-heading">Quick Installation</h1>
                             <hr>
-
+<p>For Docker based single click installation follow the below instructions.</p>
                             <div>
 
-                                <h3 id="docker-based-installation">Docker Based Installation</h3>
-                                <br>
-                                <ol>
-                                    <li>
-                                        <h5 id="docker-single-click-installation">Docker single click installation</h5>
+                               
+                               <ol>
+                                   <li>Download the bundle.zip file and extract it wherever you want.</li><br>
+                                   <img src="./assets/images/quick-installation1.png"></img><br>
+                                   <li>After extracting you will get the following files.</li><br>
+                                   <img src="./assets/images/quick-installation2.png"></img><br>
+                                   <li>Here install.bat/bash are the installation files for windows and linux. The docker-compose file and the newly creating env files can be 
+                                       seen inside the configuration folder.</li>
+                                       <li>While you start the installation, you can see the following general questions that is been asked,</li>
+                                       <br>
+                                       <pre>
+                                           <code>
+Do you want analytics to include in the installation? [y/n]
+Do you have an existing keycloak?[y/n]?
+                                            </code>
+                                       </pre><br>
+                                       <li>If you need to add analytics in the installation, you can give “y” or else “n”.
                                     </li>
-                                    <p>Download the compressed<a
-                                            href="https://github.com/AOT-Technologies/forms-flow-ai/blob/master/deployment/docker/bundle/bundle.zip/?raw=true">bundle
-                                            .</a>
-
-                                    </p>
-
-                                </ol>
-
-
-                                <br>
-
-                                <h4 id="summary">Summary</h4>
-                                <p>The root directory contains the install script for windows. After executing it, you
-                                    can
-                                    access the web applications by following the link from <a
-                                        href="download and installation.html#verifying-the-installation-status">here</a>
-                                </p>
-                                <h4 id="dependency">Dependencies</h4>
-                                <ol>
-                                    <div>
-                                        <ul>
-                                            <li><a href="https://docs.docker.com/engine/install/">Docker</a></li>
-                                            <li><a href="https://git-scm.com/">Git</a></li>
-                                        </ul>
-                                    </div>
-                                </ol>
-                                <h4 id="installation">Installation</h4><br>
-                                <code>This setup is not recommended for production use.</code><br>
-                                <br>
-
-                                <ul>
-                                    <li>In the base directory execute install script by double clicking on the
-                                        install.bat
-                                        (For Windows).</li>
-                                    <li>The following image depicts the installation flow with user input required for
-                                        configuration.</li>
-                                </ul>
-                                <p><img src="https://user-images.githubusercontent.com/94040192/160104985-35e13a88-1384-48e7-8701-87ac9fc66cb1.jpg"
-                                        alt="Drawing (3)"></p>
-
-
-
-
-
-
-                                <!-- <h4>Step 2</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus tempora quos iusto
-                                    architecto excepturi. Maxime cum provident molestiae! Deserunt obcaecati est maxime.
-                                    Modi aut, sint hic quia perspiciatis dolor laboriosam?</p>
-                                <ul>
-                                    <li>Run batch file on command prompt as adminstartor </li>
-                                </ul>
-                            </div> -->
-                                <!-- <div>
-                                    <h5>testing List Examples:</h5>
+                                    <li> You can give N if you do not have a default keycloak, the system will defaultly install keycloak for you.After the keycloak gets up in the docker you have to provide the client secret key from the keycloak browser.<br><br>
+                                        <pre>
+                                            <code>
+ What is your [Keycloak] forms-flow-bpm client secret key?
+                                            </code>
+                                        </pre>
+                                        <img src="./assets/images/quick-installation5.png" height="250" width="1000"></img>   <br>
+                                        Also, if you already have a keycloak in your docker, then you have to give certain details like,</li>
                                     <ul>
-                                        <li> Web</strong> <a href="">http://localhost:3000</a></li>
-                                        <li> Web</strong> <a href="">http://localhost:3000</a></li>
-                                        <li> Web</strong> <a href="">http://localhost:3000</a></li>
-        
+                                        <li>Keycloak url</li>
+                                        <li>Keycloak Realm name</li>
+                                        <li>Keycloak admin user name</li>
+                                        <li>Keycloak admin password</li>
+                                        <li>Forms-flow-bpm client secret key</li><br>
+                                           
+                                       
                                     </ul>
-        
-                                </div> -->
+                                    <li>After each component gets up in the docker, You can see the statement “done” in the command prompt.</li>
+                                    <br>
+                                       <img src="./assets/images/quick-installation6.png"></img><br><br>
+                                       <li>After the analytics get up (if you had chosen analytics), then it asks you the redash api key.</li>
+                                       <br><pre>
+                                           <code>
+ What is your Redash API key?
+                                           </code>
+                                       </pre>
+                                       <img src="./assets/images/quick-installation8.png"></img><br>
+                                       <li>. After the forms-flow-forms get up in the docker, it takes some time to generate role id’s. So it checks with the system and find if it is able to access the port and generate role id’s.</li><br>
+                                       <img src="./assets/images/quick-installation9.png"></img><br><br>
+                                       <li>Then all other components get up in the docker.</li> 
+                                       <br><img src="./assets/images/quick-installation10.png" height="550" width="850"></img><br><br>
+                                       <li>As long as the role id’s is not generated it shows the error message “curl error” and try to start up the next attempt, so just wait for the system to confirm.</li><br><br>
+                                       <img src="./assets/images/quick-installation11.png"></img><br><br>
+                                       <li>If everything gets up in the docker the system shows the completion message.</li><br>
+                                       <pre>
+                                           <code>
+ ********************** formsflow.ai is successfully installed ****************************
+ Press any key to continue . . .
+                                           
+                                           </code>
+                                       </pre>
+                               </ol>
+
+
+                              
+
+                              
+
+
+
+
+
+
+                                
+                                </div> 
                         </section>
                         <br><br>
                         <a href="UsageInstructions.html" class="previous">&laquo; Previous</a>

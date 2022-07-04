@@ -88,7 +88,7 @@
                     <li class="nav-item"><a href="index.html" style="color:  #566573">Introduction</a></li>
                     <li class="nav-item"><a href="architecture.html" style="color:  #566573">System Architecture</a>
                     </li>
-                    <li class="nav-item"><a class="current" href="aboutproject.html" style="color:  #566573">About The
+                    <li class="nav-item"><a href="aboutproject.html" style="color:  #566573">About The
                             Project</a>
                     </li>
                     <li class="nav-item"><a href="UsageInstructions.html" style="color:  #566573">Usage-instructions</a>
@@ -100,18 +100,26 @@
                     <li class="nav-item"><a href="quick installation.html" style="color:  #566573">Quick
                             Installation</a></li>
 
-                    
-                        <details>
-                            <summary><a href="download and installation.html" style="color:  #566573">Install Using Containers</a>
-                            </summary>
-                            <ul>
-                              <li class="nav-item"><a href="local keycloak setup.html" style="color:  #566573">Keycloak Setup</a></li>
-                              <li class="nav-item"><a href="Form Management Platform.html"style="color:  #566573">Formsflow forms Setup</a></li>
-                              <li class="nav-item"><a href="formsflow.ai Web Application.html" style="color:  #566573">Formsflow web Setup</a></li>
-                              <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">Formsflow api Setup</a></li>
-                              <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">Formsflow bpm Setup</a></li>
-                            </ul>
-                          </details>
+
+                    <details>
+                        <summary><a href="download and installation.html" style="color:  #566573">Install Using
+                                Containers</a>
+                        </summary>
+                        <ul>
+                            <li class="nav-item"><a href="local keycloak setup.html" style="color:  #566573">Keycloak
+                                    Setup</a></li>
+                            <li class="nav-item"><a href="Form Management Platform.html"
+                                    style="color:  #566573">Formsflow forms Setup</a></li>
+                            <li class="nav-item"><a href="Analytics Engine.html"
+                                    style="color:  #566573">Formsflow Analytics Setup</a></li>
+                            <li class="nav-item"><a href="formsflow.ai Web Application.html"
+                                    style="color:  #566573">Formsflow web Setup</a></li>
+                            <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">Formsflow api
+                                    Setup</a></li>
+                            <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">Formsflow bpm
+                                    Setup</a></li>
+                        </ul>
+                    </details>
 
                     <li class="nav-item"><a href="Openshift.html" style="color:  #566573">Openshift
                             Installation</a></li>
@@ -130,9 +138,11 @@
                     </li>
                     <li class="nav-item"><a href="Keycloak SAML Setup.html" style="color:  #566573">Keycloak SAML
                             Setup</a></li>
-                            <li class="nav-item"><a class="current" href="Redash.html" style="color:  #566573">Redash User Guide</a></li>
-                    <li class="nav-item"><a href="Logo change .html" style="color:  #566573">Logo change and code coverage</a></li>
-                           
+                    <li class="nav-item"><a class="current" href="Redash.html" style="color:  #566573">Redash User
+                            Guide</a></li>
+                    <li class="nav-item"><a href="Logo change .html" style="color:  #566573">Logo change and code
+                            coverage</a></li>
+
                     <li class="nav-item"><a href="AnonymousForm.html" style="color:  #566573">Anonymous Forms</a></li>
                     <li class="nav-item"><a href="AdminPageDashboard.html" style="color:  #566573">Admin
                             Dashboard</a></li>
@@ -141,6 +151,11 @@
                     </li>
                     <li class="nav-item"><a href="Tenant-based task assignment.html"
                             style="color:  #566573">Tenant-based task assignment</a></li>
+                            <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span
+								class="theme-icon-holder me-2"><i class="fas fa-check"></i></span>Update & Migration</a>
+					</li>
+					<li class="nav-item"><a href="java upgrade.html" style="color:  #566573">Java</a>
+					</li>
 
                     <!-- main heading -->
                     <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span
@@ -231,7 +246,41 @@
 
                                 </ul>
                             </div>
+                            <div>
+                                <h1 id="dashboard">Adding Dashboards on Admin page</h1>
+                                <hr><br>
+                                <p>
+                                    To enable dashboards, and provide authorization the following changes are required
+                                    in
+                                    existing installations:
+                                <ol>
+                                    <li>Create a new main group called formsflow-analytics, and create as many subgroups
+                                        as you
+                                        want to associate various dashboards from Admin UI(in Designer)</li><br>
+                                    <img src="./assets/images/Screenshot 2022-05-16 123429.png" alt="image">
+                                    <li>Create a new mapper under forms-flow-web client in Keycloak, by following below
+                                        steps:
+                                    </li>
+                                    <img src="./assets/images/Screenshot 2022-05-16 130800.png" alt="image" height="500"
+                                        width="500"><br>
+                                    <li>Corresponding to each user, add the dashboard-groups you want to enable for
+                                        dashboard
+                                        authorization. This will give users permission to as many dashboards which the
+                                        group
+                                        have been enabled with from Admin.</li><br>
+                                    <img src="./assets/images/Screenshot 2022-05-16 131123.png" alt="image" width="1000"
+                                        height="500"><br>
+                                    <li>The dashboards added in the above step will be displayed in the insights tab
+                                    </li><br>
+                                    <img src="./assets/images/Screenshot 2022-05-16 131548.png" alt="image" width="1000"
+                                        height="500"><br><br>
+                                    <strong>Note:</strong>-For those users who have no groups added in keycloak will not
+                                    have
+                                    insights tab option.
 
+                                </ol>
+                                </p>
+                            </div>
 
                         </section><br><br>
                         <a href="" class="previous">&laquo; Previous</a>

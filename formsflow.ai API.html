@@ -109,8 +109,8 @@
                                     Setup</a></li>
                             <li class="nav-item"><a href="Form Management Platform.html"
                                     style="color:  #566573">Formsflow forms Setup</a></li>
-                            <li class="nav-item"><a href="Analytics Engine.html"
-                                    style="color:  #566573">Formsflow Analytics Setup</a></li>
+                            <li class="nav-item"><a href="Analytics Engine.html" style="color:  #566573">Formsflow
+                                    Analytics Setup</a></li>
                             <li class="nav-item"><a href="formsflow.ai Web Application.html"
                                     style="color:  #566573">Formsflow web Setup</a></li>
                             <li class="nav-item"><a class="current" href="formsflow.ai API.html"
@@ -136,23 +136,22 @@
                     </li>
                     <li class="nav-item"><a href="Keycloak SAML Setup.html" style="color:  #566573">Keycloak SAML
                             Setup</a></li>
-                    <li class="nav-item"><a href="Redash.html" style="color:  #566573">Redash User Guide</a></li>
+                    <li class="nav-item"><a href="Redash.html" style="color:  #566573">Analytics User Guide</a></li>
                     <li class="nav-item"><a href="Logo change .html" style="color:  #566573">Logo change and code
                             coverage</a></li>
 
                     <li class="nav-item"><a href="AnonymousForm.html" style="color:  #566573">Anonymous Forms</a></li>
-                    <li class="nav-item"><a href="AdminPageDashboard.html" style="color:  #566573">Admin
-                            Dashboard</a></li>
+
                     <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
                                 class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Multi Tenancy</a>
                     </li>
                     <li class="nav-item"><a href="Tenant-based task assignment.html"
                             style="color:  #566573">Tenant-based task assignment</a></li>
-                            <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span
-								class="theme-icon-holder me-2"><i class="fas fa-check"></i></span>Update & Migration</a>
-					</li>
-					<li class="nav-item"><a href="java upgrade.html" style="color:  #566573">Java</a>
-					</li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-check"></i></span>Update & Migration</a>
+                    </li>
+                    <li class="nav-item"><a href="java upgrade.html" style="color:  #566573">Java</a>
+                    </li>
                     <!-- main heading -->
                     <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span
                                 class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
@@ -177,7 +176,7 @@
 
                         <section>
                             <div>
-                                <h1 id="formsflow-ai-api">Formsflow.ai API</h1><br>
+                                <h1 id="formsflow-ai-api">Formsflow.ai API</h1>
                                 <hr>
                                 <p><strong>Formsflow.ai</strong> has built this adaptive tier for correlating form
                                     management, BPM and analytics together.</p>
@@ -185,7 +184,7 @@
                                     the system. It is built using Python .</p>
 
 
-                                <h3 id="prerequisites">Prerequisites</h3>
+                                <h3 id="prerequisites">Prerequisites</h3><br>
                                 <ul>
                                     <li>For docker based installation <a href="https://docker.com">Docker</a> need to be
                                         installed.</li>
@@ -193,14 +192,14 @@
                                         ensure audience(camunda-rest-api) is setup in Keycloak-bpm server.</li>
                                 </ul>
 
-                                <h3 id="installation">Installation</h3>
+                                <h3 id="installation">Installation</h3><br>
                                 <p>If you are interested in contributing to the project, you can install through docker
                                     or locally.</p>
                                 <p>It&#39;s recommended to download dev-packages to follow Python coding standards for
                                     project like PEP8 if you are interested in contributing to project.
                                     You installing dev-packages using pip as follows:</p>
                                 <p><code>python3 -m pip install -r requirements/dev.txt</code></p>
-
+<br>
                                 <h3 id="environment-configuration">Environment Configuration</h3>
                                 <ul>
                                     <li>Make sure you have a Docker machine up and running.</li>
@@ -230,7 +229,7 @@
 
                                 </div>
 
-                                <h3 id="running-the-application">Running the Application</h3>
+                                <h3 id="running-the-application">Running the Application</h3><br>
                                 <ul>
                                     <li>forms-flow-api service uses port 5000, make sure the port is available.</li>
                                     <li>
@@ -248,7 +247,7 @@
                                 <p><em>NOTE: Use --build command with the start command to reflect any future
                                         <strong>.env</strong> changes eg :
                                         <code>docker-compose up --build -d</code></em></p>
-                                <h4 id="to-stop-the-application">To Stop the Application</h4>
+                                <h4 id="to-stop-the-application">To Stop the Application</h4><br>
                                 <ul>
 
                                     <li>Run <code>docker-compose stop</code> to
@@ -257,7 +256,7 @@
                                 </li>
 
                                 </ul>
-                                <h3 id="verify-the-application-status">Verify the Application Status</h3>
+                                <h3 id="verify-the-application-status">Verify the Application Status</h3><br>
                                 <p> The application should be up and available for use at port defaulted to 5000 in <a
                                         href="http://localhost:5000/">http://localhost:5000/</a></p>
                                 <ul>
@@ -296,6 +295,19 @@ Content-<span class="hljs-keyword">Type</span> <span class="hljs-type">: </span>
 Authorization: Bearer {<span class="hljs-keyword">access</span> token}
 </code></pre>
 
+                                <br>
+                                <h3 id="get-the-redash-api-key">Get the Redash API Key</h3>
+                                <hr>
+                                <ul>
+                                    <li>Login to redash hosted instance (i.e. <a
+                                            href="http://localhost:7000/">http://localhost:7000/</a>) using the admin
+                                        credentials passed for registration / SAML credentials</li>
+                                    <li>Go to User Icon -&gt; Profile -&gt; Settings<ul>
+                                            <li>Go to Account Section</li>
+                                            <li>Copy API Key to Clipboard</li>
+                                        </ul>
+                                    </li>
+                                </ul>
                         </section><br><br>
                         <a href="formsflow.ai Web Application.html" class="previous">&laquo; Previous</a>
                         <a href="Workflow Engine.html" class="next">Next &raquo;</a>

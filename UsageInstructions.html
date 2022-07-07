@@ -110,8 +110,8 @@
                                     Setup</a></li>
                             <li class="nav-item"><a href="Form Management Platform.html"
                                     style="color:  #566573">Formsflow forms Setup</a></li>
-                            <li class="nav-item"><a href="Analytics Engine.html"
-                                    style="color:  #566573">Formsflow Analytics Setup</a></li>
+                            <li class="nav-item"><a href="Analytics Engine.html" style="color:  #566573">Formsflow
+                                    Analytics Setup</a></li>
                             <li class="nav-item"><a href="formsflow.ai Web Application.html"
                                     style="color:  #566573">Formsflow web Setup</a></li>
                             <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">Formsflow api
@@ -140,21 +140,21 @@
                     </li>
                     <li class="nav-item"><a href="Keycloak SAML Setup.html" style="color:  #566573">Keycloak SAML
                             Setup</a></li>
-                            <li class="nav-item"><a href="Redash.html" style="color:  #566573">Analytics User Guide</a></li>
+                    <li class="nav-item"><a href="Redash.html" style="color:  #566573">Analytics User Guide</a></li>
                     <li class="nav-item"><a href="Logo change .html" style="color:  #566573">Logo change and code
                             coverage</a></li>
                     <li class="nav-item"><a href="AnonymousForm.html" style="color:  #566573">Anonymous Forms</a></li>
-                    
+
                     <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
                                 class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Multi Tenancy</a>
                     </li>
                     <li class="nav-item"><a href="Tenant-based task assignment.html"
                             style="color:  #566573">Tenant-based task assignment</a></li>
-                            <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span
-								class="theme-icon-holder me-2"><i class="fas fa-check"></i></span>Update & Migration</a>
-					</li>
-					<li class="nav-item"><a href="java upgrade.html" style="color:  #566573">Java</a>
-					</li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-check"></i></span>Update & Migration</a>
+                    </li>
+                    <li class="nav-item"><a href="java upgrade.html" style="color:  #566573">Java</a>
+                    </li>
 
                     <!-- main heading -->
                     <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span
@@ -199,7 +199,7 @@
                                     <li>After the log in is successful, you will be redirected to <a
                                             href="http://localhost:3000/form">http://localhost:3000/form</a> where
                                         you
-                                        can <code>Create/View/Edit/Delete a form</code>.</li>
+                                        can <code>Create / Upload / Download / View / Edit / Delete</code> a form.</li>
                                     <li>To create a form click on <strong>Create Form Button</strong>, you can use
                                         the
                                         Drag-and-drop forms-builder to create a new form.</li>
@@ -292,7 +292,7 @@
                                     </blockquote>
                                 </ul>
                                 <hr>
-                                <h2 id="usage-instructions-with-examples">Examples
+                                <h2 id="usage-instructions-with-examples">Usage Instructions with Example
                                 </h2>
 
 
@@ -311,50 +311,57 @@
                                     <li>After the log in is successful you will be redirected to <a
                                             href="http://localhost:3000/form">http://localhost:3000/form</a> where
                                         you
-                                        can <code>Create / View / Edit / Delete</code> a form.</li>
+                                        can <code>Create / Upload / Download / View / Edit / Delete</code> a form.</li>
                                 </ul>
                                 <p><img src="./assets/images/Screenshot 2022-05-13 120316.png" alt="image" width="1000"
                                         height="500"></p>
                                 <ul>
-                                    <li>Select the <code>Freedom of Information and Protection of Privacy</code>
-                                        form by
-                                        clicking on it.</li>
+                                    <li>Click <a
+                                            href="https://github.com/AOT-Technologies/forms-flow-ai-examples/tree/main/forms-examples/formio">Here</a>
+                                        and download FreedomOfInformationAndProtectionOfPrivacy.json and upload the
+                                        file.</li>
+                                    <br><img src="./assets/images/177704043-c817381d-0abd-4772-adfc-d0c3a71e8972.png"
+                                        width="950"></img><br><br>
+
                                     <li>You can modify the form by clicking on the <strong>View/Edit Form</strong>
                                         button or continue by clicking the <strong>Next</strong> button.</li>
                                 </ul>
                                 <p><img src="./assets/images/Screenshot 2022-05-13 120606.png" alt="image" width="1000"
-                                        height="500"></p>
+                                        height="500"></p><br>
                                 <ul>
                                     <li>At this stage form designing is completed, you can click on the <strong>EDIT
-                                            Button</strong> and associate a workflow - One Step Approval task Listener.
+                                            Button</strong> and associate a default workflow if you want.
                                     </li>
                                 </ul>
                                 <p><img src="./assets/images/Screenshot 2022-05-13 120712.png" alt="image" width="1000"
                                         height="500"></p>
                                 <ul>
-                                    <li>After associating workflow click on the <strong>TASK VARIABLE
-                                        </strong> to add taskvariables.</li><br><br>
+                                    In order to deploy any other workflow ,<p> Goto <a
+                                            href="https://github.com/AOT-Technologies/forms-flow-ai-examples/tree/main/bpm-examples/camunda/approval-process">https://github.com/AOT-Technologies/forms-flow-ai-examples/tree/main/bpm-examples/camunda/approval-process</a>and
+                                        download any sample workflow (eg:one-step-approval.bpmn)</p><br>
+                                    <br><img src="./assets/images/177704370-92ae070e-e9a3-4ad7-9b65-0b9e89071ff3.png"
+                                        height="150" width="1000"></img><br><br><br>
+                                    <li>click on the deploy button in the Camunda Modeler, then give it the Deployment
+                                        Name "One Step Approval” and url for an Endpoint Configuration and click the
+                                        Deploy button.</li><br>
+                                    <img src="./assets/images/Screenshot 2022-07-07 150728.png" height="500"
+                                        width="1000"></img><br><br><br><br>
+                                    <p><img src="./assets/images/Screenshot 2022-07-07 151518.png" height="600"
+                                            width="450" class="center"></img></p><br><br>
+                                    <li>After associating the workflow, click on the Next Button to Preview and Confirm
+                                    </li><br>
+                                    <img src="./assets/images/Screenshot 2022-07-07 152421.png" height="500"
+                                        width="1000"></img><br>
+                                    <li>You can click on the NEXT Button and publish the form for clients.</li><br>
+                                    <img src="./assets/images/Screenshot 2022-07-07 152653.png" height="500"
+                                        width="1000"></img>
+                                    <li>Click on SAVE Button to completed designing a form.</li>
+                                    <li>Form designing is successfully completed, you can now Log out and go to <a
+                                            href="#client--steps2">Client Steps</a></li>
 
-                                    <p><img src="./assets/images/Screenshot 2022-05-05 154026.png" alt="image"
-                                            width="1000" height="500"></p>
-                                    <li>After that click on the <strong>Next </strong> Button to Preview and
-                                        Confirm.
-                                    </li>
-                                    <li>You can click on the <strong>EDIT Button</strong> and publish the form for
-                                        clients.</li>
                                 </ul>
-                                <p><img src="./assets/images/Screenshot 2022-05-13 120712.png" alt="image" width="1000"
-                                        height="500"></p>
-                                <ul>
-                                    <li>
-                                        <p>Click on <strong>SAVE Button</strong> to completed designing a form.</p>
-                                    </li>
-                                    <li>
-                                        <p>Form designing is successfully completed, you can now Log out and go to
-                                            <a href="#client--steps2">Client Steps</a>
-                                        </p>
-                                    </li>
-                                </ul>
+
+
                                 <h3 id="client--steps2">Client Steps</h3>
                                 <ul>
                                     <li>Log in to <a href="http://localhost:3000">http://localhost:3000</a>

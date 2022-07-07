@@ -254,8 +254,9 @@ small,
 mark,
 .mark {
   padding: 0.2em;
-  background-color: #fcf8e3;
+  background-color: rgb(223, 220, 220);
 }
+
 
 sub,
 sup {
@@ -776,7 +777,12 @@ progress {
     max-width: 1320px;
   }
 }
-
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;

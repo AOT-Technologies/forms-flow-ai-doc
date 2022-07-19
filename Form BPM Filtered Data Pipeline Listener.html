@@ -23,7 +23,7 @@
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
     <link id="theme-style" rel="stylesheet" href="assets/css/atom-one-dark.min.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 </head>
@@ -71,96 +71,12 @@
     </header>
     <!--//header-->
 
-    <div class="docs-wrapper">
-        <div id="docs-sidebar" class="docs-sidebar">
-            <div class="top-search-box d-lg-none p-3">
-                <form class="search-form">
-                    <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
-                    <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
-                </form>
-            </div>
-            <nav id="docs-nav" class="docs-nav navbar">
-                <ul class="section-items list-unstyled nav flex-column pb-3">
-                    <!-- main heading -->
-                    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
-                                class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Getting
-                            started</a></li>
-                    <li class="nav-item"><a href="index.html" style="color:  #566573">Introduction</a></li>
-                    <li class="nav-item"><a href="architecture.html" style="color:  #566573">System Architecture</a>
-                    </li>
-                    <li class="nav-item"><a href="aboutproject.html" style="color:  #566573">About The Project</a>
-                    </li>
-                    <li class="nav-item"><a href="UsageInstructions.html" style="color:  #566573">Usage-instructions</a>
-                    </li>
-                    <!-- main heading -->
-                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span
-                                class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Installation</a>
-                    </li>
-                    <li class="nav-item"><a href="quick installation.html" style="color:  #566573">Quick
-                            Installation</a></li>
-
-                    <details>
-                        <summary><a href="download and installation.html" style="color:  #566573">Install Using
-                                Containers</a>
-                        </summary>
-                        <ul>
-                            <li class="nav-item"><a href="local keycloak setup.html" style="color:  #566573">Keycloak
-                                    Setup</a></li>
-                            <li class="nav-item"><a href="Form Management Platform.html"
-                                    style="color:  #566573">Formsflow forms Setup</a></li>
-                            <li class="nav-item"><a href="Analytics Engine.html"
-                                    style="color:  #566573">Formsflow Analytics Setup</a></li>
-                            <li class="nav-item"><a href="formsflow.ai Web Application.html"
-                                    style="color:  #566573">Formsflow web Setup</a></li>
-                            <li class="nav-item"><a href="formsflow.ai API.html" style="color:  #566573">Formsflow api
-                                    Setup</a></li>
-                            <li class="nav-item"><a href="Workflow Engine.html" style="color:  #566573">Formsflow bpm
-                                    Setup</a></li>
-                        </ul>
-                    </details>
-
-                    <li class="nav-item"><a href="Openshift.html" style="color:  #566573">Openshift
-                            Installation</a></li>
-                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span
-                                class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Features</a></li>
-
-
-                    <li class="nav-item"><a href="Internationalization.html"
-                            style="color:  #566573">Internationalization</a></li>
-                    <li class="nav-item"><a href="Listeners.html" style="color:  #566573">Camunda Listeners</a></li>
-                    <li class="nav-item"><a href="Camunda_Filters.html" style="color:  #566573">Camunda Filters</a></li>
-                    <li class="nav-item"><a href="Taskvariables.html" style="color:  #566573">Task
-                            variable workflow</a></li>
-                    <li class="nav-item"><a href="Custom components.html" style="color:  #566573">Custom Components</a>
-                    </li>
-                    <li class="nav-item"><a href="Keycloak SAML Setup.html" style="color:  #566573">Keycloak SAML
-                            Setup</a></li>
-                    <li class="nav-item"><a href="Redash.html" style="color:  #566573">Analytics User Guide</a></li>
-                    <li class="nav-item"><a href="Logo change .html" style="color:  #566573">Logo change and code
-                            coverage</a></li>
-                    <li class="nav-item"><a href="AnonymousForm.html" style="color:  #566573">Anonymous Forms</a></li>
-                   
-                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
-                                class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Multi Tenancy</a>
-                    </li>
-                    <li class="nav-item"><a href="Tenant-based task assignment.html"
-                            style="color:  #566573">Tenant-based task assignment</a></li>
-                            <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span
-								class="theme-icon-holder me-2"><i class="fas fa-check"></i></span>Update & Migration</a>
-					</li>
-					<li class="nav-item"><a href="java upgrade.html" style="color:  #566573">Java</a>
-					</li>
-                    <!-- main heading -->
-                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span
-                                class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-1">Section Item 9.1</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-2">Section Item 9.2</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-3">Section Item 9.3</a></li>
-                </ul>
-
-            </nav>
-            <!--//docs-nav-->
-        </div>
+    <div id="nav-placeholder"></div>
+    <script>
+        $.get("nav.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+    </script> 
         <!--//docs-sidebar-->
         <div class="docs-content">
             <div class="container">

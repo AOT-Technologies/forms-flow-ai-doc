@@ -29,7 +29,7 @@
 </head>
 
 <body>
-
+    
     <header class="header fixed-top">
         <div class="branding docs-branding">
             <div class="container-fluid position-relative py-2">
@@ -70,14 +70,16 @@
         <!--//branding-->
     </header>
     <!--//header-->
-    
 
     <div id="nav-placeholder"></div>
-            <script>
-                $.get("nav.html", function(data){
-                    $("#nav-placeholder").replaceWith(data);
-                });
-            </script> 
+    <script>
+        $.get("nav.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+    </script> 
+           
+            <!--//docs-nav-->
+        
         <!--//docs-sidebar-->
         <div class="docs-content">
             <div class="container">
@@ -85,43 +87,28 @@
                     <!-- main heading content -->
                     <header class="docs-header">
 
-
+                    
 
                         <br>
-                        <section class="docs-section" id="installation-2">
 
+                        <section class="docs-section" id="item-1-1">
+                            <h1 class="section-heading">Download</h1>
+                            <div>
+                                <p>If you want to download and setup, follow the installation guide, you will find step-by-step instructions to download and install.</p>
+                                <p>Clone this github repo: <a href="https://github.com/AOT-Technologies/forms-flow-ai">https://github.com/AOT-Technologies/forms-flow-ai</a></p>
+                                
 
-                            
+                            </div>
+                        </section><br><br>
+                        <a href="architecture.html" class="previous">&laquo; Previous</a>
+                        <a href="quick installation.html" class="next">Next &raquo;</a>
 
-                            <h2>Docker Individual Service Deployment</h2><br><hr>
-<p>Install the components in the listed order. (NOTE: Keycloak, form.io and redash dependencies are used on other components)</p>
-<ul>
-<li><a href="local keycloak setup.html">Keycloak</a> Identity keycloak components</li>
-<li><a href="Form Management Platform.html">forms-flow-forms</a> formsflow.ai integration with form.io</li>
-<li><a href="Analytics Engine.html">forms-flow-analytics</a> Redash analytics components</li>
-<li><a href="Workflow Engine.html">forms-flow-bpm</a> Camunda Workflow deployment and integration</li>
-<li><a href="formsflow.ai API.html">forms-flow-api</a> REST API of formsflow.ai</li>
-<li><a href="formsflow.ai Web Application.html">forms-flow-web</a> formsflow.ai integration web UI</li>
-</ul>
+            </div></div>
 
-
-                            <br><br>
-
-
-                            <a href="Docker full deployment.html" class="previous">&laquo; Previous</a>
-                            <a href="Openshift.html" class="next">Next &raquo;</a>
-
-
-
-
-
-
-            </div>
             <!--//docs-code-block-->
 
 
             </header>
-
 
             </article>
 
@@ -140,7 +127,6 @@
             <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
             <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
             <script src="assets/js/docs.js"></script>
-
 </body>
 
 </html>

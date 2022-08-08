@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Forms flow ai documentation">
+    <meta name="author" content="formsflow.ai">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Welcome to formsflow.ai</title>
+
+    <!-- Google Font -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+    <link id="theme-style" rel="stylesheet" href="assets/css/atom-one-dark.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    
+    <header class="header fixed-top">
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+                        type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2"
+                                src="assets/images/formsflow.ai-logo.svg" alt="logo"><span
+                                class="logo-text">formsflow.ai</span></a></div>
+                </div>
+                <!--//docs-logo-wrapper-->
+                <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+                    <div class="top-search-box d-none d-lg-flex">
+                        <form class="search-form">
+                            <input type="text" placeholder="Search the docs..." name="search"
+                                class="form-control search-input">
+                            <button type="submit" class="btn search-btn" value="Search"><i
+                                    class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+
+                    <ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+                        <li class="list-inline-item"><a href="https://github.com/AOT-Technologies/forms-flow-ai"><i
+                                    class="fab fa-github fa-fw"></i></a></li>
+                    </ul>
+                    <!--//social-list-->
+                    <a href="https://github.com/AOT-Technologies/forms-flow-ai"
+                        class="btn btn-primary d-none d-lg-flex">Download</a>
+                </div>
+                <!--//docs-top-utilities-->
+            </div>
+            <!--//container-->
+        </div>
+        <!--//branding-->
+    </header>
+    <!--//header-->
+
+    <div id="nav-placeholder"></div>
+    <script>
+        $.get("nav.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+    </script> 
+           
+            <!--//docs-nav-->
+        
+        <!--//docs-sidebar-->
+        <div class="docs-content">
+            <div class="container">
+                <article class="docs-article" id="section-1">
+                    <!-- main heading content -->
+                    <header class="docs-header">
+
+                    
+
+                        <br>
+
+                        <section>
+                            <h2>Docker Full Deployment</h2><br><hr>
+                            <h3>Installation Steps</h3><br>
+                            <p>These are the steps required to complete the installation and setup of formsflow.ai solution</p>
+                            <ul>
+                                <li>Keycloak setup</li>
+                                <li>forms-flow-analytics setup</li>
+                                <li>forms-flow-forms setup</li>
+                                <li>forms-flow-web, forms-flow-bpm, forms-flow-api setup</li>
+                            </ul>
+                            <div class="callout-block callout-block-info">
+                                <div class="content">
+                                    <span class="callout-icon-holder me-1"></span>
+
+                                    <i class="fa fa-bullhorn"></i>
+
+                                    <em>   Make sure you have a Docker machine up and running.</em>
+
+                                </div>
+
+                            </div><br>
+                            <ol>
+                                <h4><li>Keycloak Setup</li></h4>
+                                <p>Follow the instructions given<a href="local keycloak setup.html">here</a></p>
+                                <h4><li>forms-flow-analytics Setup</li></h4>
+                                <p>Start the analytics server by following the instructions given<a href="Analytics Engine.html">here</a></p>
+                                <h4><li>forms-flow-forms Setup</li></h4>
+                                <ul>
+                                    <li>Make sure your current working directory is "/forms-flow-ai/deployment/docker".</li>
+                                <li>Rename the file <strong> sample.env</strong> to <strong>.env.</strong></li>
+                    <li>Modify the environment variables in the newly created .env file if needed. Environment variables are given in the table below,</li>
+                                
+                </ul>
+                            
+                          
+                            <img src="./assets/images/Screenshot 2022-08-05 143945.png" height="300" width="500"></img>
+                            <br><p>Follow the below steps for mapping the role IDs.
+                            </p>
+                            <ol><ul>
+                            
+                            <li>Start the forms-flow-forms service.</li>
+                            <ul><li>Run <code>docker-compose up -d forms-flow-forms</code> to start</li></ul>
+                        </ul>
+                    </ol>
+                    <h5>Health Check</h5>
+                    <p>Click<a href="Form Management Platform.html#health-check">here .</a></p>
+                           
+                            <div class="callout-block callout-block-info">
+                                <div class="content">
+                                    <span class="callout-icon-holder me-1"></span>
+
+                                    <i class="fa fa-bullhorn"></i>
+
+                                    <em>   NOTE: Use --build command with the start command to reflect any future .env / code changes eg : <code>docker-compose up --build -d</code></em>
+
+                                </div>
+
+                            </div>
+                            
+                              <h4> <li>forms-flow-web, forms-flow-bpm & forms-flow-api Setup</li></h4>
+                               <ul>
+                                <li>Make sure your current working directory is "/forms-flow-ai/deployment/docker".</li>
+                                <li>Modify the environment variables inside .env file if needed. Environment variables are given in the tables below.</li>
+                                <li>NOTE - While configuring USER_ACCESS_PERMISSIONS the accessAllowApplications will hide / show application tab, the same way accessAllowSubmissions does for viewSubmission button. To enable this feature you need to add access-allow-applications, access-allow-submissions with the respective user group in keycloak.</li>
+                               </ul>
+                            </ol>
+                            <h4>Running the application</h4>
+                            <ul>
+                                <li>Run <code>docker-compose up -d</code> to start.</li>
+                            
+                            </ul>
+                            <h5>To stop the application</h5>
+                            <ul>
+                            <li>Run <code>docker-compose stop</code> to stop.</li>
+                        </ul>
+                        <h4>Health Check</h4>
+                        <ul>
+                            <li>Analytics should be up and available for use at port defaulted to 7000 i.e. <a href="http://localhost:7000/">http://localhost:7000/</a></li>
+                            
+                            <li>Business Process Engine should be up and available for use at port defaulted to 8000 i.e.<a href="http://localhost:8000/camunda/"> http://localhost:8000/camunda/</a></li>
+<li>FormIO should be up and available for use at port defaulted to 3001 i.e. <a href="http://localhost:3001/">http://localhost:3001/</a></li>
+<li>formsflow.ai Rest API should be up and available for use at port defaulted to 5000 i.e. <a href="http://localhost:5000/checkpoint">http://localhost:5000/checkpoint</a></li>
+<li>formsflow.ai web application should be up and available for use at port defaulted to 3000 i.e. <a href="http://localhost:3000/">http://localhost:3000/</a></li>
+                        
+                            <li><p>Default user credentials are provided<a href="default user credential.html">here</a></p></li>
+                        </section></ul><br><br>
+                        <a href="Docker full deployment.html" class="previous">&laquo; Previous</a>
+                        <a href="download and installation.html" class="next">Next &raquo;</a>
+                    </div>
+            </div></div>
+
+            <!--//docs-code-block-->
+
+
+            </header>
+
+            </article>
+
+
+
+
+            <!-- Javascript -->
+            <script src="assets/plugins/popper.min.js"></script>
+            <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+            <!-- Page Specific JS -->
+            <script src="assets/plugins/smoothscroll.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+            <script src="assets/js/highlight-custom.js"></script>
+            <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+            <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+            <script src="assets/js/docs.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<article class="docs-article" id="section-1">
+    <section class="docs-section" id="forms-flow-bpm">
+        <div>
+            <h1 id="workflow-engine">Workflow Engine</h1>
+           
+            <hr>
+            <p>formsflow.ai leverages Camunda for workflow and decision automation.</p>
+            <p>To know more about Camunda, visit<a
+                    href="https://camunda.com/">https://camunda.com/</a></p>
+            <h3 id="prerequisites">Prerequisites</h3>
+            <ul>
+                <li>For docker based installation <a href="https://docker.com">Docker</a> need to be
+                    installed.</li>
+                <li>Admin access to Keycloak server.</li>
+            </ul>
+
+            <h3 id="installation">Installation</h3>
+            <ul>
+                <li>Make sure you have a Docker machine up and running.</li>
+                <li>Make sure your current working directory is
+                    &quot;forms-flow-ai/forms-flow-bpm&quot;.</li>
+                <li>Rename the file <strong>sample.env</strong> to <strong>.env</strong>.
+                </li>
+                <li>Modify the environment variables in the newly created <strong>.env</strong> file
+                    if needed. Environment variables are given below</li>
+
+
+            </ul>
+
+
+            <hr>
+            <img src="./assets/images/Screenshot 2022-06-10 115356.png" width="700"
+                height="700"></img>
+            <br>
+            <img src="./assets/images/Screenshot 2022-06-10 115423.png" width="700"
+                height="700"></img><br><br>
+
+
+            <br>
+            <div class="callout-block callout-block-info">
+                <div class="content">
+                    <span class="callout-icon-holder me-1"></span>
+
+                    <i class="fa fa-info-circle"></i>
+
+
+                    <code>KEYCLOAK_URL</code>*,<code>KEYCLOAK_BPM_CLIENT_SECRET</code>*,<code>FORMSFLOW_API_URL</code>*,
+                    <code>FORMIO_DEFAULT_PROJECT_URL</code>*,<code>WEBSOCKET_SECURITY_ORIGIN</code>*,<code>BPM_BASE_URL</code>*
+
+
+                </div>
+
+            </div>
+
+            <br>
+            <h4 id="mail-configuration">Mail Configuration</h4>
+            <ul>
+                <li>Modify the file <strong>mail-config.properties</strong> (under
+                    forms-flow-bpm/src/main/resources/). The default settings provided are for the
+                    Gmail server, and you need to change the credentials at the bottom of the file.
+                    Note that you want to configure your own Gmail setting to allow unsecure apps
+                    first. </li>
+            </ul>
+            <br>
+
+            <h3 id="running-the-application">Running the application</h3>
+            <ul>
+                <li>forms-flow-bpm service uses port 8000, make sure the port is available.</li>
+                <li><code>cd {Your Directory}/forms-flow-ai/forms-flow-bpm</code></li>
+                <li>Run <code>docker-compose  up -d</code> to start.</li>
+            </ul>
+            <div class="callout-block callout-block-info">
+                <div class="content">
+                    <span class="callout-icon-holder me-1"></span>
+
+                    <i class="fa fa-bullhorn"></i>
+
+                    <strong>NOTE :</strong> Use --build command with the start command to reflect
+                    any future
+                    <strong>.env</strong> changes eg :
+                    <code>docker-compose up --build -d</code></em>
+
+                </div>
+
+            </div>
+
+
+            <h4 id="to-stop-the-application">To stop the application</h4>
+            <ul>
+                <li>Run <code>docker-compose  stop</code> to stop.</li>
+            </ul>
+            <h3 id="health-check">Health Check</h3>
+            <p> The application should be up and available for use at port defaulted to 8000 in <a
+                    href="http://localhost:8000/camunda/">http://localhost:8000/camunda/</a></p><br>
+                    <img src="./assets/images/Screenshot 2022-08-05 163745.png" height="400" width="500"></img>
+                    <p>Default user credentials are provided<a href="default user credential.html">here</a></p>
+
+            <p>To deploy a Process<a href="Deploy process.html">Click</a></p>
+
+        </div>
+    </section>
+    </article>

@@ -1,0 +1,134 @@
+<article class="docs-article" id="section-1">
+    <section class="docs-section" id="docker_full_deployment">
+
+        <h1>Docker Full Deployment</h1><br>
+        <hr>
+        <h3>Installation Steps</h3><br>
+        <p>These are the steps required to complete the installation and setup of formsflow.ai solution
+        </p>
+        <ul>
+            <li>Keycloak setup</li>
+            <li>forms-flow-analytics setup</li>
+            <li>forms-flow-forms setup</li>
+            <li>forms-flow-web, forms-flow-bpm, forms-flow-api setup</li>
+        </ul>
+        <div class="callout-block callout-block-info">
+            <div class="content">
+                <span class="callout-icon-holder me-1"></span>
+
+                <i class="fa fa-bullhorn"></i>
+
+                <em> Make sure you have a Docker machine up and running.</em>
+
+            </div>
+
+        </div><br>
+        <ol>
+            <h4>
+                <li>Keycloak Setup</li>
+            </h4>
+            <p>Keycloak is an open source software product to allow single sign-on with Identity and Access Management
+                aimed at modern applications and services.</p>
+            <p>To install keycloak follow the instructions given <a href="local_keycloaksetup.html">here</a></p>
+            <h4>
+                <li>forms-flow-analytics Setup</li>
+            </h4>
+            <p>Redash is used to build analytics dashboards. The analytics server can be started by following the
+                instructions given <a href="formsflow_analytics.html">here</a>
+            </p>
+            <h4>
+                <li>forms-flow-forms Setup</li>
+            </h4>
+            <p>To setup forms-flow-forms follow the below instructions .</p>
+            <ul>
+                <li>Make sure your current working directory is "/forms-flow-ai/deployment/docker".</li>
+                <li>Rename the file <strong> sample.env</strong> to <strong>.env.</strong></li>
+                <li>Modify the environment variables in the newly created .env file if needed.
+                    Environment variables are given below,</li>
+
+            </ul><br>
+            <code>NOTE :{your-ip-address} given inside the .env file should be changed to your host system IP address.
+                Please take special care to identify the correct IP address if your system has multiple network cards.</code><br>
+
+            <img src="./assets/images/Screenshot 2022-08-05 143945.png" height="300" width="500"></img>
+            <br>
+
+            <ol>
+                <ul>
+
+                    <li>Start the forms-flow-forms service.</li>
+                    <ul>
+                        <li>Run <code>docker-compose up -d forms-flow-forms</code> to start</li>
+                    </ul>
+                </ul>
+            </ol>
+
+
+            <div class="callout-block callout-block-info">
+                <div class="content">
+                    <span class="callout-icon-holder me-1"></span>
+
+                    <i class="fa fa-bullhorn"></i>
+
+                    <em> NOTE: Use --build command with the start command to reflect any future .env /
+                        code changes eg : <code>docker-compose up --build -d</code></em>
+
+                </div>
+
+            </div>
+            <br>
+            <h4>
+                <li>forms-flow-web, forms-flow-bpm & forms-flow-api Setup</li>
+            </h4>
+            <p>To setup forms-flow-web, forms-flow-bpm & forms-flow-api follow the below instructions .</p>
+            <ul>
+                <li>Make sure your current working directory is "/forms-flow-ai/deployment/docker".</li>
+                <li>Modify the environment variables inside .env file if needed. Environment variables
+                    are given below.</li>
+                    
+                <code>NOTE :{your-ip-address} given inside the .env file should be changed to your host system IP address.
+                Please take special care to identify the correct IP address if your system has multiple network cards.</code>
+                <br>
+                <img src="./assets/images/deployment_docker1.png" height="500" width="600"></img>
+                <img src="./assets/images/deployment_docker2.png" height="500" width="600"></img>
+                <img src="./assets/images/deployment_docker3.png" height="500" width="600"></img>
+                <img src="./assets/images/deployment_docker4.png" height="500" width="600"></img>
+                <img src="./assets/images/deployment_docker5.png" height="500" width="600"></img>
+                <li>NOTE - While configuring USER_ACCESS_PERMISSIONS the accessAllowApplications will
+                    hide / show application tab, the same way accessAllowSubmissions does for
+                    viewSubmission button. To enable this feature you need to add
+                    access-allow-applications, access-allow-submissions with the respective user group
+                    in keycloak.</li>
+            </ul>
+        </ol>
+        <h4>Running the application</h4>
+        <ul>
+            <li>Run <code>docker-compose up -d</code> to start.</li>
+
+        </ul>
+        <h5>To stop the application</h5>
+        <ul>
+            <li>Run <code>docker-compose stop</code> to stop.</li>
+        </ul>
+        <h4>Health Check</h4>
+        <ul>
+            <li>Analytics should be up and available for use at port defaulted to 7000 i.e. <a
+                    href="http://localhost:7000/">http://localhost:7000/</a></li>
+
+            <li>Business Process Engine should be up and available for use at port defaulted to 8000
+                i.e.<a href="http://localhost:8000/camunda/"> http://localhost:8000/camunda/</a></li>
+            <li>FormIO should be up and available for use at port defaulted to 3001 i.e. <a
+                    href="http://localhost:3001/">http://localhost:3001/</a></li>
+            <li>formsflow.ai Rest API should be up and available for use at port defaulted to 5000 i.e.
+                <a href="http://localhost:5000/checkpoint">http://localhost:5000/checkpoint</a>
+            </li>
+            <li>formsflow.ai web application should be up and available for use at port defaulted to
+                3000 i.e. <a href="http://localhost:3000/">http://localhost:3000/</a></li>
+
+            <li>
+                <p>Default user credentials are provided <a href="default user credential.html">here</a>
+                </p>
+            </li>
+    </section>
+
+</article>

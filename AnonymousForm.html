@@ -1,142 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Forms flow ai documentation">
-    <meta name="author" content="formsflow.ai">
-    <link rel="shortcut icon" href="favicon.ico">
-    <title>Welcome to formsflow.ai</title>
-
-    <!-- Google Font -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
-    <!-- FontAwesome JS-->
-    <script defer src="assets/fontawesome/js/all.min.js"></script>
-
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
-
-    <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
-    <link id="theme-style" rel="stylesheet" href="assets/css/atom-one-dark.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<article class="docs-article">
+    <section class="docs-section" id="anonymous">
+        <div>
 
 
-</head>
+            <h1 id="anonymous-workflow">Anonymous Forms</h1>
+            <hr><br>
+            <p>
+                An anonymous form allows users to submit form entries anonymously. Users can access the
+                form using the form url without login to the application.
 
-<body>
+            </p>
+            <p>Below steps describes how you can design a form anonymous</p>
+            <ol>
+                <li>Create a new form or Edit an already created form. Check the field asking whether
+                    you want to make the form public to make the form available to public.
+                </li><br><br>
+                <img src="./assets/images/166641751-b7f4df20-959d-485a-ac41-cc688e9f6762 (1).png" height="500"
+                    width="1000"> </p>
+                <li>Assosiate a workflow if you want and move to the next stage.</li><br><br>
+                <img src="./assets/images/Screenshot 2022-06-01 142611.png" height="500" width="1000"><br><br>
+                <li>In this stage, you can copy the anonymous form url and publish the form to the
+                    client.Forms that are made anonymous and public will only appear publicly.</li>
+                <br><br>
 
-    <div class="container">
-        <header>
-            <div id="header"></div>
-        </header>
-
-    </div>
-    <script>
-        $(function(){
-            $('#header').load('header.html');
-        }
-        );
-    </script>
-    <!--//header-->
-
-    
-            
-        
-        <div id="nav-placeholder"></div>
-        <script>
-            $.get("nav.html", function(data){
-                $("#nav-placeholder").replaceWith(data);
-            });
-        </script> 
-        <!--//docs-sidebar-->
-        <div class="docs-content">
-            <div class="container">
-                <article class="docs-article" id="section-1">
-                    <!-- main heading content -->
-                    <header class="docs-header">
-
-
-
-                        <br>
-                        <section class="docs-section" id="installation-3">
-
-                            <h1 id="anonymous-workflow">Anonymous Forms</h1>
-                            <hr><br>
-                            <p>
-                                An anonymous form allows users to submit form entries anonymously. Users can access the
-                                form using the form url without login to the application.
-
-                            </p>
-                            <p>Below steps describes how you can design a form anonymous</p>
-                            <ol>
-                                <li>Create a new form or Edit an already created form. Check the field asking whether
-                                    you want to make the form public to make the form available to public.
-                                </li><br><br>
-                                <img src="./assets/images/166641751-b7f4df20-959d-485a-ac41-cc688e9f6762 (1).png"
-                                    height="500" width="1000"> </p>
-                                <li>Assosiate a workflow if you want and move to the next stage.</li><br><br>
-                                <img src="./assets/images/Screenshot 2022-06-01 142611.png" height="500"
-                                    width="1000"><br><br>
-                                <li>In this stage, you can copy the anonymous form url and publish the form to the
-                                    client.Forms that are made anonymous and public will only appear publicly.</li>
-                                <br><br>
-
-                                <p><img src="./assets/images/166641111-41401eb1-4c42-4198-99b5-e66200d20498.png"
-                                        alt="image" height="500" width="1000"></p>
-                                <strong>
-                                    Note-Forms will not be available to anonymous users if its not published
-                                </strong>
-                                <br><br>
-                                <img src="./assets/images/Screenshot 2022-06-01 143337.png" height="300" width="1000">
-                                <br><br>
-                                <li>Designers can share the copied URL to other users for submitting anonymous forms.
-                                </li>
-                                <br>
-                                <img src="./assets/images/Screenshot 2022-06-01 143743.png" height="500" width="1000">
-                                <br><br>
-                            </ol>
+                <p><img src="./assets/images/166641111-41401eb1-4c42-4198-99b5-e66200d20498.png" alt="image"
+                        height="500" width="1000"></p>
+                <strong>
+                    Note-Forms will not be available to anonymous users if its not published
+                </strong>
+                <br><br>
+                <img src="./assets/images/Screenshot 2022-06-01 143337.png" height="300" width="1000">
+                <br><br>
+                <li>Designers can share the copied URL to other users for submitting anonymous forms.
+                </li>
+                <br>
+                <img src="./assets/images/Screenshot 2022-06-01 143743.png" height="500" width="1000">
+                <br><br>
+            </ol>
 
 
-                        </section>
-                        <br>
-                        <a href="Internationalization.html" class="previous">&laquo; Previous</a>
-                        <a href="Listeners.html" class="next">Next &raquo;</a>
-
-
-
-
-
-
-            </div>
-            <!--//docs-code-block-->
-
-
-            </header>
-
-
-            </article>
-
-
-
-
-            <!-- Javascript -->
-            <script src="assets/plugins/popper.min.js"></script>
-            <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-
-
-            <!-- Page Specific JS -->
-            <script src="assets/plugins/smoothscroll.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
-            <script src="assets/js/highlight-custom.js"></script>
-            <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
-            <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
-            <script src="assets/js/docs.js"></script>
-
-</body>
-
-</html>
+        </div>
+    </section>
+</article>

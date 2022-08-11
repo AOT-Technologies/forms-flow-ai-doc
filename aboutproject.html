@@ -1,148 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
+<article class="docs-article" id="section-1">
+        <section class="docs-section" id="item-1-1">
+            <h1 class="docs-heading">About the Project</h1>
+            <div>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Forms flow ai documentation">
-    <meta name="author" content="formsflow.ai">
-    <link rel="shortcut icon" href="favicon.ico">
-    <title>Welcome to formsflow.ai</title>
-
-    <!-- Google Font -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
-    <!-- FontAwesome JS-->
-    <script defer src="assets/fontawesome/js/all.min.js"></script>
-
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
-
-    <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
-    <link id="theme-style" rel="stylesheet" href="assets/css/atom-one-dark.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-</head>
-
-<body>
-    <div class="container">
-        <header>
-            <div id="header"></div>
-        </header>
-
-    </div>
-    <script>
-        $(function(){
-            $('#header').load('header.html');
-        }
-        );
-    </script>
-    
-    <!--//header-->
-
-    
-            <!--//docs-nav-->
-        
-        <div id="nav-placeholder"></div>
-        <script>
-            $.get("nav.html", function(data){
-                $("#nav-placeholder").replaceWith(data);
-            });
-        </script> 
-               
-        <!--//docs-sidebar-->
-        <div class="docs-content">
-            <div class="container">
-                <article class="docs-article" id="section-1">
-                    <!-- main heading content -->
-                    <header class="docs-header">
-
-
-
+                <hr>
+                <p>The project was initiated by AOT Technologies as a means of addressing the general
+                    situation whereby end-users fill in a form, the form is processed and there may be a
+                    requirement to report on the form metrics or data.</p>
+                <p>Some use cases of formsflow are:</p>
+                <ul>
+                    <li>Applications for licenses</li>
+                    <li>Public submissions</li>
+                    <li>FOI requests</li>
+                    <li>Applications for funding</li>
+                    <li>Statements of compliance</li>
+                    <li>Employee onboarding</li>
+                    <li>Performance Reviews</li>
+                    <li>Emergency processes</li>
+                    <li>Escalations</li>
+                    <li>Surveys</li>
+                    <li>
+                        <p>Case Management</p>
                         <br>
 
-                        <section class="docs-section" id="item-1-1">
-                            <h1 class="section-heading">About the Project</h1>
-                            <div>
-    
-                                <hr>
-                                <p>The project was initiated by AOT Technologies as a means of addressing the general
-                                    situation whereby end-users fill in a form, the form is processed and there may be a
-                                    requirement to report on the form metrics or data.</p>
-                                <p>Some use cases of formsflow are:</p>
-                                <ul>
-                                    <li>Applications for licenses</li>
-                                    <li>Public submissions</li>
-                                    <li>FOI requests</li>
-                                    <li>Applications for funding</li>
-                                    <li>Statements of compliance</li>
-                                    <li>Employee onboarding</li>
-                                    <li>Performance Reviews</li>
-                                    <li>Emergency processes</li>
-                                    <li>Escalations</li>
-                                    <li>Surveys</li>
-                                    <li>
-                                        <p>Case Management</p>
-                                        <br>
-    
-    
-    
-                                        </p>
-                            </div>
-                            <div>
-                                <ul>
-                                    <h2 id="features">Features</h2>
-                                    <hr>
-                                    <li>Drag-and-drop forms-builder with rich UI components</li>
-                                    <li>Lightweight server-based workflow engine with full capabilities including human,
-                                        parallel, asynchronous and timed flows, decision engine, and graphical designer
-                                    </li>
-                                    <li>Notifications engine for notifications, reminders, and alerts on tasks and even
-                                        data thresholds.</li>
-                                    <li>Metrics and data visualization dashboards for the display of key workflow and
-                                        form data</li>
-                                    <li>(future) Multi-tenancy isolation</li>
-                                    <li>Containerized deployment with docker, docker-compose, and Openshift</li>
-                                    <li>Flexible Identity Management uses existing IDM systems for authentication and
-                                        single sign-on</li>
-                                </ul>
 
 
-
-                            
-                        </section><br><br>
-                        <a href="index.html" class="previous">&laquo; Previous</a>
-                        <a href="architecture.html" class="next">Next &raquo;</a>
-
+                        </p>
             </div>
-            <!--//docs-code-block-->
+            <div>
+                <ul>
+                    <h2 id="features">Features</h2>
+                    <hr>
+                    <li>Drag-and-drop forms-builder with rich UI components</li>
+                    <li>Lightweight server-based workflow engine with full capabilities including human,
+                        parallel, asynchronous and timed flows, decision engine, and graphical designer
+                    </li>
+                    <li>Notifications engine for notifications, reminders, and alerts on tasks and even
+                        data thresholds.</li>
+                    <li>Metrics and data visualization dashboards for the display of key workflow and
+                        form data</li>
+                    <li>(future) Multi-tenancy isolation</li>
+                    <li>Containerized deployment with docker, docker-compose, and Openshift</li>
+                    <li>Flexible Identity Management uses existing IDM systems for authentication and
+                        single sign-on</li>
+                </ul>
 
 
-            </header>
 
-
-            </article>
-
-
-
-
-            <!-- Javascript -->
-            <script src="assets/plugins/popper.min.js"></script>
-            <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-
-
-            <!-- Page Specific JS -->
-            <script src="assets/plugins/smoothscroll.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
-            <script src="assets/js/highlight-custom.js"></script>
-            <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
-            <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
-            <script src="assets/js/docs.js"></script>
-
-</body>
-
-</html>
+            
+        </section><br><br>
+    
+</div>
+    </section>
+</article>

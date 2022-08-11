@@ -1,0 +1,144 @@
+<article class="docs-article" id="Section">
+    <section class="docs-section" id="custom_submission">
+        <div>
+
+
+            <h1>Form Adapter/CustomSubmission</h1>
+            <br>
+            <hr><br>
+            <p>Supports the submission of form data to a data store other than MongoDB with custom data
+                URLs.
+            </p>
+            <p>This feature requires the following env variables set:</p>
+            <ul>
+                <li>CUSTOM_SUBMISSION_ENABLED=true
+                </li>
+                <li>CUSTOM_SUBMISSION_URL=http://{your-ip-address}:{port}</li>
+            </ul>
+            <p>
+                Form Adapter uses custom submission URLs to create, submit, get and edit submissions
+                within a form to the preferred database. These URLs follow the same URL pattern as the
+                formio submission URL.
+            </p>
+            <h3>Create Custom Form Submission</h3><br>
+            <i>POST</i><br>
+            <code>{{CUSTOM_SUBMISSION_URL}}/form/<formid>/submission</code><br><br>
+            <p>Example of how to create a new form submission within a custom form.</p>
+
+            <h5><b>HEADERS</b>
+            </h5>
+            <p><b>Authorization Bearer </b>{{token}}
+            </p>
+            <p><b>Content-Type </b>application/json
+            </p>
+            <h5><b>BODY</b></h5>
+            <pre>
+                    <code> <br>                                 {
+                        "data": {
+                            "name": "John",
+                            "age": 21,
+                            "applicationStatus": "",
+                            "applicationId": ""
+                        }
+                 }
+                    </code>
+                </pre>
+            <h5><b>Response</b></h5>
+            <pre>
+                    <code>
+                        <br>
+                        {
+                            "created": "2022-08-03 09:32:59.448886",
+                            "_id": "04016fac-8811-4762-859b-0c664c2490b5",
+                            "form": "62da4ec3e44bcd4da0454ae1",
+                            "data": {
+                                 "name": "John",
+                                 "age": 21,
+                                    "applicationStatus": "",
+                                    "applicationId": ""
+                        
+                            },
+                            "modified": "2022-08-03 09:32:59.448893"
+                        }
+                        
+                    </code>
+                </pre><br>
+            <h3>Get a Submission</h3><br>
+
+            <i>GET</i>
+            <code>{{CUSTOM_SUBMISSION_URL}}/form/&lt;formid&gt;/submission/&lt;submission_id&gt;&lt;/submission_id&gt;</code><br>
+            <br>
+
+            <p>Retrieve a single submission within a form.</p>
+
+            <h5><b>Headers</b></h5>
+
+            <p><b>Authorization Bearer</b> {{token}}</p>
+            <p><b>Content-Type</b> application/json</p>
+
+            <h5>Response</h5>
+            <pre><code>
+{
+"created": "2022-08-03 09:32:59.448886",
+"_id": "04016fac-8811-4762-859b-0c664c2490b5",
+"form": "62da4ec3e44bcd4da0454ae1",
+"data": {
+    "name": "John",
+    "age": 21,
+        "applicationStatus": "",
+        "applicationId": ""
+
+},
+ "modified": "2022-08-03 09:32:59.448893"
+}
+</code></pre>
+
+
+            <h3>Update a Submission</h3><br>
+
+            <i>PUT </i>
+            <code>{{CUSTOM_SUBMISSION_URL}}/form/&lt;formid&gt;/submission/&lt;submission_id&gt;</code><br><br>
+
+            <p>Update the whole submission.</p>
+
+            <h5><b>HEADERS</b></h5>
+
+            <p><b>Authorization Bearer </b>{{token}}</p>
+            <p><b>Content-Type</b> application/json</p>
+
+            <h5><b>BODY</b></h5>
+            <pre><code><br>
+{
+"data": {
+            "name": "John Joe",
+            "age": 22,
+            "applicationStatus": "",
+            "applicationId": ""
+}
+}
+</code></pre>
+            <h3>Partial Update a Submission</h3>
+
+            <p><b>PATCH</b></p>
+            <code>{{CUSTOM_SUBMISSION_URL}}/form/&lt;formid&gt;/submission/&lt;submission_id&gt;</code><br><br>
+
+
+            <h5><b>HEADERS</b></h5>
+
+            <p><b>Authorization Bearer</b> {{token}}</p>
+            <p><b>Content-Type</b> application/json</p>
+
+            <h5><b>BODY</b></h5>
+            <pre><code><br>
+{
+"data": {
+          "applicationStatus": "New",
+          "applicationId": "1234"
+}
+}
+</code></pre>
+
+
+        </div>
+    </section>
+</article>

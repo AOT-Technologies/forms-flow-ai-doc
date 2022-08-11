@@ -1,144 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+<article class="docs-article">
+    <section class="docs-section" id="taskvariables">
+        <div>
+            <h1 id="taskvariables">Task variable workflow</h1>
+            <hr><br>
+            Task variables are the form fields that you added to the form. Users can select form
+            fields that they want to display in the task list.
+            <ol>
+                <li>Create a new form or Edit an already created form.</li><br>
+                <img src="./assets/images/Screenshot 2022-05-12 160427.png" width="1000"
+                    height="500"><br><br>
+                <li>Associate the form with the workflow. </li><br>
+                <img src="./assets/images/Screenshot 2022-05-12 160526.png" width="1000"
+                    height="500"><br><br>
+                <li>Ensure the workflow has included FormBPMFilteredDataPipelineListener. </li><br>
+                <img src="./assets/images/Screenshot 2022-05-12 165140.png" width="1000"
+                    height="500"><br><br>
+                <li>Add task filter variables to the form. The FormBPMFilteredDataPipelineListener
+                    copies
+                    the added task variable keys from form(formio) to camunda variables..</li><br>
+                <img src="./assets/images/Screenshot 2022-05-12 161159.png" width="1000"
+                    height="500"><br><br>
+                <strong>Note:</strong> As of now only key is used, Label and Show in list are
+                included for
+                future purpose.<br>
+                <li>Click the add button, the selected key is added as a task variable. We can add
+                    more
+                    variables from the form as task variables and also edit the task variable
+                    already added.
+                </li><br>
+                <img src="./assets/images/Screenshot 2022-05-12 162111.png" width="1000"
+                    height="500"><br><br>
+                <li>Submit new application with this form</li><br>
+                <img src="./assets/images/Screenshot 2022-05-12 162340.png" width="1000"
+                    height="500"><br><br>
+                <li> Add the task variables to edit filter in camunda tasklist</li><br>
+                <img src="./assets/images/Screenshot 2022-05-12 162652.png" width="1000"
+                    height="500"><br><br>
+                <li>Now these variables are displayed in users tasklist</li><br>
+                <img src="./assets/images/Screenshot 2022-05-12 162839.png" width="1000"
+                    height="500"><br><br>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Forms flow ai documentation">
-    <meta name="author" content="formsflow.ai">
-    <link rel="shortcut icon" href="favicon.ico">
-    <title>Welcome to formsflow.ai</title>
-
-    <!-- Google Font -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
-    <!-- FontAwesome JS-->
-    <script defer src="assets/fontawesome/js/all.min.js"></script>
-
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
-
-    <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
-    <link id="theme-style" rel="stylesheet" href="assets/css/atom-one-dark.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-
-</head>
-
-<body>
-
-    <div class="container">
-        <header>
-            <div id="header"></div>
-        </header>
-
-    </div>
-    <script>
-        $(function(){
-            $('#header').load('header.html');
-        }
-        );
-    </script>
-    <!--//header-->
-        
-<div id="nav-placeholder"></div>
-<script>
-    $.get("nav.html", function(data){
-        $("#nav-placeholder").replaceWith(data);
-    });
-</script>
-        <!--//docs-sidebar-->
-        <div class="docs-content">
-            <div class="container">
-                <article class="docs-article" id="section-1">
-                    <!-- main heading content -->
-                    <header class="docs-header">
-
-
-
-                        <br>
-                        <section>
-                            <div>
-                                <h2 id="taskvariables">Task variable workflow</h2>
-                                <hr><br>
-                                Task variables are the form fields that you added to the form. Users can select form
-                                fields that they want to display in the task list.
-                                <ol>
-                                    <li>Create a new form or Edit an already created form.</li><br>
-                                    <img src="./assets/images/Screenshot 2022-05-12 160427.png" width="1000"
-                                        height="500"><br><br>
-                                    <li>Associate the form with the workflow. </li><br>
-                                    <img src="./assets/images/Screenshot 2022-05-12 160526.png" width="1000"
-                                        height="500"><br><br>
-                                    <li>Ensure the workflow has included FormBPMFilteredDataPipelineListener. </li><br>
-                                    <img src="./assets/images/Screenshot 2022-05-12 165140.png" width="1000"
-                                        height="500"><br><br>
-                                    <li>Add task filter variables to the form. The FormBPMFilteredDataPipelineListener
-                                        copies
-                                        the added task variable keys from form(formio) to camunda variables..</li><br>
-                                    <img src="./assets/images/Screenshot 2022-05-12 161159.png" width="1000"
-                                        height="500"><br><br>
-                                    <strong>Note:</strong> As of now only key is used, Label and Show in list are
-                                    included for
-                                    future purpose.<br>
-                                    <li>Click the add button, the selected key is added as a task variable. We can add
-                                        more
-                                        variables from the form as task variables and also edit the task variable
-                                        already added.
-                                    </li><br>
-                                    <img src="./assets/images/Screenshot 2022-05-12 162111.png" width="1000"
-                                        height="500"><br><br>
-                                    <li>Submit new application with this form</li><br>
-                                    <img src="./assets/images/Screenshot 2022-05-12 162340.png" width="1000"
-                                        height="500"><br><br>
-                                    <li> Add the task variables to edit filter in camunda tasklist</li><br>
-                                    <img src="./assets/images/Screenshot 2022-05-12 162652.png" width="1000"
-                                        height="500"><br><br>
-                                    <li>Now these variables are displayed in users tasklist</li><br>
-                                    <img src="./assets/images/Screenshot 2022-05-12 162839.png" width="1000"
-                                        height="500"><br><br>
-
-                                </ol>
-                            </div>
-                        </section>
-                        <br>
-                        <a href="Camunda_Filters.html" class="previous">&laquo; Previous</a>
-                        <a href="Custom components.html" class="next">Next &raquo;</a>
-
-
-
-
-
-
-            </div>
-            <!--//docs-code-block-->
-
-
-            </header>
-
-
-            </article>
-
-
-
-
-            <!-- Javascript -->
-            <script src="assets/plugins/popper.min.js"></script>
-            <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-
-
-            <!-- Page Specific JS -->
-            <script src="assets/plugins/smoothscroll.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
-            <script src="assets/js/highlight-custom.js"></script>
-            <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
-            <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
-            <script src="assets/js/docs.js"></script>
-
-</body>
-
-</html>
+            </ol>
+        </div>
+        </section>
+        </article>

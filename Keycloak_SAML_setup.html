@@ -1,0 +1,39 @@
+<article class="docs-article" id="section-1">
+    <section class="docs-section" id="saml setup">
+        <div>
+            <h1 id="configuration-of-keycloak-saml-setup">Configuration of Keycloak SAML Setup</h1>
+            <hr>
+            <ul>
+                <li>Post registration, login to the application with admin credentials.</li>
+                <li>Click the menu icon to the left of the username and navigate to <strong>Edit
+                        Profile</strong>.</li>
+                <li>Go to tab &quot;Settings&quot;, and then navigate to &quot;General&quot;. Under
+                    &quot;Authentication&quot;.<ul>
+                        <li>Check the option &quot;Enabled(dynamic)&quot;.</li>
+                        <li>Set the field &quot;SAML Metadata URL&quot; with value of Keycloak SAML
+                            descriptor URL. Example. <a
+                                href="http://{your-ip-address}:8080/auth/realms/forms-flow-ai/protocol/saml/descriptor">http://{your-ip-address}:8080/auth/realms/forms-flow-ai/protocol/saml/descriptor</a>.
+                            {your-ip-address} should be changed to your host system IP address.
+                            Please take special care to identify the correct IP address if your
+                            system has multiple network cards</li>
+                        <li>Set the field &quot;SAML Entity ID&quot; value to be
+                            <code>forms-flow-analytics</code>.
+                        </li>
+                        <li>Set the field &quot;SAML NameID Format&quot; value to be
+                            <code>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</code>.
+                        </li>
+                    </ul>
+                </li>
+                <li>Logout and login again using valid formsflow.ai keycloak user credentials.
+                    Default user credentials are provided <a
+                        href="default user credential.html">here</a>.
+                </li>
+            </ul>
+            <blockquote>
+                <p>forms-flow-analytic (REDASH) setup is successfully completed now. You can skip
+                    remaining sections in this page and continue with other installation steps.</p>
+            </blockquote>
+        </div>
+        </section>
+        </article>
+        

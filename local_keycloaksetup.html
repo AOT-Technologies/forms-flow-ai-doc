@@ -1,0 +1,91 @@
+<article class="docs-article">
+    <section class="docs-section" id="localkeycloak_setup">
+        <div>
+
+            <h2 id="local-keycloak-setup">Keycloak setup</h2>
+            <hr>
+            <p>This setup is preferred for local development only. A docker instance will be
+                created as part of setup.</p>
+
+            <h3 id="prerequisites">Prerequisites</h3>
+            <ul>
+                <li>For docker based installation <a href="https://docker.com">Docker</a> needs to
+                    be installed.</li>
+            </ul>
+            <h3 id="environment-configuration">Environment Configuration</h3>
+            <ul>
+                <li>Make sure you have a Docker machine up and running.</li>
+                <li>Make sure your current working directory is
+                    <code>cd {Your Directory}/forms-flow-ai/forms-flow-idm/keycloak</code>
+
+                    <ul>
+                        <li><em>Optional</em>: Rename the file <strong>sample.env</strong> to <strong>.env</strong>.
+                            Skip this step if you want to use the default values as mentioned in
+                            the table below.</li>
+
+                    </ul>
+                    </blockquote>
+                </li>
+            </ul>
+            <h3 id="environment-variables">Environment Variables</h3>
+
+            <hr>
+            <img src="./assets/images/Screenshot 2022-06-09 155723.png" width="500">
+
+
+            <br><br>
+
+
+            <h4 id="to-start-the-keycloak-server">To start the keycloak server</h4>
+            <ul>
+                <li>Run <code>docker-compose up -d</code> to start.</li>
+            </ul>
+            <br>
+            <img src="./assets/images/Screenshot 2022-08-04 145654.png" height="500" width="800"></img><br>
+            <div class="callout-block callout-block-info">
+                <div class="content">
+                    <span class="callout-icon-holder me-1"></span>
+
+                    <i class="fa fa-bullhorn"></i>
+
+                    <em> Use --build command with the start command to reflect any future changes eg
+                        : <code>docker-compose up --build -d</code></em>
+                    <br>
+                </div>
+
+            </div>
+
+
+
+
+            <!-- <p><em>NOTE: Use --build command with the start command to reflect any future changes eg
+                    : <code>docker-compose up --build -d</code></em></p> -->
+            <h4 id="to-stop-the-keycloak-server">To stop the keycloak server</h4>
+            <ul>
+                <li>Run <code>docker-compose stop</code> to stop.</li>
+            </ul>
+            <br>
+            <img src="./assets/images/Screenshot 2022-08-04 152949.png" height="300" width="800"></img><br><br>
+            <h3 id="health-check">Health Check</h3>
+            <p>The application should be up and available for use in <a
+                    href="http://localhost:8080">http://localhost:8080</a></p><br>
+            <img src="./assets/images/Screenshot 2022-08-05 113828.png" height="300" width="400"><br><br>
+            <pre><code><span class="hljs-section">Login Credentials
+            -----------------</span>
+            User Name : admin
+            Password  : changeme
+            </code></pre>
+
+            <h3 id="add-custom-login-theme">Add custom login theme</h3>
+            <ul>
+                <li>Log in to <a href="http://localhost:8080">http://localhost:8080</a></li>
+                <li>Select Realm settings&gt;Themes&gt;Login Theme&gt;formsflow&gt;Save.</li>
+                <li>Run <code>docker-compose up --build -d</code> to verify the changes.</li>
+            </ul>
+            <a href="default user credential.html">Default User Credentials</a>
+
+
+
+        </div>
+    </section>
+</article>

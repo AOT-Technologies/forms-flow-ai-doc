@@ -1,0 +1,123 @@
+<article class="docs-article">
+    <section class="docs-section" id="forms-flow-api">
+        <div>
+            <h1 id="formsflow-ai-api">Formsflow.ai API</h1>
+            <hr>
+            <p><strong>Formsflow.ai</strong> has built this adaptive tier for correlating form
+                management, BPM and analytics together.</p>
+            <p>The goal of the REST API is to provide access to all relevant interfaces of
+                the system. It is built using Python .</p>
+
+
+            <h3 id="prerequisites">Prerequisites</h3><br>
+            <ul>
+                <li>For docker based installation <a href="https://docker.com">Docker</a> need to be
+                    installed.</li>
+                <li>Admin access to Keycloak server and
+                    ensure audience(camunda-rest-api) is setup in Keycloak-bpm server.</li>
+            </ul>
+
+            <h3 id="installation">Installation</h3><br>
+            <p>If you are interested in contributing to the project, you can install through docker
+                or locally.</p>
+            <p>It&#39;s recommended to download dev-packages to follow Python coding standards for
+                project like PEP8 if you are interested in contributing to project.
+                You installing dev-packages using pip as follows:</p>
+            <p><code>python3 -m pip install -r requirements/dev.txt</code></p>
+            <br>
+            <h3 id="environment-configuration">Environment Configuration</h3>
+            <ul>
+                <li>Make sure you have a Docker machine up and running.</li>
+                <li>Make sure your current working directory is
+                    &quot;forms-flow-ai/forms-flow-api&quot;.</li>
+                <li>Rename the file <strong>sample.env</strong> to <strong>.env</strong>.
+                </li>
+                <li>Modify the environment variables in the newly created <strong>.env</strong> file
+                    if needed. Environment variables are given below.</li>
+
+
+
+            </ul>
+            <img src="./assets/images/Screenshot 2022-06-10 114602.png" height="750" width="600"></img><br>
+            <br><code>INSIGHT_API_URL</code>* , <code>INSIGHT_API_KEY</code>*
+            ,<code>KEYCLOAK_URL</code>*,
+            <code>CAMUNDA_API_URL</code>*,<code>FORMSFLOW_API_URL</code>*<br>
+            <div class="callout-block callout-block-info">
+                <div class="content">
+                    <span class="callout-icon-holder me-1"></span>
+
+                    <i class="fa fa-bullhorn"></i>
+
+                    <strong>NOTE :</strong> Default realm is <code>forms-flow-ai</code>
+                </div>
+
+            </div>
+
+            <h3 id="running-the-application">Running the Application</h3><br>
+            <ul>
+                <li>forms-flow-api service uses port 5000, make sure the port is available.</li>
+                <li>
+                    <p><code>cd {Your Directory}/forms-flow-ai/forms-flow-api</code></p>
+                </li>
+                <li>
+
+                    <ul>
+                        <li>Run <code>docker-compose up -d </code> to
+                            start.</li>
+                    </ul>
+
+                </li>
+            </ul>
+            <p><em>NOTE: Use --build command with the start command to reflect any future
+                    <strong>.env</strong> changes eg :
+                    <code>docker-compose up --build -d</code></em></p>
+            <h4 id="to-stop-the-application">To Stop the Application</h4><br>
+            <ul>
+
+                <li>Run <code>docker-compose stop</code> to
+                    stop.</li>
+            </ul>
+            </li>
+
+            </ul>
+            <h3 id="verify-the-application-status">Verify the Application Status</h3><br>
+            <p> The application should be up and available for use at port defaulted to 5000 in <a
+                    href="http://localhost:5000/">http://localhost:5000/</a></p>
+            <ul>
+                <li>Access the <strong>/checkpoint</strong> endpoint for a Health Check on API to
+                    see it&#39;s up and running.</li>
+            </ul>
+            <pre><code>GET <span class="hljs-string">http:</span><span class="hljs-comment">//localhost:5000/checkpoint</span>
+
+RESPONSE
+
+{
+<span class="hljs-string">"message"</span>: <span class="hljs-string">"Welcome to formsflow.ai API"</span>
+}
+</code></pre>
+            <ul>
+                <li>Get the access token</li>
+            </ul>
+            <pre><code><span class="hljs-class">POST </span>{Keycloak URL}<span class="hljs-meta-keyword">/auth/</span>realms/<span class="hljs-params">&lt;realm&gt;</span><span class="hljs-meta-keyword">/protocol/</span>openid-connect/token
+<span class="hljs-symbol">
+Body:</span>
+<span class="hljs-symbol">grant_type:</span> client_credentials
+<span class="hljs-symbol">client_secret:</span> {set client token}
+<span class="hljs-symbol">client_id:</span> forms-flow-bpm
+<span class="hljs-symbol">
+Headers:</span>
+Content-Type : application/x-www-form-urlencoded
+</code></pre>
+            <ul>
+                <li>Access the <strong>/task</strong> endpoint and verify response. Ensure Bearer
+                    token is passed along</li>
+            </ul>
+            <pre><code>GET http://localhost:<span class="hljs-number">5000</span>/<span class="hljs-keyword">task</span>
+
+Headers:
+Content-<span class="hljs-keyword">Type</span> <span class="hljs-type">: </span>application/json
+Authorization: Bearer {<span class="hljs-keyword">access</span> token}
+</code></pre>
+        </div>
+    </section>
+</article>

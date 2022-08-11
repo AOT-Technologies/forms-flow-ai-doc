@@ -25,335 +25,191 @@
 	<link id="theme-style" rel="stylesheet" href="assets/css/atom-one-dark.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-
 </head>
 
 <body>
 
-	<div class="container">
-        <header>
-            <div id="header"></div>
-        </header>
+	<header class="header fixed-top">
+		<div class="branding docs-branding">
+			<div class="container-fluid position-relative py-2">
+				<div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+						type="button">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2"
+								src="assets/images/formsflow.ai-logo.svg" alt="logo"><span
+								class="logo-text">formsflow.ai</span></a></div>
+				</div>
+				<!--//docs-logo-wrapper-->
+				<div class="docs-top-utilities d-flex justify-content-end align-items-center">
+					<div class="top-search-box d-none d-lg-flex">
+						<form class="search-form">
+							<input type="text" placeholder="Search the docs..." name="search"
+								class="form-control search-input">
+							<button type="submit" class="btn search-btn" value="Search"><i
+									class="fas fa-search"></i></button>
+						</form>
+					</div>
 
-    </div>
-    <script>
-        $(function(){
-            $('#header').load('header.html');
-        }
-        );
-    </script>
+					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+						<li class="list-inline-item"><a href="https://github.com/AOT-Technologies/forms-flow-ai"><i
+									class="fab fa-github fa-fw"></i></a></li>
+					</ul>
+					<!--//social-list-->
+					<a href="https://github.com/AOT-Technologies/forms-flow-ai"
+						class="btn btn-primary d-none d-lg-flex">Download</a>
+				</div>
+				<!--//docs-top-utilities-->
+			</div>
+			<!--//container-->
+		</div>
+		<!--//branding-->
+	</header>
 	<!--//header-->
 
-	<div id="nav-placeholder"></div>
-        <script>
-            $.get("nav.html", function(data){
-                $("#nav-placeholder").replaceWith(data);
-            });
-        </script> 
-		<!--//docs-sidebar-->
-		<div class="docs-content">
-			<div class="container">
-				<article class="docs-article" id="section-1">
-					<!-- main heading content -->
-					<header class="docs-header">
-						<h1 class="docs-heading">Introduction <span class="docs-time">Last updated: 2022-06-07</span>
-						</h1>
-						<hr>
-						<section class="docs-intro" id="item-1-1">
-							<p>
-							<p>Welcome to formsflow.ai</p>
-
-							<p>Formsflow.ai is developed by AOT Technologies.
-
-								We are on a mission to empower our clients to serve people better.
-
-								By building intelligent systems and leveraging our expertise in integration and
-								analytics, we are able to make an impact on the world alongside our clients. Our purpose
-								is to use technology and our expertise to build systems that benefit society.
-							</p>
-							<p>This framework integrates selected open source products for Forms, Workflow, Analytics,
-								and Security to provide a seamless solution as a viable alternative to expensive
-								enterprise software products.</p>
-							<p>
-							<img src="./assets/images/bnr_img2-2.png"><br><br>
-							<p>
-								This project was initiated by AOT Technologies to address general-purpose end to end
-								business process problems. It provides a user interface for a customer to fill and
-								submit a service request form to the service provider. Service provider employees get a
-								user interface through which they can process this service request. It also allows the
-								service provider employees to generate reports.
-							</p>
-							
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/Gq24xjzP5l8"
-									title="YouTube video player" frameborder="0"
-									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-									allowfullscreen></iframe>
-							</p>
-							<a href="https://www.aot-technologies.com">For more informations visit</a>
-							<br><br>
-							<hr>
-							<h2 id="how-it-works">How it Works</h2>
-							<p>It starts with an open source dynamic form builder, a drag-and-drop user interface tool
-								that allows you to create functional front-end web forms. You can easily configure the
-								rules and business processes that should be triggered when the form is submitted by the user.
-								Then, you&#39;ll set up the back-end, using formsflow.
-								<br>
-								<br>
-								<img src="./assets/images/How It works.jpg" alt="Creating new form">
-							</p>
-							<br><br>
-							<hr><br>
-
-							<a href="#" class="previous">&laquo; Previous</a>
-							<a href="aboutproject.html" class="next">Next &raquo;</a>
-
-
-
-
-
-							<!--//docs-intro-->
-
-							<!-- <h5>Github Code Example:</h5>
-						<p>You can <a class="theme-link" href="https://gist.github.com/" target="_blank">embed your code
-								snippets using Github gists</a></p> -->
-							<div class="docs-code-block">
-								<!-- ** Embed github code starts ** -->
-								<!-- <script
-								src="https://github.com/AOT-Technologies/forms-flow-ai/blob/master/README.md"></script>
-							<!-- ** Embed github code ends ** -->
-								<!-- <a href="">clickhere</a> -->
-							</div>
-							<!--//docs-code-block-->
-
-							<!-- <h5>Highlight.js Example:</h5>
-						<p>You can <a class="theme-link" href="https://github.com/highlightjs/highlight.js"
-								target="_blank">embed your code snippets using highlight.js</a> It supports <a
-								class="theme-link" href="https://highlightjs.org/static/demo/" target="_blank">185
-								languages and 89 styles</a>.</p>
-						<p>This template uses <a class="theme-link" href="https://highlightjs.org/static/demo/"
-								target="_blank">Atom One Dark</a> style for the code blocks:
-							<br><code>&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css&#x22;&#x3E;</code>
-						</p> -->
-							<!-- <div class="docs-code-block">
-							<pre class="shadow-lg rounded"><code class="json hljs">[
-  {
-    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"apples"</span>,
-    <span class="hljs-attr">"count"</span>: [<span class="hljs-number">12000</span>, <span class="hljs-number">20000</span>],
-    <span class="hljs-attr">"description"</span>: {<span class="hljs-attr">"text"</span>: <span class="hljs-string">"..."</span>, <span class="hljs-attr">"sensitive"</span>: <span class="hljs-literal">false</span>}
-  },
-  {
-    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"oranges"</span>,
-    <span class="hljs-attr">"count"</span>: [<span class="hljs-number">17500</span>, <span class="hljs-literal">null</span>],
-    <span class="hljs-attr">"description"</span>: {<span class="hljs-attr">"text"</span>: <span class="hljs-string">"..."</span>, <span class="hljs-attr">"sensitive"</span>: <span class="hljs-literal">false</span>}
-  }
-]
-
-
-</code></pre>
-						</div> -->
-							<!--//docs-code-block-->
-
-
-					</header>
-					<!-- main heading content end -->
-					<!-- sub heading content -->
-					<!-- <section>
-						<h5>Callout Examples:</h5> -->
-					<!-- <div class="callout-block callout-block-info">
-
-							<div class="content">
-								<h4 class="callout-title">
-									<span class="callout-icon-holder me-1">
-										<i class="fas fa-info-circle"></i>
-									</span>
-									
-									Note
-								</h4>
-								
-							</div>
-							
-						</div>
-						//callout-block-->
-
-					<!-- <div class="callout-block callout-block-warning">
-							<div class="content">
-								<h4 class="callout-title">
-									<span class="callout-icon-holder me-1">
-										<i class="fas fa-bullhorn"></i>
-									</span>
-									
-									Warning
-								</h4>
-								
-							</div>
-							
-						</div> -->
-					<!--//callout-block-->
-
-					<!-- <div class="callout-block callout-block-info">
-						<div class="content">
-							<span class="callout-icon-holder me-1"></span>
-
-							<i class="fa fa-bullhorn"></i>
-
-
-
-						</div>
-
-					</div> -->
-					<!--//callout-block-->
-					<!-- 
-						<div class="callout-block callout-block-danger me-1">
-							
-						</div> -->
-					<!--//callout-block-->
-
-					<!-- <h5 class="mt-5">Alert Examples:</h5> -->
-					<!-- <div class="alert alert-primary" role="alert">
-							This is a primary alert—check it out!
-						</div>
-						<div class="alert alert-secondary" role="alert">
-							This is a secondary alert—check it out!
-						</div>
-						<div class="alert alert-success" role="alert">
-							This is a success alert—check it out!
-						</div>
-						<div class="alert alert-danger" role="alert">
-							This is a danger alert—check it out!
-						</div>
-						<div class="alert alert-warning" role="alert">
-							This is a warning alert—check it out!
-						</div>
-						<div class="alert alert-info" role="alert">
-							This is a info alert—check it out!
-						</div>
-						<div class="alert alert-light" role="alert">
-							This is a light alert—check it out!
-						</div>
-						<div class="alert alert-dark" role="alert">
-							This is a dark alert—check it out!
-						</div> -->
-
-
-					<!-- </section>
-					//section-->
-					<!-- sub heading content  end-->
-
-					<!-- sub heading gallary content -->
-
-
-					<!--//section-->
-					<!-- sub heading gallary content
-
-				</article>
-
-				//docs-article-->
-
-
-
-
-					<!-- <article class="docs-article" id="section-9">
-					<header class="docs-header">
-						<h1 class="docs-heading">FAQs</h1>
-						<section class="docs-intro">
-							<p>Section intro goes here. You can list all your FAQs using the format below.</p>
-						</section>
-						
-				</header>
-				 <section class="docs-section" id="item-9-1">
-						<h2 class="section-heading">Section Item 9.1 <small>(FAQ Category One)</small></h2>
-						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>What's sit amet quam eget lacinia?
-						</h5>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-							Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-							ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-							consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-							arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu
-							pede mollis pretium.</p>
-						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How to ipsum dolor sit amet quam
-							tortor?</h5>
-						<p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus
-							nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus
-							quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
-						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Can I bibendum sodales?</h5>
-						<p>Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy
-							id, metus. Nullam accumsan lorem in dui. </p>
-						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Where arcu sed urna gravida?</h5>
-						<p>Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam libero, et elementum diam
-							mollis ac. In dignissim aliquam est eget ullamcorper. Sed id sodales tortor, eu finibus leo.
-							Vivamus dapibus sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida
-							lobortis. Donec lectus est, imperdiet eu viverra viverra, ultricies nec urna. </p>
-					</section> -->
-					<!--//section-->
-
-					<!-- <section class="docs-section" id="item-9-2">
-						<h2 class="section-heading">Section Item 9.2 <small>(FAQ Category Two)</small></h2>
-						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>What's sit amet quam eget lacinia?
-						</h5>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-							Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-							ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-							consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-							arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu
-							pede mollis pretium.</p>
-						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How to ipsum dolor sit amet quam
-							tortor?</h5>
-						<p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus
-							nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus
-							quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
-						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Can I bibendum sodales?</h5>
-						<p>Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy
-							id, metus. Nullam accumsan lorem in dui. </p>
-						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Where arcu sed urna gravida?</h5>
-						<p>Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam libero, et elementum diam
-							mollis ac. In dignissim aliquam est eget ullamcorper. Sed id sodales tortor, eu finibus leo.
-							Vivamus dapibus sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida
-							lobortis. Donec lectus est, imperdiet eu viverra viverra, ultricies nec urna. </p>
-					</section>  -->
-					<!--//section-->
-					<!-- 
-					<section class="docs-section" id="item-9-3">
-						<h2 class="section-heading">Section Item 9.3 <small>(FAQ Category Three)</small></h2>
-						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How to dapibus sollicitudin justo
-							vel fermentum?</h5>
-						<p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus
-							nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus
-							quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
-						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How long bibendum sodales?</h5>
-						<p>Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy
-							id, metus. Nullam accumsan lorem in dui. </p>
-						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Where dapibus sollicitudin?</h5>
-						<p>Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam libero, et elementum diam
-							mollis ac. In dignissim aliquam est eget ullamcorper. Sed id sodales tortor, eu finibus leo.
-							Vivamus dapibus sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida
-							lobortis. Donec lectus est, imperdiet eu viverra viverra, ultricies nec urna. </p>
-					</section> -->
-					<!--//section-->
-				</article>
-				<!--//docs-article-->
-
-				<footer class="footer">
-					<div class="container text-center py-5">
-						<small class="copyright">Copyright &copy; <a href="https://formsflow.ai/"
-								target="_blank">formsflow.ai</a></small>
-						<ul class="social-list list-unstyled pt-4 mb-0">
-							<li class="list-inline-item"><a href="https://github.com/AOT-Technologies/forms-flow-ai"><i
-										class="fab fa-github fa-fw"></i></a></li>
-							<li class="list-inline-item"><a href="https://twitter.com/formsflowai"><i
-										class="fab fa-twitter fa-fw"></i></a></li>
-							<li class="list-inline-item"><a
-									href="https://www.linkedin.com/company/aot-technologies/products/"><i
-										class="fab fa-linkedin-in"></i></a></li>
-							<li class="list-inline-item"><a href="https://www.facebook.com/formsflowai"><i
-										class="fab fa-facebook-f fa-fw"></i></a></li>
-							<li class="list-inline-item"><a href="https://www.instagram.com/formsflow.ai/"><i
-										class="fab fa-instagram fa-fw"></i></a></li>
-						</ul>
-						<!--//social-list-->
-					</div>
-				</footer>
+	<div class="docs-wrapper">
+		<div id="docs-sidebar" class="docs-sidebar">
+			<!-- mobile view -->
+			<div class="top-search-box d-lg-none p-3">
+				<form class="search-form">
+					<input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+					<button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+				</form>
 			</div>
+			<nav id="docs-nav" class="docs-nav navbar">
+				<ul class="section-items list-unstyled nav flex-column pb-3">
+					<!-- main heading -->
+					<li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
+								class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Getting
+							started</a></li>
+					<li class="nav-item active" id="introduction"><a class="nav-link scrollto"
+							href="#introduction">Introduction</a></li>
+					<li class="nav-item" id="aboutproject"><a class="nav-link scrollto" href="#aboutproject">About The
+							Project</a></li>
+					<li class="nav-item" id="architecture"><a class="nav-link scrollto" href="#architecture">System
+							Architecture</a>
+					</li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto active" href="#section-2"><span
+								class="theme-icon-holder me-2"><i class="fa fa-download"></i></span>Download and
+							Installation</a></li>
+
+					<li class="nav-item" id="downloadformsflow"><a class="nav-link scrollto"
+							href="#downloadformsflow">Download Formsflow.ai</a></li>
+					<!-- main heading -->
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto active" href="#section-3"><span
+								class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Docker Based
+							Installation</a></li>
+					<li class="nav-item" id="quick_installation"><a class="nav-link scrollto"
+							href="#quick_installation">Quick Installation</a></li>
+					<li class="nav-item" id="docker_full_deployment"><a class="nav-link scrollto"
+							href="#docker_full_deployment">Docker Full Deployment</a></li>
+					<li class="nav-item" id="individual_service_deployment"><a class="nav-link scrollto"
+							href="#individual_service_deployment">Individual Service Deployment</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
+								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Openshift Based
+							Installation</a>
+					</li>
+					<li class="nav-item" id="openshift_installation"><a class="nav-link scrollto"
+							href="#openshift_installation">Openshift
+							Installation</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span
+								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Usage
+							instructions</a>
+					</li>
+					<li class="nav-item" id="usage"><a class="nav-link scrollto" href="#usage">Usage</a>
+					</li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span
+								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Features</a>
+					</li>
+					<li class="nav-item" id="internationalization"><a class="nav-link scrollto"
+							href="#internationalization">Internationalization</a></li>
+					<li class="nav-item" id="anonymousform"><a class="nav-link scrollto" href="#anonymousform">Anonymous
+							Forms</a></li>
+							<li class="nav-item" id="draft_feature"><a class="nav-link scrollto" href="#draft_feature">Draft Feature</a>
+								<li class="nav-item" id="exportpdf"><a class="nav-link scrollto" href="#exportpdf">Export Form as PDF</a>
+					<li class="nav-item" id="listeners"><a class="nav-link scrollto" href="#listeners">Bpm Listeners</a>
+					</li>
+
+					<li class="nav-item" id="camunda_filters"><a class="nav-link scrollto"
+							href="camunda_filters">Camunda Filters</a></li>
+					<li class="nav-item" id="taskvariables"><a class="nav-link scrollto"
+							href="#taskvariables">Taskvariable workflow</a></li>
+
+					<li class="nav-item" id="custom_components"><a class="nav-link scrollto"
+							href="#custom_components">Custom Components</a>
+					</li>
+					<li class="nav-item" id="Keycloak_SAML_setup"><a class="nav-link scrollto"
+							href="#Keycloak_SAML_setup">Keycloak SAML Setup</a></li>
+
+					<li class="nav-item" id="redash"><a class="nav-link scrollto" href="#redash">Analytics User
+							Guide</a></li>
+					<li class="nav-item" id="logochange"><a class="nav-link scrollto" href="#logochange">Theming</a>
+					</li>
+					<li class="nav-item" id="custom_submission"><a class="nav-link scrollto" href="#custom_submission"
+							style="color:  #566573">Form Adapter</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-7"><span
+								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Multi Tenancy</a>
+					<li class="nav-item" id="tenantbased_taskassignment"><a class="nav-link scrollto"
+							href="#tenantbased_taskassignment">Tenant-based task assignment</a></li>
+
+						
+
+
+
+
+
+					<!-- main heading -->
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span
+								class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-9-1">Section Item 9.1</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-9-2">Section Item 9.2</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-9-3">Section Item 9.3</a></li>
+				</ul>
+
+			</nav>
+			<!--//docs-nav-->
 		</div>
+		<!--//docs-sidebar-->
+
+
+		<!-- // this is main container -->
+		<div class="docs-content">
+
+			<div class="container" id="main-content">
+				
+			</div>
+				<hr>
+				<div class="d-flex w-100 px-lg-5 px-2 justify-content-between align-items-center">
+					<button id="previous-btn" class="btn btn-outline-primary">Prev</button>
+					<button  id="next-btn" class="btn btn-primary">Next</button>
+				</div>
+
+			<!-- ----------------------- this is footer section ------------------------ -->
+			<footer class="footer">
+				<div class="container text-center py-5">
+					<small class="copyright">Copyright &copy; <a href="https://formsflow.ai/"
+							target="_blank">formsflow.ai</a></small>
+					<ul class="social-list list-unstyled pt-4 mb-0">
+						<li class="list-inline-item"><a href="https://github.com/AOT-Technologies/forms-flow-ai"><i
+									class="fab fa-github fa-fw"></i></a></li>
+						<li class="list-inline-item"><a href="https://twitter.com/formsflowai"><i
+									class="fab fa-twitter fa-fw"></i></a></li>
+						<li class="list-inline-item"><a
+								href="https://www.linkedin.com/company/aot-technologies/products/"><i
+									class="fab fa-linkedin-in"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.facebook.com/formsflowai"><i
+									class="fab fa-facebook-f fa-fw"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.instagram.com/formsflow.ai/"><i
+									class="fab fa-instagram fa-fw"></i></a></li>
+					</ul>
+					<!--//social-list-->
+				</div>
+			</footer>
+		</div>
+	</div>
 	</div>
 	<!--//docs-wrapper-->
 

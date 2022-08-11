@@ -1,0 +1,53 @@
+<article class="docs-article">
+    <section class="docs-section" id="listeners">
+        <div>
+            <h2 id="application-state-listener">Application State Listener</h2>
+            <p><strong>org.camunda.bpm.extension.hooks.listeners.ApplicationStateListener</strong>
+            </p>
+            <p>This component can be used on any event of task/execution listener. Upon
+                configuration it takes care
+                of</p>
+            <ol>
+                <li>Syncing formsflow.ai system&#39; with the active status from camunda. </li>
+                <li>Send value from cam variables: &quot;applicationStatus&quot; and
+                    &quot;formUrl&quot; to
+                    formsflow.ai system for capturing audit.</li>
+            </ol>
+            <h3 id="table-of-content">Table of Content</h3>
+            <ul>
+                <li><a href="#type">Type</a></li>
+                <li><a href="#how-it-works">How it Works</a></li>
+                <li><a href="#how-to-use">How to Use</a></li>
+            </ul>
+            <h4 id="type">Type</h4>
+            <p>Task/Execution Listener</p>
+            <h4 id="how-it-works">How it Works</h4>
+            <p>This invokes listed REST endpoints in sequence,</p>
+            <ol>
+                <li>Invokes REST endpoint of application <strong>application/{id}</strong> with data
+                    from cam
+                    variables: &quot;applicationStatus&quot; and &quot;formUrl&quot;.</li>
+                <li>Invokes REST endpoint of application history
+                    <strong>application/{id}/history</strong> with data
+                    from cam variables: &quot;applicationStatus&quot; and &quot;formUrl&quot;.
+                </li>
+            </ol>
+            <p>The component is dependent on listed variables from camunda context,</p>
+            <ol>
+                <li>applicationId </li>
+                <li>applicationStatus</li>
+                <li>formUrl</li>
+            </ol>
+            <h4 id="how-to-use">How to Use</h4>
+            <p>Below snapshot shows how to configure the <strong>ApplicationStateListener</strong>
+                to a task. </p>
+            <p><img src="./assets/images/applicationstate-listener-snp1.jpg"
+                    alt="Application State listener - Snapshot" height="500" width="1000">
+                <br><br>
+                Click here <a href="BPM Form Data Pipeline Listener.html">BPM Form Data Pipeline
+                    Listener</a>
+            </p>
+
+        </div>
+        </section>
+        </article>

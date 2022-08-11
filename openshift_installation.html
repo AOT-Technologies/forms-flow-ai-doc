@@ -1,0 +1,112 @@
+<article class="docs-article" id="section-1">
+    <section class="docs-section" id="Openshift">
+        <div>
+            <h1 id="openshift-based-installation">Openshift Based Installation</h1>
+            <hr>
+            <ul>
+                <li>
+                    <p id="openshift-full-deployment">Openshift Full Deployment</p>
+                </li>
+            </ul>
+            <p> Follow the instructions </p>
+            <h3 id="formsflow-ai-openshift-setup">formsflow.ai - Openshift Setup</h3>
+            <p>This page details elaborates about deploying overall in openshift. All the
+                applicaiton are deployed using openshift templates.</p>
+            <p><em>The templates are tested , ran and customised for running in BCGOV pathfinder
+                    OCP3 and Openshift 4 silver cluster , there could be particular places where the
+                    templates are opinionated. Feel free to alter them and generalise them for any
+                    kubernetes/openshift deployments</em></p>
+            <p>Every component has a build config [bc], Deployment config and might have a param
+                file. The general syntax for running them is</p>
+            <p><code>oc process -f web_dc.yaml --param-file=web_param.yaml |oc apply -f - --ignoreunknownparams</code>
+            </p>
+            <p>an ideal topology will look like Databases</p>
+            <p><img src="./assets/images/forms-flow-topology.png" alt="" title="Deployment Topology" width="1000">
+
+            </p>
+            <p></p>
+            <h3 id="databases">Databases</h3>
+            <p>The application uses Postgres and Mongo DB for persistence.The below templates can be
+                used as a reference to spin up new databases.Alternatively new databse schema can be
+                created with in the existing database.</p>
+            <h3 id="how-to-deploy-postgres">How to deploy postgres</h3>
+            <p>Postgres HA and Non-HA templates can be used.</p>
+            <p>A sample patroni templates can be found at <a
+                    href="yamal_files.html#patroni-build">patroni-build.yaml</a>
+                ,<a href="yamal_files.html#patroni-deployment">patroni-deployment.yaml</a>
+                ,<a href="yamal_files.html#patroni-deployment-prereq">patroni-deployment-prereq.yaml</a>
+            </p>
+            <p>To avail the latest patroni templates ,Please refer to <a
+                    href="yamal_files.html#patroni-cluster-setup-in-openshift-4">BCDevOps/platform-services/patroni
+                    templates</a></p>
+            <p>A sample non-Ha template is checked in here at <a
+                    href="yamal_files.html#postgresql-deploy">postgres-non-ha
+                    template</a></p>
+            <h3 id="how-to-deploy-mongo">How to deploy Mongo</h3>
+            <p>Mongo HA and Non-HA templates can be used.</p>
+            <p>A sample Mongo HA template can be found at <a href="yamal_files.html#mongo-ha.yaml">mongo-ha.yaml</a>
+                A sample Mongo non-HA templates can be found at <a
+                    href="yamal_files.html#mongodb-nonha.yaml">mongodb-nonha.yaml</a></p>
+            <h3 id="secrets-and-config-maps">Secrets and Config maps</h3>
+            <h4 id="secrets">secrets</h4>
+            <p>The forms-flow-ai secret contain most of the values which are mandatory for
+                application to work.</p>
+            <p>running the <a href="yamal_files.html#formio_secrets.yaml">formio_secrets_param.yaml</a>
+                with proper values should create the required secret.</p>
+            <p>There are other secrets which are needed as well. They are mostly Mongo ,
+                Postgres,Redash secrets as in the below screenshot</p>
+            <p><img src="./assets/images/secrets.png" alt="" title="Secrets" height="700" width="1000"></p><br>
+            <h4 id="config-maps">config maps</h4>
+            <p>the two major config which are required to run the application is the
+                forms-flow-web-config and forms-flow-web-keycloak-config.
+                forms-flow-web-config contains the ids and urls required for web project to work.
+                forms-flow-web-keycloak-config has the keycloak configs.</p>
+            <p><img src="./assets/images/config-maps.png" alt="" title="Config maps" height="700" width="1000"></p><br>
+            <h4 id="build-configs-images">Build Configs/Images</h4>
+            <p>Each project needs a build configuration and images/image stream to work with.An
+                ideal build config will look like below.</p>
+            <p><img src="./assets/images/buildconfig.png" alt="" title="Build Config" height="700" width="1000"></p><br>
+            <h4 id="deployment-configs">Deployment Configs</h4>
+            <p>An example deployment config will look like below</p>
+            <p><img src="./assets/images/deployment config.png" alt="" title="Deployment Config" height="700"
+                    width="1000"></p><br>
+
+            <h2 id="docker-files">Docker files</h2>
+            <p>the project has different deployment topoloiges and there are different docker files
+                for each purpose as below</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>filename</th>
+                        <th style="text-align:center">sample reference</th>
+                        <th style="text-align:right">Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dockerfile</td>
+                        <td style="text-align:center"><a href="yamal_files.html#Dockerfile">Dockerfile</a></td>
+                        <td style="text-align:right">Dockerfile to support docker compose</td>
+                    </tr>
+                    <tr>
+                        <td>openshift_Dockerfile</td>
+                        <td style="text-align:center"><a
+                                href="yamal_files.html#openshift_Dockerfile">openshift_Dockerfile</a>
+                        </td>
+                        <td style="text-align:right">Openshift based deployment</td>
+                    </tr>
+                    <tr>
+                        <td>openshift_custom_Dockerfile</td>
+                        <td style="text-align:center"><a
+                                href="yamal_files.html#openshift_custom_Dockerfile">openshift_custom_Dockerfile</a>
+                        </td>
+                        <td style="text-align:right">To allow customisation and build from this
+                            repo.Helps to copy stuff from the buidling repo and merge to the
+                            product.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+</article>

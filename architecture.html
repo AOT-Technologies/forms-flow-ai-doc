@@ -1,162 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Forms flow ai documentation">
-    <meta name="author" content="formsflow.ai">
-    <link rel="shortcut icon" href="favicon.ico">
-    <title>Welcome to formsflow.ai</title>
-
-    <!-- Google Font -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
-    <!-- FontAwesome JS-->
-    <script defer src="assets/fontawesome/js/all.min.js"></script>
-
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
-
-    <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
-    <link id="theme-style" rel="stylesheet" href="assets/css/atom-one-dark.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-</head>
-
-<body>
-
-    <div class="container">
-        <header>
-            <div id="header"></div>
-        </header>
-
-    </div>
-    <script>
-        $(function(){
-            $('#header').load('header.html');
-        }
-        );
-    </script>
-    <!--//header-->
-
-    <div id="nav-placeholder"></div>
-        <script>
-            $.get("nav.html", function(data){
-                $("#nav-placeholder").replaceWith(data);
-            });
-        </script> 
-        <!--//docs-sidebar-->
-        <div class="docs-content">
-            <div class="container">
-                <article class="docs-article" id="section-1">
-                    <!-- main heading content -->
-                    <header class="docs-header">
-
-
-
-                        <br>
-                        <section>
-                            <div>
-                                <h1 id="#architecture">System Architecture</h1><br>
-                                <hr><br>
-                                <img src="./assets/images/formsflow-ai-components.png" alt="image" width="700"
-                                    height="500"><br><br>
-                                <h3 id="components">Components</h3>
-                                <p>The components of the system are:</p>
-                                <h4 id="formsflow-ui">formsflow UI</h4>
-                                <p>Browser-based React integration web UI Most of the day-to-day end-user and review
-                                    tasks are performed from this application, built specifically to act as a common
-                                    UI combining forms, workflow, and analytics functionality. The web application
-                                    is written as a <a
-                                        href="https://en.wikipedia.org/wiki/Progressive_web_application">progressive</a>
-                                    app with the potential for offline data-entry. formsflow UI accesses the
-                                    individual system component data through native API&#39;s using OIDC or SAML
-                                    access tokens.</p>
-                                <h4 id="formsflow-ui-extension-for-vue-js-optional-">formsflow UI Extension for
-                                    Vue.js (optional)</h4>
-                                <p>There is a Vue.js based web user interface for easy integration of formsflow.ai
-                                    to your existing User Interface. This extension provides components for easily
-                                    using Forms, Tasklist by installing as a npm package. To know more details
-                                    checkout <a
-                                        href="https://github.com/AOT-Technologies/forms-flow-ai-extensions/tree/master/camunda-formio-tasklist-vue">formsflow-ai-extension
-                                        repository</a>and to install package <a
-                                        href="https://www.npmjs.com/package/camunda-formio-tasklist-vue">go
-                                        here.</a></p>
-                                <h4 id="keycloak-identity-management-server">Keycloak Identity management server
-                                </h4>
-                                <p>The system uses an existing (your) Keycloak server which provides a common
-                                    identity management capability. The system provides default installation and
-                                    provisioning of the Keycloak server for local setup, steps are mentioned <a
-                                        href="download and installation.html">here</a>.
-                                    However, you can setup your own Keycloak server and follow the provisioning
-                                    steps <a href="local keycloak setup.html">here</a>.
-                                <h4 id="form-io-api">Form.io API</h4>
-                                <p>The REST interface to the form.io core</p>
-                                <h4 id="camunda-admin-ui">Camunda Admin UI</h4>
-                                <p>The native admin interface to Camunda (bundled and unchanged). Use this to
-                                    define workflows and to manage workflow tasks as an admin.</p>
-                                <h4 id="nginx-web-server-optional-">Nginx Web server (optional)</h4>
-                                <p>Webserver providing reverse-proxy redirection and SSL to components for remote
-                                    deployments ( bundled and configured ).</p>
-                                <h4 id="redash-admin-ui">Redash Admin UI</h4>
-                                <p>The native admin interface to Redash (bundled and unchanged). Use this to build
-                                    analytics dashboards.</p>
-                                <h4 id="redash-api">Redash API</h4>
-                                <p>The REST interface to the Redash core. Bundled and unchanged</p>
-                                <h4 id="rest-api">REST API</h4>
-                                <p>Python REST API providing business logic around the internal formsflow.ai
-                                    Postgres database. This API is used extensively by the formsflow.ai UI to
-                                    synchronize, maintain state, extend functionality, and integrate between
-                                    components.</p>
-
-
-                                </p>
-
-                            </div>
-            </div>
-            <br>
-            </section>
+<article class="docs-article" id="section-1">
+    <section class="docs-section">
+        <div>
+            <h1 class="docs-heading">System Architecture</h1><br>
             <hr><br>
+            <img src="./assets/images/formsflow-ai-components.png" alt="image" width="700"
+                height="500"><br><br>
+            <h3 id="components">Components</h3>
+            <p>The components of the system are:</p>
+            <h4 id="formsflow-ui">formsflow UI</h4>
+            <p>Browser-based React integration web UI Most of the day-to-day end-user and review
+                tasks are performed from this application, built specifically to act as a common
+                UI combining forms, workflow, and analytics functionality. The web application
+                is written as a <a
+                    href="https://en.wikipedia.org/wiki/Progressive_web_application">progressive</a>
+                app with the potential for offline data-entry. formsflow UI accesses the
+                individual system component data through native API&#39;s using OIDC or SAML
+                access tokens.</p>
+            <h4 id="formsflow-ui-extension-for-vue-js-optional-">formsflow UI Extension for
+                Vue.js (optional)</h4>
+            <p>There is a Vue.js based web user interface for easy integration of formsflow.ai
+                to your existing User Interface. This extension provides components for easily
+                using Forms, Tasklist by installing as a npm package. To know more details
+                checkout <a
+                    href="https://github.com/AOT-Technologies/forms-flow-ai-extensions/tree/master/camunda-formio-tasklist-vue">formsflow-ai-extension
+                    repository</a>and to install package <a
+                    href="https://www.npmjs.com/package/camunda-formio-tasklist-vue">go
+                    here.</a></p>
+            <h4 id="keycloak-identity-management-server">Keycloak Identity management server
+            </h4>
+            <p>The system uses an existing (your) Keycloak server which provides a common
+                identity management capability. The system provides default installation and
+                provisioning of the Keycloak server for local setup, steps are mentioned <a
+                    href="download and installation.html">here</a>.
+                However, you can setup your own Keycloak server and follow the provisioning
+                steps <a href="local keycloak setup.html">here</a>.
+            <h4 id="form-io-api">Form.io API</h4>
+            <p>The REST interface to the form.io core</p>
+            <h4 id="camunda-admin-ui">Camunda Admin UI</h4>
+            <p>The native admin interface to Camunda (bundled and unchanged). Use this to
+                define workflows and to manage workflow tasks as an admin.</p>
+            <h4 id="nginx-web-server-optional-">Nginx Web server (optional)</h4>
+            <p>Webserver providing reverse-proxy redirection and SSL to components for remote
+                deployments ( bundled and configured ).</p>
+            <h4 id="redash-admin-ui">Redash Admin UI</h4>
+            <p>The native admin interface to Redash (bundled and unchanged). Use this to build
+                analytics dashboards.</p>
+            <h4 id="redash-api">Redash API</h4>
+            <p>The REST interface to the Redash core. Bundled and unchanged</p>
+            <h4 id="rest-api">REST API</h4>
+            <p>Python REST API providing business logic around the internal formsflow.ai
+                Postgres database. This API is used extensively by the formsflow.ai UI to
+                synchronize, maintain state, extend functionality, and integrate between
+                components.</p>
 
 
-            <a href="aboutproject.html" class="previous">&laquo; Previous</a>
-            <a href="download.html" class="next">Next &raquo;</a>
-
-
-
-
-
+            </p>
 
         </div>
-        <!--//docs-code-block-->
-
-
-        </header>
-
-
-        </article>
-
-
-
-
-        <!-- Javascript -->
-        <script src="assets/plugins/popper.min.js"></script>
-        <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-
-
-        <!-- Page Specific JS -->
-        <script src="assets/plugins/smoothscroll.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
-        <script src="assets/js/highlight-custom.js"></script>
-        <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
-        <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
-        <script src="assets/js/docs.js"></script>
-
-</body>
-
-</html>
+    </section>
+</article>

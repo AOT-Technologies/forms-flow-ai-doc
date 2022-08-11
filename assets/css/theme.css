@@ -217,7 +217,8 @@ samp {
   direction: ltr /* rtl:ignore */;
   unicode-bidi: bidi-override;
   padding-left: 0%;
-  display: block;
+  color: white;
+  
   
 }
 pre {

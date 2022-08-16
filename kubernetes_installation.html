@@ -9,21 +9,81 @@
 
           <h2 id="get-repo-info">Get Repo Info</h2>
           
-          <pre><code>
-
-            helm repo add formsflow https://aot-technologies.github.io/helm-charts
-            helm repo update
-          </code></pre>
+            <pre>
+                <code>
+                    helm repo add formsflow https://aot-technologies.github.io/helm-charts
+                    helm repo update
+                </code>
+            </pre>
           
           
           <p><em>See <a href="https://helm.sh/docs/helm/helm_repo/">helm repo</a> for command documentation.</em></p>
           
           <p>##E.g Install Component Chart</p>
-          <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>Helm 3
-          <span class="gp">$</span><span class="w"> </span>helm <span class="nb">install</span> <span class="o">[</span>RELEASE_NAME] formsflow/[COMPONENT_NAME] <span class="o">[</span>flags]
-          </code></pre></div></div>
-          
+          <pre>
+            <code>
+                helm install [RELEASE_NAME] formsflow/[COMPONENT_NAME] [flags]
+                helm repo update
+            </code>
+        </pre>
+
           <h2 id="install-formsflowai">Install Formsflow.ai</h2>
+                             
+                <pre>
+                 <code>
+                    # Helm 3
+
+                    helm install forms-flow-ai formsflow/forms-flow-ai \
+                        --set Domain=$DOMAIN_NAME \ 
+                        --set forms-flow-idm.keycloak.ingress.hostname=forms-flow-idm-$NAMESPACE.$DOMAIN_NAME \
+                        --namespace $NAMESPACE
+                    
+                    helm install forms-flow-analytics formsflow/forms-flow-analytics \
+                        --set Domain=$DOMAIN_NAME \
+                        --namespace $NAMESPACE
+                    
+                    helm install forms-flow-mongodb formsflow/forms-flow-mongodb \
+                        --namespace $NAMESPACE
+                    
+                    
+                    helm install forms-flow-forms formsflow/forms-flow-forms \
+                        --set Domain=$DOMAIN_NAME \
+                        --namespace $NAMESPACE
+                    
+                    helm install forms-flow-idm formsflow/forms-flow-idm \
+                        --set Domain=$DOMAIN_NAME \
+                        --set keycloak.ingress.hostname=forms-flow-idm-$NAMESPACE.$DOMAIN_NAME \
+                        --namespace $NAMESPACE 
+                    
+                    
+                    helm install forms-flow-admin formsflow/forms-flow-admin \
+                        --set Domain=$DOMAIN_NAME \
+                        --namespace $NAMESPACE
+                    
+                    
+                    helm install forms-flow-api formsflow/forms-flow-api \
+                        --set Domain=$DOMAIN_NAME \
+                        --namespace $NAMESPACE
+                    
+                    helm install forms-flow-bpm formsflow/forms-flow-bpm \
+                        --set Domain=$DOMAIN_NAME \
+                        --set camunda.websocket.securityOrigin=https://*.$DOMAIN_NAME \
+                        --namespace $NAMESPACE
+                    
+                    helm install forms-flow-data-analysis formsflow/forms-flow-data-analysis \
+                        --set Domain=$DOMAIN_NAME \
+                        --namespace $NAMESPACE
+                    
+                    
+                    
+                    helm install forms-flow-web formsflow/forms-flow-web \
+                        --set Domain=$DOMAIN_NAME \
+                        --namespace $NAMESPACE
+                    
+                    
+                 </code>
+                </pre>
+
           <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>Helm 3
           <span class="gp">helm install forms-flow-admin formsflow/forms-flow-admin \
               --set Domain=$</span>DOMAIN_NAME <span class="se">\</span>

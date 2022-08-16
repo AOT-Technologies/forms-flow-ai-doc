@@ -232,7 +232,7 @@ pre {
 }
 pre code {
   font-size: inherit;
-  color: inherit;
+  color: #d63384;
   word-break: normal;
   background-color: #000;
 }

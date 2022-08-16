@@ -3,11 +3,13 @@
         <div>
 
 
-            <h1>Form Adapter/CustomSubmission</h1>
+            <h1>Form Adapter</h1>
             <br>
             <hr><br>
-            <p>Supports the submission of form data to a data store other than MongoDB with custom data
-                URLs.
+            <p>Formsflow.ai supports submission data to be stored and served using external system. This feature can be used for submission datastore to different database than MongoDB. 
+                If this feature is enabled MongoDB will be used only for form definition data. 
+                A Rest API is needed to support this where customer can add this Rest API to their choice of database and provide the required endpoints. 
+                A reference implementation can be found <a href="https://github.com/AOT-Technologies/forms-flow-ai-submissions/tree/develop/forms-flow-submissions" target="_blank">here</a>
             </p>
             <p>This feature requires the following env variables set:</p>
             <ul>

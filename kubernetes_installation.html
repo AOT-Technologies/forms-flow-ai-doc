@@ -83,71 +83,21 @@
                  </code>
                 </pre>
 
-          <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>Helm 3
-          <span class="gp">helm install forms-flow-admin formsflow/forms-flow-admin \
-              --set Domain=$</span>DOMAIN_NAME <span class="se">\</span>
-              <span class="nt">--namespace</span> <span class="nv">$NAMESPACE</span>
-          <span class="go">
-          </span><span class="gp">helm install forms-flow-ai formsflow/forms-flow-ai \
-              --set Domain=$</span>DOMAIN_NAME <span class="se">\ </span>
-          <span class="gp">	--set forms-flow-idm.keycloak.ingress.hostname=forms-flow-idm-$</span>NAMESPACE.<span class="nv">$DOMAIN_NAME</span> <span class="se">\</span>
-              <span class="nt">--namespace</span> <span class="nv">$NAMESPACE</span>
-          <span class="go"> 
-          </span><span class="gp">helm install forms-flow-analytics formsflow/forms-flow-analytics \
-              --set Domain=$</span>DOMAIN_NAME <span class="se">\</span>
-              <span class="nt">--namespace</span> <span class="nv">$NAMESPACE</span>
-          <span class="go">
-          </span><span class="gp">helm install forms-flow-api formsflow/forms-flow-api \
-              --set Domain=$</span>DOMAIN_NAME <span class="se">\</span>
-              <span class="nt">--namespace</span> <span class="nv">$NAMESPACE</span>
-          <span class="go">
-          </span><span class="gp">helm install forms-flow-bpm formsflow/forms-flow-bpm \
-              --set Domain=$</span>DOMAIN_NAME <span class="se">\</span>
-              <span class="nt">--set</span> camunda.websocket.securityOrigin<span class="o">=</span>https://<span class="k">*</span>.<span class="nv">$DOMAIN_NAME</span> <span class="se">\</span>
-              <span class="nt">--namespace</span> <span class="nv">$NAMESPACE</span>
-          <span class="go">
-          </span><span class="gp">helm install forms-flow-data-analysis formsflow/forms-flow-data-analysis \
-              --set Domain=$</span>DOMAIN_NAME <span class="se">\</span>
-              <span class="nt">--namespace</span> <span class="nv">$NAMESPACE</span>
-          <span class="go">
-          </span><span class="gp">helm install forms-flow-forms formsflow/forms-flow-forms \
-              --set Domain=$</span>DOMAIN_NAME <span class="se">\</span>
-              <span class="nt">--namespace</span> <span class="nv">$NAMESPACE</span>
-          <span class="go">
-          </span><span class="gp">helm install forms-flow-idm formsflow/forms-flow-idm \
-              --set Domain=$</span>DOMAIN_NAME <span class="se">\</span>
-              <span class="nt">--set</span> keycloak.ingress.hostname<span class="o">=</span>forms-flow-idm-<span class="nv">$NAMESPACE</span>.<span class="nv">$DOMAIN_NAME</span> <span class="se">\</span>
-              <span class="nt">--namespace</span> <span class="nv">$NAMESPACE</span> 
-          <span class="go">
-          </span><span class="gp">helm install forms-flow-mongodb formsflow/forms-flow-mongodb \
-              --namespace $</span>NAMESPACE
-          <span class="go">
-          
-          </span><span class="gp">helm install forms-flow-web formsflow/forms-flow-web \
-              --set Domain=$</span>DOMAIN_NAME <span class="se">\</span>
-              <span class="nt">--namespace</span> <span class="nv">$NAMESPACE</span>
-          <span class="go">
-          </span></code></pre></div></div>
+
+                
           <h2 id="uninstall-chart">Uninstall Chart</h2>
+            <pre><code>helm uninstall [RELEASE_NAME]</code></pre>
           
-          <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>Helm 3
-          <span class="gp">$</span><span class="w"> </span>helm uninstall <span class="o">[</span>RELEASE_NAME]
-          </code></pre></div></div>
           
           <p>This removes all the Kubernetes components associated with the chart and deletes the release.</p>
           
           <p><em>See <a href="https://helm.sh/docs/helm/helm_uninstall/">helm uninstall</a> for command documentation.</em></p>
           
           <h2 id="upgrade-chart">Upgrade Chart</h2>
-          
-          <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>Helm 3
-          <span class="gp">$</span><span class="w"> </span>helm upgrade <span class="o">[</span>RELEASE_NAME] forms-flow-ai/forms-flow-ai <span class="o">[</span>flags]
-          </code></pre></div></div>
+          <pre><code>helm upgrade [RELEASE_NAME] forms-flow-ai/forms-flow-ai [flags]</code></pre>
           
           <p><em>See <a href="https://helm.sh/docs/helm/helm_upgrade/">helm upgrade</a> for command documentation.</em></p>
           
-          <p>Visit the chart’s <a href="./CHANGELOG.md">CHANGELOG</a> to view the chart’s release history.
-          For migration between major version check <a href="#migration-guide">migration guide</a>.</p>
           
           <h2 id="configuration">Configuration</h2>
           
@@ -165,7 +115,6 @@
                   
                     <span class="site-footer-owner"><a href="https://github.com/AOT-Technologies/helm-charts">helm-charts</a> is maintained by <a href="https://github.com/AOT-Technologies">AOT-Technologies</a>.</span>
                   
-                  <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
                 </footer>
               </main>
 

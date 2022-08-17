@@ -12,6 +12,7 @@
             <li>forms-flow-forms setup</li>
             <li>forms-flow-web, forms-flow-bpm, forms-flow-api setup</li>
         </ul>
+        <p><strong>Note:</strong> Please make sure to install the components in the listed order as forms-flow-web, forms-flow-bpm & forms-flow-api  have dependencies .</p><br>
         <div class="callout-block callout-block-info">
             <div class="content">
                 <span class="callout-icon-holder me-1"></span>
@@ -39,9 +40,11 @@
             <h4>
                 <li>forms-flow-forms Setup</li>
             </h4>
+            <p>Forms-flow-forms leverages an easy to drag-and-drop form builder to dynamically create the Forms and Resources for your application.</p>
             <p>To setup forms-flow-forms follow the below instructions .</p>
             <ul>
                 <li>Make sure your current working directory is "/forms-flow-ai/deployment/docker".</li>
+                <img src="./assets/images/Screenshot 2022-08-16 155944.png"></img>
                 <li>Rename the file <strong> sample.env</strong> to <strong>.env.</strong></li>
                 <li>Modify the environment variables in the newly created .env file if needed.
                     Environment variables are given below,</li>
@@ -61,6 +64,7 @@
                         <li>Run <code>docker-compose up -d forms-flow-forms</code>to start </li>
                     </ul>
                 </ul>
+                <img src="./assets/images/Screenshot 2022-08-16 160153.png" height="500" width="850"></img>
             </ol>
 
 
@@ -106,6 +110,7 @@
             <li>Run <code>docker-compose up -d</code> to start.</li>
 
         </ul>
+        <img src="./assets/images/Screenshot 2022-08-16 160934.png" height="350" width="800"></img><br><br>
         <h5>To stop the application</h5>
         <ul>
             <li>Run <code>docker-compose stop</code> to stop.</li>

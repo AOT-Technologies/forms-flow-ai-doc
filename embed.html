@@ -1,9 +1,39 @@
 <article class="docs-article">
     <section class="docs-section" id="rpa">
         <div>
-            <h1>Form embedding</h1>
+            <h1>Form embedding</h1><hr><br>
 
+            <p>Form embedding will help you to convert your form into a component and to use the form in any website
+                that you wish. And you can use this form component in any javascript frameworks.</p>
+            <p>Below steps will describes how to use the form embedding option</p>
+            <ol>
+                <li>Install npm package formsflow-wc</li>
+                <img src="./assets/images/formembed.png">
+                <li>Import 'formsflow-wc';</li>
+                <li>Use component &lt;formsflow-wc url="" &gt;&lt;/formsflow-wc&gt;
+                </li>
+                <pre>
+                    <code>
+import './App.css';
+import 'formsflow-wc';
+function App() {
+  return (
+    &lt;div className="App" &gt;
+      &lt;formsflow-wc  url=""&gt;&lt;/formsflow-wc&gt;
+    &lt;/div&gt;
+  );
+}
 
+export default App;
+                    </code>
+                </pre>
+
+            </ol>
+            <p>
+                Here 'formsflow-wc' is your webcomponent.There is an attribute called ‘url’ inside the component so you
+                can pass your form url inside that attribute. This is only applicable for anonymous forms . You are not
+                able to use authorized forms in this component.
+            </p>
 
         </div>
     </section>

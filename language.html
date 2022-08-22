@@ -28,16 +28,19 @@
                 <li>Now open folder 'en' from the same folder 'resourceBundles'</li>
                 <li>Copy the content of en/resourceBundles.js and paste it to the newly created file
                 </li>
-               
+
 
                 <li>Change 'EN' to 'BG'</li>
                 <li>Copy each value from the "key": "value" and translate the same using google
                     translator to the required language </li>
                 <li>Paste the the translated language to the new file</li>
-                
+                <li>Import the same file to forms-flow-web/src/resourceBundles/i18n.js like rest of the languages.</li>
+                <li>You should add content of new translation file to
+                    forms-flow-web/src/resourceBundles/formio_resourceBundles.js also.</li>
+
                 <li>At 'resourceBundles/i18n.js' make the required changes as shown below for
                     'bg' : </li>
-                    
+
                 <pre>
                 <code>
 import i18n from "i18next";
@@ -86,14 +89,18 @@ export default i18n;
                       
                     
 </code>
-                </pre></div>
-            
+                </pre>
+        </div>
 
-            <li>Open <a href="http://localhost:3000 ">http://localhost:3000 </a>to see the changes.
-            </li>
-            <li>Internationalization is now done.</li>
+        <li>Open forms-flow-api/src/formsflow_api/utils/translations/translations.py , copy any set of translations
+            ,translate the values and paste it back to the file with required language key.</li>
+        <li>You should add the proposed name and value of the language to
+            forms-flow-web/public/config/languageData.json.</li>
+        <li>Open <a href="http://localhost:3000 ">http://localhost:3000 </a>to see the changes.
+        </li>
+        <li>Internationalization is now done.</li>
 
-            </ul>
+        </ul>
 
         </div>
     </section>

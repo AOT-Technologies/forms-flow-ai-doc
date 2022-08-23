@@ -288,7 +288,7 @@
                                 <li>Access the <strong>/checkpoint</strong> endpoint for a Health Check on API to
                                     see it&#39;s up and running.</li>
                             </ul>
-                            <pre><code>GET <span class="hljs-string">http:</span><span class="hljs-comment">//localhost:5000/checkpoint</span>
+                            <pre><code class="hljs">GET <span class="hljs-string">http:</span><span class="hljs-comment">//localhost:5000/checkpoint</span>
 
 RESPONSE
 
@@ -299,7 +299,7 @@ RESPONSE
                             <ul>
                                 <li>Get the access token</li>
                             </ul>
-                            <pre><code><span class="hljs-class">POST </span>{Keycloak URL}<span class="hljs-meta-keyword">/auth/</span>realms/<span class="hljs-params">&lt;realm&gt;</span><span class="hljs-meta-keyword">/protocol/</span>openid-connect/token
+                            <pre><code class="hljs"><span class="hljs-class">POST </span>{Keycloak URL}<span class="hljs-meta-keyword">/auth/</span>realms/<span class="hljs-params">&lt;realm&gt;</span><span class="hljs-meta-keyword">/protocol/</span>openid-connect/token
 <span class="hljs-symbol">
 Body:</span>
 <span class="hljs-symbol">grant_type:</span> client_credentials
@@ -313,7 +313,7 @@ Content-Type : application/x-www-form-urlencoded
                                 <li>Access the <strong>/task</strong> endpoint and verify response. Ensure Bearer
                                     token is passed along</li>
                             </ul>
-                            <pre><code>GET http://localhost:<span class="hljs-number">5000</span>/<span class="hljs-keyword">task</span>
+                            <pre><code class="hljs">GET http://localhost:<span class="hljs-number">5000</span>/<span class="hljs-keyword">task</span>
 
 Headers:
 Content-<span class="hljs-keyword">Type</span> <span class="hljs-type">: </span>application/json

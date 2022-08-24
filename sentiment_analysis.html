@@ -2,8 +2,88 @@
     <section class="docs-section" id="sentiment_analysis">
         <div>
             <h1>Sentiment Analysis</h1>
+            <hr><br>
+            <p>Sentiment analysis is used to understand the customer's sentiments toward products, movies, and other
+                such things, whether they feel positive, negative, or neutral about it. BERT is a perfect pre-trained
+                language model which helps machines learn excellent representations of text with respect to the context
+                in many natural language tasks.
+            </p>
+            <h3>Data Analysis API(link to data-analysis-api folder)</h3>
+            <p>Data Analysis API is used to understand the customer's sentiments whether they feel positive, negative,
+                or neutral about it. </p>
+            <p>This feature requires the following env:</p>
+            <pre><code>
+                DATA_ANALYSIS_API_BASE_URL=http://{your-ip-address}:{port}
+            </code></pre><br>
+            <h4>POST API for sentiment analysis</h4><br>
 
+            <h5><i>POST</i></h5>
+            <code>{{DATA_ANALYSIS_API_BASE_URL}}/sentiment.</code>
+            <br><br>
+            <u>
+                <h5>HEADERS</h5>
+            </u>
+            <p><strong> Authorization Bearer</strong> {{token}}</p>
+            <p><strong> Content-Type</strong> application/json</p>
+            <u>
+                <h5>BODY</h5>
+            </u>
+            <pre>
+                <code>
+                    {   
+                     "applicationId":"{valid applicationId}",
+                     "formUrl":"{valid formUrl}",
+                        "data":[{
+                            "text":"bad service",
+                            "elementId":""
+                         }]
+                    }
+                    
+                </code>
+            </pre>
+            <u>
+                <h5>RESPONSE</h5>
+            </u>
+            <pre>
+                <code>
+                    {
+                        "overallSentiment": "NEGATIVE"
+                    }
+                </code>
+            </pre>
+            <br>
+            <h4>Model description (https://huggingface.co/Seethal/sentiment_analysis_generic_dataset)</h4>
+            <p>This is a fine-tuned downstream version of the bert-base-uncased model for sentiment analysis, this model
+                is not intended for further downstream fine-tuning for any other tasks. This model is trained on a
+                classified dataset for text classification.</p>
 
+            <h4> How to use the Sentiment Analysis component</h4>
+            <p>One of the unique features of the formsflow.ai framework is Sentiment Analysis. It can analyze the
+                sentiment from forms based on specific topics mentioned by the designer during form creation.</p>
+            <ul>
+                <li>A form designer can drag and drop Text Area with Analytics component and associated with the
+                    corresponding workflow. This activates the sentiment analysis component.
+                </li><br>
+                <img src="./assets/images/sentiment1.png" width="1000" height="500"><br><br>
+                <li>Based on the input responses of the user, formsflow.ai process sentiment associated with each user's
+                    responses and the response will be patched to submission data by the Camunda listener.</li>
+                    <li>The workflow associated with sentiment analysis, you need to add the java class in listeners as</li>
+                    <code>`org.camunda.bpm.extension.hooks.delegates.FormTextAnalysisDelegate`</code>
+                    <p>Refer to the sample shown below:</p> <br>
+                    <img src="./assets/images/sentiment2.png" width="1000" height="500"><br><br>
+            </ul>
+            
+            <div class="callout-block callout-block-info">
+                <div class="content">
+                    <span class="callout-icon-holder me-1"></span>
+
+                    <i class="fa fa-bullhorn"></i>
+
+                    <em> NOTE:  Refer here(https://huggingface.co/docs/transformers/index) for model creation and training procedures </em>
+
+                </div>
+
+            </div>
 
         </div>
     </section>

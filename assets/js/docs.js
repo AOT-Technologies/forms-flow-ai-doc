@@ -4,18 +4,33 @@
 const sidebarToggler = document.getElementById("docs-sidebar-toggler");
 const sidebar = document.getElementById("docs-sidebar");
 const sidebarLinks = document.querySelectorAll("#docs-sidebar .scrollto");
-
+const sectionTitle = document.querySelectorAll(".section-title")
 /* ===== Responsive Sidebar ====== */
 
 window.onload = function () {
+  let url = (window.location).href
+  const id = url.substring(url.lastIndexOf("#")+1,url.length)
   responsiveSidebar();
-  let target = "introduction";
+  $("li:not(.section-title):not(.intro)").hide()
+
+  const itemExist = document.getElementById(id)
+  let target = itemExist? id : "introduction";
   setPreviosNextfun(target);
+  minimizeTitle()
 };
 
 window.onresize = function () {
   responsiveSidebar();
 };
+
+function minimizeTitle (){
+  sectionTitle.forEach(ele=>{
+    ele.addEventListener("click",function(){
+      const name = this.getAttribute("name")
+    console.log(  $(`.${name}`).slideToggle(600))
+    })
+  })
+}
 
 function responsiveSidebar() {
   let w = window.innerWidth;
@@ -29,6 +44,9 @@ function responsiveSidebar() {
     sidebar.classList.add("sidebar-hidden");
   }
 }
+
+
+
 
 sidebarToggler.addEventListener("click", () => {
   if (sidebar.classList.contains("sidebar-visible")) {

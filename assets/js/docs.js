@@ -27,7 +27,7 @@ function minimizeTitle (){
   sectionTitle.forEach(ele=>{
     ele.addEventListener("click",function(){
       const name = this.getAttribute("name")
-    console.log(  $(`.${name}`).slideToggle(600))
+      $(`.${name}`).slideToggle(600)
     })
   })
 }

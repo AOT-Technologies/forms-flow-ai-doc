@@ -67,7 +67,12 @@
                 </li><br>
                 <img src="./assets/images/sentiment1.png" width="1000" height="500"><br><br>
                 <li>Based on the input responses of the user, formsflow.ai process sentiment associated with each user's
-                    responses and the response will be patched to submission data by the Camunda listener.</li>
+                    responses and the response will be patched to submission data by the Camunda listener. For this it requires the following env:
+                </li>
+                <br><pre><code>
+                    DATA_ANALYSIS_URL=http://{your-ip-address}:{port}/analysis
+
+                </code></pre>
                     <li>The workflow associated with sentiment analysis, you need to add the java class in listeners as</li>
                     <code>`org.camunda.bpm.extension.hooks.delegates.FormTextAnalysisDelegate`</code>
                     <p>Refer to the sample shown below:</p> <br>

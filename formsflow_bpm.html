@@ -108,37 +108,43 @@
 							href="#docker_full_deployment">Docker Full Deployment</a></li>
 					<li class="nav-item" id="individual_service_deployment"><a class="nav-link scrollto"
 							href="#individual_service_deployment">Individual Service Deployment</a></li>
-							<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
 								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Kubernetes
 							Installation</a>
-							</li>
-							<li class="nav-item" id="kubernetes_installation"><a class="nav-link scrollto"
-									href="#kubernetes_installation">Kubernetes
-									Installation</a></li>
+					</li>
+					<li class="nav-item" id="kubernetes_installation"><a class="nav-link scrollto"
+							href="#kubernetes_installation">Kubernetes
+							Installation</a></li>
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span
 								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Usage
 							instructions</a>
 					</li>
-					<li class="nav-item" id="howto_use"><a class="nav-link scrollto" href="#howto_use">How to Use formsflow.ai</a>
+					<li class="nav-item" id="howto_use"><a class="nav-link scrollto" href="#howto_use">How to Use
+							formsflow.ai</a>
 					</li>
 					<li class="nav-item" id="examples"><a class="nav-link scrollto" href="#examples">Examples</a>
 					</li>
-					
+
 					<li class="nav-item" id="usage"><a class="nav-link scrollto" href="#usage">Usage</a>
 					</li>
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span
 								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Features</a>
 					</li>
-					
-					<li class="nav-item" id="language"><a class="nav-link scrollto" href="#language">Internationalization</a></li>
-					<li class="nav-item" id="anonymous_form"><a class="nav-link scrollto" href="#anonymous_form">Anonymous
+
+					<li class="nav-item" id="language"><a class="nav-link scrollto"
+							href="#language">Internationalization</a></li>
+					<li class="nav-item" id="anonymous_form"><a class="nav-link scrollto"
+							href="#anonymous_form">Anonymous
 							Forms</a></li>
-							<li class="nav-item" id="draft_feature"><a class="nav-link scrollto" href="#draft_feature">Draft Feature</a>
-								<li class="nav-item" id="exportpdf"><a class="nav-link scrollto" href="#exportpdf">Export Form as PDF</a>
-					<li class="nav-item" id="camunda_listeners"><a class="nav-link scrollto" href="#camunda_listeners">Bpm Listeners</a>
+					<li class="nav-item" id="draft_feature"><a class="nav-link scrollto" href="#draft_feature">Draft
+							Feature</a>
+					<li class="nav-item" id="exportpdf"><a class="nav-link scrollto" href="#exportpdf">Export Form as
+							PDF</a>
+					<li class="nav-item" id="camunda_listeners"><a class="nav-link scrollto"
+							href="#camunda_listeners">Bpm Listeners</a>
 					</li>
-					<li class="nav-item" id="camunda"><a class="nav-link scrollto"
-								href="#camunda">Camunda Filters</a></li>	
+					<li class="nav-item" id="camunda"><a class="nav-link scrollto" href="#camunda">Camunda Filters</a>
+					</li>
 					<li class="nav-item" id="task_variables"><a class="nav-link scrollto"
 							href="#task_variables">Taskvariable workflow</a></li>
 
@@ -148,7 +154,8 @@
 					<li class="nav-item" id="keycloak_setup"><a class="nav-link scrollto"
 							href="#keycloak_setup">Keycloak SAML Setup</a></li>
 
-					<li class="nav-item" id="redash_guide"><a class="nav-link scrollto" href="#redash_guide">Analytics User
+					<li class="nav-item" id="redash_guide"><a class="nav-link scrollto" href="#redash_guide">Analytics
+							User
 							Guide</a></li>
 					<li class="nav-item" id="logochange"><a class="nav-link scrollto" href="#logochange">Theming</a>
 					</li>
@@ -159,7 +166,7 @@
 					<li class="nav-item" id="tenantbased_taskassignment"><a class="nav-link scrollto"
 							href="#tenantbased_taskassignment">Tenant-based task assignment</a></li>
 
-						
+
 
 
 
@@ -183,114 +190,129 @@
 		<div>
 
 			<div class="container" id="main-content">
-				
-<article class="docs-article" id="section-1">
-    <section class="docs-section" id="forms-flow-bpm">
-        <div>
-            <h1 id="workflow-engine">Workflow Engine</h1>
-           
-            <hr>
-            <p>formsflow.ai leverages Camunda for workflow and decision automation.</p>
-            <p>To know more about Camunda, visit<a
-                    href="https://camunda.com/">https://camunda.com/</a></p>
-            <h3 id="prerequisites">Prerequisites</h3>
-            <ul>
-                <li>For docker based installation <a href="https://docker.com">Docker</a> need to be
-                    installed.</li>
-                <li>Admin access to Keycloak server.</li>
-            </ul>
 
-            <h3 id="installation">Installation</h3>
-            <ul>
-                <li>Make sure you have a Docker machine up and running.</li>
-                <li>Make sure your current working directory is
-                    &quot;forms-flow-ai/forms-flow-bpm&quot;.</li>
-                <li>Rename the file <strong>sample.env</strong> to <strong>.env</strong>.
-                </li>
-                <li>Modify the environment variables in the newly created <strong>.env</strong> file
-                    if needed. Environment variables are given below</li>
+				<article class="docs-article" id="section-1">
+					<section class="docs-section" id="forms-flow-bpm">
+						<div>
+							<h1 id="workflow-engine">Workflow Engine</h1>
 
+							<hr>
+							<p>formsflow.ai leverages Camunda for workflow and decision automation.</p>
+							<p>To know more about Camunda, visit<a href="https://camunda.com/">https://camunda.com/</a>
+							</p>
+							<h3 id="prerequisites">Prerequisites</h3>
+							<ul>
+								<li>For docker based installation <a href="https://docker.com">Docker</a> need to be
+									installed.</li>
+								<li>Admin access to Keycloak server.</li>
+							</ul>
 
-            </ul>
+							<h3 id="installation">Installation</h3>
+							<ul>
+								<li>Make sure you have a Docker machine up and running.</li>
+								<li>Make sure your current working directory is
+									&quot;forms-flow-ai/forms-flow-bpm&quot;.</li>
+								<li>Rename the file <strong>sample.env</strong> to <strong>.env</strong>.
+								</li>
+								<li>Modify the environment variables in the newly created <strong>.env</strong> file
+									if needed. Environment variables are given below</li>
 
 
-            <hr>
-            <img src="./assets/images/Screenshot 2022-06-10 115356.png" width="700"
-                height="700"></img>
-            <br>
-            <img src="./assets/images/Screenshot 2022-06-10 115423.png" width="700"
-                height="700"></img>
-				<img src="./assets/images/Screenshot 2022-08-17 174912.png" width="700"
-                height="250"></img>
-				<br><br>
+							</ul>
+
+							<img src="./assets/images/clientsecret.png" width="700" height="400"></img><br><br>
+							<p>The KEYCLOAK_BPM_CLIENT_SECRET provided is the default value and each time you install the
+								project you need to regenerate the SECRET key.</p>
+							<h4 id="bpmclientsecret"> Get the Keycloak bpm client secret</h4>
+							<ul>
+								<li>Go to <a href="http://localhost:8080">http://localhost:8080</a> in the browser</li>
+								<li> Login to KeyCloak Realm with admin privileges </li>
+								<li> Configure > Clients > </li>
+								<li>Click on Client ID = forms-flow-bpm </li><br>
+								
+							<img src="./assets/images/keycloak.png" width="1000" height="500"></img>
+
+							<br><br>
+							<li> Got to Credentials Tab</li>
+								<li>Regenerate the secret and copy the value</li>
+							</ul>
+							<br>
+							<img src="./assets/images/env1.png" height="150" width="700"></img>
+							<img src="./assets/images/env2.png" height="300" width="700"></img>
+
+							<img src="./assets/images/Screenshot 2022-06-10 115356.png" width="700" height="400"></img>
+							<br>
+							<img src="./assets/images/Screenshot 2022-06-10 115423.png" width="700" height="450"></img>
+							<img src="./assets/images/Screenshot 2022-08-17 174912.png" width="700" height="250"></img>
+							<br><br>
+
+							
+							<div class="callout-block callout-block-info">
+								<div class="content">
+									<span class="callout-icon-holder me-1"></span>
+
+									<i class="fa fa-info-circle"></i>
 
 
-            <br>
-            <div class="callout-block callout-block-info">
-                <div class="content">
-                    <span class="callout-icon-holder me-1"></span>
 
-                    <i class="fa fa-info-circle"></i>
+									<code>KEYCLOAK_URL</code>*,<code>KEYCLOAK_BPM_CLIENT_SECRET</code>*,<code>FORMSFLOW_API_URL</code>*,
+									<code>FORMIO_DEFAULT_PROJECT_URL</code>*,<code>WEBSOCKET_SECURITY_ORIGIN</code>*,<code>BPM_BASE_URL</code>*
 
 
-                    <code>KEYCLOAK_URL</code>*,<code>KEYCLOAK_BPM_CLIENT_SECRET</code>*,<code>FORMSFLOW_API_URL</code>*,
-                    <code>FORMIO_DEFAULT_PROJECT_URL</code>*,<code>WEBSOCKET_SECURITY_ORIGIN</code>*,<code>BPM_BASE_URL</code>*
+								</div>
+
+							</div>
+
+							<br>
+							<h4 id="mail-configuration">Mail Configuration(optional)</h4>
+							<ul>
+								<li>Modify the file <strong>mail-config.properties</strong> (under
+									forms-flow-bpm/src/main/resources/). The default settings provided are for the
+									Gmail server, and you need to change the credentials at the bottom of the file.
+									Note that you want to configure your own Gmail setting to allow unsecure apps
+									first. </li>
+							</ul>
+							<br>
+
+							<h3 id="running-the-application">Running the application</h3>
+							<ul>
+								<li>forms-flow-bpm service uses port 8000, make sure the port is available.</li>
+								<li><code>cd {Your Directory}/forms-flow-ai/forms-flow-bpm</code></li>
+								<li>Run <code>docker-compose  up -d</code> to start.</li>
+							</ul>
+							<div class="callout-block callout-block-info">
+								<div class="content">
+									<span class="callout-icon-holder me-1"></span>
+
+									<i class="fa fa-bullhorn"></i>
+
+									<strong>NOTE :</strong> Use --build command with the start command to reflect
+									any future
+									<strong>.env</strong> changes eg :
+									<code>docker-compose up --build -d</code></em>
+
+								</div>
+
+							</div>
 
 
-                </div>
-
-            </div>
-
-            <br>
-            <h4 id="mail-configuration">Mail Configuration</h4>
-            <ul>
-                <li>Modify the file <strong>mail-config.properties</strong> (under
-                    forms-flow-bpm/src/main/resources/). The default settings provided are for the
-                    Gmail server, and you need to change the credentials at the bottom of the file.
-                    Note that you want to configure your own Gmail setting to allow unsecure apps
-                    first. </li>
-            </ul>
-            <br>
-
-            <h3 id="running-the-application">Running the application</h3>
-            <ul>
-                <li>forms-flow-bpm service uses port 8000, make sure the port is available.</li>
-                <li><code>cd {Your Directory}/forms-flow-ai/forms-flow-bpm</code></li>
-                <li>Run <code>docker-compose  up -d</code> to start.</li>
-            </ul>
-            <div class="callout-block callout-block-info">
-                <div class="content">
-                    <span class="callout-icon-holder me-1"></span>
-
-                    <i class="fa fa-bullhorn"></i>
-
-                    <strong>NOTE :</strong> Use --build command with the start command to reflect
-                    any future
-                    <strong>.env</strong> changes eg :
-                    <code>docker-compose up --build -d</code></em>
-
-                </div>
-
-            </div>
+							<h4 id="to-stop-the-application">To stop the application</h4>
+							<ul>
+								<li>Run <code>docker-compose  stop</code> to stop.</li>
+							</ul>
+							<h3 id="health-check">Health Check</h3>
+							<p> The application should be up and available for use at port defaulted to 8000 in <a
+									href="http://localhost:8000/camunda/">http://localhost:8000/camunda/</a></p><br>
+							<img src="./assets/images/Screenshot 2022-08-05 163745.png" height="400" width="500"></img>
+							<p>Default user credentials are provided <a href="default user credential.html">here</a></p>
 
 
-            <h4 id="to-stop-the-application">To stop the application</h4>
-            <ul>
-                <li>Run <code>docker-compose  stop</code> to stop.</li>
-            </ul>
-            <h3 id="health-check">Health Check</h3>
-            <p> The application should be up and available for use at port defaulted to 8000 in <a
-                    href="http://localhost:8000/camunda/">http://localhost:8000/camunda/</a></p><br>
-                    <img src="./assets/images/Screenshot 2022-08-05 163745.png" height="400" width="500"></img>
-                    <p>Default user credentials are provided <a href="default user credential.html">here</a></p>
 
-            
-
-        </div>
-    </section>
-    </article>
+						</div>
+					</section>
+				</article>
 			</div>
-				
+
 
 			<!-- ----------------------- this is footer section ------------------------ -->
 			<footer class="footer">
@@ -330,25 +352,8 @@
 	<script src="assets/js/highlight-custom.js"></script>
 	<script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
 	<script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
-	
+
 
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -48,13 +48,13 @@
             <p>The script uses the process variable &quot;tenantKey&quot; to determine the candidate
                 group.</p>
             <pre><code class="hljs">        tenantKey = execution.getVariable(<span class="hljs-string">"tenantKey"</span>);
-<span class="hljs-keyword">if</span> (tenantKey){        
-<span class="hljs-attr">candidateGroup</span> = tenantKey + <span class="hljs-string">"-formsflow-reviewer"</span>;
-}
-<span class="hljs-keyword">else</span>{
-<span class="hljs-attr">candidateGroup</span> = <span class="hljs-string">"formsflow/formsflow-reviewer"</span>;
-}
-execution.setVariable(<span class="hljs-string">"candidateGroup"</span>, candidateGroup);
+<span class="hljs-keyword">              if</span>(tenantKey){        
+<span class="hljs-attr">                            candidateGroup</span> = tenantKey + <span class="hljs-string">"-formsflow-reviewer"</span>;
+                            }
+<span class="hljs-keyword">                     else</span>{
+<span class="hljs-attr">                             candidateGroup</span> = <span class="hljs-string">"formsflow/formsflow-reviewer"</span>;
+                            }
+            execution.setVariable(<span class="hljs-string">"candidateGroup"</span>, candidateGroup);
 </code></pre>
         </div>
 

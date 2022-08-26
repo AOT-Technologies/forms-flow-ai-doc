@@ -11,12 +11,20 @@
                 A Rest API is needed to support this where customer can add this Rest API to their choice of database and provide the required endpoints. 
                 A reference implementation can be found <a href="https://github.com/AOT-Technologies/forms-flow-ai-submissions/tree/develop/forms-flow-submissions" target="_blank">here</a>
             </p>
+            
             <p>This feature requires the following env variables set:</p>
-            <ul>
+            <pre>
+                <code>
+        #custom submission
+        CUSTOM_SUBMISSION_ENABLED=false
+        CUSTOM_SUBMISSION_URL=http://{your-ip-address}:{port}
+                </code>
+            </pre>
+            <!-- <ul>
                 <li>CUSTOM_SUBMISSION_ENABLED=true
                 </li>
                 <li>CUSTOM_SUBMISSION_URL=http://{your-ip-address}:{port}</li>
-            </ul>
+            </ul> -->
             <p>
                 Form Adapter uses custom submission URLs to create, submit, get and edit submissions
                 within a form to the preferred database. These URLs follow the same URL pattern as the
@@ -35,7 +43,8 @@
             </p>
             <h5><b>BODY</b></h5>
             <pre>
-                    <code class="hljs"> <br>                                 {
+                    <code class="hljs"> <br>                     
+                 {
                         "data": {
                             "name": "John",
                             "age": 21,
@@ -80,19 +89,19 @@
 
             <h5>Response</h5>
             <pre><code class="hljs"><br>
-{
-"created": "2022-08-03 09:32:59.448886",
-"_id": "04016fac-8811-4762-859b-0c664c2490b5",
-"form": "62da4ec3e44bcd4da0454ae1",
-"data": {
-    "name": "John",
-    "age": 21,
-        "applicationStatus": "",
-        "applicationId": ""
+    {
+        "created": "2022-08-03 09:32:59.448886",
+        "_id": "04016fac-8811-4762-859b-0c664c2490b5",
+        "form": "62da4ec3e44bcd4da0454ae1",
+        "data": {
+            "name": "John",
+            "age": 21,
+                "applicationStatus": "",
+                "applicationId": ""
 
-},
- "modified": "2022-08-03 09:32:59.448893"
-}
+                },
+            "modified": "2022-08-03 09:32:59.448893"
+    }
 </code></pre>
 
 
@@ -110,14 +119,14 @@
 
             <h5><b>BODY</b></h5>
             <pre><code class="hljs"><br>
-{
-"data": {
+    {
+      "data": {
             "name": "John Joe",
             "age": 22,
             "applicationStatus": "",
             "applicationId": ""
-}
-}
+              }
+    }
 </code></pre>
             <h3>Partial Update a Submission</h3>
 
@@ -132,12 +141,12 @@
 
             <h5><b>BODY</b></h5>
             <pre><code class="hljs"><br>
-{
-"data": {
+    {
+      "data": {
           "applicationStatus": "New",
           "applicationId": "1234"
-}
-}
+              }
+    }
 </code></pre>
 <p><strong>NOTE</strong>: In case of reviewer actions, if submission data need to be updated directly from the form, call customSubmissionUrl instead of formio. 
 </p>

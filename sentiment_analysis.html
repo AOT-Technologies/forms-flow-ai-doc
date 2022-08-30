@@ -13,7 +13,7 @@
                 or neutral about it. </p>
                 <p>Make sure your current working directory is <code> cd {Your Directory}/forms-flow-ai/forms-flow-data-analysis-api</code></p>
             <p>This feature requires the following env:</p>
-            <pre><code>
+            <pre><code class="hljs">
                 DATA_ANALYSIS_API_BASE_URL=http://{your-ip-address}:{port}
             </code></pre><br>
             <h4>POST API for sentiment analysis</h4><br>
@@ -30,7 +30,7 @@
                 <h5>BODY</h5>
             </u>
             <pre>
-                <code>
+                <code class="hljs">
                     {   
                      "applicationId":"{valid applicationId}",
                      "formUrl":"{valid formUrl}",
@@ -46,7 +46,7 @@
                 <h5>RESPONSE</h5>
             </u>
             <pre>
-                <code>
+                <code class="hljs">
                     {
                         "overallSentiment": "NEGATIVE"
                     }
@@ -69,7 +69,7 @@
                 <li>Based on the input responses of the user, formsflow.ai process sentiment associated with each user's
                     responses and the response will be patched to submission data by the Camunda listener. For this it requires the following env:
                 </li>
-                <br><pre><code>
+                <br><pre><code class="hljs">
                     DATA_ANALYSIS_URL=http://{your-ip-address}:{port}/analysis
 
                 </code></pre>

@@ -1,14 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -119,13 +108,13 @@
 							href="#docker_full_deployment">Docker Full Deployment</a></li>
 					<li class="nav-item" id="individual_service_deployment"><a class="nav-link scrollto"
 							href="#individual_service_deployment">Individual Service Deployment</a></li>
-							<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
 								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Kubernetes
 							Installation</a>
-							</li>
-							<li class="nav-item" id="kubernetes_installation"><a class="nav-link scrollto"
-									href="#kubernetes_installation">Kubernetes
-									Installation</a></li>
+					</li>
+					<li class="nav-item" id="kubernetes_installation"><a class="nav-link scrollto"
+							href="#kubernetes_installation">Kubernetes
+							Installation</a></li>
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span
 								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Usage
 							instructions</a>
@@ -135,16 +124,21 @@
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span
 								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Features</a>
 					</li>
-					
-					<li class="nav-item" id="language"><a class="nav-link scrollto" href="#language">Internationalization</a></li>
-					<li class="nav-item" id="anonymous_form"><a class="nav-link scrollto" href="#anonymous_form">Anonymous
+
+					<li class="nav-item" id="language"><a class="nav-link scrollto"
+							href="#language">Internationalization</a></li>
+					<li class="nav-item" id="anonymous_form"><a class="nav-link scrollto"
+							href="#anonymous_form">Anonymous
 							Forms</a></li>
-							<li class="nav-item" id="draft_feature"><a class="nav-link scrollto" href="#draft_feature">Draft Feature</a>
-								<li class="nav-item" id="exportpdf"><a class="nav-link scrollto" href="#exportpdf">Export Form as PDF</a>
-					<li class="nav-item" id="camunda_listeners"><a class="nav-link scrollto" href="#camunda_listeners">Bpm Listeners</a>
+					<li class="nav-item" id="draft_feature"><a class="nav-link scrollto" href="#draft_feature">Draft
+							Feature</a>
+					<li class="nav-item" id="exportpdf"><a class="nav-link scrollto" href="#exportpdf">Export Form as
+							PDF</a>
+					<li class="nav-item" id="camunda_listeners"><a class="nav-link scrollto"
+							href="#camunda_listeners">Bpm Listeners</a>
 					</li>
-					<li class="nav-item" id="camunda"><a class="nav-link scrollto"
-								href="#camunda">Camunda Filters</a></li>	
+					<li class="nav-item" id="camunda"><a class="nav-link scrollto" href="#camunda">Camunda Filters</a>
+					</li>
 					<li class="nav-item" id="task_variables"><a class="nav-link scrollto"
 							href="#task_variables">Taskvariable workflow</a></li>
 
@@ -154,7 +148,8 @@
 					<li class="nav-item" id="keycloak_setup"><a class="nav-link scrollto"
 							href="#keycloak_setup">Keycloak SAML Setup</a></li>
 
-					<li class="nav-item" id="redash_guide"><a class="nav-link scrollto" href="#redash_guide">Analytics User
+					<li class="nav-item" id="redash_guide"><a class="nav-link scrollto" href="#redash_guide">Analytics
+							User
 							Guide</a></li>
 					<li class="nav-item" id="logochange"><a class="nav-link scrollto" href="#logochange">Theming</a>
 					</li>
@@ -165,7 +160,7 @@
 					<li class="nav-item" id="tenantbased_taskassignment"><a class="nav-link scrollto"
 							href="#tenantbased_taskassignment">Tenant-based task assignment</a></li>
 
-						
+
 
 
 
@@ -189,125 +184,115 @@
 		<div>
 
 			<div class="container" id="main-content">
-				
-<article class="docs-article" id="section-1">
-    <section class="docs-section" id="item-1-1">
-        <div>
-            <h1 id="form-management-platform">Form Management Platform</h1>
-            <hr>
-			
 
-            <p><strong>Formsflow.ai</strong> leverages form.io to build &quot;serverless&quot; data
-                management applications using a simple drag-and-drop form builder interface.</p>
-            <p>To know more about form.io, go to <a href="https://form.io">https://form.io</a>.</p>
-
-            <h2 id="prerequisites">Prerequisites</h2>
-            <ul>
-                <li>For docker based installation <a href="https://docker.com">Docker</a> need to be
-                    installed.</li>
-            </ul>
-
-            <h3 id="installation">Installation</h3>
-            <ul>
-                <li>Make sure you have a Docker machine up and running.</li>
-                <li>Make sure your current working directory is
-                    &quot;forms-flow-ai/forms-flow-forms&quot;.</li>
-                <li>Rename the file <strong>sample.env</strong> to <strong>.env</strong>.
-                </li>
-                <li>Modify the environment variables in the newly created <strong>.env</strong> file
-                    if needed. Environment variables are given below.</li>
-                <div class="callout-block callout-block-info">
-                    <div class="content">
-                        <span class="callout-icon-holder me-1"></span>
-
-                        <i class="fa fa-bullhorn"></i>
-
-                        <em> NOTE :<code>{your-ip-address}</code> given inside the .env file should
-                            be changed to your host system IP address. Please take special care to
-                            identify the correct IP address if your system has multiple network
-                            cards.</em>
-
-                    </div>
-
-                </div>
+				<article class="docs-article" id="section-1">
+					<section class="docs-section" id="item-1-1">
+						<div>
+							<h1 id="form-management-platform">Form Management Platform</h1>
+							<hr>
 
 
-            </ul>
-            <br>
+							<p><strong>Formsflow.ai</strong> leverages form.io to build &quot;serverless&quot; data
+								management applications using a simple drag-and-drop form builder interface.</p>
+							<p>To know more about form.io, go to <a href="https://form.io">https://form.io</a>.</p>
 
-            <br>
-            <img src="./assets/images/Screenshot 2022-06-10 110600.png"></img><br><br>
+							<h2 id="prerequisites">Prerequisites</h2>
+							<ul>
+								<li>For docker based installation <a href="https://docker.com">Docker</a> need to be
+									installed.</li>
+							</ul>
 
-            <div class="callout-block callout-block-info">
-                <div class="content">
-                    <span class="callout-icon-holder me-1"></span>
+							<h3 id="installation">Installation</h3>
+							<ul>
+								<li>Make sure you have a Docker machine up and running.</li>
+								<li>Make sure your current working directory is
+									&quot;forms-flow-ai/forms-flow-forms&quot;.</li>
+								<li>Rename the file <strong>sample.env</strong> to <strong>.env</strong>.
+								</li>
+								<li>Modify the environment variables in the newly created <strong>.env</strong> file
+									if needed. Environment variables are given below.</li>
+								<strong> NOTE :<code>{your-ip-address}</code> given inside the .env file should
+									be changed to your host system IP address. Please take special care to
+									identify the correct IP address if your system has multiple network
+									cards.
+								</strong>
 
-                    <i class="fa fa-info-circle"></i>
+							</ul>
+							<br>
 
-                    <code>FORMIO_DEFAULT_PROJECT_URL</code> *
+							<br>
+							<img src="./assets/images/Screenshot 2022-06-10 110600.png"></img><br><br>
 
-                </div>
-                <br>
-            </div>
-            <b>Additionally, you may want to change these</b><br>
-            <ul>
-                <li>The value of Mongo database details (especially if this instance is not just for
-                    testing purposes)</li>
-                <li>The value of ROOT user account details (especially if this instance is not just for
-                    testing purposes)</li>
-            </ul>
-            <h3 id="running-the-application">Running the application</h3>
-            <ul>
-                <li>forms-flow-forms service uses port 3001, make sure the port is available.</li>
-                <li>
-                    <p><code>cd {Your Directory}/forms-flow-ai/forms-flow-forms</code></p>
-                </li>
-                <li>
-                    <p>Run <code>docker-compose up -d</code> to start</p>
-            </ul>
-            <br><br>
-            <img src="./assets/images/form-flow-forms.png" height="500" width="700"></img>
-            <div class="callout-block callout-block-info">
-                <div class="content">
-                    <span class="callout-icon-holder me-1"></span>
+							<div class="callout-block callout-block-info">
+								<div class="content">
+									<span class="callout-icon-holder me-1"></span>
 
-                    <i class="fa fa-bullhorn"></i>
+									<i class="fa fa-info-circle"></i>
 
-                    <em>NOTE: Use --build command with the start command to reflect any future
-                        <strong>.env</strong> changes eg :
-                        <code>docker-compose up --build -d</code></em>
+									<code>FORMIO_DEFAULT_PROJECT_URL</code> *
 
-                </div>
+								</div>
+								<br>
+							</div>
+							<b>Additionally, you may want to change these</b><br>
+							<ul>
+								<li>The value of Mongo database details (especially if this instance is not just for
+									testing purposes)</li>
+								<li>The value of ROOT user account details (especially if this instance is not just for
+									testing purposes)</li>
+							</ul>
+							<h3 id="running-the-application">Running the application</h3>
+							<ul>
+								<li>forms-flow-forms service uses port 3001, make sure the port is available.</li>
+								<li>
+									<p><code>cd {Your Directory}/forms-flow-ai/forms-flow-forms</code></p>
+								</li>
+								<li>
+									<p>Run <code>docker-compose up -d</code> to start</p>
+							</ul>
+							<br><br>
+							<img src="./assets/images/form-flow-forms.png" height="500" width="700"></img>
+							<div class="callout-block callout-block-info">
+								<div class="content">
+									<span class="callout-icon-holder me-1"></span>
 
-            </div>
+									<i class="fa fa-bullhorn"></i>
 
-            <h4 id="to-stop-the-application">To stop the application</h4>
-            <ul>
+									<em>NOTE: Use --build command with the start command to reflect any future
+										<strong>.env</strong> changes eg :
+										<code>docker-compose up --build -d</code></em>
 
-                <li>Run <code>docker-compose stop</code> to
-                    stop.</li>
-            </ul>
+								</div>
+
+							</div>
+
+							<h4 id="to-stop-the-application">To stop the application</h4>
+							<ul>
+
+								<li>Run <code>docker-compose stop</code> to
+									stop.</li>
+							</ul>
 
 
 
-            <h3 id="health-check">Health Check</h3>
-            <p> The application should be up and available for use at port defaulted to 3001 in
-                (i.e. <a href="http://localhost:3001/">http://localhost:3001/</a>)</p>
-            <br>
-            <img src="./assets/images/formio.png" height="300" width="500"></img><br><br>
-            <pre><code class="hljs">    Default Login Credentials
+							<h3 id="health-check">Health Check</h3>
+							<p> The application should be up and available for use at port defaulted to 3001 in
+								(i.e. <a href="http://localhost:3001/">http://localhost:3001/</a>)</p>
+							<br>
+							<img src="./assets/images/formio.png" height="300" width="500"></img><br><br>
+							<pre><code class="hljs">    Default Login Credentials
             <span class="hljs-comment">-----------------</span>
             User Name / Email : <span class="hljs-type">admin</span>@example.com
             Password  : <span class="hljs-type">changeme</span>
             </code></pre><br>
 
 
-        </div>
-        </section>
-        </article>
+						</div>
+					</section>
+				</article>
 			</div>
-				
-				
+
+
 
 			<!-- ----------------------- this is footer section ------------------------ -->
 			<footer class="footer">
@@ -347,42 +332,8 @@
 	<script src="assets/js/highlight-custom.js"></script>
 	<script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
 	<script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
-	
+
 
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

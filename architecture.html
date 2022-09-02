@@ -7,53 +7,59 @@
                 height="500"><br><br>
             <h3 id="components">Components</h3>
             <p>The components of the system are:</p>
-            <h4 id="formsflow-ui">formsflow UI</h4>
+            <h4 id="formsflow-ui">formsflow.ai web</h4>
             <p>Browser-based React integration web UI.Most of the day-to-day end-user and review
                 tasks are performed from this application, built specifically to act as a common
                 UI combining forms, workflow, and analytics functionality. The web application
                 is written as a <a
                     href="https://en.wikipedia.org/wiki/Progressive_web_application">progressive</a>
-                app with the potential for offline data-entry. formsflow UI accesses the
+                app with the potential for offline data-entry. formsflow.ai web accesses the
                 individual system component data through native APIs using OIDC or SAML
                 access tokens.</p>
-            <h4 id="formsflow-ui-extension-for-vue-js-optional-">formsflow UI Extension for
+
+            <h4 id="formsflow-ui-extension-for-vue-js-optional-">formsflow.ai web Extension for
                 Vue.js (optional)</h4>
+
             <p>There is a Vue.js-based web-user interface for easy integration of formsflow.ai
                 to your existing user interface. This extension provides components for easily
-                using Forms and Tasklist by installing as a npm package. For more details check out <a
+                using Forms, Tasklist by installing as a npm package. For more details check out <a
                     href="https://github.com/AOT-Technologies/forms-flow-ai-extensions/tree/master/camunda-formio-tasklist-vue">formsflow-ai-extension
                     repository</a> and to install package <a
                     href="https://www.npmjs.com/package/camunda-formio-tasklist-vue">go
                     here.</a></p>
-            <h4 id="keycloak-identity-management-server">Keycloak Identity Management Server
+
+            <h4 id="keycloak-identity-management-server">Keycloak Identity and access management
             </h4>
-            <p>This system uses your existing Keycloak server, which provides a common
-                identity management capability. The system provides default installation and
+            <p>formsflow.ai uses an existing (your) Keycloak server which provides a common
+                identity and authorization management capability. The system provides default installation and
                 provisioning of the Keycloak server for a local setup. Steps are described  <a
                     href="download and installation.html">here</a>.
                 However, you can set up your own Keycloak server and follow the provisioning
                 steps <a href="local keycloak setup.html">here</a>.
             <h4 id="form-io-api">Form.io API</h4>
-            <p>The REST interface to the Form.io core.</p>
-            <h4 id="camunda-admin-ui">Camunda Admin UI</h4>
-            <p>The native admin interface to Camunda (bundled and unchanged). Use this to
-                define workflows and to manage workflow tasks as an admin.</p>
+            <p>The REST interface to the form.io core. formsflow.ai uses custom authentication flow with form.io to authenticate users into form.io.</p>
+            <h4 id="camunda-admin-ui">Camunda cockpit UI</h4>
+            <p>The native admin interface to Camunda (bundled and unchanged). Use this to define task filters and to troubleshoot workflow tasks as an admin.</p>
+
             <h4 id="nginx-web-server-optional-">Nginx Web server (optional)</h4>
             <p>Webserver providing reverse-proxy redirection and SSL to components for remote
-                deployments (bundled and configured).</p>
+                deployments ( bundled and configured).</p>
             <h4 id="redash-admin-ui">Redash Admin UI</h4>
             <p>The native admin interface to Redash (bundled and unchanged). Use this to build
                 analytics dashboards.</p>
             <h4 id="redash-api">Redash API</h4>
-            <p>The REST interface to the Redash core(bundled and unchanged).</p>
-            <h4 id="rest-api">REST API</h4>
+            <p>The REST interface to the Redash core. Bundled and unchanged</p>
+            <h4 id="rest-api">Web API</h4>
             <p>Python REST API providing business logic around the internal formsflow.ai
-                Postgres database. This API is used extensively by the formsflow.ai UI to
+                Postgres database. This API is used extensively by the formsflow.ai web to
                 synchronize, maintain state, extend functionality, and integrate between
                 components.</p>
+            <h4 id="rest-api">Admin API</h4>
+            <p>Python REST API to provision tenants in a multi tenanted environment.</p>
 
+            <h4 id="rest-api">Documents API</h4>
+            <p>Python REST API to generate and export form submission PDF reports.</p>
 
-            </p>
 
         </div>
     </section>

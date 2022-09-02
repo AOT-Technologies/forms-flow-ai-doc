@@ -28,9 +28,9 @@
             </p>
             <h3>Create Custom Form Submission</h3><br>
             <i>POST</i><br>
-            <code>{{CUSTOM_SUBMISSION_URL}}/form/<formid>/submission</code><br><br>
+            <code>{{CUSTOM_SUBMISSION_URL}}/form/&lt;formid&gt;/submission</code><br><br>
             <p>Example of how to create a new form submission within a custom form.</p>
-
+            <code>http://{your-ip-address}:6212/form/62da4ec3e44bcd4da0454ae1/submission</code><br><br>
             <h5><b>HEADERS</b>
             </h5>
             <p><b>Authorization Bearer </b>{{token}}
@@ -70,10 +70,11 @@
                         
                     </code>
                 </pre><br>
+                <p><strong>Note:</strong> In the response,  _id refers to the submission id  and form refers to the form id.</p>
             <h3>Get a Submission</h3><br>
 
             <i>GET</i>
-            <code>{{CUSTOM_SUBMISSION_URL}}/form/&lt;formid&gt;/submission/&lt;submission_id&gt;&lt;/submission_id&gt;</code><br>
+            <code>{{CUSTOM_SUBMISSION_URL}}/form/&lt;formid&gt;/submission/&lt;submission_id&gt;/&lt;submission_id&gt;</code><br>
             <br>
 
             <p>Retrieve a single submission within a form.</p>

@@ -1,12 +1,10 @@
 <article class="docs-article">
     <section class="docs-section" id="custom_components">
         <div>
-
-
-            <h1 id="custom-components">Custom Components</h1><br>
+            <h1>Custom Components</h1><br>
             <hr>
-            <p>One of the more powerful features of the Forms-flow platform is the ability to create your own custom
-                form components. The process of creating a custom component involves extending a Base class of the
+            <p>One of the more powerful features of the forms-flow.ai platform is the ability to create your own custom
+                form components. The process of creating a custom component involves extending a base class of the
                 component that is "closest" to the implementation you desire, and then override methods or introduce new
                 methods that will implement your custom logic. All of the existing components within the platform also
                 use this same method, so you can see the multitude of examples by inspecting how the base components for
@@ -16,15 +14,15 @@
                 a new component. They are as follows.
             </p>
             <h2>Extending Components</h2>
-            <p>Every custom component will derive from a base class, whose behavior is closest to the behavior of the
+            <p>Every custom component will derive from a base class, whose behaviour is closest to the behaviour of the
                 component you wish to create. It is possible to extend any other component within the Form.io renderer
                 and a list of all of these components and their classes can be found <a
-                    href="https://github.com/formio/formio.js/tree/master/src/components">@https://github.com/formio/formio.js/tree/master/src/components</a>
+                    href="https://github.com/formio/formio.js/tree/master/src/components">@https://github.com/formio/formio.js/tree/master/src/components</a> .
             </p>
             <p>Because of this, the first task in building a custom component is to determine which component most
-                closely resembles the behavior and data model of the component you are looking to achieve. For example,
-                if you wish to build a multi-button select component, it may be best to start with a Radio component
-                since this is the component that most closely resembles the behavior of the component you wish to
+                closely resembles the behaviour and data model of the component you are looking to achieve. For example,
+                if you wish to build a multi-button select component, it may be best to start with a radio component
+                since this is the component that most closely resembles the behaviour of the component you wish to
                 create.
             </p>
             <p>If you are unsure, then it is also fine to derive from the "core" components which serve as the base for
@@ -77,9 +75,9 @@
             <br>
             <h3>Component Methods</h3>
             <p>Once you derive from a base component, the next step is to define methods that either override base
-                behavior or introduce new behavior into the component class. It is recommended to look at the source
+                behaviour or introduce new behaviour into the component class. It is recommended to look at the source
                 code of your "base" component and the classes that it extends to understand what methods you have
-                available to you, but the majority of all behavior can be achieved by implementing some of the following
+                available to you, but the majority of all behaviour can be achieved by implementing some of the following
                 methods.</p>
             <pre>
                 <code  class="hljs">
@@ -329,7 +327,7 @@
             <h3>Component Modules
             </h3>
             <p>Custom components can be registered with the renderer using a module that is also able to include a large
-                number of components</p>
+                number of components.</p>
             <p>These components can then be included in the module by creating an export of these components like so.
             </p>
             <pre>
@@ -343,7 +341,7 @@
 
                 </code>
             </pre><br>
-            <h3>Using Custom Components in applications</h3>
+            <h3>Using Custom Components in Applications</h3>
             <p>Once these components are created as a module, they can then easily be added to the renderer using the
                 Formio.use method as follows.</p>
             <pre>
@@ -362,32 +360,32 @@
                     <li>Google Map integration.
                     </li>
                 </h4>
-                <p>We have created a custom component integrating the google map. The Google map API Key can be called
+                <p>We have created a custom component integrating Google Maps. The Google Maps API Key can be called
                     from .env file and thus you need to include the key in the .env file like</p>
-                <pre><code  class="hljs">REACT_APP_GOOGLE_MAP_URL="YOUR GOOGLE MAP API KEY HERE" </code></pre>
-                <p>The last compnet in the below image is the one which we created as the new custom component for
+                <pre><code  class="hljs">REACT_APP_GOOGLE_MAP_URL="YOUR GOOGLE MAP API KEY HERE" </code>.</pre>
+                <p>The last component in the image below is the one which we created as the new custom component for
                     “Google Map”.</p>
                 <img src="./assets/images/custom1.png" alt=""><br><br>
-                <p>And the resultant component will look like this</p>
+                <p>And the resultant component will look like this:</p>
                 <img src="./assets/images/custom2.png" alt="" height="500" width="800">
                 <br><br>
                 <p>
-                    Follow the link for further references and code base for the implementation Google map service as a
+                    Follow the link for further references and code base for the implementing the Google Maps service as a
                     custom component:
                 </p>
                 <a
                     href="https://github.com/AOT-Technologies/forms-flow-ai-examples/tree/main/custom-components/google-map-component">https://github.com/AOT-Technologies/forms-flow-ai-examples/tree/main/custom-components/google-map-component</a>
                 <br><br>
                 <h4>
-                    <li>Custom file upload component</li>
+                    <li>Custom file upload Component</li>
                 </h4>
                 <p>We have created a custom component for file upload for the customization of the file upload where we
-                    can upload the files and save the data in a different database( maybe our own separate database).
-                    Usually we save the file data in the space provided by the form.io, by implementing the custom file
+                    can upload the files and save the data in a different database(maybe our own separate database).
+                    Usually we save the file data in the space provided by the Form.io, By implementing the custom file
                     upload, we can save the data in our own space.</p>
-                <p>The File upload component UI will look like </p>
+                <p>The File Upload component UI will look like </p>
                 <img src="./assets/images/custom3.png" height="400" width="800"><br><br>
-                <p>We can download the file from our directory using the file name saved in form.io server.
+                <p>We can download the file from our directory using the file name saved in Form.io server.
                     In this case we have to add the server details in the .env file to which we have to send the file
                     data.
                 </p><br>

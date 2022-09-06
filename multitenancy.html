@@ -1,39 +1,40 @@
 <article class="docs-article">
     <section class="docs-section" id="taskvariables">
         <div>
-            <h1>Multi Tenancy</h1>
+            <h1>Multitenancy</h1>
             <hr>
-            <p>Formsflow.ai supports multi tenancy where one installation can be served for multiple tenants with
+            <p>Formsflow.ai supports multitenancy where one installation can be served for multiple tenants with
                 logical separation of data.</p>
             <h3>Tenant isolation</h3>
             <p>Formsflow.ai logically separates tenant data and authorization which enables</p>
             <ul>
-                <li>Application URL : Each tenant gets their own tenant specific URL to access the application.</li>
-                <li>Authorization : Each tenant data is secured using tenant specific authentication token.
+                <li>Application URL: Each tenant gets their own tenant specific URL to access the application.</li>
+                <li>Authorization: Each tenant data is secured using tenant specific authentication token.
                     A user can be members of multiple tenants with different roles and user is authenticated based on
                     the tenant URL
                     and token with access to only that tenant is issued. Each tenant can have different sets of roles
                     than the default formsflow roles.</li>
-                <li>Forms : Each tenant can create and publish their own forms.</li>
-                <li>BPM : Each tenant can create and publish their own workflows. Workflows can be deployed which can be
+                <li>Forms: Each tenant can create and publish their own forms.</li>
+                <li>BPM: Each tenant can create and publish their own workflows. Workflows can be deployed which can be
                     shared across all tenants on the platform. Please <a
-                        href="#camunda-bpm-tenant-based-task-assignment">see</a> for tenant based task assignment.</li>
-                <li>Analytics : Each tenant gets their own analytics organization to create dashboards.</li>
+                        href="#camunda-bpm-tenant-based-task-assignment">see</a> this page for information on tenant-based task assignment.
+                    </li>
+                <li>Analytics: Each tenant gets their own analytics organization to create dashboards.</li>
             </ul>
             </p>
 
             <p>
-                If you are interested in premium features please submit a request <a
+                If you are interested in premium features please contact us <a
                     href="https://formsflow.ai/about-us/#contact-us" target="_blank">here</a>.
             </p>
     </section>
     <section class="docs-section" id="taskvariables">
         <div>
-            <h1 id="camunda-bpm-tenant-based-task-assignment">BPM: Tenant-based task
-                assignment</h1>
+            <h1 id="camunda-bpm-tenant-based-task-assignment">BPM: Tenant-based Task
+                Assignment</h1>
             <hr>
             <p>In a tenant-based environment, the user task is assigned to the tenant&#39;s
-                reviewer/approver group. An example process is provided below that demonstrates how
+                Reviewer/Approver group. An example process is provided below that demonstrates how
                 a user task is assigned using a process variable.</p>
             <h3 id="example-process">Example process</h3>
             <p>The candidateGroups attribute in the user task is associated to a process variable

@@ -4,7 +4,7 @@
         <h1>Docker Full Deployment</h1><br>
         <hr>
         <h3>Installation Steps</h3><br>
-        <p>Following steps are required to complete the installation and setup of formsflow.ai solution
+        <p>Following steps are required to complete the installation and setup of formsflow.ai solution:
         </p>
         <ul>
             <li>Keycloak setup</li>
@@ -26,38 +26,39 @@
         </div><br>
         <ol>
             <h4>
-                <li>Keycloak Setup</li>
+                <li>Keycloak Setup.</li>
             </h4>
-            <p>Keycloak is an open source software product to allow single sign-on with Identity and Access Management
+            <p>Keycloak is an open source software product to allow single sign-on with identity and access management
                 aimed at modern applications and services.</p>
-            <p>To install keycloak follow the instructions given <a href="local_keycloaksetup.html" target="_blank">here</a></p>
+            <p>To install Keycloak follow the instructions given <a href="local_keycloaksetup.html" target="_blank">here</a>.</p>
             <h4>
-                <li>forms-flow-analytics Setup</li>
+                <li>forms-flow-analytics Setup.</li>
             </h4>
             <p>Redash is used to build analytics dashboards. The analytics server can be started by following the
-                instructions given <a href="formsflow_analytics.html" target="_blank">here</a>
+                instructions given <a href="formsflow_analytics.html" target="_blank">here</a>.
             </p>
             
            
             
             <br>
             <h4>
-                <li>forms-flow-forms, forms-flow-web, forms-flow-bpm & forms-flow-api Setup</li>
+                <li>forms-flow-forms, forms-flow-web, forms-flow-bpm, forms-flow-api & forms-flow-documents Setup.</li>
             </h4>
             <p>To setup forms-flow-forms, forms-flow-web, forms-flow-bpm & forms-flow-api follow the below instructions .</p>
             <ul>
-                <li>Make sure your current working directory is "/forms-flow-ai/deployment/docker".</li>
-                <li>Modify the environment variables inside .env file if needed. Environment variables
+                <li>Make sure your current working directory is <code>/forms-flow-ai/deployment/docker</code> .</li>
+                <li>Modify the environment variables inside the <strong> .env</strong> file if needed. Environment variables
                     are given below.</li>
                     <br>
-                <code>NOTE :{your-ip-address} given inside the .env file should be changed to your host system IP address.
-                Please take special care to identify the correct IP address if your system has multiple network cards.</code>
+                <strong> NOTE :{your-ip-address} given inside the <i> .env</i> file should be changed to your host system IP address.
+                Please take special care to identify the correct IP address if your system has multiple network cards.</strong>
                 <br><br><br>
                 <img src="./assets/images/clientsecret.png" height="250" width="600"></img><br><br>
-                <p>KEYCLOAK_BPM_CLIENT_SECRET provided in the <strong> sample.env</strong> is the default one.To generate new secret click <a href="formsflow_bpm.html#bpmclientsecret">HERE</a> </p>
+                <p>KEYCLOAK_BPM_CLIENT_SECRET provided in the <strong> sample.env</strong> is the default one.To generate new secret click <a href="formsflow_bpm.html#bpmclientsecret">here</a> .</p>
                 <br>
+                <img src="./assets/images/deployment6.png" height="200" width="600"></img><br><br>
+                <p>To get the redash API key click <a href="formsflow_analytics.html#get-the-redash-api-key">here</a> .</p>
                 <img src="./assets/images/deployment_docker1.png" height="450" width="600"></img>
-               
                 <img src="./assets/images/deployment_docker2.png" height="500" width="600"></img>
                 <img src="./assets/images/deployment_docker3.png" height="500" width="600"></img>
                 <img src="./assets/images/deployment_docker4.png" height="500" width="600"></img>
@@ -79,20 +80,20 @@
         <h4 id="healthcheck">Health Check</h4>
         <ul>
             <li>Analytics should be up and available for use at port defaulted to 7000 i.e. <a
-                    href="http://localhost:7000/">http://localhost:7000/</a></li>
+                    href="http://localhost:7000/">http://localhost:7000/</a>.</li>
 
             <li>Business Process Engine should be up and available for use at port defaulted to 8000
-                i.e.<a href="http://localhost:8000/camunda/"> http://localhost:8000/camunda/</a></li>
+                i.e.<a href="http://localhost:8000/camunda/"> http://localhost:8000/camunda/</a>.</li>
             <li>FormIO should be up and available for use at port defaulted to 3001 i.e. <a
-                    href="http://localhost:3001/">http://localhost:3001/</a></li>
+                    href="http://localhost:3001/">http://localhost:3001/</a>.</li>
             <li>formsflow.ai Rest API should be up and available for use at port defaulted to 5000 i.e.
-                <a href="http://localhost:5000/checkpoint">http://localhost:5000/checkpoint</a>
+                <a href="http://localhost:5000/checkpoint">http://localhost:5000/checkpoint</a>.
             </li>
             <li>formsflow.ai web application should be up and available for use at port defaulted to
-                3000 i.e. <a href="http://localhost:3000/">http://localhost:3000/</a></li>
-                <li>Formsflow.ai documents API for use at port defaulted to 5006 i.e. <a href="http://localhost:5006">http://localhost:5006/checkpoint</a> </li>
+                3000 i.e. <a href="http://localhost:3000/">http://localhost:3000/</a>.</li>
+                <li>formsflow.ai documents API for use at port defaulted to 5006 i.e. <a href="http://localhost:5006">http://localhost:5006/checkpoint</a>. </li>
             <li>
-                <p>Default user credentials are provided <a href="default user credential.html" target="_blank">here</a>
+                <p>Default user credentials are provided <a href="default user credential.html" target="_blank">here</a>.
                 </p>
             </li>
         </ul>

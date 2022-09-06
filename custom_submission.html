@@ -6,10 +6,10 @@
             <h1>Form Adapter</h1>
             <br>
             <hr><br>
-            <p>Formsflow.ai supports submission data to be stored and served using external system. This feature can be used for submission datastore to different database than MongoDB. 
+            <p>formsflow.ai supports submission data to be stored and served using external system. This feature can be used for submission datastore to different database than MongoDB. 
                 If this feature is enabled MongoDB will be used only for form definition data. 
                 A Rest API is needed to support this where customer can add this Rest API to their choice of database and provide the required endpoints. 
-                A reference implementation can be found <a href="https://github.com/AOT-Technologies/forms-flow-ai-submissions/tree/develop/forms-flow-submissions" target="_blank">here</a>
+                A reference implementation can be found <a href="https://github.com/AOT-Technologies/forms-flow-ai-submissions/tree/develop/forms-flow-submissions" target="_blank">here</a>.
             </p>
             
             <p>This feature requires the following env variables set:</p>
@@ -28,9 +28,9 @@
             </p>
             <h3>Create Custom Form Submission</h3><br>
             <i>POST</i><br>
-            <code>{{CUSTOM_SUBMISSION_URL}}/form/<formid>/submission</code><br><br>
+            <code>{{CUSTOM_SUBMISSION_URL}}/form/&lt;formid&gt;/submission</code><br><br>
             <p>Example of how to create a new form submission within a custom form.</p>
-
+            <code>http://{your-ip-address}:6212/form/62da4ec3e44bcd4da0454ae1/submission</code><br><br>
             <h5><b>HEADERS</b>
             </h5>
             <p><b>Authorization Bearer </b>{{token}}
@@ -70,10 +70,11 @@
                         
                     </code>
                 </pre><br>
+                <p><strong>Note:</strong> In the response,  _id refers to the submission id  and form refers to the form id.</p>
             <h3>Get a Submission</h3><br>
 
             <i>GET</i>
-            <code>{{CUSTOM_SUBMISSION_URL}}/form/&lt;formid&gt;/submission/&lt;submission_id&gt;&lt;/submission_id&gt;</code><br>
+            <code>{{CUSTOM_SUBMISSION_URL}}/form/&lt;formid&gt;/submission/&lt;submission_id&gt;/&lt;submission_id&gt;</code><br>
             <br>
 
             <p>Retrieve a single submission within a form.</p>
@@ -124,7 +125,7 @@
               }
     }
 </code></pre>
-            <h3>Partial Update a Submission</h3>
+            <h3>Partially Update a Submission</h3>
 
             <p><b>PATCH</b></p>
             <code>{{CUSTOM_SUBMISSION_URL}}/form/&lt;formid&gt;/submission/&lt;submission_id&gt;</code><br><br>
@@ -144,7 +145,7 @@
               }
     }
 </code></pre>
-<p><strong>NOTE</strong>: In case of reviewer actions, if submission data need to be updated directly from the form, call customSubmissionUrl instead of formio. 
+<p><strong>NOTE</strong>: In case of Reviewer actions, if submission data need to be updated directly from the form, call customSubmissionUrl instead of formio. 
 </p>
 <img src="./assets/images/formadapter1.png" width="800"></img>
 <br><br><br>

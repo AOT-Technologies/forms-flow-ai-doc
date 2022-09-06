@@ -5,14 +5,14 @@
             <h1>Export form as PDF</h1> <br>
             <hr>
             <p>
-                This feature enables users to export forms with submitted data as a pdf from the UI. Users will have an
-                “Export PDF ” button in form view pages to click and get the form downloaded as a pdf in the browser
+                This feature enables users to export forms with submitted data as a PDF from the UI. Users will have an
+                “Export PDF ” button in form view pages to click and get the form downloaded as a PDF in the browser
                 itself. 
             </p>
             <p>
-                <img src="./assets/images/pdf2.png" width="1000" ><br>
+                <img src="./assets/images/pdf2.png" width="800" ><br>
                 <br><br><br>
-                <img src="./assets/images/pdf3.png" width="1000">
+                <img src="./assets/images/pdf3.png" width="800">
 
             </p>
             <p>
@@ -28,35 +28,35 @@
                 Optional params:
             </p>
             <p>
-                <strong>timezone </strong>: A parameter to render form based on client timezone or any custom timezone.
+                <strong>timezone</strong>: A parameter to render form based on client timezone or any custom timezone.
             </p>
             <p>
                 Eg:
-                &lt;form-flow-webapi-server>/form/&lt;form-id>/submission/&lt;submission-id>/export/pdf?timezone=Asia/Calcutta
+                &lt;form-flow-webapi-server>/form/&lt;form-id>/submission/&lt;submission-id>/export/pdf?timezone=Asia/Calcutta.
             </p>
             <p>
                 <strong>API Method</strong>: GET
             </p>
             <p>
                 <strong>API Response</strong>: Will be a blob response that can be used by the client to save it as a
-                pdf
+                PDF.
 
 
             </p>
             <p>
-                This feature requires the following prerequisites for running in local without docker.
+                This feature requires the following prerequisites for running in local without Docker.
             </p>
             <ol>
 
-                <li>A Chrome installation and its driver are required to render this form and print it as a pdf in
+                <li>A Chrome installation and its driver are required to render this form and print it as a PDF in
                     headless mode on the server side.
                 </li>
             </ol>
             <p>
-                Chrome driver path can be provided via env variable like below
+                Chrome driver path can be provided via env variable like below:
             </p>
             <p>
-                In windows
+                In windows,
             </p>
 
 
@@ -66,24 +66,24 @@
 
 
             <p>
-                In Linux
+                In Linux,
             </p>
 
 
 
-            <pre class="prettyprint"><code>     CHROME_DRIVER_PATH=/usr/local/bin/chromedriver</code>
+            <pre class="prettyprint"><code>     CHROME_DRIVER_PATH=/usr/local/bin/chromedriver</code>.
                 </pre>
 
 
             <p>
-                If not given the default value will be <code>/usr/local/bin/chromedriver</code>
+                If not given, the default value will be <code>/usr/local/bin/chromedriver</code>.
             </p>
             <p>
                 <strong>Installation of Chrome and chrome driver</strong>
             </p>
             <p>
-                Forms flow docker images already contain code to install the latest Chrome and its chrome driver as
-                shown below
+                Forms flow docker images already contain code to install the latest Chrome and its ChromeDriver as
+                shown below:
             </p>
             <p>
                 <ul>
@@ -114,16 +114,16 @@
 
             </code></pre>
 
-<li>The export feature can be enabled for Formsflow web by enabling a few env.
+<li>The export feature can be enabled for formsflow.ai web by enabling a few env.
 </li>
 <pre>
-    <code>
+    <code  class="hljs">
     # To enable export feature in UI
     REACT_APP_EXPORT_PDF_ENABLED=true
  
  
     # Url of python document service url
-    REACT_APP_DOCUMENT_SERVICE_URL=<<yourIP:port>> 
+    REACT_APP_DOCUMENT_SERVICE_URL=&lt;yourIP:port&gt; 
 
     </code>
 </pre>

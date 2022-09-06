@@ -34,8 +34,8 @@
                 <p>There are a variety of visualizations supported in Redash. Ten different
                     categories of visualization can be created with just drag and select features to
                     visualize from the queried data. Redash supports visualization types like
-                    BoxPlot, Counter, BarCharts, Sunburst, Sankey, Word Cloud, line chart, Area
-                    charts, etc. To learn how to create visualizations checkout Redash visualization
+                    BoxPlot, Counter, BarCharts, Sunburst, Sankey, Word clouds, line charts and Area
+                    charts. To learn how to create visualizations checkout Redash visualization
                     docs.</p>
                 <p><img src="https://user-images.githubusercontent.com/70306694/125466037-7b66530f-235b-4198-8c6f-46d556726963.png"
                         alt="image"></p>
@@ -53,7 +53,7 @@
                 <p><img src="https://user-images.githubusercontent.com/70306694/135583411-a7e7ce1d-6792-4884-a133-b9dcd5446cb1.png"
                         alt="image"></p><br>
                 <div>
-                    <h2 id="dashboard">Adding Dashboards on Admin page</h2>
+                    <h2 id="dashboard">Adding Dashboards on Admin Page</h2>
                     <hr><br>
                     <p>
                         To enable dashboards, and provide authorization the following changes are required
@@ -62,28 +62,24 @@
                     <ol>
                         <li>Create a new main group called formsflow-analytics, and create as many subgroups
                             as you
-                            want to associate various dashboards from Admin UI(in Designer)</li><br>
+                            want to associate various dashboards from Admin UI (in Designer)</li><br>
                         <img src="./assets/images/Screenshot 2022-05-16 123429.png" alt="image" height="300"
                             width="350"><br><br>
-                        <li>Create a new mapper under forms-flow-web client in Keycloak, by following below
-                            steps:
+                        <li>Create a new mapper under forms-flow-web client in Keycloak by following the steps below:
+                          
                         </li>
                         <img src="./assets/images/Screenshot 2022-05-16 130800.png" alt="image" height="500"
                             width="500"><br>
                         <li>Corresponding to each user, add the dashboard-groups you want to enable for
                             dashboard
-                            authorization. This will give users permission to as many dashboards which the
-                            group
-                            have been enabled with from Admin.</li><br>
+                            authorization. Any user in a group given permission by the Admin to view a dashboard will then have access to that dashboard.</li><br>
                         <img src="./assets/images/Screenshot 2022-05-16 131123.png" alt="image" width="1000"
                             height="500"><br>
-                        <li>The dashboards added in the above step will be displayed in the insights tab
+                        <li>The dashboards added in the above step will be displayed in the Insights tab
                         </li><br>
                         <img src="./assets/images/Screenshot 2022-05-16 131548.png" alt="image" width="1000"
                             height="500"><br><br>
-                        <strong>Note:</strong>-For those users who have no groups added in keycloak will not
-                        have
-                        insights tab option.
+                        <strong>Note:</strong>-Users who don’t belong to any group added in Keycloak will not see an Insights tab option.
 
                     </ol>
                     </p>

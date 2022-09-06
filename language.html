@@ -5,8 +5,8 @@
 
             <p>This feature enable the user to add new language according to their preference.
                 Currently we
-                are providing you with six languages :
-            <ol>
+                are providing you with six languages:
+            <ul>
                 <li>English</li>
                 <li>Chinese</li>
                 <li>Portuguese</li>
@@ -14,33 +14,33 @@
                 <li>Bulgarian</li>
                 <li>German</li>
 
-            </ol>
+            </ul>
             </P>
-            <h4>To add a new language</h4>
+            <h4>To Add a New Language</h4>
             <ul>
-                <li>Select 'resourceBundles' folder from forms-flow-web/src</li>
-                <li>Create a folder structure as shown below</li>
+                <li>Select 'resourceBundles' folder from <code>forms-flow-web/src</code>.</li>
+                <li>Create a folder structure as shown below:</li>
                 <img src="./assets/images/image (20).png"></img>
-                <li>Folder name should be the abbreviation of the required language (example :
+                <li>Folder name should be the abbreviation of the required language (example:
                     Bulgarian- bg
-                    )</li>
-                <li>Create a file named resourceBundles.js inside the folder</li>
-                <li>Now open folder 'en' from the same folder 'resourceBundles'</li>
-                <li>Copy the content of en/resourceBundles.js and paste it to the newly created file
+                    ).</li>
+                <li>Create a file named <code> resourceBundles.js</code> inside the folder.</li>
+                <li>Now open folder <strong> 'en'</strong> from the same folder <code>resourceBundles</code>  .</li>
+                <li>Copy the content of <code> en/resourceBundles.js</code> and paste it to the newly created file.
                 </li>
 
 
-                <li>Change 'EN' to 'BG'</li>
-                <li>Copy each value from the "key": "value" and translate the same using google
-                    translator to the required language </li>
-                <li>Paste the the translated language to the new file</li>
-                <li>Import the same file to forms-flow-web/src/resourceBundles/i18n.js like rest of the languages.</li>
-                <li>You should add content of new translation file to
-                    forms-flow-web/src/resourceBundles/formio_resourceBundles.js also.</li>
+                <li>Change '<strong>EN</strong> ' to '<strong> BG</strong>'.</li>
+                <li>Copy each value from the <strong> "key": "value" </strong> and translate the same using Google
+                    Translate to the required language.</li>
+                <li>Paste the the translated language to the new file.</li>
+                <li>Import the same file to <code>forms-flow-web/src/resourceBundles/i18n.js</code>  as with the rest of the languages.</li>
+                <li>You should add content of new translation file to <code>
+                    forms-flow-web/src/resourceBundles/formio_resourceBundles.js</code> also.</li>
 
-                <li>At 'resourceBundles/i18n.js' make the required changes as shown below for
-                    'bg' : </li>
-<li>
+                <li>At <code> resourceBundles/i18n.js</code> make the required changes as shown below for <strong>
+                    'bg'</strong>: </li>
+
                 <pre>
                 <code class="hljs">
 import i18n from "i18next";
@@ -89,13 +89,12 @@ export default i18n;
                       
                     
 </code>
-                </pre></li>
+                </pre>
         </div>
 
-        <li>Open forms-flow-api/src/formsflow_api/utils/translations/translations.py , copy any set of translations
-            ,translate the values and paste it back to the file with required language key.</li>
-        <li>You should add the proposed name and value of the language to
-            forms-flow-web/public/config/languageData.json.</li>
+        <li>Open <code> forms-flow-api/src/formsflow_api/utils/translations/translations.py</code>, copy any set of translations, translate the values and paste it back to the file with required language key.</li>
+        <li>You should add the proposed name and value of the language to <code>
+            forms-flow-web/public/config/languageData.json</code>.</li>
         <li>Open <a href="http://localhost:3000 ">http://localhost:3000 </a>to see the changes.
         </li>
         <li>Internationalization is now done.</li>

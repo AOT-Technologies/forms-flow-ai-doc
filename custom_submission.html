@@ -6,10 +6,10 @@
             <h1>Form Adapter</h1>
             <br>
             <hr><br>
-            <p>Formsflow.ai supports submission data to be stored and served using external system. This feature can be used for submission datastore to different database than MongoDB. 
+            <p>formsflow.ai supports submission data to be stored and served using external system. This feature can be used for submission datastore to different database than MongoDB. 
                 If this feature is enabled MongoDB will be used only for form definition data. 
                 A Rest API is needed to support this where customer can add this Rest API to their choice of database and provide the required endpoints. 
-                A reference implementation can be found <a href="https://github.com/AOT-Technologies/forms-flow-ai-submissions/tree/develop/forms-flow-submissions" target="_blank">here</a>
+                A reference implementation can be found <a href="https://github.com/AOT-Technologies/forms-flow-ai-submissions/tree/develop/forms-flow-submissions" target="_blank">here</a>.
             </p>
             
             <p>This feature requires the following env variables set:</p>
@@ -125,7 +125,7 @@
               }
     }
 </code></pre>
-            <h3>Partial Update a Submission</h3>
+            <h3>Partially Update a Submission</h3>
 
             <p><b>PATCH</b></p>
             <code>{{CUSTOM_SUBMISSION_URL}}/form/&lt;formid&gt;/submission/&lt;submission_id&gt;</code><br><br>
@@ -145,7 +145,7 @@
               }
     }
 </code></pre>
-<p><strong>NOTE</strong>: In case of reviewer actions, if submission data need to be updated directly from the form, call customSubmissionUrl instead of formio. 
+<p><strong>NOTE</strong>: In case of Reviewer actions, if submission data need to be updated directly from the form, call customSubmissionUrl instead of formio. 
 </p>
 <img src="./assets/images/formadapter1.png" width="800"></img>
 <br><br><br>

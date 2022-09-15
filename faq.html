@@ -15,11 +15,12 @@
             <strong>How do you customize the response to customers after they fill out forms in the backend?</strong>
             <p>You would need to design the workflow in Camunda in order for email templates to be sent to end users after they fill out a form. SMS is not supported out-of-the-box but can be included as an enhancement. </p>
             <strong>Can you use other types of databases that aren’t included with the solution (i.e. Microsoft SQL)?</strong>
-            <p>Yes, you can. However it may involve customizations on our part to ensure it runs smoothly. We recommend the DBs that come packaged with each component. Form.io, on the other hand, requires mongoDB</p>
+            <p>Yes, you can. With v5.0.0 release formsflow.ai offers form adapter feature where the submission data can be pushed to a custom ReST endpoint which can be used to push submission data to any database of your choice. 
+                However it may involve customizations on our part to integrate other components with another database than what it comes packaged. We recommend the DBs that come packaged with each component. </p>
             <strong>Can ff.ai be embedded in a webpage?</strong>
             <p>The forms you make with formsflow.ai can be, but not formsflow.ai itself. </p>
             <strong>From an architect's perspective, do you build your workflow in Camunda and then upload to ff.ai?</strong>
-            <p>All workflows are built in Camunda modeler and then uploaded to ff.ai. Needs to be separately installed. </p>
+            <p>formsflow.ai comes with web process builder where an integration designer can create new, import or modify and publish workfows. </p>
             <br><br>
 
             <h3>U/I</h3>
@@ -33,15 +34,15 @@
             <br><br>
 
             <h3>CAMUNDA</h3>
-            <strong>Do I need to get Camunda separately?</strong>
-            <p>You must download the modeler separately, but the Camunda engine is packaged within ff.ai. </p>
+            <strong>Do I need to get Camunda modeller separately?</strong>
+            <p>The web BPMN Modeller packaged with formsflow.ai lets you create and publish your workflows. </p>
             <strong>In Camunda, can we request the user for more data after the initial submission involved with a workflow?</strong>
             <p>Yes, you can.</p>
             <br><br>
 
-            <h3>REDASH</h3>
+            <!-- <h3>REDASH</h3>
             <strong></strong>
-            <br><br>
+            <br><br> -->
 
             <h3>ENTERPRISE</h3>
             <strong>How do we go about subscribing to the enterprise version of form.io? Or is it through you?</strong>
@@ -50,8 +51,8 @@
             <p>Still working on it. Right now, it must be done through Camunda. </p>
             <br><br>
 
-            <h3>FORM.IO</h3>
-            <br><br>
+            <!-- <h3>FORM.IO</h3>
+            <br><br> -->
 
             <h3>SECURITY</h3>
             <strong>When logging in, where are the personas stored in the user settings?</strong>
@@ -59,7 +60,7 @@
             <strong>If we had our own in-house ID system, we'd have to configure it with ff.ai?</strong>
             <p>Yes. Keycloak would need to be configured to work with it. It must also support SAML, OpenID, or Oauth2 authentication in order for a successful implementation. </p>
             <strong>Does a client have to log in to submit a form?</strong>
-            <p>For the time being, yes. But an update is coming to change this. However, if the form is embedded in a page, the client would not need to sign in. </p>
+            <p>No, anonymus forms enables unauthenticated users to submit a form. </p>
             <br><br>
 
             <h3>DEPLOYMENT</h3>
@@ -78,6 +79,7 @@
 
             <h3>LICENSING</h3>
             <strong>Is formsflow.ai free to use? </strong>
+            <p>Yes. You may subscribe to enterprise licensing for support and premium features.</p>
             <p></p>
 
         </div>
@@ -87,9 +89,7 @@
             <strong>This looks like three separate open source projects, do they work together?</strong>
             <p>Yes. We designed our platform to harness the functionality of Forms.io for form building, Camunda for constructing workflows, and Redash for analytic dashboard configuration. </p>
             <strong>Can formsflow.ai be embedded in a webpage?</strong>
-            <p>The forms created within formsflow.ai can be embedded into a webpage. Logging into formsflow.ai requires its own portal. </p>
-            <strong>How are workflows built?</strong>
-            <p>You must download the separate, free application, the Camunda modeler, and build the workflow there. Once complete, the file will be uploaded to and available within formsflow.ai for association with a form. </p>
+            <p>The forms created within formsflow.ai can be embedded into a webpage for anonymous use cases. Logging into formsflow.ai requires its own portal. </p>
             <strong>Do you have international language support?</strong>
             <p>Yes, all languages on the front end of formsflow.ai can be translated. </p>
             <strong>Can the theming and UI of formsflow.ai be customized?</strong>

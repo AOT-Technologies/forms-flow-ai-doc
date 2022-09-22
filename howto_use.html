@@ -1,20 +1,17 @@
 <article class="docs-article">
     <section class="docs-section">
         <div>
-            <h1>User Roles Explained</h1><br>
+            <h1>How To Use Formsflow.ai</h1><br>
             <hr><br>
-          
+            <h2>Using authorizations explained</h2>
             <p>Once a Designer has created and published applications for use in formsflow.ai, online applications can
-                be submitted by end users (Clients) to access access City services. An email is triggered when an
-                application is submitted to alert the appropriate staff user (Reviewer) to review the application. The
-                reviewer has several options when completing their tasks. They can approve, disapprove, or return the
-                form to the client for any additional information needed to ensure that the application is complete
-                before it can be approved.</p>
+                be submitted by end users (Clients) to access forms. Rest of the workflow is based on the workslow attached to the form.</p>
+            
             <p>We can broadly divide the actors or users involved as:</p>
             <img src="./assets/images/roles.jpg" height="400" width="800"></img><br><br>
             <p>Based on the actors involved, the user, group, and role creation and management are performed in Keycloak
                 by the Keycloak administrator. </p><br><br>
-                <h2>How To Configure User Roles in formsflow.ai</h2><hr><br>
+                <h2>How To Configure User Roles with groups in formsflow.ai</h2><hr><br>
                 <ol>
                     <h3><li> Create Users</li></h3>
                     <p>Users are created in Keycloak by choosing the appropriate realm and navigating to the user menu  </p>
@@ -24,12 +21,29 @@
                     <h3><li> User Group Mapping</li></h3>
                     <img src="./assets/images/keycloak3.png" width="1000"></img><br><br><br>
                 </ol>
+            
+                <h2>Using Roles for authorization</h2>
+                <p>To use keycloak client with client roles for authorizations, below config map/secret entries needs to be updated with correct values;</p>
+                <ol>
+                    <li>KEYCLOAK_ENABLE_CLIENT_AUTH: true</li>
+                    <li>KEYCLOAK_WEB_CLIENTID: {project-unique-key}-forms-flow-web (mentioned in next steps)</li>
+                    <li>KEYCLOAK_CLIENTID: same value as KEYCLOAK_WEB_CLIENTID. This is kept separate to support multi tenancy.</li>
+                </ol>
+                <h3>Keycloak clients and roles</h3>
+                <p>3 keycloak clients needs to be created per project</p>
+                <ul>
+                    <li>{project-unique-key}-forms-flow-web: Create audience mappet to inculde the same audience in token.</li>
+                    <li>{project-unique-key}-forms-flow-bpm: (Service account) with audience mapper of {project-unique-key}-forms-flow-web and {project-unique-key}-forms-flow-bpm. The service account would need manage-clients, manage-users, query-clients, query-users, view-users roles under realm management.</li>
+                    <li>{project-unique-key}-forms-flow-analytics: with audience mapper of same client. This is needed only if analytics needs SSO authentication.</li>
+                </ul>
+                <p>Default roles under {project-unique-key}-forms-flow-web. Any project specific roles has to be created under the same.</p>
+                <ul>
+                    <li>forms-flow-designer: For form and workflow designers.</li>
+                    <li>forms-flow-client: For client users</li>
+                    <li>forms-flow-reviewer: For reviewers</li>
+                    <li>camunda-admin: For workflow administrator</li>
+                </ul>
                 
-
-
-
-
-
 
         </div>
     </section>

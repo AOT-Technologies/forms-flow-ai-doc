@@ -1,0 +1,42 @@
+<article class="docs-article" id="section-1">
+    <section class="docs-section" id="Kubernetes">
+        <div>
+            <h1 id="overview">Overview</h1>
+            <hr>
+            <p>
+              Formsflow.ai can be installed using Helm, which is a tool used to deploy applications to Kubernetes clusters. Helm allows you to define, install, and upgrade applications by using Charts. For more information about Helm please visit the <a href="https://helm.sh/">Hekm website</a>.
+            </p>
+            <p>
+              Formsflow.ai can be installed by either using the formsflow.ai Helm Chart repository directly or by cloning the GitHub <a href="https://github.com/AOT-Technologies/forms-flow-ai-charts">source code</a> and installing it from a local directory. The following install instructions are for forms-flow-ai-charts release v2.1.1 to v2.14.
+            </p>
+
+          <!-- <h2 id="architecture">Formsflow.ai Helm Architecture</h2> -->
+
+
+
+          <h2 id="prerequisites">Prerequisites</h2>
+
+          <p>Before installing formsflow.ai to a Kubernetes cluster there are three prerequisites required:</p>
+          <ol>
+            <li><a href="https://helm.sh/docs/intro/quickstart/#install-helm">Helm</a> must be installed on your machine.</li>
+            <li>A Kubernetes cluster must be initialized with an associated Domain Name and Namespace.</li>
+            <p>In this example an OpenShift cluster has been setup with the following information: </p>
+            <p>Domain Name: apps.bronze.aot-technologies.com</p>
+            <p>Namespace: forms-flow</p>
+            <li>The Kubernetes cluster must have a minimum of 5.7 CPU available and a usage of 1.6 CPU</li>
+          </ol>
+          
+          <!-- <p>For a summary of all configurable options, see <a href="./VALUES_SUMMARY.md">VALUES_SUMMARY.md</a></p> -->
+          
+          
+                <footer class="site-footer">
+                  
+                    <span class="site-footer-owner"><a href="https://github.com/AOT-Technologies/helm-charts">helm-charts</a> is maintained by <a href="https://github.com/AOT-Technologies">AOT-Technologies</a>.</span>
+                  
+                </footer>
+              </main>
+
+        </div>
+    </section>
+</article>
+<script>hljs.initHighlighting();</script>

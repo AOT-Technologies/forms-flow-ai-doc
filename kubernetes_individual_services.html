@@ -39,7 +39,8 @@
                 </code>
               </pre>
               <li>Install Instructions</li>
-              <p>Sample Helm Install Command</p>
+              <br>
+              <p>Sample Helm Install Command:</p>
               <pre>
                 <code class="hljs">
                 helm install [RELEASE_NAME] formsflow/[COMPONENT_NAME] [flags]
@@ -96,10 +97,11 @@
                 </code>
               </pre>
               <li>Uninstall Instructions</li>
+              <br>
               <p>This removes all the Kubernetes components associated with the chart and deletes the release.</p>
-              <p>NOTE: Persistent Volume Claims are not automatically deleted from Kubernetes.</p>
+              <p><em>NOTE: Persistent Volume Claims are not automatically deleted from Kubernetes.</em></p>
 
-              <p>Sample Helm Uninstall Command</p>
+              <p>Sample Helm Uninstall Command:</p>
               <pre>
                 <code class="hljs">
                 helm uninstall [RELEASE_NAME] [flags]
@@ -108,26 +110,26 @@
               <p><em>See <a href="https://helm.sh/docs/helm/helm_uninstall/">helm uninstall</a> for command documentation.</em></p>
 
               <pre>
-                <code>
-                  helm uninstall forms-flow-admin -n $NAMESPACE
+                <code class="hljs">
+                helm uninstall forms-flow-admin -n $NAMESPACE
 
-                  helm uninstall forms-flow-ai -n $NAMESPACE
+                helm uninstall forms-flow-ai -n $NAMESPACE
 
-                  helm uninstall forms-flow-api -n $NAMESPACE
+                helm uninstall forms-flow-api -n $NAMESPACE
 
-                  helm uninstall forms-flow-analytics -n $NAMESPACE
+                helm uninstall forms-flow-analytics -n $NAMESPACE
 
-                  helm uninstall forms-flow-bpm -n $NAMESPACE
+                helm uninstall forms-flow-bpm -n $NAMESPACE
 
-                  helm uninstall forms-flow-data-analysis -n $NAMESPACE
+                helm uninstall forms-flow-data-analysis -n $NAMESPACE
 
-                  helm uninstall forms-flow-forms -n $NAMESPACE
+                helm uninstall forms-flow-forms -n $NAMESPACE
 
-                  helm uninstall forms-flow-idm -n $NAMESPACE
+                helm uninstall forms-flow-idm -n $NAMESPACE
 
-                  helm uninstall forms-flow-web -n $NAMESPACE
+                helm uninstall forms-flow-web -n $NAMESPACE
 
-                  helm uninstall forms-flow-documents-api -n $NAMESPACE
+                helm uninstall forms-flow-documents-api -n $NAMESPACE
                 </code>
               </pre>
             </ol>

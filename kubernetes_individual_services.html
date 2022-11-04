@@ -5,7 +5,7 @@
             <hr>
             <p>Each service can be installed, updated, and uninstalled individually. To install the formsflow.ai application, please follow the below steps in order:</p>
             <ol>
-              <li>Login to your Kubernetes cluster using the command line interface.</li>
+              <li>Log in to your Kubernetes cluster using the command line interface.</li>
               <li>Set environment variables</li>
               <pre>
                 <code class="hljs">
@@ -16,7 +16,7 @@
                   export DIRECTORY=”../charts” // Used for local directory installation
                 </code>
               </pre>
-              <li>Update Instructions</li>
+              <li>Add or update the Forms Flow chart repository on to your local machine</li>
               <pre>
                 <code class="hljs">
                   helm repo add formsflow https://aot-technologies.github.io/forms-flow-ai-charts
@@ -38,7 +38,7 @@
                   helm dependency update $DIRECTORY/forms-flow-documents-api/
                 </code>
               </pre>
-              <li>Install Instructions</li>
+              <li>Install Forms Flow using Helm Charts</li>
               <br>
               <p>Sample Helm Install Command:</p>
               <pre>
@@ -96,9 +96,9 @@
                   --namespace $NAMESPACE
                 </code>
               </pre>
-              <li>Uninstall Instructions</li>
+              <li>Uninstall Forms Flow</li>
               <br>
-              <p>This removes all the Kubernetes components associated with the chart and deletes the release.</p>
+              <p>This removes all of the Kubernetes components associated with the chart and deletes the release.</p>
               <p><em>NOTE: Persistent Volume Claims are not automatically deleted from Kubernetes.</em></p>
 
               <p>Sample Helm Uninstall Command:</p>

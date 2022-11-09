@@ -208,6 +208,8 @@ a:not([href]):not([class]):hover {
   color: inherit;
   text-decoration: none;
 }
+
+
 pre,
 code,
 kbd,
@@ -218,7 +220,7 @@ samp {
   unicode-bidi: bidi-override;
   padding-left: 0%;
   color: white;
-  
+
   
 }
 pre {

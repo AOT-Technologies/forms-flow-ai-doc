@@ -32,8 +32,8 @@
                 <h3>Keycloak clients and roles</h3>
                 <p>3 keycloak clients needs to be created per project</p>
                 <ul>
-                    <li>{project-unique-key}-forms-flow-web: Create audience mappet to inculde the same audience in token.</li>
-                    <li>{project-unique-key}-forms-flow-bpm: (Service account) with audience mapper of {project-unique-key}-forms-flow-web and {project-unique-key}-forms-flow-bpm. The service account would need manage-clients, manage-users, query-clients, query-users, view-users roles under realm management.</li>
+                    <li>{project-unique-key}-forms-flow-web: Create audience mapper to inculde the same audience in token.</li>
+                    <li>{project-unique-key}-forms-flow-bpm: (Service account) with audience mapper of {project-unique-key}-forms-flow-web and {project-unique-key}-forms-flow-bpm. The service account would need query-groups, query-clients, query-users, view-users roles under realm management.</li>
                     <li>{project-unique-key}-forms-flow-analytics: with audience mapper of same client. This is needed only if analytics needs SSO authentication.</li>
                 </ul>
                 <p>Default roles under {project-unique-key}-forms-flow-web. Any project specific roles has to be created under the same.</p>

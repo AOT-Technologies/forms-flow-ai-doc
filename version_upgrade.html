@@ -1,0 +1,119 @@
+<article class="docs-article" id="section-1">
+    <section class="docs-section" id="version">
+        <div>
+            <h1>formsflow.ai Version Upgrade</h1>
+            <hr><br>
+            <p>Formsflow.ai is often updated with new features and bug fixes. For a better user experience and to access
+                the latest features, it is essential to upgrade formflow.ai to the newest version.</p>
+            <p>For Docker full deployment, and Individual service deployment, to upgrade to the latest version,</p>
+            <ul>
+                <li> Pull the latest version from <a href="https://github.com/AOT-Technologies/forms-flow-ai">here</a>.
+                </li>
+                <li>Update the environment variables in the .env file, from the respective folders, as given below.</li>
+            </ul>
+            <br>
+            <h2>Update the environment variables:</h2><br>
+            <ol>
+                <h3>
+                    <li>Folder:forms-flow-web</li>
+                </h3><br>
+                <ol>
+                    <i>
+                        <h4>Mandatory Changes</h4>
+                    </i><br>
+                    <p>The names of the following enviroment variables should be changed as given below, but their
+                        values should not change.</p>
+                    <ul>
+
+
+                        <li>Modify the Environment variable CAMUNDA_API_URL as BPM_API_URL.</li>
+                        <li>Modify the Environment variables REACT_APP_CAMUNDA_API_URI as REACT_APP_BPM_URL.</li><br>
+                        <i>
+                            <h4>Optional Changes</h4>
+                        </i>
+                        <li>Add the environment variables MULTI_TENANCY_ENABLED, MT_ADMIN_BASE_URL,
+                            MT_ADMIN_BASE_URL_VERSION to support multi-tenancy. The value of MULTI_TENANCY_ENABLED
+                            should be set as True to support multi tenancy.</li>
+                        <li>Add the environment variable CUSTOM_SUBMISSION_URL, CUSTOM_SUBMISSION_ENABLED for support
+                            form adapter.</li>
+                        <li>Add the environment variables DRAFT_ENABLED, and DRAFT_POLLING_RATE to manage the draft
+                            feature.With this feature, all unsaved applications would be saved as drafts.</li>
+                        <li>Add the environment variable EXPORT_PDF_ENABLED for pdf service, to export the forms in PDF
+                            format..</li>
+                        <li>Add the environment variable DOCUMENT_SERVICE_URL for document service.</li>
+                        <li>Remove the environment variables CLIENT_ROLE_ID, DESIGNER_ROLE_ID,
+                            REVIEWER_ROLE_ID,ANONYMOUS_ID, USER_RESOURCE_ID.
+                        </li>
+                        <li>Remove the environment variable FORMIO_JWT_SECRET.</li>
+                        <li>Remove environment variable REACT_APP_FORMIO_JWT_SECRET
+                            .</li>
+                    </ul><br>
+                    <p><strong> Note: </strong>The reference values for these environment variables can be viewed<a
+                            href="https://github.com/AOT-Technologies/forms-flow-ai/blob/master/forms-flow-web/sample.env">
+                            here</a>.</p>
+                </ol><br>
+                <h4>
+                    <li>Folder:forms-flow-api</li>
+                </h4><br>
+                <ol>
+                    <i>
+                        <h4>Mandatory Changes</h4>
+                    </i><br>
+                    <ul>
+                        <li>Modify the Environment variables BPM_API_BASE to BPM_API_URL, the value should not change.
+                        </li>
+                        <li>Add new environment variable FORMIO_JWT_SECRET.</li><br>
+                        <i>
+                            <h4>Optional Changes</h4>
+                        </i>
+                        <li>Add the environment variable MULTI_TENANCY_ENABLED, KEYCLOAK_ENABLE_CLIENT_AUTH to support
+                            multitenancy.</li>
+                        <li>Environment variables KEYCLOAK_ADMIN_USERNAME and KEYCLOAK_ADMIN_PASSWORD can be removed
+                            since now the admin APIs are accessed using the service account (v.4.0.5).</li>
+                        <li>KEYCLOAK_BPM_CLIENT_SECRET is not mandatory (v.4.0.5), so it can be deleted.</li>
+                    </ul><br>
+                    <p><strong>Note:</strong> The reference values for these environment variables can be viewed <a
+                            href="https://github.com/AOT-Technologies/forms-flow-ai/blob/master/forms-flow-api/sample.env">here</a>.
+                    </p>
+                </ol><br>
+                <h4>
+                    <li>Folder:forms-flow-bpm</li>
+                </h4><br>
+                <ol>
+                    <i>
+                        <h4>Mandatory Changes</h4>
+                    </i><br>
+                    <ul>
+                        <li>Modify the Environment variables BPM_BASE_URL as BPM_API_URL, without changing the value.
+                        </li>
+                        <i>
+                            <h4>Optional Changes</h4>
+                        </i>
+                        <li>KEYCLOAK_BPM_CLIENT_SECRET is not mandatory (v.4.0.5).</li>
+                        <li>Add the environment variable MULTI_TENANCY_ENABLED, KEYCLOAK_ENABLE_CLIENT_AUTH,
+                            KEYCLOAK_WEB_CLIENTID, FORMSFLOW_ADMIN_URL for multitenancy support.</li>
+                        <li>Add the environment variable CUSTOM_SUBMISSION_URL, CUSTOM_SUBMISSION_ENABLED for support
+                            form adapter.</li>
+                    </ul><br>
+                    <p><strong>Note:</strong> The reference values for these environment variables can be viewed <a
+                            href="https://github.com/AOT-Technologies/forms-flow-ai/blob/master/forms-flow-bpm/sample.env">here</a>.
+                    </p>
+                </ol><br>
+                <h4>
+                    <li>Folder:forms-flow-forms</li>
+                </h4><br>
+                <ol>
+                    <ul>
+                        <i>
+                            <h4>Optional Changes</h4><br>
+                        </i>
+                        <li>Add the environment variable MULTI_TENANCY_ENABLED to support multitenancy.</li>
+                    </ul><br>
+                    <p><strong>Note:</strong> The reference values for these environment variables can be viewed <a
+                            href="https://github.com/AOT-Technologies/forms-flow-ai/blob/master/forms-flow-forms/sample.env
+                        ">here</a>. </p>
+                </ol>
+            </ol>
+        </div>
+    </section>
+</article>

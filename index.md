@@ -1,7 +1,14 @@
 ---
 title: Home
 layout: home
+nav_order: 1
+
 ---
+
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
 
 This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
 
@@ -28,3 +35,13 @@ To get started with creating a site, just click "[use this template]"!
 [Jekyll]: https://jekyllrb.com
 [GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
 [use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
+
+formsflow.ai is a completely free, open source low code platform designed to help make the process of bringing an application to life easy!
+
+Our low-code business process automation system allows you to create business applications quickly, with no programming knowledge required. It starts with an open source dynamic form builder, a drag-and-drop user interface tool that allows you to create functional front-end web forms. You can easily configure the rules and business processes that will be triggered when the form is submitted by the user.
+
+Then, you’ll set up the back-end, using formsflow.ai’s open source low code identity management framework to configure user roles and levels of access for every step of the form’s workflow.
+
+Using our powerful open source low code workflow engine, you can build workflows for your organization that are ready to attach to forms in formsflow.ai. It’s easy to set user roles and create tasks that your team can use to easily review form submissions and administer the approval process.
+
+Just like that – your new application is ready to deploy on top public cloud platforms like AWS or Azure, or on your own private infrastructure.

@@ -23,32 +23,22 @@ For Docker-based installation Docker (supports Docker version above 4.0.0) needs
 For Mac, make sure the docker for mac memory allocation is set to at least 16GB.
 Download formsflow.ai
 
-To download and set up, follow the installation guide, where you will find step-by-step instructions to download and install.
+To download and set up, follow the installation guide, where you will find step-by-step instructions to download and install.  
 
 Clone this github repo: https://github.com/AOT-Technologies/forms-flow-ai.
 
 Folder structure will look like below:
+![Download installation]( ...)  
+
+### Project Dependencies
+- [Keycloak](https://www.keycloak.org/) (included under ../.forms-flow-idm/keycloak).
+- [Form.io](https://www.form.io/opensource) (included under ../.forms-flow-forms).
+- [Camunda](https://camunda.com/) (included under ../.forms-flow-bpm).
+- [Redash](https://redash.io/) (included under ../.forms-flow-analytics).
+- [Python](https://www.python.org/) (included under ../.forms-flow-api).
+- Optional: nginx (included under ./deployment/nginx)  
 
 
-
-Project Dependencies
-Keycloak (included under ../.forms-flow-idm/keycloak).
-Form.io (included under ../.forms-flow-forms).
-Camunda (included under ../.forms-flow-bpm).
-Redash (included under ../.forms-flow-analytics).
-Python (included under ../.forms-flow-api).
-Optional: nginx (included under ./deployment/nginx).
-Installation
-
-There are multiple options for installing formsflow.ai. They are given below:
-
-Docker-based installation
-Quick Installation
-Docker Full Deployment
-Docker Individual Service Deployment
-Kubernetes Installation
-
-
-[Back to Top](/Download%20and%20install/Download.html)
-
-  *Copyright©[formsflow.ai](https://formsflow.ai/)* {: .d-flex .flex-justify-around}
+<!-- [Back to Top](/Download%20and%20install/Download.html) -->     
+  *Copyright© [formsflow.ai](https://formsflow.ai/)*   
+  {: .text-center .mt-8}

@@ -11,4 +11,4 @@ parent : Docker based installation
 \
 The components can be installed individually in the order below .   
 \
- [Prev](/Docker%20Based/DockerFull.html){: .btn .float-left }
+ [Prev](/Pages/Docker%20Based/DockerFull.html){: .btn .float-left }

@@ -12,5 +12,5 @@ parent : Docker based installation
 \
 Following steps are required to complete the installation and setup of formsflow.ai solution:  
 \
- [Prev](/Docker%20Based/QuickInstallation.html){: .btn .float-left }
- [Next](/Docker%20Based/IndividualService.html){: .btn .float-right }
+ [Prev](/Pages/Docker%20Based/QuickInstallation.html){: .btn .float-left }
+ [Next](/Pages/Docker%20Based/IndividualService.html){: .btn .float-right }

@@ -57,6 +57,7 @@ To get the redash API key click [here](https://aot-technologies.github.io/forms-
 
  {: .ml-5}
 
+--- 
 
  [Prev](/just-the-docs/Pages/Docker%20Based/QuickInstallation.html){: .btn .float-left }
  [Next](/just-the-docs/Pages/Docker%20Based/IndividualService.html){: .btn .float-right }  

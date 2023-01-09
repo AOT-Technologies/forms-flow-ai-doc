@@ -20,7 +20,7 @@ In the following document, we’ll describe the different project dependencies a
 
 
 Folder structure will look like below:
-![Download installation](/assets/downloadandinstall.png)
+![Download installation](../../assets/downloadandinstall.png)
 
 ### Project Dependencies
 - [Keycloak](https://www.keycloak.org/) (included under ../.forms-flow-idm/keycloak).

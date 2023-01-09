@@ -38,21 +38,21 @@ Redash is used to build analytics dashboards. The analytics server can be starte
 NOTE :{your-ip-address} given inside the .env file should be changed to your host system IP address. Please take special care to identify the correct IP address if your system has multiple network cards.
 {: .fw-700 .ml-5    } 
 
- ![env var](/assets//DockerFull/clientsecret.png)
+ ![env var](../../assets//DockerFull/clientsecret.png)
  {: .ml-5}
  
  KEYCLOAK_BPM_CLIENT_SECRET provided in the **sample.env** is the default one.To generate new secret click [here](https://aot-technologies.github.io/forms-flow-ai-doc/formsflow_bpm.html#bpmclientsecret) .
 
-![analytics var](/assets//DockerFull/analytics%20var.png)
+![analytics var](../../assets//DockerFull/analytics%20var.png)
  {: .ml-5}
 
 To get the redash API key click [here](https://aot-technologies.github.io/forms-flow-ai-doc/formsflow_analytics.html#get-the-redash-api-key) .
 
-![analytics var](/assets//DockerFull/variables2.png)
-![analytics var](/assets//DockerFull/variables3.png)
-![analytics var](/assets//DockerFull/variables4.png)
-![analytics var](/assets//DockerFull/variables5.png)
-![analytics var](/assets//DockerFull/variables6.png)
+![analytics var](../../assets//DockerFull/variables2.png)
+![analytics var](../../assets//DockerFull/variables3.png)
+![analytics var](../../assets//DockerFull/variables4.png)
+![analytics var](../../assets//DockerFull/variables5.png)
+![analytics var](../../assets//DockerFull/variables6.png)
 
 
  {: .ml-5}

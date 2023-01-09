@@ -27,31 +27,31 @@ The quick-installation option saves time and labour, and is less error prone tha
  {: .ml-5}
 
    
- ![clone](/assets/QuickDocker/clone.png)
+ ![clone](../../assets/QuickDocker/clone.png)
  {: .mt-6 .ml-6}
  *b*.Create a new folder or open any folder on your machine, open the command prompt for the folder and clone this repository to the folder    using the command `git clone <repo name> `  
  {: .ml-5}
 
     
-  ![gitclone ](/assets/QuickDocker/gitclonecmd.png)
+  ![gitclone ](../../assets/QuickDocker/gitclonecmd.png)
   {: .mt-6 .ml-6}  
 
  *c*. Once the repository is copied, the command prompt will display done, and all the folders in the repository will be present in the respective local folder.  
  {: .ml-5}
 
- ![cmdclone](/assets/QuickDocker/cmdclone2.png)
+ ![cmdclone](../../assets/QuickDocker/cmdclone2.png)
   {: .mt-6 .ml-6}
-   ![cmdclone](/assets/QuickDocker/cmdclone3.png)
+   ![cmdclone](../../assets/QuickDocker/cmdclone3.png)
   {: .mt-6 .ml-6}  
   
 3.Open the folder forms-flow-ai deployment>>Scripts>>Run the Install.bat/install.bash file for Windows/Linux respectively.  
 
- ![install](/assets/QuickDocker/install.png)
+ ![install](../../assets/QuickDocker/install.png)
   {: .mt-6 .ml-6}
 
 4.The installation starts with the following question,
 
- ![install](/assets/QuickDocker/install2.png)
+ ![install](../../assets/QuickDocker/install2.png)
   {: .mt-6 .ml-6}  
 
   *a*.  If you need Redash Analytics Engine in the installation, provide ‘y’ as the answer, or else answer ‘n’. (To know more about Redash Analytics Engine, please visit [Redash](https://redash.io/help/) ).  
@@ -59,17 +59,17 @@ The quick-installation option saves time and labour, and is less error prone tha
 
 5.As part of the installation, if the user has chosen the option to install with “Analytics” the user is asked to enter the Redash API key after the successful installation of Redash.  
 
- ![install](/assets/QuickDocker/installing.png)
+ ![install](../../assets/QuickDocker/installing.png)
   {: .mt-6 .ml-6} 
 
 6.The Redash application should be available for use at port defaulted to 7000. Open [http://localhost:7000/](http://localhost:7000/) on your machine and register with any valid credentials.
 
- ![install](/assets/QuickDocker/redashlogin.png)
+ ![install](../../assets/QuickDocker/redashlogin.png)
   {: .mt-6 .ml-6} 
 
 7.To get the Redash API key, log in to [http://localhost:7000/](http://localhost:7000/),Choose Settings>>Account, and copy the API Key.
 
- ![install](/assets/QuickDocker/API%20key.png)
+ ![install](../../assets/QuickDocker/API%20key.png)
   {: .mt-6 .ml-6} 
 
 8.Copy the API Key and paste it into the cmd. The installation will continue.  

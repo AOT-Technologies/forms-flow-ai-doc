@@ -13,16 +13,16 @@ nav_order: 5
   ### Step 1:-  
   Purchase ssl from a trusted entity or can use letsencrypt to create a new ssl. We purchased ssl from zerossl as a 3 month free tier basis.  
 
-  ![ssl1](/assets/server/ssl1.jpg)
-  ![ssl2](/assets/server/ssl2.jpg)
-  ![ssl3](/assets/server/ssl3.jpg)
-  ![ssl4](/assets/server/ssl4.jpg)  
+  ![ssl1](../../assets/server/ssl1.jpg)
+  ![ssl2](../../assets/server/ssl2.jpg)
+  ![ssl3](../../assets/server/ssl3.jpg)
+  ![ssl4](../../assets/server/ssl4.jpg)  
 
 In the next window, we can see a free 90 days certificate is already selected along with other purchase options. Click next and continue with the process.  
 
 Next, we need to complete the validation of the certificate, for that select DNS validation from the given window and create a CNAME record in your domain with given values.  
 
-![ssl5](/assets/server/ssl5.jpg)  
+![ssl5](../../assets/server/ssl5.jpg)  
 
 After the validation, click next and download the zip file of the certificate. The zip file contains one private key, one certificate file and one bundle file.  
 ### Step 2:-  

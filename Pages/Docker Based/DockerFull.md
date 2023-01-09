@@ -3,7 +3,6 @@ layout: default
 title: Docker Full Deployment
 nav_order: 2
 parent : Docker based installation
-
 ---
 
 ## Docker Full Deployment
@@ -21,10 +20,12 @@ Following steps are required to complete the installation and setup of formsflow
 > *Make sure you have a Docker machine up and running*.  
 {: .bg-grey-lt-000}
 
+
 ### 1. Keycloak Setup.
   Keycloak is an open source software product to allow single sign-on with identity and access management aimed at modern applications and services.
 
-  To install Keycloak follow the instructions given [here](https://aot-technologies.github.io/forms-flow-ai-doc/local_keycloaksetup.html).
+  To install Keycloak follow the instructions given [here](https://aot-technologies.github.io/forms-flow-ai-doc/local_keycloaksetup.html). 
+   [hi](../SetUp/KeycloakSetup.md)
 
 ### 2. forms-flow-analytics Setup.  
 Redash is used to build analytics dashboards. The analytics server can be started by following the instructions given [here](https://aot-technologies.github.io/forms-flow-ai-doc/formsflow_analytics.html).

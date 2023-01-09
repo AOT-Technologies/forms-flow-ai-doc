@@ -51,11 +51,19 @@ The quick-installation option saves time and labour, and is less error prone tha
 
 4.The installation starts with the following question,
 
- ![install](../../assets/QuickDocker/install2.png)
+ ![installqstn1](../../assets/QuickDocker/install2.png)
   {: .mt-6 .ml-6}  
 
   *a*.  If you need Redash Analytics Engine in the installation, provide ‘y’ as the answer, or else answer ‘n’. (To know more about Redash Analytics Engine, please visit [Redash](https://redash.io/help/) ).  
  {: .ml-5}
+
+ ![installqstn2](../../assets/QuickDocker/unnamed.png)
+ {: .mt-6 .ml-6}  
+ *b*. Verify the IP address is valid or incorrect after that. If true, provide  'y' as the answer, or else answer ‘n’.    
+
+ ![installqstn3](../../assets/QuickDocker/qstn3.png)  
+  {: .mt-6 .ml-6}  
+ *c*. Provide the proper ip address.
 
 5.As part of the installation, if the user has chosen the option to install with “Analytics” the user is asked to enter the Redash API key after the successful installation of Redash.  
 

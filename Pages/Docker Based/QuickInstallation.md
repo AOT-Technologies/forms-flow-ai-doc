@@ -14,8 +14,8 @@ The quick-installation option saves time and labour, and is less error prone tha
 
 ### Prerequisites
 
-1. For installation of formsflow.ai, the Docker Desktop needs to be installed (for both Windows/Linux). If Docker has been installed, and if any previous formsflow.ai installations were done already, those need to be removed from the Docker Desktop.
-2. This installation is supported only by Node.js versions 14 and below (older versions of Node.js are listed [here](https://nodejs.org/en/download/releases/)).
+- For installation of formsflow.ai, the Docker Desktop needs to be installed (for both Windows/Linux). If Docker has been installed, and if any previous formsflow.ai installations were done already, those need to be removed from the Docker Desktop.
+
 
 ## Steps for formsflow.ai Installation  
 
@@ -89,12 +89,12 @@ The quick-installation option saves time and labour, and is less error prone tha
 - Default user credentials are provided [here](https://aot-technologies.github.io/forms-flow-ai-doc/default%20user%20credential.html).
 
 
-
+---
 
 
 
  [Next](/just-the-docs/Pages/Docker%20Based/DockerFull.html){: .btn .float-right }
 
 
-   *Copyright© [formsflow.ai](https://formsflow.ai/)*   
-  {: .text-center .mt-8}
+  *Copyright© [formsflow.ai](https://formsflow.ai/)*   
+  {: .text-center .mt-8 .pt-8}

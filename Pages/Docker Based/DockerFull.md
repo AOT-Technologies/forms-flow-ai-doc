@@ -63,5 +63,5 @@ To get the redash API key click [here](https://aot-technologies.github.io/forms-
  [Next](/just-the-docs/Pages/Docker%20Based/IndividualService.html){: .btn .float-right }  
   
   
-   *Copyright© [formsflow.ai](https://formsflow.ai/)*   
-  {: .text-center .mt-8}
+  *Copyright© [formsflow.ai](https://formsflow.ai/)*   
+  {: .text-center .mt-8 .pt-8}

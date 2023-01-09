@@ -30,6 +30,7 @@ Folder structure will look like below:
 - [Python](https://www.python.org/) (included under ../.forms-flow-api).
 - Optional: nginx (included under ./deployment/nginx)  
 
-    
+---
+
   *Copyright© [formsflow.ai](https://formsflow.ai/)*   
   {: .text-center .mt-8}

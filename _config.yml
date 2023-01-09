@@ -16,9 +16,9 @@ aux_links: # remove if you don't want this link to appear on your pages
 # search_enabled: false
 
 # Aux links for the upper right navigation
-aux_links:
-  "Formsflow on GitHub":
-    - "https://github.com/AOT-Technologies/forms-flow-ai"
+# aux_links:
+#   "Formsflow on GitHub":
+#     - "https://github.com/AOT-Technologies/forms-flow-ai"
 
 # color_scheme: dark
 

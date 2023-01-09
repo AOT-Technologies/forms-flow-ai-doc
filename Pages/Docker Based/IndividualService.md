@@ -31,5 +31,5 @@ Installation is successfully completed now.
 
   
     
-   *Copyright© [formsflow.ai](https://formsflow.ai/)*   
-  {: .text-center .mt-8  .v-align-baseline}
+  *Copyright© [formsflow.ai](https://formsflow.ai/)*   
+  {: .text-center .mt-8 .pt-8}

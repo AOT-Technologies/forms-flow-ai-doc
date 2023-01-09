@@ -17,4 +17,10 @@ Then, you’ll set up the back-end, using formsflow.ai’s open source low code 
 
 Using our powerful open source low code workflow engine, you can build workflows for your organization that are ready to attach to forms in formsflow.ai. It’s easy to set user roles and create tasks that your team can use to easily review form submissions and administer the approval process.
 
-Just like that – your new application is ready to deploy on top public cloud platforms like AWS or Azure, or on your own private infrastructure.
+Just like that – your new application is ready to deploy on top public cloud platforms like AWS or Azure, or on your own private infrastructure.  
+
+![introduction](./assets/intro/intro.png)  
+
+This project was initiated by AOT Technologies to address general-purpose end-to-end business process problems. It provides a user interface for a customer to fill and submit a service request form to the service provider. Service provider employees get a user interface through which they can process this service request. It also allows the service provider employees to generate reports.  
+
+For more information [visit](https://formsflow.ai/).

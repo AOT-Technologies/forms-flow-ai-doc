@@ -5,7 +5,7 @@ nav_order: 6
 ---
 
 ## AWS EKS Installation Steps 
-\
+  
 ### Prerequisites
 
 1. kubectl – A command line tool for working with Kubernetes clusters. For more information, see [Installing or updating kubectl](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)

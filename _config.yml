@@ -3,13 +3,15 @@ description: A starter template for a Jeykll site using the Just the Docs theme!
 theme: just-the-docs
 
 url: https://fahad-aot.github.io/just-the-docs
+
 # Set a path/url to a logo that will be displayed instead of the title
 logo: "./assets/logo.svg"
+
 # Set a path/url to a favicon that will be displayed by the browser
 favicon_ico: "./assets/logo.svg"
 
-aux_links: # remove if you don't want this link to appear on your pages
-  Template Repository: https://github.com/fahad-aot.github.io/just-the-docs
+# aux_links: # remove if you don't want this link to appear on your pages
+#   Template Repository: https://github.com/fahad-aot.github.io/just-the-docs
 
   # Enable or disable the site search
 # Supports true (default) or false

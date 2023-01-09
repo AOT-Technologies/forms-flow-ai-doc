@@ -10,8 +10,8 @@ In the following document, we’ll describe the different project dependencies a
 
 ### Prerequisites
  - Admin access to a local or remote server (can be local Windows PC or Mac provided it is 64-bit with at least 16GB RAM and 25GB HDD).
- - For Docker-based installation Docker (supports Docker version above 4.0.0) needs to be installed
- - For Mac, make sure the docker for mac memory allocation is set to at least 16GB.
+ - For Docker-based installation [Docker](https://www.docker.com/) (supports Docker version above 4.0.0) needs to be installed
+ - For Mac, make sure the [docker for mac](https://docs.docker.com/desktop/install/mac-install/) memory allocation is set to at least 16GB.
 
 ### Download formsflow.ai
  To download and set up, follow the installation guide, where you will find step-by-step instructions to download and install.  
@@ -20,7 +20,7 @@ In the following document, we’ll describe the different project dependencies a
 
 
 Folder structure will look like below:
-![Download installation]( ...)  
+![Download installation](/assets/downloadandinstall.png)
 
 ### Project Dependencies
 - [Keycloak](https://www.keycloak.org/) (included under ../.forms-flow-idm/keycloak).

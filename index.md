@@ -24,3 +24,8 @@ Just like that – your new application is ready to deploy on top public cloud p
 This project was initiated by AOT Technologies to address general-purpose end-to-end business process problems. It provides a user interface for a customer to fill and submit a service request form to the service provider. Service provider employees get a user interface through which they can process this service request. It also allows the service provider employees to generate reports.  
 
 For more information [visit](https://formsflow.ai/).
+
+---
+
+  *Copyright© [formsflow.ai](https://formsflow.ai/)*   
+  {: .text-center .mt-8}

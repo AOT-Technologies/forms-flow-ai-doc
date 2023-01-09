@@ -19,7 +19,7 @@ Following steps are required to complete the installation and setup of formsflow
 
 > ####  Notice
 > *Make sure you have a Docker machine up and running*.  
-{: .bg-yellow-000}
+{: .bg-grey-lt-000}
 
 ### 1. Keycloak Setup.
   Keycloak is an open source software product to allow single sign-on with identity and access management aimed at modern applications and services.

@@ -87,8 +87,8 @@ Each service can be installed, updated, and uninstalled individually. To install
 \
  helm install forms-flow-documents-api formsflow/forms-flow-documents-api \
  --set Domain=$DOMAIN_NAME \
- --namespace $NAMESPACE  
-\                 
+ --namespace $NAMESPACE   
+\                   
  helm install forms-flow-web formsflow/forms-flow-web \
  --set Domain=$DOMAIN_NAME \
  --namespace $NAMESPACE

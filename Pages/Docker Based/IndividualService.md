@@ -3,6 +3,7 @@ layout: default
 title: Individual Service Deployment
 nav_order: 3
 parent : Docker based installation
+has_children: true
 
 ---
 
@@ -13,13 +14,13 @@ The components can be installed individually in the order below .
 \
 **Note** : Keycloak, form.io and analytics(optional) should be installed before bpm,api & web.
 
-- [Keycloak](https://aot-technologies.github.io/forms-flow-ai-doc/local_keycloaksetup.html) Identity Keycloak components.
-- [forms-flow-forms](https://aot-technologies.github.io/forms-flow-ai-doc/formsflow_forms.html) formsflow.ai integration with form.io.
-- [forms-flow-analytics](https://aot-technologies.github.io/forms-flow-ai-doc/formsflow_analytics.html) Redash analytics components.
-- [forms-flow-bpm](https://aot-technologies.github.io/forms-flow-ai-doc/formsflow_bpm.html) Camunda workflow deployment and integration.
-- [forms-flow-api](https://aot-technologies.github.io/forms-flow-ai-doc/formsflow_api.html) REST API of formsflow.ai.
-- [forms-flow-web](https://aot-technologies.github.io/forms-flow-ai-doc/forms-flow-web.html) formsflow.ai integration web UI.
-- [forms-flow-documents](https://aot-technologies.github.io/forms-flow-ai-doc/forms-flow-documents.html) generate PDF with form submission data.
+- <a href="/Pages/Docker%20Based/SetUp/KeycloakSetup.html"  target="_blank" > Keycloak</a> Identity Keycloak components.
+- <a href="/Pages/Docker%20Based/SetUp/forms.html"  target="_blank" > forms-flow-forms</a>formsflow.ai integration with form.io.
+- <a href="/Pages/Docker%20Based/SetUp/Analytics.html"  target="_blank" > forms-flow-analytics</a> Redash analytics components.
+- <a href="/Pages/Docker%20Based/SetUp/Bpm.html"  target="_blank" > forms-flow-bpm</a>Camunda workflow deployment and integration.
+- <a href="/Pages/Docker%20Based/SetUp/API.html"  target="_blank" > forms-flow-api</a> REST API of formsflow.ai.
+- <a href="/Pages/Docker%20Based/SetUp/Web.html"  target="_blank" > forms-flow-web</a> formsflow.ai integration web UI.
+- <a href="/Pages/Docker%20Based/SetUp/documents.html"  target="_blank" > forms-flow-documents</a> generate PDF with form submission data.
 
 
 Installation is successfully completed now.

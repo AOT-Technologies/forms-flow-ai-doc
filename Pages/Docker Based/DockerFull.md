@@ -24,11 +24,12 @@ Following steps are required to complete the installation and setup of formsflow
 ### 1. Keycloak Setup.
   Keycloak is an open source software product to allow single sign-on with identity and access management aimed at modern applications and services.
 
-  To install Keycloak follow the instructions given [here](https://aot-technologies.github.io/forms-flow-ai-doc/local_keycloaksetup.html). 
-   [hi](../SetUp/KeycloakSetup.md)
+  To install Keycloak follow the instructions given
+  <a href="/Pages/Docker%20Based/SetUp/KeycloakSetup.html"  target="_blank" > here</a>
+   <!-- [here](https://aot-technologies.github.io/forms-flow-ai-doc/local_keycloaksetup.html).  -->
 
 ### 2. forms-flow-analytics Setup.  
-Redash is used to build analytics dashboards. The analytics server can be started by following the instructions given [here](https://aot-technologies.github.io/forms-flow-ai-doc/formsflow_analytics.html).
+Redash is used to build analytics dashboards. The analytics server can be started by following the instructions given <a href="/Pages/Docker%20Based/SetUp/Analytics.html" target="_blank" >here</a>.
 
 ### 3. forms-flow-forms, forms-flow-web, forms-flow-bpm, forms-flow-api & forms-flow-documents Setup. 
  
@@ -42,12 +43,12 @@ NOTE :{your-ip-address} given inside the .env file should be changed to your hos
  ![env var](../../assets//DockerFull/clientsecret.png)
  {: .ml-5}
  
- KEYCLOAK_BPM_CLIENT_SECRET provided in the **sample.env** is the default one.To generate new secret click [here](https://aot-technologies.github.io/forms-flow-ai-doc/formsflow_bpm.html#bpmclientsecret) .
+ KEYCLOAK_BPM_CLIENT_SECRET provided in the **sample.env** is the default one.To generate new secret click <a href="/Pages/Docker%20Based/SetUp/Bpm.html" target="_blank" >here</a>.
 
 ![analytics var](../../assets//DockerFull/analytics%20var.png)
  {: .ml-5}
 
-To get the redash API key click [here](https://aot-technologies.github.io/forms-flow-ai-doc/formsflow_analytics.html#get-the-redash-api-key) .
+To get the redash API key click <a href="/Pages/Docker%20Based/SetUp/Analytics.html" target="_blank" >here</a>.  .
 
 ![analytics var](../../assets//DockerFull/variables2.png)
 ![analytics var](../../assets//DockerFull/variables3.png)

@@ -19,9 +19,13 @@ favicon_ico: "./assets/logo.svg"
 
 # Aux links for the upper right navigation
 # aux_links:
-#   "Formsflow on GitHub":
+#   "Docker":
 #     - "https://github.com/AOT-Technologies/forms-flow-ai"
 
 # color_scheme: dark
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: true
 
-
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"

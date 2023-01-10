@@ -1,8 +1,8 @@
-title: FormFlow.ai
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: Formsflow.ai
+description: formsflow.ai
 theme: just-the-docs
 
-url: https://fahad-aot.github.io/just-the-docs
+url: https://aot-technologies.github.io/formsflow.ai
 
 # Set a path/url to a logo that will be displayed instead of the title
 logo: "./assets/logo.svg"
@@ -11,7 +11,7 @@ logo: "./assets/logo.svg"
 favicon_ico: "./assets/logo.svg"
 
 # aux_links: # remove if you don't want this link to appear on your pages
-#   Template Repository: https://github.com/fahad-aot.github.io/just-the-docs
+#   Template Repository: https://aot-technologies.github.io/formsflow.ai
 
   # Enable or disable the site search
 # Supports true (default) or false

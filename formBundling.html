@@ -59,15 +59,12 @@
             </li>
             <li>
                 Save the Bundle
-            </li>
-            <li>
-                Attach the workflow to the Bundle
-            </li>
-            <li>
-                Publish the Bundle
                 <img class="mt-3" src="./assets/images/formbundling/save_bundle.png" alt="Save_bundle_Snapshot" height="500" width="1000">
             </li>
-                
+            <li>
+                Attach the workflow to the bundle and publish 
+                <img class="mt-3" src="./assets/images/formbundling/publish_bundle.png" alt="Save_bundle_Snapshot" height="500" width="1000">
+            </li>
             </ol>
     </section>
     <section class="docs-section" id="taskvariables">
@@ -89,26 +86,35 @@
                     </code>
                 </pre>
                 <img class="mt-3" src="./assets/images/formbundling/button_component.png" alt="Save_bundle_Snapshot" height="500" width="1000">
-
+                <br>
                 <li>
                     But in the case of the form used in the form connector, it can directly update formio.
                 </li>
                 <img class="mt-3" src="./assets/images/formbundling/button_component_2.png" alt="Save_bundle_Snapshot" height="500" width="1000">
             </ul>
-
+        </div>
+    </section>
+    <section class="docs-section" id="taskvariables">
+        <div>
             <h3>How to Use CombineSubmissionBundleListener</h3>
-
+        
             <ol>
                 <li>
-                    Configure <a target="_blank" href="https://github.com/AOT-Technologies/forms-flow-ai-ee/blob/feature/form-bundling/forms-flow-bpm/starter-examples/listeners/formconnector-readme.md">FormConnectorListener</a>FormConnectorListener to a task. This listener set bundleUrl as the execution variable.
-                    <img class="mt-3" src="./assets/images/formbundling/task_listener_1.png" alt="Save_bundle_Snapshot" height="400" width="800">
+                    Configure <a target="_blank"
+                        href="https://github.com/AOT-Technologies/forms-flow-ai-ee/blob/feature/form-bundling/forms-flow-bpm/starter-examples/listeners/formconnector-readme.md">FormConnectorListener</a>FormConnectorListener
+                    to a task. This listener set bundleUrl as the execution variable.
+                    <img class="mt-3" src="./assets/images/formbundling/task_listener_1.png" alt="Save_bundle_Snapshot"
+                        height="400" width="800">
                 </li>
                 <li>
-                    Configure the CombineSubmissionBundleListener that merges the data from bundleUrl and formUrl to generate a new
+                    Configure the CombineSubmissionBundleListener that merges the data from bundleUrl and formUrl to generate a
+                    new
                     submission for the associated bundle. The URL of the newly created submission is then assigned to formUrl.
-                    <img class="mt-3" src="./assets/images/formbundling/task_listener_2.png" alt="Save_bundle_Snapshot" height="400" width="800">
+                    <img class="mt-3" src="./assets/images/formbundling/task_listener_2.png" alt="Save_bundle_Snapshot"
+                        height="400" width="800">
                 </li>
             </ol>
         </div>
+    </section>
 
         <script>hljs.initHighlighting();</script>

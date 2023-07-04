@@ -1,0 +1,92 @@
+<article class="docs-article">
+    <section class="docs-section" >
+        <div>
+            <h1>RBAC -Role Based Access Control</h1> 
+            <hr><br>
+            <p>formsflow introduces the ability for designers to set permissions for forms, catering to both designers and client
+            users. This functionality provides fine-grained control over the visibility of forms based on user roles.</p>
+            <p>
+                With this feature, designers using formsflow can define specific permissions with each form they create. They have the
+                flexibility to determine which roles can view and interact with a particular form. By configuring these permissions,
+                designers can ensure that only authorized individuals or user roles can access and work with the form.
+            </p>
+            <p>
+                Overall, this feature enhances the flexibility and control available to designers within formsflow, empowering them to
+                manage permissions and determine who can interact with their forms. It ensures that the visibility of forms aligns with
+                the assigned roles, creating a more secure and tailored environment for both designers and client users
+            </p>
+            <ol>
+                <li>
+                    Log in as designer user and create a form then save it
+                    <img class="mt-3" src="/assets/images/RBAC/create_form.png" alt="Create_form" height="500" width="1000"/>
+                </li>
+                <li>
+                    Attach the form with workflow
+                    <br>
+                    <img class="mt-3" src="/assets/images/RBAC/workflow.png" alt="Attach_workflow" height="500" width="1000" />
+                </li>
+                <li>
+                     select designer for the specific form.
+                    <br>
+                        <h4 class="mt-3">
+                            For designer permission
+                        </h4>
+                        <ul>
+                        <li>
+                            Case I : Accessible for all designers : default
+                        </li>
+                        <li>
+                            Case II : Private(Only You) : If only the current designer need to access the form 
+                            <img class="mt-3" src="/assets/images/RBAC/access_for_all.png" alt="select_roles" height="500" width="1000" />
+                        </li>
+                        
+                        <br>
+                        <p><strong>Note:</strong> The designer of a form will always have access to the form, designed
+                             by him/her even though the option is Private(Only You).
+                        </p>
+                        <li>
+                            Case III: Specific Designer Group : Give access to specific groups of designer
+                            <img class="mt-3" src="/assets/images/RBAC/add_btn_designer.png" alt="select_roles" height="500" width="1000" /> 
+                            <p class="mt-3">
+                                Click on the Specific Designer Group option, and then click on Add button to display the list of groups available
+                                .In
+                                the same way, we can add specific client groups
+                                <img class="mt-3" src="/assets/images/RBAC/grp_list.png" alt="select_roles" height="500" width="1000" />
+                            </p>
+                        </li>
+                        <p><strong>Note:</strong> The designer of a form will always have access to the form, designed by him/her even though
+                            he/she is
+                            not a member of the specific group.
+                        </p>
+                    </ul>
+                    <li>
+                        select client for the specific form.
+                        <h4 class="mt-3">
+                            For client permission
+                        </h4>
+                        <ul>
+                            <li>
+                                Case I : Accessible for all client : default
+                                <img class="mt-3" src="/assets/images/RBAC/access_for_all.png" alt="select_roles" height="500" width="1000" />
+                            </li>
+                            <li>
+                                Case II : Specific Client Group : Give access to specific groups of clients
+                                <img class="mt-3" src="/assets/images/RBAC/add_btn_client.png" alt="select_roles" height="500" width="1000" />
+                                
+                            </li>
+                        </ul>
+                    </li>
+                    <p><strong>Note</strong>When choosing specific designer groups or client groups, the list contains all the groups available in Keycloak,
+                    including the designer groups, client groups, and reviewer groups. The designer has to choose the appropriate group
+                    required</p>
+                </li> 
+
+                <li>
+                    Publish and save the form for client users
+                    <img class="mt-3" src="/assets/images/RBAC/pulish_save.png" alt="select_roles" height="500" width="1000" />
+                </li>
+
+            </ol>
+        </div>
+    </section>
+</article>

@@ -95,6 +95,18 @@
                 </li>
 
             </ol>
+            <br>
+            <p><strong>Note</strong> :<em>
+                    If existing forms are to be listed for clients, you need to migrate the existing Camunda authorizations. For this, you
+                    have to run a bash script inside the FormsFlow web API. If you need to run this script in the instance or server, such
+                    as a Kubernetes cluster or Nginx, you have to access the Docker container of the FormsFlow web API and execute the bash
+                    script called "migration.sh". Alternatively, if you are setting up the environment locally and running the Docker
+                    container locally, you can get inside the FormsFlow web API container and run the "migration.sh" command. In the case of
+                    running the web API with Flask locally, you should activate the virtual environment and run the bash script within it.
+                    You can create the virtual environment by following the instructions provided in the Makefile inside the FormsFlow web
+                    API.
+                </em> </p>
+
         </div>
     </section>
 </article>

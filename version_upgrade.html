@@ -7,12 +7,65 @@
                 the latest features, it is essential to upgrade formflow.ai to the newest version.</p>
             <p>For Docker full deployment, and Individual service deployment, to upgrade to the latest version(for version 4.5+ to 5.* upgrade),</p>
             <ul>
-                <li> Pull the latest version from <a href="https://github.com/AOT-Technologies/forms-flow-ai">here</a>.
+                <li> Pull the latest version from <a target="_blank" href="https://github.com/AOT-Technologies/forms-flow-ai">here</a>.
                 </li>
                 <li>Update the environment variables in the .env file, from the respective folders, as given below.</li>
             </ul>
+            <section class="docs-section">
+                <h2>version 5.0.0 to 5.2.0 *</h2>
+                <ol>
+                    <h4>
+                        <li>forms-flow-web</li>
+                    </h4>
+                    <ul>
+                        <li>
+                            Removed environment variable REACT_APP_FORMIO_JWT_SECRET form config.sample.js.
+                        </li>
+                        <li>
+                            Removed environment variable DOCUMENT_SERVICE_URL.
+                        </li>
+                    </ul>
+                    <br>
+                    <li>
+                        <h4>forms-flow-bpm</h4>
+                    </li>
+                    <ul>
+                        <li>Added environment variables REDIS_ENABLED,REDIS_HOST,REDIS_PORT,REDIS_PASSCODE and
+                            SESSION_COOKIE_SECURE.
+                        </li>
+                    </ul>
+                    <br>
+                    <li>
+                        <h4>forms-flow-forms</h4>
+                    </li>
+                    <ul>
+                        <li>
+                            Added environment variable FORMIO_CLIENT_UI.
+                        </li>
+                    </ul>
+                    <br>
+                    <li>
+                        <h4>forms-flow-web-root-config</h4>
+                    </li>
+                    <ul>
+                        <li>
+                            Added environment variables MF_FORMSFLOW_WEB_URL, MF_FORMSFLOW_NAV_URL, MF_FORMSFLOW_SERVICE_URL,
+                            MF_FORMSFLOW_ADMIN_URL, MF_FORMSFLOW_THEME_URL to get MicroFrontend Components Created.
+                        </li>
+                        <li>
+                            Added environment variables ENABLE_FORMS_MODULE, ENABLE_TASKS_MODULE, ENABLE_DASHBOARDS_MODULE,
+                            ENABLE_PROCESSES_MODULE,
+                            ENABLE_APPLICATIONS_MODULE to disable a particular module in forms-flow-web.
+                        </li>
+                        <li>
+                            Added environment variable CUSTOM_THEME_URL for providing theming configuration.
+                        </li>
+                    </ul>
+                </ol>
+            </section>
             <br>
-            <h2>Update the environment variables:</h2><br>
+            <section >
+            <h2>version 4.5.0 to 5.0.0 </h2>
             <ol>
                 <h3>
                     <li>forms-flow-web</li>
@@ -24,8 +77,6 @@
                     <p>The names of the following enviroment variables should be changed as given below, but their
                         values should not change.</p>
                     <ul>
-
-
                         <li>Modify the Environment variable CAMUNDA_API_URL as BPM_API_URL.</li>
                         <li>Modify the Environment variables REACT_APP_CAMUNDA_API_URI as REACT_APP_BPM_URL.</li><br>
                         <i>
@@ -109,11 +160,16 @@
                         </i>
                         <li>Add the environment variable MULTI_TENANCY_ENABLED to support multitenancy.</li>
                     </ul><br>
-                    <p><strong>Note:</strong> The reference values for these environment variables can be viewed <a
-                            href="https://github.com/AOT-Technologies/forms-flow-ai/blob/master/forms-flow-forms/sample.env
-                        ">here</a>. </p>
+                    <section class="docs-note">
+                        <p>
+                            <strong>Note:</strong> The reference values for these environment variables can be viewed
+                            <a target="_blank"
+                                href="https://github.com/AOT-Technologies/forms-flow-ai/blob/master/forms-flow-forms/sample.env">here</a>.
+                        </p>
+                    </section>
                 </ol>
             </ol>
+            </section>  
         </div>
     </section>
 </article>

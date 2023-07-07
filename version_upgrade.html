@@ -19,10 +19,8 @@
                     </h4>
                     <ul>
                         <li>
-                            Removed environment variable REACT_APP_FORMIO_JWT_SECRET form config.sample.js.
-                        </li>
-                        <li>
-                            Removed environment variable DOCUMENT_SERVICE_URL.
+                            Environment variable USER_ACCESS_PERMISSIONS is replaced with ENABLE_APPLICATION_ACCESS_PERMISSION_CHECK to enable Role
+                            level permission.
                         </li>
                     </ul>
                     <br>
@@ -49,19 +47,36 @@
                     </li>
                     <ul>
                         <li>
-                            Added environment variables MF_FORMSFLOW_WEB_URL, MF_FORMSFLOW_NAV_URL, MF_FORMSFLOW_SERVICE_URL,
-                            MF_FORMSFLOW_ADMIN_URL, MF_FORMSFLOW_THEME_URL to get MicroFrontend Components Created.
+                            Added environment variables 
+                            <ul style="list-style-type: none;">
+                                <li>MF_FORMSFLOW_WEB_URL</li>
+                                <li>MF_FORMSFLOW_NAV_URL</li>
+                                <li>MF_FORMSFLOW_SERVICE_URL</li>
+                                <li>MF_FORMSFLOW_ADMIN_URL</li>
+                                <li>MF_FORMSFLOW_THEME_URL</li>
+                            </ul>
+                             &nbsp; &nbsp; to get MicroFrontend Components Created
                         </li>
                         <li>
-                            Added environment variables ENABLE_FORMS_MODULE, ENABLE_TASKS_MODULE, ENABLE_DASHBOARDS_MODULE,
-                            ENABLE_PROCESSES_MODULE,
-                            ENABLE_APPLICATIONS_MODULE to disable a particular module in forms-flow-web.
+                            Added environment variables 
+                            <ul style="list-style-type: none;">
+                                <li>ENABLE_FORMS_MODULE</li>
+                                <li>ENABLE_TASKS_MODULE</li>
+                                <li>ENABLE_DASHBOARDS_MODULE</li>
+                                <li>ENABLE_PROCESSES_MODULE</li>
+                                <li>ENABLE_APPLICATIONS_MODULE</li>
+                            </ul>
+                            &nbsp; &nbsp; to disable a particular module in forms-flow-web.
                         </li>
                         <li>
                             Added environment variable CUSTOM_THEME_URL for providing theming configuration.
                         </li>
                     </ul>
                 </ol>
+                <p>
+                    <strong>Note</strong>: <em> For listing all the forms for clients, existing users should run RBAC migration script with Camunda authorization.
+                    Please follow the instructions <a target="_blank" href="https://github.com/AOT-Technologies/forms-flow-ai/blob/master/forms-flow-api/README.md#migration-script-for-existing-users">here</a></em>
+                </p>
             </section>
             <br>
             <section >

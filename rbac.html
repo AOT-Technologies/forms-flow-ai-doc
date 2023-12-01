@@ -1,7 +1,7 @@
 <article class="docs-article" >
     <section class="docs-section" id="version" >
         <div>
-            <h1>Designer and Client Authorization</h1> 
+            <h1>Role Based Access Control for forms</h1> 
             <hr><br>
             <p>formsflow introduces the ability for designers to set permissions for forms, catering to both designers and client
             users. This functionality provides fine-grained control over the visibility of forms based on user roles.</p>
@@ -63,23 +63,48 @@
                             though he/she is not a member of the specific group.</em></p>
                     <br>
                     <h4 class="mt-3">
-                        For client permission
+                        Permission to create new submission
                     </h4>
+                    <br>
+                    <p>This permission grants exclusive rights to a specified user group, allowing them to create new submissions for the designed form.</p>
                     <ul style="list-style-type:disc;">
                         <li>
-                            Case I :: &nbsp;  All Clients: default.
-                            <img class="mt-3" src="./assets/images/RBAC/access_for_all.png" alt="select_roles" height="500" width="1000" />
+                            Case I :: &nbsp;  All reviewers and clients: default. 
+                            <img class="mt-3" src="./assets/images/RBAC/permission_all_users.png" alt="select_roles" height="500" width="1000" />
                         </li>
                         <li>
-                            Case II ::  &nbsp; Specific Client Group : Give access to specific groups of clients.
-                            <img class="mt-3" src="./assets/images/RBAC/add_btn_client.png" alt="add_client" height="500" width="1000" />
+                            Case II ::  &nbsp; Specific User Group: Give access to specific groups of clients and reviewers
+                            <img class="mt-3" src="./assets/images/RBAC/add_btn_user.png" alt="add_client" height="500" width="1000" />
                             <p class="mt-3">
-                                Click on the Specific Client Group option, and then click on Add button to display the list of groups
-                                available.
-                                <img class="mt-3" src="./assets/images/RBAC/client_list.png" alt="select_roles" height="500" width="1000" />
+                                Click on the Specific User Group option, and then click on Add button to display the list of groups available.
+                                <img class="mt-3" src="./assets/images/RBAC/add_user_list.png" alt="select_roles" height="500" width="1000" />
                             </p>
                         </li>
                     </ul>
+
+                    <h4 class="mt-3">
+                        Reviewer permission to view submissions
+                    </h4>
+                    <br>
+                    <p>With this permission, the assigned reviewer has the capability to review the submission history of the designed form.</p>
+                    <ul>
+                    <li>
+                        Case I :: &nbsp;  All Reviewers: default. 
+                        <img class="mt-3" src="./assets/images/RBAC/view_all_reviewers.png" alt="select_roles" height="500" width="1000" />
+                    </li>
+
+                    <li>
+                        Case II :: &nbsp; Specific Reviewers : Give access to specific groups of reviewers
+                        <img class="mt-3" src="./assets/images/RBAC/specific_reviewers.png" alt="select_roles" height="500" width="1000" />
+                        <p class="mt-3">
+                            Click on the Specific Reviewers, and then click on Add button to display the list of groups available.
+                            <img class="mt-3" src="./assets/images/RBAC/reviewer_list.png" alt="select_roles" height="500" width="1000" />
+                        </p>
+                    </li>
+                    
+                    <br>
+                   
+                </ul>
                     <br>
                     <p><strong>Note</strong> :<em>
                         When choosing specific designer groups or client groups, the list contains all the groups available in Keycloak,
@@ -91,7 +116,7 @@
 
                 <li>
                     Publish and save the form for client users.
-                    <img class="mt-3" src="./assets/images/RBAC/pulish_save.png" alt="select_roles" height="500" width="1000" />
+                    <img class="mt-3" src="./assets/images/RBAC/publish_save.png" alt="select_roles" height="500" width="1000" />
                 </li>
 
             </ol>

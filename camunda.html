@@ -1,72 +1,214 @@
-<article class="docs-article">
-    <section class="docs-section" id="filters">
-        <div>
-            <h1>Camunda Filters</h1>
-            <hr><br><br>
-            <p>In Tasklist, you can create and select filters. You can use these filters to create lists
-                of tasks, sorted by specified criteria. To create a filter, select Create a Filter. You
-                will then see a screen as depicted in the above image. You have several options to
-                configure your filter:</p><br><br>
-            <img src="./assets/images/camunda_Filter1.png" height="500" width="1000"></img><br>
+<!DOCTYPE html>
+<html lang="en">
 
-            <ul>
-                <li><strong>General</strong> - Specify the name and description of the filter as well as
-                    assigning a color. Assign a priority to determine the order in which the filters are
-                    displayed on the dashboard.
-                    </li>
-                <li>
-                    <strong> Permissions</strong> - Specify which users or groups can see the filter.
-                    You can set the filter as globally accessible by selecting the checkbox labelled “Accessible by all users”. A permission that is set here is equivalent to a READ permission which
-                    can also be set in Camunda Admin. In case you want to assign other permissions, you
-                    can do so in the Authorizations tab in Camunda Admin.
-                </li>
-                <li>
-                    <strong>Criteria</strong> - Specify which tasks will be displayed when selecting the
-                    filter. A key and a value must be inserted.
-                </li><br>
-                <img src="./assets/images/camunda_Filter2.png" height="600" width="1000"></img><br>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Forms flow ai documentation">
+    <meta name="author" content="formsflow.ai">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Welcome to formsflow.ai</title>
 
-                <div class="callout-block callout-block-info">
-                    <div class="content">
-                        <span class="callout-icon-holder me-1"></span>
+    <!-- Google Font -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
-                        <i class="fa fa-bullhorn"></i>
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
 
-                        <strong>NOTE :</strong>
-                        Keys marked with a * accept expressions as value.
-                    </div>
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
 
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+    <link id="theme-style" rel="stylesheet" href="assets/css/atom-one-dark.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <header class="header fixed-top">
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+                        type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2"
+                                src="assets/images/formsflow.ai-logo.svg" alt="logo"><span
+                                class="logo-text">formsflow.ai</span></a></div>
                 </div>
-                <li>
-                    <strong>Variables</strong> - Specify which variables are displayed in the filter
-                    results section of the dashboard. Setting variables here has no influence on which
-                    tasks are displayed. To set the variables, you need to insert a Name, which is the
-                    coded name of the variable, and a Label, which defines what the variable will be
-                    named in the filter results.
-                </li>
-            </ul>
-            <h2>Common Filters</h2>
-            <ol>
-                <li>
-                    <strong>My task</strong> filter
-                </li>
-                This filter will display tasks claimed by logged-in user.
-                <br><br>
-                <img src="./assets/images/camunda_Filter3.png" height="450" width="800"></img><br><br><br>
+                <!--//docs-logo-wrapper-->
+                <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+                    <!-- <div class="top-search-box d-none d-lg-flex">
+						<form class="search-form">
+							<input type="text" placeholder="Search the docs..." name="search"
+								class="form-control search-input">
+							<button type="submit" class="btn search-btn" value="Search"><i
+									class="fas fa-search"></i></button>
+						</form>
+					</div> -->
 
-                <img src="./assets/images/camunda_Filter4.png" height="450" width="800"></img><br><br><br>
-                <img src="./assets/images/camunda_Filter5.png" height="400" width="950"></img><br><br><br>
-                <li>
-                    <strong>All tasks </strong>filter
-                </li>
-                This filter will display all tasks of the user logged in.
-                <br><br>
-                <img src="./assets/images/camunda_Filter6.png" height="450" width="800"></img><br><br><br>
-                <img src="./assets/images/camunda_Filter7.png" height="400" width="950"></img><br><br><br>
-                In the table below we list some of the more common and useful filters that you can
-                create in Tasklist and how to set them up.
-                <br><img src="./assets/images/camunda_Filter8.png" height="800" width="900"></img><br><br>
-            </ol>
+                    <ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+                        <li class="list-inline-item"><a href="https://github.com/AOT-Technologies/forms-flow-ai"><i
+                                    class="fab fa-github fa-fw"></i></a></li>
+                    </ul>
+                    <!--//social-list-->
+                    <a href="https://github.com/AOT-Technologies/forms-flow-ai"
+                        class="btn btn-primary d-none d-lg-flex">Download</a>
+                </div>
+                <!--//docs-top-utilities-->
+            </div>
+            <!--//container-->
         </div>
-    </section>
-</article>
+        <!--//branding-->
+    </header>
+    <!--//header-->
+
+    <div class="docs-wrapper">
+        <div id="docs-sidebar" class="docs-sidebar">
+            <!-- mobile view -->
+            <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+                    <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+                    <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+
+
+        </div>
+
+        <div>
+
+            <div class="container" id="main-content">
+
+                <article class="docs-article">
+                    <section class="docs-section" id="filters">
+                        <div>
+                            <h1>Camunda Filters</h1>
+                            <hr><br><br>
+                            <p>In Tasklist, you can create and select filters. You can use these filters to create lists
+                                of tasks, sorted by specified criteria. To create a filter, select Create a Filter. You
+                                will then see a screen as depicted in the above image. You have several options to
+                                configure your filter:</p><br><br>
+                            <img src="./assets/images/camunda_Filter1.png" height="500" width="1000"></img><br>
+                
+                            <ul>
+                                <li><strong>General</strong> - Specify the name and description of the filter as well as
+                                    assigning a color. Assign a priority to determine the order in which the filters are
+                                    displayed on the dashboard.
+                                    </li>
+                                <li>
+                                    <strong> Permissions</strong> - Specify which users or groups can see the filter.
+                                    You can set the filter as globally accessible by selecting the checkbox labelled “Accessible by all users”. A permission that is set here is equivalent to a READ permission which
+                                    can also be set in Camunda Admin. In case you want to assign other permissions, you
+                                    can do so in the Authorizations tab in Camunda Admin.
+                                </li>
+                                <li>
+                                    <strong>Criteria</strong> - Specify which tasks will be displayed when selecting the
+                                    filter. A key and a value must be inserted.
+                                </li><br>
+                                <img src="./assets/images/camunda_Filter2.png" height="600" width="1000"></img><br>
+                
+                                <div class="callout-block callout-block-info">
+                                    <div class="content">
+                                        <span class="callout-icon-holder me-1"></span>
+                
+                                        <i class="fa fa-bullhorn"></i>
+                
+                                        <strong>NOTE :</strong>
+                                        Keys marked with a * accept expressions as value.
+                                    </div>
+                
+                                </div>
+                                <li>
+                                    <strong>Variables</strong> - Specify which variables are displayed in the filter
+                                    results section of the dashboard. Setting variables here has no influence on which
+                                    tasks are displayed. To set the variables, you need to insert a Name, which is the
+                                    coded name of the variable, and a Label, which defines what the variable will be
+                                    named in the filter results.
+                                </li>
+                            </ul>
+                            <h2>Common Filters</h2>
+                            <ol>
+                                <li>
+                                    <strong>My task</strong> filter
+                                </li>
+                                This filter will display tasks claimed by logged-in user.
+                                <br><br>
+                                <img src="./assets/images/camunda_Filter3.png" height="450" width="800"></img><br><br><br>
+                
+                                <img src="./assets/images/camunda_Filter4.png" height="450" width="800"></img><br><br><br>
+                                <img src="./assets/images/camunda_Filter5.png" height="400" width="950"></img><br><br><br>
+                                <li>
+                                    <strong>All tasks </strong>filter
+                                </li>
+                                This filter will display all tasks of the user logged in.
+                                <br><br>
+                                <img src="./assets/images/camunda_Filter6.png" height="450" width="800"></img><br><br><br>
+                                <img src="./assets/images/camunda_Filter7.png" height="400" width="950"></img><br><br><br>
+                                In the table below we list some of the more common and useful filters that you can
+                                create in Tasklist and how to set them up.
+                                <br><img src="./assets/images/camunda_Filter8.png" height="800" width="900"></img><br><br>
+                            </ol>
+                        </div>
+                       
+                    </div>
+                    <br>
+                
+                    </section>
+                </article>
+            </div>
+
+
+            <!-- ----------------------- this is footer section ------------------------ -->
+            <footer class="footer">
+                <div class="container text-center py-5">
+                    <small class="copyright">Copyright &copy; <a href="https://formsflow.ai/"
+                            target="_blank">formsflow.ai</a></small>
+                    <ul class="social-list list-unstyled pt-4 mb-0">
+                        <li class="list-inline-item"><a href="https://github.com/AOT-Technologies/forms-flow-ai"><i
+                                    class="fab fa-github fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="https://twitter.com/formsflowai"><i
+                                    class="fab fa-twitter fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a
+                                href="https://www.linkedin.com/company/aot-technologies/products/"><i
+                                    class="fab fa-linkedin-in"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.facebook.com/formsflowai"><i
+                                    class="fab fa-facebook-f fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/formsflow.ai/"><i
+                                    class="fab fa-instagram fa-fw"></i></a></li>
+                    </ul>
+                    <!--//social-list-->
+                </div>
+            </footer>
+        </div>
+    </div>
+    </div>
+    <!--//docs-wrapper-->
+
+
+    <!-- Javascript -->
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+    <!-- Page Specific JS -->
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script>
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+
+
+</body>
+
+</html>
+
+
+

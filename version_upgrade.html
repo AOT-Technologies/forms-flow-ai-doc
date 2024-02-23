@@ -12,6 +12,90 @@
                 <li>Update the environment variables in the .env file, from the respective folders, as given below.</li>
             </ul>
             <section class="docs-section">
+                <h2>version 5.2.0 * to 5.3.0 </h2>
+                <ol>
+                    <h3>
+                        <li>forms-flow-web</li>
+                    </h3>
+                    <br>
+                    <h4><em>Optional Changes</em></h4>
+                    <ul>
+                        <li>
+                            Added environment variable DATE_FORMAT to change the date format.
+                        </li>
+                        <li>
+                            Added environment variable TIME_FORMAT to change the time format.
+                        </li>
+                        <li>
+                            Added environment variable CUSTOM_THEME_URL to override the theme.
+                        </li>
+                        <li>
+                            Added environment variable CUSTOM_RESOURCE_BUNDLE_URL to customize resource bundle for internationalization.
+                        </li>
+                    </ul>
+                    <br>
+                    <h3>
+                        <li>forms-flow-api</li>
+                    </h3>
+                    <br>
+                    <h4><em>Optional Changes</em></h4>
+                    <ul>
+                        <li>
+                            Added environment variable API_LOG_ROTATION_WHEN for specifying the frequency of log file rotation.
+                        </li>
+                        <li>
+                            Added environment variable API_LOG_ROTATION_INTERVAL for setting the time interval for log file rotation.
+                        </li>
+                        <li>
+                            Added environment variable API_LOG_BACKUP_COUNT for determining the number of backup log files to keep.
+                        </li>
+                    </ul>
+                    <h4><em>upgrades</em></h4>
+                    <ul>
+                        <li>
+                            Flask upgraded to 2.3.3 and fixed security vulnerabilities.
+                        </li>
+                    </ul>
+                    <br>
+                    <h3>
+                        <li>forms-flow-documents</li>
+                    </h3>
+                    <br>
+                    <h4><em>Optional Changes</em></h4>
+                    <ul>
+                        <li>
+                            Added environment variable API_LOG_ROTATION_WHEN for specifying the frequency of log file rotation.
+                        </li>
+                        <li>
+                            Added environment variable API_LOG_ROTATION_INTERVAL for setting the time interval for log file rotation.
+                        </li>
+                        <li>
+                            Added environment variable API_LOG_BACKUP_COUNT for determining the number of backup log files to keep
+                        </li>
+                    </ul>
+                    <h4><em>upgrades</em></h4>
+                    <ul>
+                        <li>
+                            Flask upgraded to 2.3.3 and fixed security vulnerabilities
+                        </li>
+                    </ul>
+                    <h3>
+                        <li>forms-flow-bpm</li>
+                    </h3>
+                    <br>
+                    <h4><em>upgrades</em></h4>
+                    <ul>
+                        <li>
+                            Camunda upgraded to 7.20.0, SpringBoot upgraded to 3.1.5 and fixed security vulnerabilities.
+                        </li>
+                    </ul> 
+                </ol>
+                <p>
+                    <strong>Note</strong>: <em> Added migration script to move existing task filters from forms-flow-bpm to forms-flow-api,
+                    Please follow the instructions <a target="_blank" href="https://github.com/AOT-Technologies/forms-flow-ai/blob/v5.3.0/forms-flow-api/README.md#migration-script-for-existing-users">here</a></em>.
+                </p>
+            </section>
+            <section class="docs-section">
                 <h2>version 5.0.0 to 5.2.0 *</h2>
                 <ol>
                     <h3>

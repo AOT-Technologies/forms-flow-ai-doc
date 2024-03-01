@@ -1,59 +1,196 @@
-<article class="docs-article">
-    <section class="docs-section" id="taskvariables">
-        <div>
-            <h1 id="taskvariables">BPMN variable</h1>
-            <hr><br>
-            BPMN variables are the form fields that you added to the form. Users can select form
-            fields that they want to display in the task list.
-            <ol>
-                <li>Create a new form or Edit an already created form.</li><br>
-                <img src="./assets/images/Screenshot 2022-05-12 160427.png" width="1000"
-                    height="500"><br><br>
-                <li>Associate the form with the workflow. </li><br>
-                <img src="./assets/images/Screenshot 2022-05-12 160526.png" width="1000"
-                    height="500"><br><br>
-                <li>Ensure the workflow has included FormBPMFilteredDataPipelineListener. </li><br>
-                <img src="./assets/images/Screenshot 2022-05-12 165140.png" width="1000"
-                    height="500"><br><br>
-                <li>Add task filter variables to the form. The FormBPMFilteredDataPipelineListener
-                    copies
-                    the added task variable keys from form (formio) to Camunda variables.</li><br>
-                <img src="./assets/images/Screenshot 2022-05-12 161159.png" width="1000"
-                    height="500"><br><br>
-                <strong>Note:</strong> As of now only key is used.Label and Show in list are
-                included for
-                future purpose.<br>
-                <li>Click the add button, the selected key is added as a task variable. We can add
-                    more
-                    variables from the form as task variables and also edit the task variable
-                    already added.
-                </li><br>
-                <img src="./assets/images/Screenshot 2022-05-12 162111.png" width="1000"
-                    height="500"><br><br>
-                
-                <li> Add the task variables to edit filter in Camunda tasklist.</li><br>
-                <img src="./assets/images/Screenshot 2022-05-12 162652.png" width="1000"
-                    height="500"><br><br>
-                    <li>Submit new application with this form.</li><br>
-                <img src="./assets/images/Screenshot 2022-05-12 162340.png" width="1000"
-                    height="500"><br><br>
-                <li>Now these variables are displayed in user's tasklist.</li><br>
-                <img src="./assets/images/Screenshot 2022-05-12 162839.png" width="1000"
-                    height="500"><br><br>
-                    <li> If you want to search for a taskvariable, select Process Variables from the drop down.</li>
-                    <img src="./assets/images/Screenshot 2022-09-12 130212.png"  width="1000"
-                    height="500"><br><br>
-                    <ul>
-                        <li>Now select any task variable from the list.</li>
-                    
-                    <img src="./assets/images/Screenshot 2022-09-12 130437.png" width="1000"
-                    height="500"><br><br>
-                    <li>Here you can enter the data and filter task from the tasklist.</li>
-                    <img src="./assets/images/Screenshot 2022-09-12 130659.png" width="1000"
-                    height="500"><br><br>
-                </ul>
 
-            </ol>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Forms flow ai documentation">
+    <meta name="author" content="formsflow.ai">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Welcome to formsflow.ai</title>
+
+    <!-- Google Font -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+    <link id="theme-style" rel="stylesheet" href="assets/css/atom-one-dark.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <header class="header fixed-top">
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+                        type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2"
+                                src="assets/images/formsflow.ai-logo.svg" alt="logo"><span
+                                class="logo-text">formsflow.ai</span></a></div>
+                </div>
+                <!--//docs-logo-wrapper-->
+                <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+                    <!-- <div class="top-search-box d-none d-lg-flex">
+						<form class="search-form">
+							<input type="text" placeholder="Search the docs..." name="search"
+								class="form-control search-input">
+							<button type="submit" class="btn search-btn" value="Search"><i
+									class="fas fa-search"></i></button>
+						</form>
+					</div> -->
+
+                    <ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+                        <li class="list-inline-item"><a href="https://github.com/AOT-Technologies/forms-flow-ai"><i
+                                    class="fab fa-github fa-fw"></i></a></li>
+                    </ul>
+                    <!--//social-list-->
+                    <a href="https://github.com/AOT-Technologies/forms-flow-ai"
+                        class="btn btn-primary d-none d-lg-flex">Download</a>
+                </div>
+                <!--//docs-top-utilities-->
+            </div>
+            <!--//container-->
         </div>
-        </section>
-        </article>
+        <!--//branding-->
+    </header>
+    <!--//header-->
+
+    <div class="docs-wrapper">
+        <div id="docs-sidebar" class="docs-sidebar">
+            <!-- mobile view -->
+            <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+                    <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+                    <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+
+
+        </div>
+
+        <div>
+
+            <div class="container" id="main-content">
+
+                <article class="docs-article">
+                    <section class="docs-section" id="taskvariables">
+                        <div>
+                            <h1 id="taskvariables">BPMN variable</h1>
+                            <hr><br>
+                            BPMN variables are the form fields that you added to the form. Users can select form
+                            fields that they want to display in the task list.
+                            <ol>
+                                <li>Create a new form or Edit an already created form.</li><br>
+                                <img src="./assets/images/Screenshot 2022-05-12 160427.png" width="1000"
+                                    height="500"><br><br>
+                                <li>Associate the form with the workflow. </li><br>
+                                <img src="./assets/images/Screenshot 2022-05-12 160526.png" width="1000"
+                                    height="500"><br><br>
+                                <li>Ensure the workflow has included FormBPMFilteredDataPipelineListener. </li><br>
+                                <img src="./assets/images/Screenshot 2022-05-12 165140.png" width="1000"
+                                    height="500"><br><br>
+                                <li>Add task filter variables to the form. The FormBPMFilteredDataPipelineListener
+                                    copies
+                                    the added task variable keys from form (formio) to Camunda variables.</li><br>
+                                <img src="./assets/images/Screenshot 2022-05-12 161159.png" width="1000"
+                                    height="500"><br><br>
+                                <strong>Note:</strong> As of now only key is used.Label and Show in list are
+                                included for
+                                future purpose.<br>
+                                <li>Click the add button, the selected key is added as a task variable. We can add
+                                    more
+                                    variables from the form as task variables and also edit the task variable
+                                    already added.
+                                </li><br>
+                                <img src="./assets/images/Screenshot 2022-05-12 162111.png" width="1000"
+                                    height="500"><br><br>
+                                
+                                <li> Add the task variables to edit filter in Camunda tasklist.</li><br>
+                                <img src="./assets/images/Screenshot 2022-05-12 162652.png" width="1000"
+                                    height="500"><br><br>
+                                    <li>Submit new application with this form.</li><br>
+                                <img src="./assets/images/Screenshot 2022-05-12 162340.png" width="1000"
+                                    height="500"><br><br>
+                                <li>Now these variables are displayed in user's tasklist.</li><br>
+                                <img src="./assets/images/Screenshot 2022-05-12 162839.png" width="1000"
+                                    height="500"><br><br>
+                                    <li> If you want to search for a taskvariable, select Process Variables from the drop down.</li>
+                                    <img src="./assets/images/Screenshot 2022-09-12 130212.png"  width="1000"
+                                    height="500"><br><br>
+                                    <ul>
+                                        <li>Now select any task variable from the list.</li>
+                                    
+                                    <img src="./assets/images/Screenshot 2022-09-12 130437.png" width="1000"
+                                    height="500"><br><br>
+                                    <li>Here you can enter the data and filter task from the tasklist.</li>
+                                    <img src="./assets/images/Screenshot 2022-09-12 130659.png" width="1000"
+                                    height="500"><br><br>
+                                </ul>
+                
+                            </ol>
+                        </div>
+                        </section>
+                        </article>
+
+            </div>
+
+
+            <!-- ----------------------- this is footer section ------------------------ -->
+            <footer class="footer">
+                <div class="container text-center py-5">
+                    <small class="copyright">Copyright &copy; <a href="https://formsflow.ai/"
+                            target="_blank">formsflow.ai</a></small>
+                    <ul class="social-list list-unstyled pt-4 mb-0">
+                        <li class="list-inline-item"><a href="https://github.com/AOT-Technologies/forms-flow-ai"><i
+                                    class="fab fa-github fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="https://twitter.com/formsflowai"><i
+                                    class="fab fa-twitter fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a
+                                href="https://www.linkedin.com/company/aot-technologies/products/"><i
+                                    class="fab fa-linkedin-in"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.facebook.com/formsflowai"><i
+                                    class="fab fa-facebook-f fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/formsflow.ai/"><i
+                                    class="fab fa-instagram fa-fw"></i></a></li>
+                    </ul>
+                    <!--//social-list-->
+                </div>
+            </footer>
+        </div>
+    </div>
+    </div>
+    <!--//docs-wrapper-->
+
+
+    <!-- Javascript -->
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+    <!-- Page Specific JS -->
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script>
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+
+
+</body>
+
+</html>

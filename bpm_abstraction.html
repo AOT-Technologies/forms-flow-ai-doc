@@ -96,7 +96,8 @@
 
                                 <p>Previously, relying on Camunda for task filters required users to log in, but with
                                     the BPM Abstraction
-                                    feature, they can now easily generate filters directly from the Task page. Let's
+                                    feature, they can now easily generate filters directly from formsflow.ai Task page
+                                    itself. Let's
                                     walk through creating a
                                     new filter.
                                 </p>
@@ -137,55 +138,45 @@
                                     <br>
                                     <p><img src="./assets/images/Taskfilters/mytask2.png" alt="image" width="1000"></p>
                                     <b>
-                                        <li>Show task based on logged user roles :</li>
+                                        <li>Display authorized tasks based on user roles :</li>
                                     </b>
 
-                                    This filter is based on user roles, allowing the system to dynamically showcase
-                                    tasks based on the
-                                    specific roles assigned to the logged-in user. For instance, if a user holds a
-                                    reviewer role, the filter
-                                    will exclusively present tasks designated for reviewer role users.
+                                    This criteria is based on user roles and is visible exclusively to users with an
+                                    admin role. Users with other roles won't have access. Admin users can toggle this
+                                    field on or off. By default, this criteria will be true for all users.
                                     <br><br>
                                     <p><img src="./assets/images/Taskfilters/current_usertask1.png" alt="image"
                                             width="1000"></p> <br>
                                     <p><img src="./assets/images/Taskfilters/current_usertask2.png" alt="image"
                                             width="1000"></p>
                                     <b>
-                                        <li>Definition Key :</li>
+                                        <li>workflow :</li>
                                     </b>
                                     This specific criteria allows users to display tasks according to the specified
-                                    process definition key,
-                                    which basically represents the name of the workflow.
-                                    Users can easily extract the workflow name from the designer login and enter it into
-                                    the filter,
-                                    resulting in the display of all tasks linked with that specific definition key.
+                                    workflow. Users can easily select the workflow name from the provided list,
+                                    resulting in the display of all tasks linked with that specific workflow.
                                     <br><br>
-                                    <p><img src="./assets/images/Taskfilters/definition_key.png" alt="image"
-                                            width="1000"></p> <br>
-                                    <p><img src="./assets/images/Taskfilters/definiton_key2.png" alt="image"
-                                            width="1000"></p><br>
-                                    <p><img src="./assets/images/Taskfilters/definiton_key3.png" alt="image"
-                                            width="1000"></p><br>
+                                    <p><img src="./assets/images/Taskfilters/workflow1.png" alt="image" width="1000">
+                                    </p> <br>
+                                    <p><img src="./assets/images/Taskfilters/workflow2.png" alt="image" width="1000">
+                                    </p><br>
                                     <p><b>Note:</b>This filter has the advantage of supporting the like operator, which
                                         allows users to
                                         input only a portion of the defining key, hence increasing flexibility and user
                                         comfort.
                                     </p>
                                     <b>
-                                        <li>Candidate Group :</li>
+                                        <li>User Group :</li>
                                     </b>
-                                    The candidate group criteria provides a more detailed approach by providing tasks
-                                    connected with a
-                                    certain candidate group. For instance, if the candidate group is defined as
+                                    The user group criteria provides a more detailed approach by providing tasks
+                                    connected with a certain user group. For instance, if the user group is defined as
                                     <b>formsflow/formsflow-reviewer/clerk</b> , the filter will display all tasks
-                                    related to that specific
-                                    group. This functionality is especially useful when tasks are arranged according to
-                                    certain business
-                                    processes or responsibilities.
+                                    related to that specific group. This functionality is especially useful when tasks
+                                    are arranged according to certain business processes or responsibilities.
                                     <br><br>
-                                    <p><img src="./assets/images/Taskfilters/candidategp1.png" alt="image" width="1000">
+                                    <p><img src="./assets/images/Taskfilters/usergp1.png" alt="image" width="1000">
                                     </p><br>
-                                    <p><img src="./assets/images/Taskfilters/candidategp2.png" alt="image" width="1000">
+                                    <p><img src="./assets/images/Taskfilters/usergp2.png" alt="image" width="1000">
                                     </p><br>
                                     <b>
                                         <li>Assignee :</li>
@@ -199,14 +190,23 @@
                                     approach in situations where tasks are precisely assigned to people with designated
                                     roles or expertise.
                                     <br><br>
-                                    <p><img src="./assets/images/Taskfilters/assignee1.png" alt="image" width="1000">
+                                    <p><img src="./assets/images/Taskfilters/assignee.png" alt="image" width="1000">
                                     </p><br>
-                                    <p><img src="./assets/images/Taskfilters/assignee2.png" alt="image" width="1000">
+                                    <b>
+                                        <li>Select Form :</li>
+                                    </b>
+                                    This option allows the user to select the required form specific to the task, so
+                                    that the task variables linked with the form will be accessible in the Task
+                                    Attributes section.
+                                    <br><br>
+                                    <p><img src="./assets/images/Taskfilters/selectForm.png" alt="image" width="1000">
                                     </p><br>
 
                                 </ol>
+
                                 <h3>Permission</h3>
-                                Users can choose any of the below Permissions while creating a filter. Private (Only You) will be
+                                Users can choose any of the below Permissions while creating a filter. Private (Only
+                                You) will be
                                 selected by default.
                                 <ol>
                                     <b>
@@ -226,17 +226,18 @@
                                     With this option, filters can be shared only with a predefined group of users,
                                     providing selective
                                     access based on group membership.
-                                   
+
                                 </ol>
                                 <h3>Task attributes</h3>
-                                Choose task attributes from the list, and they will appear in the task list view.
+                                All task variables from the selected form and static task attributes will be listed
+                                here.Choose the required task attributes from the list, and they will appear in the task
+                                list view.
                                 <br><br>
-                                <p><img src="./assets/images/Taskfilters/taskattributes.png" alt="image" width="1000">
+                                <p><img src="./assets/images/Taskfilters/taskAttribute.png" alt="image" width="1000">
                                 </p><br>
-                                <p><img src="./assets/images/Taskfilters/taskattributes2.png" alt="image" width="1000">
+                                <p><img src="./assets/images/Taskfilters/taskListView.png" alt="image" width="1000">
                                 </p><br>
-                                <p><img src="./assets/images/Taskfilters/taskattributes3.png" alt="image" width="1000">
-                                </p><br>
+
 
                                 <h3>Task
                                     Variables

@@ -96,53 +96,38 @@
                             BPMN variables are the form fields that you added to the form. Users can select form
                             fields that they want to display in the task list.
                             <ol>
-                                <li>Create a new form or Edit an already created form.</li><br>
-                                <img src="./assets/images/Screenshot 2022-05-12 160427.png" width="1000"
+                                <b><li>Create a new form or Edit an already created form</li><br>
+                                <img src="./assets/images/task_variables/editForm.png" width="1000"
                                     height="500"><br><br>
-                                <li>Associate the form with the workflow. </li><br>
-                                <img src="./assets/images/Screenshot 2022-05-12 160526.png" width="1000"
+                                <li>Associate the form with the workflow</li><br>
+                                <img src="./assets/images/task_variables/associate_workflow.png" width="1000"
                                     height="500"><br><br>
-                                <li>Ensure the workflow has included FormBPMFilteredDataPipelineListener. </li><br>
-                                <img src="./assets/images/Screenshot 2022-05-12 165140.png" width="1000"
+                                <li>Ensure the workflow has included FormBPMFilteredDataPipelineListener</li><br>
+                                <img src="./assets/images/task_variables/filtered_listener.png" width="1000"
                                     height="500"><br><br>
                                 <li>Add task filter variables to the form. The FormBPMFilteredDataPipelineListener
                                     copies
-                                    the added task variable keys from form (formio) to Camunda variables.</li><br>
-                                <img src="./assets/images/Screenshot 2022-05-12 161159.png" width="1000"
+                                    the added task variable keys from form (formio) to Camunda variables</li>
+                                <ul><li>Select all fields:</li></b>
+                                    Select the checkbox to choose all fields from the form as task variables.<br><br>
+                                <img src="./assets/images/task_variables/all_variables.png" width="1000"
                                     height="500"><br><br>
-                                <strong>Note:</strong> As of now only key is used.Label and Show in list are
-                                included for
-                                future purpose.<br>
-                                <li>Click the add button, the selected key is added as a task variable. We can add
-                                    more
-                                    variables from the form as task variables and also edit the task variable
-                                    already added.
+                                    <b><li>Select specific fields:</li></b>
+                                    Deselect the checkbox and choose only the necessary fields from the list for task variables.<br><br>
+                                <img src="./assets/images/task_variables/specific_fields.png" width="1000"
+                                    height="500"></ul><br><br>    
+                                
+                                <b><li>Click the edit label button to update the label if required
                                 </li><br>
-                                <img src="./assets/images/Screenshot 2022-05-12 162111.png" width="1000"
+                                <img src="./assets/images/task_variables/edit_label.png" width="1000"
                                     height="500"><br><br>
                                 
-                                <li> Add the task variables to edit filter in Camunda tasklist.</li><br>
-                                <img src="./assets/images/Screenshot 2022-05-12 162652.png" width="1000"
+                                    <li>Submit new application with this form</li><br>
+                                <img src="./assets/images/task_variables/form_submit.png" width="1000"
                                     height="500"><br><br>
-                                    <li>Submit new application with this form.</li><br>
-                                <img src="./assets/images/Screenshot 2022-05-12 162340.png" width="1000"
+                                <li>Now these variables are displayed in user's tasklist, you can select any variables from the list </li></b><br>
+                                <img src="./assets/images/task_variables/taskAttr_list.png" width="1000"
                                     height="500"><br><br>
-                                <li>Now these variables are displayed in user's tasklist.</li><br>
-                                <img src="./assets/images/Screenshot 2022-05-12 162839.png" width="1000"
-                                    height="500"><br><br>
-                                    <li> If you want to search for a taskvariable, select Process Variables from the drop down.</li>
-                                    <img src="./assets/images/Screenshot 2022-09-12 130212.png"  width="1000"
-                                    height="500"><br><br>
-                                    <ul>
-                                        <li>Now select any task variable from the list.</li>
-                                    
-                                    <img src="./assets/images/Screenshot 2022-09-12 130437.png" width="1000"
-                                    height="500"><br><br>
-                                    <li>Here you can enter the data and filter task from the tasklist.</li>
-                                    <img src="./assets/images/Screenshot 2022-09-12 130659.png" width="1000"
-                                    height="500"><br><br>
-                                </ul>
-                
                             </ol>
                         </div>
                         </section>

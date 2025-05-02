@@ -91,43 +91,49 @@
                 <article class="docs-article">
                     <section class="docs-section" id="taskvariables">
                         <div>
-                            <h1 id="taskvariables">BPMN variable</h1>
+                            <h1 id="taskvariables">BPMN Variables</h1>
                             <hr><br>
-                            BPMN variables are the form fields that you added to the form. Users can select form
-                            fields that they want to display in the task list.
+                            <p>
+                                BPMN variables are the form fields added to the layout. These fields, if selected, are passed to BPMN during form submission, allowing BPMN to access their values. The selected variables will also be available to be displayed in the task list under Review > Tasks.
+                            </p>
                             <ol>
-                                <b><li>Create a new form or Edit an already created form</li><br>
-                                <img src="./assets/images/task_variables/editForm.png" width="1000"
-                                    height="500"><br><br>
-                                <li>Associate the form with the workflow</li><br>
-                                <img src="./assets/images/task_variables/associate_workflow.png" width="1000"
-                                    height="500"><br><br>
-                                <li>Ensure the workflow has included FormBPMFilteredDataPipelineListener</li><br>
-                                <img src="./assets/images/task_variables/filtered_listener.png" width="1000"
-                                    height="500"><br><br>
-                                <li>Add task filter variables to the form. The FormBPMFilteredDataPipelineListener
-                                    copies
-                                    the added task variable keys from form (formio) to Camunda variables</li>
-                                <ul><li>Select all fields:</li></b>
-                                    Select the checkbox to choose all fields from the form as task variables.<br><br>
-                                <img src="./assets/images/task_variables/all_variables.png" width="1000"
-                                    height="500"><br><br>
-                                    <b><li>Select specific fields:</li></b>
-                                    Deselect the checkbox and choose only the necessary fields from the list for task variables.<br><br>
-                                <img src="./assets/images/task_variables/specific_fields.png" width="1000"
-                                    height="500"></ul><br><br>    
+                                <li>
+                                    Create a new form or Edit an already created form<br><br>
+
+                                    <img src="./assets/images/Screenshot 2024-11-26 164256.png" class="screenshot"><br><br><br>
+                                </li>
+
+                                <li>
+                                    Create your form's layout<br><br><br>
+                                </li>
+
+                                <li>
+                                    Switch to the flow of the form by clicking large "Flow" button on the right side<br><br><br>
+                                </li>
+
+                                <li>
+                                    On the flow page there is a Variables button on the top left.<br><br>
+
+                                    <img src="./assets/images/Screenshot 2024-11-26 164833.png" class="screenshot"><br><br><br>
+
+                                    <ul>
+                                        <li>
+                                            Select each field you would like by clicking on it.<br><br>
+
+                                            <img src="./assets/images/Screenshot 2024-11-26 165300.png" class="screenshot"><br><br><br>
+                                        </li>
+
+                                        <li>
+                                            On the right side you can see the type of a variable the form's field would provide. Click "Add Variable" if you want to keep this variable for usage in the Flow, Submissions and Tasks. You can also add an alternative label to the variable if you would like. If you want to edit the label of a variable after it has been added, just click the variable pill to bring the settings up.<br><br>
+
+                                            <img src="./assets/images/Screenshot 2024-11-26 165614.png" class="screenshot"><br><br><br>
+                                        </li>
+                                    </ul>  
+                                </li>
                                 
-                                <b><li>Click the edit label button to update the label if required
-                                </li><br>
-                                <img src="./assets/images/task_variables/edit_label.png" width="1000"
-                                    height="500"><br><br>
-                                
-                                    <li>Submit new application with this form</li><br>
-                                <img src="./assets/images/task_variables/form_submit.png" width="1000"
-                                    height="500"><br><br>
-                                <li>Now these variables are displayed in user's tasklist, you can select any variables from the list </li></b><br>
-                                <img src="./assets/images/task_variables/taskAttr_list.png" width="1000"
-                                    height="500"><br><br>
+                                <li>
+                                    Once the form is submitted you will have access to the variables you have selected in the previous step in the Review > Tasks. You can click on "Create New Filter" button at the top, or edit a filter that has been created before. In the side popup you can click on "Task attributes" and select which varibles to show.
+                                </li>
                             </ol>
                         </div>
                         </section>

@@ -13,7 +13,7 @@
                 supports external service tasks that can be extended to automate tasks. formsflow.ai makes use of this
                 powerful external task client to process the robot’s instructions and return a response. That’s how
                 RPA’s integration with formsflow.ai came into existence.</p>
-            <img src="./assets/images/rpa.png">
+            <img src="./assets/images/rpa.png" class="diagram-md">
             <b><figcaption>formsflow.ai integrations</figcaption></b><br><br>
 
             <p>RPA, or robotic process automation, is a hot topic nowadays. It’s a type of business process automation
@@ -22,7 +22,7 @@
                 understanding what is on a desktop screen, autofilling data and entering keystrokes, navigating through
                 systems, identifying and extracting data from different sources, and performing a wide range of defined
                 actions. </p>
-            <img src="./assets/images/rpa2.png" height="400" width="500"><br><br>
+            <img src="./assets/images/rpa2.png" class="diagram-md"><br><br>
             <p>The formsflow.ai team had been searching for an RPA solution that would meet the following criteria:</p>
             <ul>
                 <li>Was open source</li>
@@ -52,7 +52,7 @@
             </ul>
 
             <p>Now let’s look at the system architecture: </p>
-            <img src="./assets/images/rpaarchitecture.png" height="400" width="500"><br><br>
+            <img src="./assets/images/rpaarchitecture.png" class="diagram-md"><br><br>
             <p>As you can see in the architecture diagram, there are two components: the formsflow.ai Camunda service
                 task and the external RPA client. </p>
             <p>We are using Camunda's powerful workflow feature called a service task, which can serve as an event in a
@@ -92,13 +92,15 @@
             <h2>Sample Use Case: Background Check Verification</h2>
             <p>In collaboration with Robocorp we developed a way to automate background checks on business-licence
                 applicants by having a robot perform web scraping. Here’s how we did it:</p>
+
+
             <h3>Step 1: Build the Robot
             </h3>
             <p>First, you need to create your robot using the Robocorp framework. In particular, we’ll be using <a
                     href="https://robocorp.com/docs/developer-tools/robocorp-lab/overview">Robocorp
                     Lab</a>, which provides open-source components as an easy way to get started developing software
                 robots.</p>
-            <img src="./assets/images/robocorblap.jpg" height="400" width="400"><br><br>
+            <img src="./assets/images/robocorblap.jpg" class="diagram-md"><br><br>
             <p>Our background-check robot first extracts a business application form’s input variables before starting
                 the web scraping. It will then record screenshots of pages in the following categories before compiling
                 these shots as a PDF file:</p>
@@ -109,34 +111,37 @@
                 <li>Checking if the company is blacklisted, presuming it’s opening up in Canada.</li>
             </ul>
             <p>The PDF file can be downloaded in formsflow.ai by the Reviewer of the application form, and then sent on
-                for an Approver’s response.</p>
-            <h3>Step 2: Create the Camunda Workflow</h3>
-            <p>Next you’ll create a Camunda workflow that includes a two-step approval process:</p>
+                for an Approver’s response.
+            </p>
+            
+
+            <h3>Step 2: Create the Form Using formsflow.ai</h3>
+            <p>Next you’ll create the form's layout using the drag-and-drop interface of the formsflow.ai. Then save your layout changes.</p>
+            <img src="./assets/images/Screenshot 2024-11-22 095740.png" class="screenshot"><br><br>
+
+
+            <h3>Step 3: Create the Camunda Flow</h3>
+            <p>Next you’ll create a Camunda Flow that includes a two-step approval process:</p>
             <ul>
-                <li>Create a process diagram with an external service task using Camunda Modeler and define the topic
-                    name.</li>
-                <li>Then deploy the process to the Camunda platform engine.</li>
+                <li>In the Flow section (access by clicking large "Flow" button on the right side) create a process diagram with an external service task using Camunda Modeler and define the topic name.</li>
+                <li>Save your flow changes</li>
             </ul>
-            <img src="./assets/images/rpa workflow.png" height="350" width="500"><br><br>
-            <h3>Step 3: Use External Task Handler to Link Robot to Camunda</h3>
+            <img src="./assets/images/rpa workflow.png" class="diagram-md"><br><br>
+
+
+            <h3>Step 4: Use External Task Handler to Link Robot to Camunda</h3>
             <p>We need to create an external task handler for each robot. The task handler uses the Camunda REST API to
                 fetch, lock, and complete all the required external service tasks. We can configure the Java handler to
                 custom override all the methods needed to manage and run the robot. This process relies on an external
                 task subscription. Also, you will need to define the topic name as shown below. The topic name should be
                 similar to the robot name.</p>
-            <img src="./assets/images/rpataskhandler.jpg" height="700" width="300"><br><br>
-            <h3>Step 4: Create the Form Using formsflow.ai</h3>
-            <p>Next you’ll create the form using the drag-and-drop interface of the formsflow.ai design mode. Log in as
-                a formsflow.ai Designer using the form design page. </p>
-            <img src="./assets/images/rpaform.png" height="1000" width="800"><br><br>
-            <h3>Step 5: Associate a Workflow, then Publish the Form</h3>
-            <p>Once you’ve completed the form design, publish the workflow to Camunda and associate the form with the
-                workflow you created in step 2.</p><br>
-            <img src="./assets/images/rpaworkflow.png" height="500" width="1000"><br><br>
-            <p>We can then publish the form you designed in order to make it available for clients to fill out. </p>
-            <img src="./assets/images/businesslicence_rpa.png" height="450" width="1000"><br><br>
-            <p>Here’s an example of how a client filled out a sample business licence application:</p><br>
-            <img src="./assets/images/rpaformfill.png" height="500" width="1000"><br><br>
+            <img src="./assets/images/rpataskhandler.jpg" class="diagram-sm"><br><br>
+
+
+            <h3>Step 5: Publish the Form</h3>
+            <p>Go back to form edit page and publish the form (the top right corner) in order to make it available for clients to fill out.</p>
+
+
             <h3>Step 6: Start the Robot</h3>
             <p>After the form is filled out and submitted, the associated workflow will be triggered, and an external
                 service task will then start the robot. You can run your robot either directly by using RCC or
@@ -152,7 +157,7 @@
             <p>With RCC you can use parallel robot invocation by placing your robots in multiple holotree spaces. It’s
                 not a complete parallel solution as you’ll have to keep in mind that each robot runs only once until it
                 receives a new request.</p>
-            <img src="./assets/images/rcc.png" height="800" width="1000"><br><br>
+            <img src="./assets/images/rcc.png" class="screenshot"><br><br>
             <p>After the robot has completed its task, the response file can be downloaded from the form’s page in
                 formsflow.ai.</p>
             <i>
@@ -164,27 +169,26 @@
             <p>All aspects of your robot workforce can be controlled in the cloud, including triggering the robot,
                 uploading and downloading robots, monitoring their status, and getting the results of their work through
                 simple API calls.</p><br>
-            <img src="./assets/images/backgroundcheck.png" height="400" width="1000"><br><br><br>
+            <img src="./assets/images/backgroundcheck.png" class="screenshot"><br><br><br>
             <p>
                 Once the new business licence form has been submitted, the cloud-based robot will be triggered and will
                 start processing.
             </p><br><br>
-            <img src="./assets/images/rpacloud.png" height="1000" width="800"><br><br><br>
+            <img src="./assets/images/rpacloud.png" class="screenshot"><br><br><br>
             <p>You can monitor your robot’s activities in the cloud and afterwards check the logs in your workspace.</p>
-            <img src="./assets/images/rpacloud2.png" height="400" width="1000"><br><br><br>
+            <img src="./assets/images/rpacloud2.png" class="screenshot"><br><br><br>
             <h3>Step 7: Download the PDF Report</h3>
             <p>After the robot has completed its task, a response file will be created. Below you can see a sample PDF
                 that was generated by the robot using our sample form data and then downloaded from the forms page on
                 formsflow.ai.</p>
-            <img src="./assets/images/rpadownload.png" height="1000" width="900"><br><br><br>
-            <img src="./assets/images/rpadownload2.png" height="1000" width="900"><br><br><br>
-            <img src="./assets/images/rpadownload3.png" height="1000" width="900"><br><br><br><br>
-            <p>And here you can see the link to the PDF for download:</p>
-            <img src="./assets/images/rpatask.png" height="500" width="1000"><br><br><br>
+            <img src="./assets/images/rpadownload.png" class="diagram-lg"><br><br><br>
+            <img src="./assets/images/rpadownload2.png" class="diagram-lg"><br><br><br>
+            <img src="./assets/images/rpadownload3.png" class="diagram-lg"><br><br><br><br>
+            <p>And under Review > Tasks you can see the link to the PDF for download</p>
+
             <h3>Step 8: Finishing the Approval Process</h3>
             <p>The downloaded file can be reviewed in formsflow.ai by a user in the Reviewer role, who can then either
                 Reject the form or mark it as Reviewed with Comments.</p>
-            <img src="./assets/images/rpaapprove.png" height="500" width="1000"><br><br><br>
             <h2>Challenges Integrating Robocorp with formsflow.ai</h2>
             <hr><br>
             <p>There are many great features that Robocorp integration offers. However, you should remember that

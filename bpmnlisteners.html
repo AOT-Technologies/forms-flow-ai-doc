@@ -1,24 +1,16 @@
 <article class="docs-article">
     <section class="docs-section" id="listeners">
         <div>
-            <h1 id="listeners">Adding Listeners</h1>
+            <h1 id="listeners">BPMN Listeners</h1>
             <hr>
             <h4>Listeners</h4>
-            <p>Listeners allow you to execute external Java code or evaluate an expression when
-                certain
-                events occur during process execution.
+            <p>Listeners provide a powerful mechanism to execute external Java code or evaluate expressions in response to specific events during process execution. They are frequently used during process development to implement custom behavior at key stages of the process.<br><br>
+                Depending on their configuration, listeners can be triggered at various points, such as the start or end of an activity, gateway, process instance, or specific events. This flexibility makes them a versatile tool for extending and customizing process logic.
 
-                Listeners are a mechanism that is very often used during process development.
-                We can compare them to aspects of aspect programming. Comparing to aspects may open
-                up some
-                horizons for you, as many programmers are closer to this solution than Camunda
-                specific
-                listeners.
-                Depending on the definition, we can run them at start/end activity/gateway/process
-                instance/events.<br><br>
-            <h2 id="forms-flow-bpm-listeners">forms-flow-bpm Listeners</h2>
-            <p>This page elaborates on customization and listeners created for use.</p>
+                <br><br>
 
+            <h2 id="forms-flow-bpm-listeners">Predefined Listerns</h2>
+            <p>This table lists the listeners included with formsflow.ai</p>
 
             <table>
                 <thead>
@@ -30,32 +22,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td> <code>FormConnectorListener</code></td>
-                        <td>Task Listener</td>
-                        <td>This component can be used on <strong>CREATE</strong> event of task
-                            listener.
-                            This
-                            serves to associate a form with task.</td>
-                        <td>Refer to <a href="form_connectorListener.html" target="_blank">link</a></td>
-                    </tr>
-                    <tr>
-                        <td> <code>NotifyListener</code></td>
-                        <td>Task Listener</td>
-                        <td>This component can be used on <strong>CREATE</strong> event of task
-                            listener;
-                            and sends
-                            email upon task creation.</td>
-                        <td>Refer to <a href="notify_listener.html" target="_blank">link</a></td>
-                    </tr>
-                    <tr>
-                        <td> <code>TaskDurationAttributesListener</code></td>
-                        <td>Task/Execution Listener</td>
-                        <td>This component can be used on any event of task/execution listener. This
-                            calculates and
-                            set DUE DATE in business days.</td>
-                        <td>Refer to <a href="formDuration_listener.html" target="_blank">link</a> </td>
-                    </tr>
                     <tr>
                         <td> <code>ApplicationAuditListener</code></td>
                         <td>Task/Execution Listener</td>
@@ -82,15 +48,6 @@
                         <td>Refer to <a href="applicationState_listener.html" target="_blank">link</a></td>
                     </tr>
                     <tr>
-                        <td> <code>FormBPMDataPipelineListener</code></td>
-                        <td>Task/Execution Listener</td>
-                        <td>This component can be used on any event of task/execution listener. It
-                            is used
-                            for
-                            populating formio data into CAM Variables.</td>
-                        <td>Refer to <a href="formBPMDataPipeline_listener.html" target="_blank">link</a></td>
-                    </tr>
-                    <tr>
                         <td> <code>BPMFormDataPipelineListener</code></td>
                         <td>Task/Execution Listener</td>
                         <td>This component can be used on any event of task/execution listener. It
@@ -98,6 +55,18 @@
                             for
                             populating CAM Variables into formio data.</td>
                         <td>Refer to <a href="bpmformDataPipeline_listener.html" target="_blank">link</a></td>
+                    </tr>
+                    <tr>
+                        <td> <code>EmailAttributesListener</code></td>
+                        <td>Execution Listener</td>
+                        <td>This component intended to run <strong>ONLY</strong> with the process
+                            <strong>notification_email.bpmn</strong> and
+                            <strong> email-template.dmn</strong> or
+                            any
+                            similar notification processes.It replaces all reserved identifier
+                            <strong>@{variable}</strong> with values in email body.
+                        </td>
+                        <td>Refer to <a href="emailAttributes_listener.html" target="_blank">link</a></td>
                     </tr>
                     <tr>
                         <td> <code>ExternalSubmissionListener</code></td>
@@ -121,24 +90,32 @@
                         <td>Refer to <a href="formAccessTokenCache_listener.html" target="_blank">link</a></td>
                     </tr>
                     <tr>
-                        <td> <code>EmailAttributesListener</code></td>
-                        <td>Execution Listener</td>
-                        <td>This component intended to run <strong>ONLY</strong> with the process
-                            <strong>notification_email.bpmn</strong> and
-                            <strong> email-template.dmn</strong> or
-                            any
-                            similar notification processes.It replaces all reserved identifier
-                            <strong>@{variable}</strong> with values in email body.
-                        </td>
-                        <td>Refer to <a href="emailAttributes_listener.html" target="_blank">link</a></td>
+                        <td> <code>FormBPMDataPipelineListener</code></td>
+                        <td>Task/Execution Listener</td>
+                        <td>This component can be used on any event of task/execution listener. It
+                            is used
+                            for
+                            populating formio data into CAM Variables.</td>
+                        <td>Refer to <a href="formBPMDataPipeline_listener.html" target="_blank">link</a></td>
                     </tr>
                     <tr>
-                        <td> <code>TimeoutNotifyListener</code></td>
+                        <td> <code>FormBPMFilteredDataPipelineListener</code></td>
+                        <td>Task/Execution Listener</td>
+                        <td>This component can be used on any event of task/execution listener. It
+                            is used
+                            for
+                            populating specific variables from formio to CAM Variables.</td>
+                        <td>Refer to <a href="formBPMFilteredDataPipeline_listener.html" target="_blank">link</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <code>FormConnectorListener</code></td>
                         <td>Task Listener</td>
-                        <td>This component sends an email reminder a day before task due date, and
-                            escalation email
-                            on the day after due date.</td>
-                        <td>Refer to <a href="timeoutNotification_listener.html" target="_blank">link</a></td>
+                        <td>This component can be used on <strong>CREATE</strong> event of task
+                            listener.
+                            This
+                            serves to associate a form with task.</td>
+                        <td>Refer to <a href="form_connectorListener.html" target="_blank">link</a></td>
                     </tr>
                     <tr>
                         <td> <code>FormSubmissionListener</code></td>
@@ -150,14 +127,29 @@
                         <td>Refer to <a href="formSubmission_listener.html" target="_blank">link</a></td>
                     </tr>
                     <tr>
-                        <td> <code>FormBPMFilteredDataPipelineListener</code></td>
+                        <td> <code>NotifyListener</code></td>
+                        <td>Task Listener</td>
+                        <td>This component can be used on <strong>CREATE</strong> event of task
+                            listener;
+                            and sends
+                            email upon task creation.</td>
+                        <td>Refer to <a href="notify_listener.html" target="_blank">link</a></td>
+                    </tr>
+                    <tr>
+                        <td> <code>TaskDurationAttributesListener</code></td>
                         <td>Task/Execution Listener</td>
-                        <td>This component can be used on any event of task/execution listener. It
-                            is used
-                            for
-                            populating specific variables from formio to CAM Variables.</td>
-                        <td>Refer to <a href="formBPMFilteredDataPipeline_listener.html" target="_blank">link</a>
-                        </td>
+                        <td>This component can be used on any event of task/execution listener. This
+                            calculates and
+                            set DUE DATE in business days.</td>
+                        <td>Refer to <a href="formDuration_listener.html" target="_blank">link</a> </td>
+                    </tr>
+                    <tr>
+                        <td> <code>TimeoutNotifyListener</code></td>
+                        <td>Task Listener</td>
+                        <td>This component sends an email reminder a day before task due date, and
+                            escalation email
+                            on the day after due date.</td>
+                        <td>Refer to <a href="timeoutNotification_listener.html" target="_blank">link</a></td>
                     </tr>
                 </tbody>
             </table>

@@ -3,342 +3,37 @@
         <div>
             <h1>formsflow.ai Version Upgrade</h1>
             <hr><br>
-            <p>Formsflow.ai is often updated with new features and bug fixes. For a better user experience and to access
+            <p>formsflow.ai is often updated with new features and bug fixes. For a better user experience and to access
                 the latest features, it is essential to upgrade formflow.ai to the newest version.</p>
-            <p>For a complete Docker deployment or individual service deployment to upgrade to the latest version, follow these steps:</p>
-            <ul>
-                <li> Pull the latest version from <a target="_blank" href="https://github.com/AOT-Technologies/forms-flow-ai/tree/master">here</a>.
-                </li>
-                <li>Update the environment variables in the .env file located within the respective folders, as outlined below.</li>
-            </ul>
+            <p>Check out <a target="_blank" href="https://github.com/AOT-Technologies/forms-flow-ai/blob/master/CHANGELOG.md">changelog</a> for details on environment variable changes between versions.</p>
+            
             <hr>
+            <h1>Migration</h1>
+            <p>Below are the manual steps required for version migration when you already have formsflow.ai installed.</p>
             <section class="docs-section">
-                <h2>version 5.3.0* to 6.0.0</h2>
+                <h2>version 6.0.* to 7.0.0</h2>
                 <br>
                 <ol>
                     <h3>
-                        <li>forms-flow-web-root-config</li>
+                        <li>BPM database updates</li>
                     </h3>
-                    <h4><em>Optional Changes</em></h4>
+                    <p>Manual script execution is required to update the database schema for Camunda 7.21.0.</p>
                     <ul>
-                        <li>Added environment variable KEYCLOAK_URL_HTTP_RELATIVE_PATH to specify the Keycloak relative path.</li>
+                        <li>Log in to the BPM database as an administrator</li>
+                        <li>Run the <a href="https://github.com/aot-technologies/forms-flow-ai/blob/master/forms-flow-bpm/migration/scripts/7.0.0.sql">script</a></li>
                     </ul>
                     <h3>
-                        <li>forms-flow-bpm</li>
+                        <li>Keycloak updates</li>
                     </h3>
-                    <h4><em>Optional Changes</em></h4>
+                    <p>The new permission matrix in v7.0.0 requires changes to your existing Keycloak configuration.</p>
+
                     <ul>
-                        <li>Added environment variable KEYCLOAK_URL_HTTP_RELATIVE_PATH to specify the Keycloak relative path.</li>
+                        <li>Follow the steps outlined <a href="https://github.com/AOT-Technologies/forms-flow-ai/tree/develop/forms-flow-idm/migration#700" >here</a></a></li>
                     </ul>
-                    <h3>
-                        <li>forms-flow-api</li>
-                    </h3>
-                    <h4><em>Optional Changes</em></h4>
-                    <ul>
-                        <li>Added environment variables</li>
-                        <ul>
-                            <li>REDIS_URL to configure Redis for caching purposes.</li>
-                            <li>KEYCLOAK_URL_HTTP_RELATIVE_PATH to specify the Keycloak relative path.</li>
-                            <li>CONFIGURE_LOGS to enable/disable log file rotation.</li>
-                        </ul>
-                    </ul>
-                    <h3>
-                        <li>forms-flow-documents</li>
-                    </h3>
-                    <h4><em>Optional Changes</em></h4>
-                    <ul>
-                        <li>Added environment variable</li>
-                        <ul>
-                            <li>REDIS_URL to configure Redis for caching purposes.</li>
-                            <li>KEYCLOAK_URL_HTTP_RELATIVE_PATH to specify the Keycloak relative path.</li>
-                            <li>CONFIGURE_LOGS to enable/disable log file rotation.</li>
-                        </ul>
-                    </ul>
-                    <h3>
-                        <li>forms-flow-data-analysis-api</li>
-                    </h3>
-                    <h4><em>Optional Changes</em></h4>
-                    <ul>
-                        <li>Added environment variables</li>
-                        <ul>
-                            <li>KEYCLOAK_URL_HTTP_RELATIVE_PATH to specify the Keycloak relative path.</li>
-                            <li>API_LOG_ROTATION_WHEN to specify the frequency of log file rotation.</li>
-                            <li>API_LOG_ROTATION_INTERVAL to set the time interval for log file rotation.</li>
-                            <li>API_LOG_BACKUP_COUNT to determine the number of backup log files to keep.</li>
-                            <li>CONFIGURE_LOGS to enable/disable log file rotation.</li>
-                        </ul>
-                    </ul>
-                </ol>
-            </section>
-            <section class="docs-section">
-                <h2>version 5.2.0 * to 5.3.0 </h2>
-                <ol>
-                    <h3>
-                        <li>forms-flow-web</li>
-                    </h3>
-                    <br>
-                    <h4><em>Optional Changes</em></h4>
-                    <ul>
-                        <li>
-                            Added environment variable DATE_FORMAT to change the date format.
-                        </li>
-                        <li>
-                            Added environment variable TIME_FORMAT to change the time format.
-                        </li>
-                        <li>
-                            Added environment variable CUSTOM_THEME_URL to override the theme.
-                        </li>
-                        <li>
-                            Added environment variable CUSTOM_RESOURCE_BUNDLE_URL to customize resource bundle for internationalization.
-                        </li>
-                    </ul>
-                    <br>
-                    <h3>
-                        <li>forms-flow-api</li>
-                    </h3>
-                    <br>
-                    <h4><em>Optional Changes</em></h4>
-                    <ul>
-                        <li>
-                            Added environment variable API_LOG_ROTATION_WHEN for specifying the frequency of log file rotation.
-                        </li>
-                        <li>
-                            Added environment variable API_LOG_ROTATION_INTERVAL for setting the time interval for log file rotation.
-                        </li>
-                        <li>
-                            Added environment variable API_LOG_BACKUP_COUNT for determining the number of backup log files to keep.
-                        </li>
-                    </ul>
-                    <h4><em>upgrades</em></h4>
-                    <ul>
-                        <li>
-                            Flask upgraded to 2.3.3 and fixed security vulnerabilities.
-                        </li>
-                    </ul>
-                    <br>
-                    <h3>
-                        <li>forms-flow-documents</li>
-                    </h3>
-                    <br>
-                    <h4><em>Optional Changes</em></h4>
-                    <ul>
-                        <li>
-                            Added environment variable API_LOG_ROTATION_WHEN for specifying the frequency of log file rotation.
-                        </li>
-                        <li>
-                            Added environment variable API_LOG_ROTATION_INTERVAL for setting the time interval for log file rotation.
-                        </li>
-                        <li>
-                            Added environment variable API_LOG_BACKUP_COUNT for determining the number of backup log files to keep
-                        </li>
-                    </ul>
-                    <h4><em>upgrades</em></h4>
-                    <ul>
-                        <li>
-                            Flask upgraded to 2.3.3 and fixed security vulnerabilities
-                        </li>
-                    </ul>
-                    <h3>
-                        <li>forms-flow-bpm</li>
-                    </h3>
-                    <br>
-                    <h4><em>upgrades</em></h4>
-                    <ul>
-                        <li>
-                            Camunda upgraded to 7.20.0, SpringBoot upgraded to 3.1.5 and fixed security vulnerabilities.
-                        </li>
-                    </ul> 
-                </ol>
-                <p>
-                    <strong>Note</strong>: <em> Added migration script  to move the current Camunda authorizations &  existing task filters from forms-flow-bpm to forms-flow-api,
-                    Please follow the instructions <a target="_blank" href="https://github.com/AOT-Technologies/forms-flow-ai/blob/v5.3.0/forms-flow-api/README.md#migration-script-for-existing-users">here</a></em>.
-                </p>
-            </section>
-            <section class="docs-section">
-                <h2>version 5.0.0 to 5.2.0 *</h2>
-                <ol>
-                    <h3>
-                        <li>forms-flow-web</li>
-                    </h3>
-                    <br>
-                    <h4><em>Optional Changes</em></h4>
-                    <ul>
-                        <li>
-                            Environment variable USER_ACCESS_PERMISSIONS is replaced with ENABLE_APPLICATION_ACCESS_PERMISSION_CHECK to enable Role
-                            level permission.
-                        </li>
-                    </ul>
-                    <br>
-                    <h3>
-                        <li>forms-flow-bpm</li>
-                    </h3>
                     
-                    <br>
-                    <h4><em>Optional Changes</em></h4>
-                    <ul>
-                        <li>Added environment variables REDIS_ENABLED,REDIS_HOST,REDIS_PORT,REDIS_PASSCODE and
-                            SESSION_COOKIE_SECURE.
-                        </li>
-                    </ul>
-                    <br>
-                    <h3>
-                        <li>forms-flow-forms</li>
-                    </h3>
-                    <br>
-                    <h4><em>Optional Changes</em></h4>
-                    <ul>
-                        <li>
-                            Added environment variable FORMIO_CLIENT_UI.
-                        </li>
-                    </ul>
-                    <br>
-                    <h3>
-                        <li>forms-flow-web-root-config</li>
-                    </h3>
-                    <ul>
-                        <br>
-                        <h4><em>Mandatory Changes</em></h4>
-                        <li>
-                            Added environment variables 
-                            <ul style="list-style-type: none;">
-                                <li>MF_FORMSFLOW_WEB_URL</li>
-                                <li>MF_FORMSFLOW_NAV_URL</li>
-                                <li>MF_FORMSFLOW_SERVICE_URL</li>
-                                <li>MF_FORMSFLOW_ADMIN_URL</li>
-                                <li>MF_FORMSFLOW_THEME_URL</li>
-                            </ul>
-                             &nbsp; &nbsp; to get MicroFrontend Components Created.
-                        </li>
-                        <br>
-                        <h4><em>Optional Changes</em></h4>
-                        <li>
-                            Added environment variables 
-                            <ul style="list-style-type: none;">
-                                <li>ENABLE_FORMS_MODULE</li>
-                                <li>ENABLE_TASKS_MODULE</li>
-                                <li>ENABLE_DASHBOARDS_MODULE</li>
-                                <li>ENABLE_PROCESSES_MODULE</li>
-                                <li>ENABLE_APPLICATIONS_MODULE</li>
-                            </ul>
-                            &nbsp; &nbsp; to disable a particular module in forms-flow-web.
-                        </li>
-                        <li>
-                            Added environment variable CUSTOM_THEME_URL for providing theming configuration.
-                        </li>
-                    </ul>
                 </ol>
-                <p>
-                    <strong>Note</strong>: <em> For listing all the forms for clients, existing users should run RBAC migration script with Camunda authorization.
-                    Please follow the instructions <a target="_blank" href="https://github.com/AOT-Technologies/forms-flow-ai/blob/master/forms-flow-api/README.md#migration-script-for-existing-users">here</a></em>.
-                </p>
             </section>
-            <br>
-            <section >
-            <h2>version 4.5.0 to 5.0.0 </h2>
-            <ol>
-                <h3>
-                    <li>forms-flow-web</li>
-                </h3><br>
-                <ol>
-                    <i>
-                        <h4>Mandatory Changes</h4>
-                    </i><br>
-                    <p>The names of the following enviroment variables should be changed as given below, but their
-                        values should not change.</p>
-                    <ul>
-                        <li>Modify the Environment variable CAMUNDA_API_URL as BPM_API_URL.</li>
-                        <li>Modify the Environment variables REACT_APP_CAMUNDA_API_URI as REACT_APP_BPM_URL.</li><br>
-                        <i>
-                            <h4>Optional Changes</h4>
-                        </i>
-                        <li>Add the environment variables MULTI_TENANCY_ENABLED, MT_ADMIN_BASE_URL,
-                            MT_ADMIN_BASE_URL_VERSION to support multi-tenancy. The value of MULTI_TENANCY_ENABLED
-                            should be set as True to support multi tenancy.</li>
-                        <li>Add the environment variable CUSTOM_SUBMISSION_URL, CUSTOM_SUBMISSION_ENABLED for support
-                            form adapter.</li>
-                        <li>Add the environment variables DRAFT_ENABLED, and DRAFT_POLLING_RATE to manage the draft
-                            feature.With this feature, all unsaved applications would be saved as drafts.</li>
-                        <li>Add the environment variable EXPORT_PDF_ENABLED for pdf service, to export the forms in PDF
-                            format..</li>
-                        <li>Add the environment variable DOCUMENT_SERVICE_URL for document service.</li>
-                        <li>Remove the environment variables CLIENT_ROLE_ID, DESIGNER_ROLE_ID,
-                            REVIEWER_ROLE_ID,ANONYMOUS_ID, USER_RESOURCE_ID.
-                        </li>
-                        <li>Remove the environment variable FORMIO_JWT_SECRET.</li>
-                        <li>Remove environment variable REACT_APP_FORMIO_JWT_SECRET
-                            .</li>
-                    </ul><br>
-                    <p><strong> Note: </strong>The reference values for these environment variables can be viewed<a
-                            href="https://github.com/AOT-Technologies/forms-flow-ai/blob/master/forms-flow-web/sample.env">
-                            here</a>.</p>
-                </ol><br>
-                <h3>
-                    <li>forms-flow-api</li>
-                </h3><br>
-                <ol>
-                    <i>
-                        <h4>Mandatory Changes</h4>
-                    </i><br>
-                    <ul>
-                        <li>Modify the Environment variables BPM_API_BASE to BPM_API_URL, the value should not change.
-                        </li>
-                        <li>Add new environment variable FORMIO_JWT_SECRET.</li><br>
-                        <i>
-                            <h4>Optional Changes</h4>
-                        </i>
-                        <li>Add the environment variable MULTI_TENANCY_ENABLED, KEYCLOAK_ENABLE_CLIENT_AUTH to support
-                            multitenancy.</li>
-                        <li>Environment variables KEYCLOAK_ADMIN_USERNAME and KEYCLOAK_ADMIN_PASSWORD can be removed
-                            since now the admin APIs are accessed using the service account (v.4.0.5).</li>
-                        <li>KEYCLOAK_BPM_CLIENT_SECRET is not mandatory (v.4.0.5), so it can be deleted.</li>
-                    </ul><br>
-                    <p><strong>Note:</strong> The reference values for these environment variables can be viewed <a
-                            href="https://github.com/AOT-Technologies/forms-flow-ai/blob/master/forms-flow-api/sample.env">here</a>.
-                    </p>
-                </ol><br>
-                <h3>
-                    <li>forms-flow-bpm</li>
-                </h3><br>
-                <ol>
-                    <i>
-                        <h4>Mandatory Changes</h4>
-                    </i><br>
-                    <ul>
-                        <li>Modify the Environment variables BPM_BASE_URL as BPM_API_URL, without changing the value.
-                        </li>
-                        <i>
-                            <h4>Optional Changes</h4>
-                        </i>
-                        <li>KEYCLOAK_BPM_CLIENT_SECRET is not mandatory (v.4.0.5).</li>
-                        <li>Add the environment variable MULTI_TENANCY_ENABLED, KEYCLOAK_ENABLE_CLIENT_AUTH,
-                            KEYCLOAK_WEB_CLIENTID, FORMSFLOW_ADMIN_URL for multitenancy support.</li>
-                        <li>Add the environment variable CUSTOM_SUBMISSION_URL, CUSTOM_SUBMISSION_ENABLED for support
-                            form adapter.</li>
-                    </ul><br>
-                    <p><strong>Note:</strong> The reference values for these environment variables can be viewed <a
-                            href="https://github.com/AOT-Technologies/forms-flow-ai/blob/master/forms-flow-bpm/sample.env">here</a>.
-                    </p>
-                </ol><br>
-                <h3>
-                    <li>forms-flow-forms</li>
-                </h3><br>
-                <ol>
-                    <ul>
-                        <i>
-                            <h4>Optional Changes</h4><br>
-                        </i>
-                        <li>Add the environment variable MULTI_TENANCY_ENABLED to support multitenancy.</li>
-                    </ul><br>
-                    <section class="docs-note">
-                        <p>
-                            <strong>Note:</strong> The reference values for these environment variables can be viewed
-                            <a target="_blank"
-                                href="https://github.com/AOT-Technologies/forms-flow-ai/blob/master/forms-flow-forms/sample.env">here</a>.
-                        </p>
-                    </section>
-                </ol>
-            </ol>
-            </section>  
+            
         </div>
     </section>
 </article>

@@ -2,6 +2,15 @@
 	max-width: 600px;
 }
 
+.screenshot {
+	width: 100%;
+	height: auto;
+
+	border: 1rem/16 solid $theme-border-color;
+
+	border-radius: 1rem;
+}
+
 
 
 .docs-overview {
@@ -173,8 +182,10 @@
 	
 	
 	.section-title {
-		font-size: 1rem;
 		margin-bottom: 1rem;
+		
+		font-size: 1rem;
+		pointer-events: none;
 		a {
 			&:hover {
 				text-decoration: none;
@@ -247,7 +258,7 @@
 
 .docs-content {
 	margin-left: 300px;
-	padding-bottom: 500px;
+	padding-bottom: 0;
 }
 
 

@@ -8,7 +8,7 @@ svg:not(:root).svg-inline--fa {
 .svg-inline--fa {
   display: inline-block;
   font-size: inherit;
-  height: 1em;
+  height: 1.5em;
   overflow: visible;
   vertical-align: -.125em; }
   .svg-inline--fa.fa-lg {
@@ -64,7 +64,7 @@ svg:not(:root).svg-inline--fa {
   .svg-inline--fa.fa-li {
     width: 2em; }
   .svg-inline--fa.fa-fw {
-    width: 1.25em; }
+    width: 1.5em; }
 
 .fa-layers svg.svg-inline--fa {
   bottom: 0;

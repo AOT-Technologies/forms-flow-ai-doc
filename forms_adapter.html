@@ -1,9 +1,9 @@
 <article class="docs-article" id="Section">
-    <section class="docs-section" id="custom_submission">
+    <section class="docs-section" id="forms_adapter">
         <div>
 
 
-            <h1>Form Adapter</h1>
+            <h1>Forms: Adapter</h1>
             <br>
             <hr><br>
             <p>formsflow.ai supports submission data to be stored and served using external system. This feature can be used for submission datastore to different database than MongoDB. 
@@ -12,14 +12,7 @@
                 A reference implementation can be found <a href="https://github.com/AOT-Technologies/forms-flow-ai-submissions/tree/develop/forms-flow-submissions" target="_blank">here</a>.
             </p>
             
-            <p>This feature requires the following env variables set:</p>
-            <pre>
-                <code class="hljs">
-        #custom submission
-        CUSTOM_SUBMISSION_ENABLED=false
-        CUSTOM_SUBMISSION_URL=http://{your-ip-address}:{port}
-                </code>
-            </pre>
+            <p>This feature needs to be configured during installation. Refer to <a href="https://aot-technologies.github.io/forms-flow-installation-eks/docs/next/windows">Installation Documentation</a> for help.</p>
          
             <p>
                 Form Adapter uses custom submission URLs to create, submit, get and edit submissions
@@ -187,9 +180,9 @@
     </pre><br>
 <p><strong>NOTE</strong>: In case of Reviewer actions, if submission data need to be updated directly from the form, call customSubmissionUrl instead of formio. 
 </p>
-<img src="./assets/images/formadapter1.png" width="800"></img>
+<img src="./assets/images/formadapter1.png" class="screenshot"></img>
 <br><br><br>
-<img src="./assets/images/formadapter2.png" width="400" height="500"></img>
+<img src="./assets/images/formadapter2.png" class="screenshot"></img>
 
         </div>
     </section>

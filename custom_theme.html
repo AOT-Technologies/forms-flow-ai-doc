@@ -1,0 +1,131 @@
+<article class="docs-article" id="section-custom-theme">
+    <section class="docs-section">
+        <div>
+            <h1>Custom Theme</h1>
+            <hr><br>
+            
+            <h3>Introduction</h3>
+            <p>This guide explains how to customize themes in your application by modifying various CSS variables. These changes allow you to adjust the visual appearance of navigation menus, buttons, headers, fonts, and more, creating a tailored experience for your users.</p>
+
+            <h3>Customizable CSS Variables</h3>
+            <p>The following table outlines the available CSS variables and their effects:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Variable</th>
+                        <th>Default Value</th>
+                        <th>Effect</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>--custom-logo-path</code></td>
+                        <td></td>
+                        <td>Fully qualified logo URL to replace the app logo.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--navbar-active-submenu-bg-color</code></td>
+                        <td>#145a32</td>
+                        <td>Changes the background color of the submenu in the navbar when clicked.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--navbar-active-submenu-font-color</code></td>
+                        <td>#ba4a00</td>
+                        <td>Changes the font color of the submenu in the navbar when clicked.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--navbar-menu-hover-bg-color</code></td>
+                        <td>#bb8fce</td>
+                        <td>Changes the background color of the main menu and submenu in the navbar when hovered.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--navbar-main-menu-active-bg-color</code></td>
+                        <td>#fad7a0</td>
+                        <td>Changes the background color of the main menu in the navbar when clicked.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--navbar-main-menu-active-font-color</code></td>
+                        <td>#641e16</td>
+                        <td>Changes the font color of the main menu in the navbar and other header elements.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--navbar-bg-color</code></td>
+                        <td>#b7950b</td>
+                        <td>Changes the background color of the navbar and header.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--custom-title</code></td>
+                        <td>"SampleWebsite.in"</td>
+                        <td>Updates the header title.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--primary-btn-font-color</code></td>
+                        <td>#e59866</td>
+                        <td>Changes the font color of primary buttons, such as "Submit," "Create New Role," etc.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--primary-btn-bg-color</code></td>
+                        <td>#0b5345</td>
+                        <td>Changes the background color of primary buttons.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--primary-btn-hover-bg-color</code></td>
+                        <td>#a9dfbf</td>
+                        <td>Changes the background color of primary buttons when hovered.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--secondary-btn-font-color</code></td>
+                        <td>#d6dbdf</td>
+                        <td>Changes the font color of secondary buttons, such as "Edit," "History," and "Undo."</td>
+                    </tr>
+                    <tr>
+                        <td><code>--secondary-btn-bg-color</code></td>
+                        <td>#5d6d7e</td>
+                        <td>Changes the background color of secondary buttons.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--secondary-btn-hover-bg-color</code></td>
+                        <td>#aeb6bf</td>
+                        <td>Changes the background color of secondary buttons when hovered.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--default-font-color</code></td>
+                        <td>#7d3c98</td>
+                        <td>Changes the default font color for various components, including forms, task headings, and metrics.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--default-font-size</code></td>
+                        <td>2rem</td>
+                        <td>Sets the default font size for elements like navbar submenus and button labels.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--ff-primary</code></td>
+                        <td>#c32047</td>
+                        <td>Sets the primary theme color for borders, active tabs, and other key elements.</td>
+                    </tr>
+                    <tr>
+                        <td><code>--ff-secondary</code></td>
+                        <td>#cae85a</td>
+                        <td>Sets the secondary theme color for additional highlights and accents.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Applying the Theme</h3>
+            <ol>
+                <li>
+                    <p>Identify the CSS variables you want to customize based on the table above.</p>
+                </li>
+                <li>
+                    <p>Update the values in your theme JSON.</p>
+                </li>
+                <li>
+                    <p>Host the JSON file to file storage and configure the deployment to use this theme file.</p>
+                </li>
+            </ol>
+
+            <p><strong>Tip:</strong> Test your changes in different browsers and screen sizes to ensure consistency across the application.</p>
+        </div>
+    </section>
+</article>

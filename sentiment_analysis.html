@@ -1,0 +1,98 @@
+<article class="docs-article">
+    <section class="docs-section" id="sentiment_analysis">
+        <div>
+            <h1>Sentiment Analysis</h1>
+            <hr><br>
+            <p>Sentiment analysis is used to understand the customer's sentiments toward products, movies, and other
+                such things, whether they feel positive, negative, or neutral about it. BERT is a perfect pre-trained
+                language model which helps machines learn excellent representations of text with respect to the context
+                in many natural language tasks.
+            </p><br>
+            <h3>Data Analysis API</h3>
+            <p>Data Analysis API is used to understand the customer's sentiments whether they feel positive, negative,
+                or neutral about it. </p>
+                <p>Make sure your current working directory is <code> cd {Your Directory}/forms-flow-ai/forms-flow-data-analysis-api</code>.</p>
+            <p>This feature requires the following env:</p>
+            <pre><code class="hljs">
+                DATA_ANALYSIS_API_BASE_URL=http://{your-ip-address}:{port}
+            </code></pre><br>
+            <h4>POST API for sentiment analysis</h4><br>
+
+            <h5><i>POST</i></h5>
+            <code>{{DATA_ANALYSIS_API_BASE_URL}}/sentiment.</code>
+            <br><br>
+            <u>
+                <h5>HEADERS</h5>
+            </u>
+            <p><strong> Authorization Bearer</strong> {{token}}</p>
+            <p><strong> Content-Type</strong> application/json</p>
+            <u>
+                <h5>BODY</h5>
+            </u>
+            <pre>
+                <code class="hljs">
+                    {   
+                     "applicationId":"{valid applicationId}",
+                     "formUrl":"{valid formUrl}",
+                        "data":[{
+                            "text":"bad service",
+                            "elementId":""
+                         }]
+                    }
+                    
+                </code>
+            </pre>
+            <u>
+                <h5>RESPONSE</h5>
+            </u>
+            <pre>
+                <code class="hljs">
+                    {
+                        "overallSentiment": "NEGATIVE"
+                    }
+                </code>
+            </pre>
+            <br>
+            <h4> <a href="https://huggingface.co/Seethal/sentiment_analysis_generic_dataset">Model Description</a></h4>
+            <p>This is a fine-tuned downstream version of the bert-base-uncased model for sentiment analysis, this model
+                is not intended for further downstream fine-tuning for any other tasks. This model is trained on a
+                classified dataset for text classification.</p>
+
+            <h4> How To Use the Sentiment Analysis Component
+            </h4>
+            <p>One of the unique features of the formsflow.ai framework is Sentiment Analysis. It can analyze the
+                sentiment from forms based on specific topics specified by the designer during form creation.</p>
+            <ul>
+                <li>A form designer can drag and drop Text Area with Analytics component and associated with the
+                    corresponding workflow. This activates the Sentiment Analysis component.
+                </li><br>
+                <img src="./assets/images/sentiment1.png" class="screenshot"><br><br>
+                <li>Based on the input responses of the user, formsflow.ai process sentiment is associated with each user's
+                    responses and the response will be patched to submission data by the Camunda listener. For this it requires the following env:
+                </li>
+                <br><pre><code class="hljs">
+                    DATA_ANALYSIS_URL=http://{your-ip-address}:{port}/analysis
+
+                </code></pre>
+                    <li>sentiment Analysis Flow is the workflow associated with sentiment analysis. You need to add the Java class in listeners as</li>
+                    <code>`org.camunda.bpm.extension.hooks.delegates.FormTextAnalysisDelegate`</code>
+                    <p>Refer to the sample shown below:</p> <br>
+                    <img src="./assets/images/sentiment2.png" class="screenshot"><br><br>
+            </ul>
+            
+            <div class="callout-block callout-block-info">
+                <div class="content">
+                    <span class="callout-icon-holder me-1"></span>
+
+                    <i class="fa fa-bullhorn"></i>
+
+                    <em> NOTE:  Refer <a href="https://huggingface.co/docs/transformers/index">here</a> for model creation and training procedures </em>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+</article>
+<script>hljs.initHighlighting();</script>

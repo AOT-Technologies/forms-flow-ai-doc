@@ -1,0 +1,117 @@
+<article class="docs-article" >
+    <section class="docs-section" id="taskvariables">
+        <div>
+            <h1>Multi-Form Bundle feature</h1>
+            
+            <hr>
+            <p>Premium Feature</p>
+            <hr>
+
+            <p>
+                Form bundling introduces the capability to create and combine multiple forms into a bundled application package. This feature is particularly useful in scenarios where there is a need to consolidate various forms and streamline their submission process.
+            </p>
+             <p>
+                By utilizing this feature, you can generate different forms with unique form schemas, each serving a specific purpose. These forms can then be combined into a bundled application package. This package acts as a unified interface that allows users to interact with and submit multiple forms seamlessly. The bundle can be associated with a workflow which can handle next steps post-submission of the package.
+             </p>
+             <p>
+                To enhance the functionality, a powerful rule engine is integrated into the bundle. This rule engine provides flexibility to designers, enabling them to configure rules that dictate the visibility of forms based on the data submitted within the forms themselves. This means that the visibility of certain forms can be dynamically controlled based on the information provided by the user. For example, if a user selects a specific option in one form, it can trigger the display or hiding of other related forms within the bundled package.
+             </p>
+             <p>
+                The flexibility of this feature becomes especially valuable when dealing with complex scenarios. For instance, imagine a situation where you have a general form that needs to include multiple specialized forms, each criteria to different types of requests. With this feature, you can consolidate all these forms into a single bundled application package. As a result, users can fill out and submit all the necessary forms in a seamless and efficient manner.
+             </p>
+             <p>
+                By leveraging the bundled application package, the complexity associated with managing and submitting different forms is significantly reduced. Instead of navigating through separate interfaces for each form, users can access and interact with all the required forms in a unified manner. This streamlined approach simplifies the process for both the users and designers, resulting in a more efficient and user-friendly application experience.
+             </p>
+
+            <h3>Steps to create bundle</h3>
+            <ol>
+                <li>
+                    Create inidividual forms. The forms you wish to use in a bundle cannot use multiple pages feature, they all must be single page forms.
+            </li>
+            <li>
+                Now in Design > Bundle click "New Bundle" in the top right corner to start creating your desired bundle.
+
+                <img class="screenshot" src="./assets/images/Screenshot 2024-12-06 124052.png" alt="Create_bundle_Snapshot">
+            </li>
+            <li>
+                Name the bundle and add a description, then click "Add Forms" and pick the forms you would like in your bundle. You can also change the order of the forms by dragging them around.
+
+                <img class="screenshot" src="./assets/images/Screenshot 2024-12-06 124324.png" alt="Select_Form_Snapshot">
+            </li>
+            <li>
+                Add conditions to control the display of the forms in the Bundle. Add the criteria and select the form to which the criteria should apply.
+
+                <img class="screenshot" src="./assets/images/Screenshot 2024-12-06 125549.png" alt="Add_criteria_Snapshot">
+            </li>
+            <br>
+            <p>
+                <strong>
+                    Note: <a target="_blank" href="https://github.com/zeroSteiner/rule-engine/blob/master/README.rst">Read more about criteria</a>.
+                </strong>
+            </p>
+            <li>
+                At the top of the page click "Save & Preview".
+            </li>
+            <li>
+                Click "Next" and in the step 2 attach or edit a flow to the bundle.<br><br>
+
+                <strong>
+                    Note: The flows inside the original forms will not be executed with the submission of the bundle. Only this flow will be executed with the submission of the bundle.
+                </strong>
+
+                <img class="screenshot" src="./assets/images/Screenshot 2024-12-06 133045.png" alt="Save_bundle_Snapshot">
+            </li>
+            <li>
+                Click "Next" and in the step 3 check all of the details of the bundle, adjust the permissions and toggle "Publish this Bundle for Client Users" if you are ready to publish this bundle. Click "Save" to save your changes and make the form live.
+
+                <img class="screenshot" src="./assets/images/Screenshot 2024-12-06 141931.png" alt="Publish Bundle">
+            </li>
+            </ol>
+    </section>
+    <section class="docs-section" id="taskvariables">
+        <div>
+            <h4 id="camunda-bpm-tenant-based-task-assignment">Here are a few things to keep in mind when designing forms</h4>
+            <hr>
+            <ul>
+                <li>
+                    If a form is included in a bundle, the Reviewer/Approver action button logic should not directly update to formio. Instead emit “customEvent”.
+                </li>
+                <pre>
+                    <code>
+                        form.emit('customEvent', {
+                             type: "actionComplete",
+                             component: component,
+                             actionType:data.managerActionType
+                        });
+                    </code>
+                </pre>
+                <img class="screenshot" src="./assets/images/button_component2.png" alt="Save_bundle_Snapshot">
+                <br>
+                <li>
+                    But in the case of the form used in the form connector, it can directly update formio.
+                </li>
+                <img class="screenshot" src="./assets/images/formbundling/button_component_2.png" alt="Save_bundle_Snapshot">
+            </ul>
+        </div>
+    </section>
+    <section class="docs-section" id="taskvariables">
+        <div>
+            <h3>How to Use CombineSubmissionBundleListener</h3>
+        
+            <ol>
+                <li>
+                    Configure <a target="_blank"
+                        href="https://github.com/AOT-Technologies/forms-flow-ai-ee/blob/feature/form-bundling/forms-flow-bpm/starter-examples/listeners/formconnector-readme.md">FormConnectorListener</a>FormConnectorListener
+                    to a task. This listener set bundleUrl as the execution variable.
+                    <img class="screenshot" src="./assets/images/formbundling/task_listener_1.png" alt="Save_bundle_Snapshot">
+                </li>
+                <li>
+                    Configure the CombineSubmissionBundleListener that merges the data from bundleUrl and formUrl to generate a new submission for the associated bundle. The URL of the newly created submission is then assigned to formUrl.
+
+                    <img class="screenshot" src="./assets/images/formbundling/task_listener_2.png" alt="Save_bundle_Snapshot">
+                </li>
+            </ol>
+        </div>
+    </section>
+
+        <script>hljs.initHighlighting();</script>

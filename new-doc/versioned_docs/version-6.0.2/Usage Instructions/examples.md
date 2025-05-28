@@ -61,9 +61,9 @@ There are few example JSON files in our repository which can be downloaded by cl
   ![Image](/img/Screenshot-2022-07-07-152653.png)
 
 - Click on **Save** button to complete designing a form.
-- Form designing is successfully completed, you can now Log out and go to [Client Steps](#client--steps2).
+- Form designing is successfully completed, you can now Log out and go to [Client Steps](#client-steps).
 
-### Client Steps
+### Client Steps {#client-steps}
 
 - Log in to [http://localhost:3000](http://localhost:3000) (forms-flow-web) with valid [default user credentials for the client](default user credential.html).
 - After the login is successful you will be redirected to [http://localhost:3000/form](http://localhost:3000/form) where you can View and Submit a form.
@@ -143,9 +143,9 @@ There are few example JSON files in our repository which can be downloaded by cl
   ![Image](/img/business4.png)
 
 - Click on **SAVE Button** to complete designing a form.
-- Form designing is successfully completed, you can now Log out and go to [Client Steps](#client---steps).
+- Form designing is successfully completed, you can now Log out and go to [Client Steps](#client-steps).
 
-### Client Steps
+### Client Steps {#client-steps}
 
 - Log in to [http://localhost:3000](http://localhost:3000) (forms-flow-web) with valid [default user credentials for the client](default user credential.html).
 - After the login is successful you will be redirected to [http://localhost:3000/form](http://localhost:3000/form) where you can View and Submit a form.

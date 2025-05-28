@@ -15,7 +15,7 @@ Formsflow.ai logically separates tenant data and authorization, which enables:
 - **Application URL**: Each tenant gets a tenant-specific URL to access the application.
 - **Authorization**: Tenant data is secured using tenant-specific authentication tokens. A user can belong to multiple tenants with different roles, and authentication is based on the tenant URL, granting access only to that tenant’s data. Each tenant can have unique roles beyond the default formsflow roles.
 - **Forms**: Each tenant can create and publish their own forms.
-- **BPM**: Each tenant can create and publish their own workflows. Workflows can also be deployed to be shared across all tenants. See [BPM: Tenant-based Task Assignment](#camunda-bpm-tenant-based-task-assignment) for details on tenant-based task assignment.
+- **BPM**: Each tenant can create and publish their own workflows. Workflows can also be deployed to be shared across all tenants. See [BPM: Tenant-based Task Assignment](#bpm-tenant-based-task-assignment) for details on tenant-based task assignment.
 - **Analytics**: Each tenant gets their own analytics organization to create dashboards.
 
 If you are interested in premium features, please [contact us](https://formsflow.ai/about-us/#contact-us).

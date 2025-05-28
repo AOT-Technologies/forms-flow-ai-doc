@@ -28,7 +28,7 @@ There is a Vue.js-based web-user interface for easy integration of formsflow.ai 
 
 ### Keycloak Identity and Access Management
 
-formsflow.ai uses your existing Keycloak server, which provides a common identity and authorization management capability. The system provides default installation and provisioning of the Keycloak server for a local setup. However, you can set up your own Keycloak server and follow the provisioning steps [here](local_keycloaksetup.html).
+formsflow.ai uses your existing Keycloak server, which provides a common identity and authorization management capability. The system provides default installation and provisioning of the Keycloak server for a local setup. However, you can set up your own Keycloak server and follow the provisioning steps [here](local_keycloaksetup).
 
 ### Form.io API
 

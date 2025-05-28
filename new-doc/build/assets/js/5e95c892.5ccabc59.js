@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkformsflow_ai_doc=self.webpackChunkformsflow_ai_doc||[]).push([[9647],{18122:(e,s,r)=>{r.r(s),r.d(s,{default:()=>d});r(96540);var a=r(34164),c=r(81082),o=r(204),u=r(22831),f=r(51410),l=r(74848);function d(e){return(0,l.jsx)(c.e3,{className:(0,a.A)(o.G.wrapper.docsPages),children:(0,l.jsx)(f.A,{children:(0,u.v)(e.route.routes)})})}}}]);

@@ -31,7 +31,6 @@ Below are the manual steps required for version migration when you already have 
 
    - Follow the steps outlined [here](https://github.com/AOT-Technologies/forms-flow-ai/tree/develop/forms-flow-idm/migration#700)
 
-
 ## Version 5.3.0 to 6.0.0
 
 1. **forms-flow-web-root-config**

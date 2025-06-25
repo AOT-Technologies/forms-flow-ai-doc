@@ -1,8 +1,9 @@
 ---
 sidebar_position: 12
+slug: /email-connector
 ---
 
-# BPMN Email Connector
+# Flow: Email Connector
 
 ---
 

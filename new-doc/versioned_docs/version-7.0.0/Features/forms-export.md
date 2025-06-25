@@ -1,8 +1,9 @@
 ---
-sidebar_position: 18
+sidebar_position: 19
+slug: /export-pdf
 ---
 
-# Export
+# Forms: Export As PDF
 
 ---
 

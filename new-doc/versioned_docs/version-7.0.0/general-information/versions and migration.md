@@ -1,12 +1,13 @@
 ---
-sidebar_position: 6
+sidebar_position: 5
+slug: /version-upgrades
 ---
 
-# formsflow.ai Version Upgrade
+# Version Upgrade
 
 ---
 
-formsflow.ai is often updated with new features and bug fixes. For a better user experience and to access the latest features, it is essential to upgrade formflow.ai to the newest version.
+*formsflow.ai* is often updated with new features and bug fixes. For a better user experience and to access the latest features, it is essential to upgrade *formflow.ai* to the newest version.
 
 Check out [changelog](https://github.com/AOT-Technologies/forms-flow-ai/blob/master/CHANGELOG.md) for details on environment variable changes between versions.
 

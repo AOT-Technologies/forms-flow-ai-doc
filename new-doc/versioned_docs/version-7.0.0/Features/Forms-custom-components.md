@@ -1,8 +1,9 @@
 ---
-sidebar_position: 16
+sidebar_position: 17
+slug: /custome-components
 ---
 
-# Custom Components
+# Form: Custom Components
 
 ---
 

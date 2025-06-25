@@ -1,8 +1,9 @@
 ---
-sidebar_position: 17
+sidebar_position: 18
+slug: /drafts
 ---
 
-# Forms: Drafts
+# Form: Drafts
 
 ---
 

@@ -1,8 +1,9 @@
 ---
-sidebar_position: 13
+sidebar_position: 22
+slug: /theme
 ---
 
-# Custom Theme
+# Web: Custom Theme
 
 ---
 

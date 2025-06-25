@@ -1,8 +1,9 @@
 ---
-sidebar_position: 20
+sidebar_position: 21
+slug: /form-rbac
 ---
 
-# Role Based Access Control for forms
+# Form: Role Based Access Control (RBAC)
 
 ---
 

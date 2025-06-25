@@ -1,8 +1,9 @@
 ---
 sidebar_position: 10
+slug: /bpmn-listeners
 ---
 
-# BPMN Listeners
+# Flow: Listeners
 
 ---
 

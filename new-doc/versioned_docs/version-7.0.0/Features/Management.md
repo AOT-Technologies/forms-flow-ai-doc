@@ -1,8 +1,9 @@
 ---
-sidebar_position: 22
+sidebar_position: 24
+slug: /admin-module
 ---
 
-# Admin Module
+# Web: Admin Module
 
 ---
 

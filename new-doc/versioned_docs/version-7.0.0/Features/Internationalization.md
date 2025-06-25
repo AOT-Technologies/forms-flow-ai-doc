@@ -1,8 +1,9 @@
 ---
 sidebar_position: 21
+slug: /i8n
 ---
 
-# Internationalization
+# Web: Internationalization
 
 ---
 

@@ -1,8 +1,9 @@
 ---
 sidebar_position: 11
+slug: /variables
 ---
 
-# BPMN Variables
+# Flow: Variables
 
 ---
 

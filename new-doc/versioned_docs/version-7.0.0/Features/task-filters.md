@@ -1,8 +1,9 @@
 ---
-sidebar_position: 25
+sidebar_position: 13
+slug: /task-filters
 ---
 
-# Task Filters
+# Flow: Task Filters
 
 ---
 

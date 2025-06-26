@@ -9,7 +9,7 @@ slug: /form-adapter
 
 formsflow.ai supports submission data to be stored and served using external system. This feature can be used for submission datastore to different database than MongoDB. If this feature is enabled MongoDB will be used only for form definition data. A Rest API is needed to support this where customer can add this Rest API to their choice of database and provide the required endpoints. A reference implementation can be found [here](https://github.com/AOT-Technologies/forms-flow-ai-submissions/tree/develop/forms-flow-submissions).
 
-This feature needs to be configured during installation. Refer to [Installation Documentation](https://aot-technologies.github.io/forms-flow-installation-eks/docs/next/windows) for help.
+This feature needs to be configured during installation. Refer to [Installation Documentation](https://aot-technologies.github.io/forms-flow-installation-eks/docs/next/windows) for help..
 
 Form Adapter uses custom submission URLs to create, submit, get and edit submissions within a form to the preferred database. These URLs follow the same URL pattern as the formio submission URL.
 

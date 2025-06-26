@@ -1,11 +1,11 @@
 ---
-sidebar_position: 10
+sidebar_position: 9
 slug: /sentiment-analysis
 ---
 
 # Analytics: Sentiment Analysis
 
-Sentiment analysis helps understand customers' sentiments toward products, services, or other items, determining whether they feel positive, negative, or neutral. BERT, a pre-trained language model, enables machines to learn excellent text representations with respect to context for various natural language tasks.
+Sentiment analysis reveals how customers feel about products, services, or other topics by classifying text as positive, negative, or neutral. This feature relies on BERT, a pretrained language model that captures contextual relationships in text.
 
 ### Data Analysis API
 

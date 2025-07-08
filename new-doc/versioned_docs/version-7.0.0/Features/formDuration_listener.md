@@ -6,15 +6,11 @@ sidebar_class_name: hidden
 
 ---
 
-**org.camunda.bpm.extension.hooks.listeners.task.TaskDurationAttributesListener**
+### Java Class
+ 
+`org.camunda.bpm.extension.hooks.listeners.task.TaskDurationAttributesListener`
 
-This component can be used on the **CREATE** event of a task listener. It calculates and sets the DUE DATE in business days only.
-
-### Table of Content
-
-* [Type](#type)
-* [How it Works](#how-it-works)
-* [How to Use](#how-to-use)
+This listener can be used on the **CREATE** event of a task listener. It calculates and sets the `DUE DATE` in business days.
 
 ### Type
 
@@ -22,7 +18,9 @@ Task Listener
 
 ### How it Works
 
-* This listener takes a mandatory expression field, **SLAInDays**.
+The listener relies on the following parameters:
+`(1)` **SLAInDays** (`name`: SLAInDays, `type`: expression, `value`: <number of days>, **Mandatory = Yes** ])
+
 * It calculates the due date by adding the `SLAInDays` value to the task creation date (considering business days).
 * It also creates a Camunda variable named **task\_due\_date** with the calculated value.
 

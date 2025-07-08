@@ -5,16 +5,11 @@ sidebar_class_name: hidden
 # Timeout Notification Listener
 
 ---
+### Java Class
+ 
+`org.camunda.bpm.extension.hooks.listeners.task.TimeoutNotifyListener`
 
-**org.camunda.bpm.extension.hooks.listeners.task.TimeoutNotifyListener**
-
-This component sends an email reminder one day before the task due date and an escalation email the day after the due date.
-
-### Table of Content
-
-* [Type](#type)
-* [How it Works](#how-it-works)
-* [How to Use](#how-to-use)
+This listener sends an email reminder one day before the task due date and an escalation email the day after the due date.
 
 ### Type
 
@@ -22,10 +17,11 @@ Task Listener
 
 ### How it Works
 
-This component is intended to be used only when a task has a due date. It relies on the following listener field parameters:
+This listener is intended to be used only when a task has a due date. It relies on the following listener field parameters:
 
-* **escalationGroup** (Listener Field): A recognized group name within Camunda. `Mandatory = Yes`
-* **messageName** (Listener Field): Refers to the message name from **notification\_email.bpmn**. `Mandatory = Yes`
+`(1)` **escalationGroup** (`name`: escalationGroup, `type`: expression, `value`: <name of the group>, **Mandatory = Yes** ])
+`(2)` **messageName** (`name`: messageName, `type`: expression, `value`: <messageName>, **Mandatory = Yes** ])
+	`messageName` refers to the message name from **notification\_email.bpmn**
 
 The listener should be configured on the task's **timeout** event with a desired timer definition.
 

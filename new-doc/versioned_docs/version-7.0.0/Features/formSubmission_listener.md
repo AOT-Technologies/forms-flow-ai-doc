@@ -5,16 +5,11 @@ sidebar_class_name: hidden
 # Form Submission Listener
 
 ---
+### Java Class
+ 
+`org.camunda.bpm.extension.hooks.listeners.FormSubmissionListener`
 
-**org.camunda.bpm.extension.hooks.listeners.FormSubmissionListener**
-
-This component can be used on any event of a task or execution listener. Upon configuration, it creates a new submission from the current one.
-
-### Table of Content
-
-* [Type](#type)
-* [How it Works](#how-it-works)
-* [How to Use](#how-to-use)
+This listener can be used on any event of a task or execution listener. Upon configuration, it creates a new submission from the current one.
 
 ### Type
 
@@ -22,7 +17,7 @@ Task/Execution Listener
 
 ### How it Works
 
-This component creates a new revision from the current `formUrl` and sets that as a CAM variable.
+This listener creates a new revision from the current `formUrl` and sets that as a CAM variable.
 
 * **[STEP 1]** - Create a new submissionId using the existing form data.
 * **[STEP 2]** - Set the new `formUrl` with CAM variables.

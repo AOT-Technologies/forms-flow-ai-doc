@@ -20,10 +20,10 @@ Task Listener
 
 The listener relies on the following parameters:
 
-`(1)` **formName** (`name`: formName, `type`: expression, `value`: <name of the form>, **Mandatory = Yes** )
-`(2)` **copyDataIndicator** (`name`: copyDataIndicator, `type`: expression, `value`: Y or N, **Mandatory = No** ]
+`(1)` **formName** (`name`: formName, `type`: expression, `value`: _name of the form_, **Mandatory = Yes** )
+`(2)` **copyDataIndicator** (`name`: copyDataIndicator, `type`: expression, `value`: _Y or N_, **Mandatory = No** ]
 	 When set to `Y`, it propagates all matching field values from the existing `formUrl` to the new form.
-`(3)` **fields** (`name`: fields, `type`: expression, `value`: Array of variable names(s), **Mandatory = Yes** ] 
+`(3)` **fields** (`name`: fields, `type`: expression, `value`: _Array of variable names(s)_, **Mandatory = Yes** ] 
 	Specifies Camunda variables as an array (e.g., `["pid","applicationId","task_id"]`). These variables are populated into the form. Note: `pid` is the process instance ID, `task_id` is the task ID, and `applicationId` is the application ID. These are essential for forms associated with tasks.
 
 

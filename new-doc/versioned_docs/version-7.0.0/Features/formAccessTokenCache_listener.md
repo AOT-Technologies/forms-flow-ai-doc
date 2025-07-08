@@ -9,7 +9,7 @@ sidebar_class_name: hidden
  
 `org.camunda.bpm.extension.hooks.listeners.execution.FormAccessTokenCacheListener`
 
-This component is designed to work **exclusively** with the `formio-access-token.bpmn` process. It generates and stores a Formio access token as a variable in the global scope.
+This Listener is designed to work **exclusively** with the `formio-access-token.bpmn` process. It generates and stores a Formio access token as a variable in the global scope.
 
 ### Type
 

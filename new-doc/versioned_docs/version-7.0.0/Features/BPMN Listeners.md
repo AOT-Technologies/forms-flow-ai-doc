@@ -11,7 +11,7 @@ slug: /bpmn-listeners
 
 Listeners provide a powerful mechanism to execute external Java code or evaluate expressions in response to specific events during process execution. They are frequently used during process development to implement custom behavior at key stages of the process.
 
-Depending on their configuration, listeners can be triggered at various points, such as the start or end of an activity, gateway, process instance, or specific events. This flexibility makes them a versatile tool for extending and customizing process logic.
+Depending on their configuration, listeners can be triggered at various points, such as the `start` or `end` of an _activity, gateway, process instance, or specific events_. This flexibility makes them a versatile tool for extending and customizing process logic.
 
 ## Predefined Listeners
 

@@ -19,7 +19,7 @@ Task Listener
 ### How it Works
 
 The listener relies on the following parameters:
-`(1)` **SLAInDays** (`name`: SLAInDays, `type`: expression, `value`: <number of days>, **Mandatory = Yes** )
+`(1)` **SLAInDays** (`name`: SLAInDays, `type`: expression, `value`: _number of days_, **Mandatory = Yes** )
 
 * It calculates the due date by adding the `SLAInDays` value to the task creation date (considering business days).
 * It also creates a Camunda variable named **task\_due\_date** with the calculated value.

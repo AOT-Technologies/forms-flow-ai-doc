@@ -7,18 +7,19 @@ slug: /i8n
 
 ---
 
-This feature enables the user to add new language according to their preference. Currently we are providing you with six languages:
+This feature enables the user to add new language according to their preference. Currently we are providing you with these languages:
 
-- English
-- Chinese
-- Portuguese
-- French
 - Bulgarian
+- Chinese
+- English
+- French
 - German
+- Portuguese
+- Spanish
 
 #### To Add a New Language
 
-- Select 'resourceBundles' folder from `forms-flow-web/src`.
+- Select `resourceBundles` folder from `forms-flow-web/src`.
 - Create a folder structure as shown below:
 
   ![Image](/img/7.0.0/image-(20).png)

@@ -17,7 +17,7 @@ Task/Execution Listener
 
 ### How it Works
 
-This listener creates a new revision from the current `formUrl` and sets that as a CAM variable.
+This listener creates a new revision from the current `formUrl` and sets that as a flow (Camunda) variable.
 
 * **[STEP 1]** - Create a new submissionId using the existing form data.
 * **[STEP 2]** - Set the new `formUrl` with CAM variables.

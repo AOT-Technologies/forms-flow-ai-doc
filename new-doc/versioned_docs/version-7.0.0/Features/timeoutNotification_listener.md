@@ -19,8 +19,8 @@ Task Listener
 
 This listener is intended to be used only when a task has a due date. It relies on the following listener field parameters:
 
-`(1)` **escalationGroup** (`name`: escalationGroup, `type`: expression, `value`: <name of the group>, **Mandatory = Yes** )
-`(2)` **messageName** (`name`: messageName, `type`: expression, `value`: <messageName>, **Mandatory = Yes** )
+`(1)` **escalationGroup** (`name`: escalationGroup, `type`: expression, `value`: _name of the group_, **Mandatory = Yes** )
+`(2)` **messageName** (`name`: messageName, `type`: expression, `value`: _messageName_, **Mandatory = Yes** )
 	`messageName` refers to the message name from **notification\_email.bpmn**
 
 The listener should be configured on the task's **timeout** event with a desired timer definition.

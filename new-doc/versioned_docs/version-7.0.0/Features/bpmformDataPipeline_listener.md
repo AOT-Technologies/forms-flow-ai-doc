@@ -21,7 +21,7 @@ The listener prepares data from Camunda variables for Formio submission and invo
 
 ### Parameters
 
-`(1)` **fields** (`name`: fields, `type`: expression, `value`: Array of variable names(s), **Mandatory = Yes** ) 
+`(1)` **fields** (`name`: fields, `type`: expression, `value`: _Array of variable names(s)_, **Mandatory = Yes** ) 
 	Specifies Camunda variables as an array (e.g., `["pid","applicationId","task_id"]`). These variables are populated into the form.
 
 ### How to Use

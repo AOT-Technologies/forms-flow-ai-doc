@@ -20,16 +20,16 @@ Task Listener
 
 This component relies on the following listener field parameters (type: expression):
 
-`(1)` **messageId** (`name`: messageId, `type`: expression, `value`: <message name>, **Mandatory = Yes** ])
+`(1)` **messageId** (`name`: messageId, `type`: expression, `value`: <message name>, **Mandatory = Yes** )
 	messageId is the name of the message used for your email notification process
 
-`(2)` **category** (`name`: category, `type`: expression, `value`: <category value>, **Mandatory = Yes** ])
+`(2)` **category** (`name`: category, `type`: expression, `value`: <category value>, **Mandatory = Yes** )
 	category is the input parameter used in the email tempalate DMN which is used email notification process
 
-`(3)` **groupsOnly** (`name`: groupsOnly, `type`: expression, `value`: <number of days>, **Mandatory = Yes** ])
+`(3)` **groupsOnly** (`name`: groupsOnly, `type`: expression, `value`: <number of days>, **Mandatory = Yes** )
 	If set, this flag ensures the email is sent *only* to **emailGroups**
 
-`(4)` **emailGroups** (`name`: emailGroups, `type`: expression, `value`: <number of days>, **Mandatory = No** ])
+`(4)` **emailGroups** (`name`: emailGroups, `type`: expression, `value`: <number of days>, **Mandatory = No** )
 	An array of email group names (e.g., `["ADMO","ED-Operations"]`).
 
 

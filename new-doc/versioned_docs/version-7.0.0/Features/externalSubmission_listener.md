@@ -20,7 +20,7 @@ Execution Listener
 
 The listener relies on the following parameter:
 
-`(1)` **formName** (`name`: formName, `type`: expression, `value`: <name of the form>, **Mandatory = Yes** ]
+`(1)` **formName** (`name`: formName, `type`: expression, `value`: <name of the form>, **Mandatory = Yes** )
 
 
 ### How to Use

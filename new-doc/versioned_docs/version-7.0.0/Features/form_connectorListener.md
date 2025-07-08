@@ -20,7 +20,7 @@ Task Listener
 
 The listener relies on the following parameters:
 
-`(1)` **formName** (`name`: formName, `type`: expression, `value`: <name of the form>, **Mandatory = Yes** ]
+`(1)` **formName** (`name`: formName, `type`: expression, `value`: <name of the form>, **Mandatory = Yes** )
 `(2)` **copyDataIndicator** (`name`: copyDataIndicator, `type`: expression, `value`: Y or N, **Mandatory = No** ]
 	 When set to `Y`, it propagates all matching field values from the existing `formUrl` to the new form.
 `(3)` **fields** (`name`: fields, `type`: expression, `value`: Array of variable names(s), **Mandatory = Yes** ] 

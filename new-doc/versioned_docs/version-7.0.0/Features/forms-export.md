@@ -7,15 +7,21 @@ slug: /export-pdf
 
 ---
 
-This feature enables users to export the submitted data as a PDF file.
+This feature enables users to export the submitted form as a PDF file.
 
-As well as allowing the designers to export the form itself (the layout + the flow).
+## Exporting a Submitted Form as PDF
 
-## Export Submission Data To PDF File
+To download a submitted form as a PDF:
 
-In Submit > Forms > Submissions Tab > **View Submitted Form** click the **Export PDF** button in the top right and get the form submission downloaded as a PDF in the browser.
+1. Navigate to `Submit > Forms > Submissions` tab.
+2. Click on **View Submitted Form** 
+3. In the top right corner, click the **Export PDF** button.
+
+The form submission will be downloaded as a PDF file in your browser.
 
 ![Image](/img/7.0.0/Screenshot-2024-11-26-124459.png)
+
+## Technical Notes
 
 ### API Details
 
@@ -35,13 +41,13 @@ This feature requires the following prerequisites for running in local without D
 
 Chrome driver path can be provided via env variable like below:
 
-In Windows,
+In **Windows**,
 
 ```bash
 CHROME_DRIVER_PATH=C:\driver\chromedriver.exe
 ```
 
-In Linux,
+In **Linux**,
 
 ```bash
 CHROME_DRIVER_PATH=/usr/local/bin/chromedriver
@@ -84,8 +90,3 @@ Forms flow docker images already contain code to install the latest Chrome and i
     # Url of python document service url
     REACT_APP_DOCUMENT_SERVICE_URL=<yourIP:port>
     ```
-
-## Export Form File
-In Design > Forms > Edit click the Actions button in the top bar on the right. In the Actions popup click on Export and get the form file downloaded in the browser. You can send this file to someone, use it as a backup, or import it in a different FormsFlow environment.
-
-![Image](/img/7.0.0/Screenshot-2024-11-26-124236.png)

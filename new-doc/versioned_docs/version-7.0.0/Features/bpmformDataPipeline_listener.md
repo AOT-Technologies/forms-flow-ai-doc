@@ -5,10 +5,11 @@ sidebar_class_name: hidden
 # BPM Form Data Pipeline Listener
 
 ---
+### Java Class
+ 
+`org.camunda.bpm.extension.hooks.listeners.BPMFormDataPipelineListener`
 
-**org.camunda.bpm.extension.hooks.listeners.BPMFormDataPipelineListener**
-
-This component can be used on any task or execution listener event. Upon configuration, it copies Camunda variables to Formio form data.
+This Listener can be used on any task or execution listener event. Upon configuration, it copies Camunda variables value to form fields with the same name.
 
 ### Type
 
@@ -20,7 +21,8 @@ The listener prepares data from Camunda variables for Formio submission and invo
 
 ### Parameters
 
-- **fields** (Listener field, type: expression): Specifies Camunda variables as an array (e.g., `["pid","applicationId","task_id"]`). These variables are populated into the form. **Mandatory = Yes**
+`(1)` **fields** (`name`: fields, `type`: expression, `value`: _Array of variable names(s)_, **Mandatory = Yes** ) 
+	Specifies Camunda variables as an array (e.g., `["pid","applicationId","task_id"]`). These variables are populated into the form.
 
 ### How to Use
 

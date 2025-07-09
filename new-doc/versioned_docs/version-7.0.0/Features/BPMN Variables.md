@@ -7,7 +7,7 @@ slug: /variables
 
 ---
 
-BPMN variables are the form fields added to the layout. These fields, if selected, are passed to BPMN during form submission, allowing BPMN to access their values. The selected variables will also be available to be displayed in the task list under Review > Tasks.
+Flow variables are the form fields added to the flow. These fields, if selected, are passed to flow during form submission, allowing flow to access their values. The selected variables will also be available to be displayed in the task list under `Review > Tasks`.
 
 1. Create a new form or Edit an already created form
 
@@ -30,3 +30,5 @@ BPMN variables are the form fields added to the layout. These fields, if selecte
      ![Image](/img/7.0.0/Screenshot-2024-11-26-165614.png)
 
 5. Once the form is submitted you will have access to the variables you have selected in the previous step in the Review > Tasks. You can click on "Create New Filter" button at the top, or edit a filter that has been created before. In the side popup you can click on "Task attributes" and select which varibles to show.
+`
+5. After the form is submitted, the selected variables from the previous step become available under `Review > Tasks`. You can either click `Create New Filter` at the top or edit an existing filter. In the side panel that appears, click `Task attributes` and choose which variables you want to display.

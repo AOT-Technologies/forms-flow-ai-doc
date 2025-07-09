@@ -6,9 +6,11 @@ sidebar_class_name: hidden
 
 ---
 
-**org.camunda.bpm.extension.hooks.listeners.task.NotifyListener**
+### Java Class
+ 
+`org.camunda.bpm.extension.hooks.listeners.task.NotifyListener`
 
-This component can be used on the **CREATE** event of a task listener. It sends an email upon task creation to members of the candidate groups and optionally to members of **emailGroups**.
+This listener can be used on the **CREATE** event of a task listener. It sends an email upon task creation to members of the candidate groups and optionally to members of **emailGroups**.
 
 #### Type
 
@@ -18,10 +20,18 @@ Task Listener
 
 This component relies on the following listener field parameters (type: expression):
 
-* **messageId**: Maps to any process event. **Mandatory = Yes**
-* **category**: Maps to the email template DMN category. **Mandatory = Yes**
-* **groupsOnly**: If set, this flag ensures the email is sent *only* to **emailGroups**. **Mandatory = Yes**
-* **emailGroups**: An array of email group names (e.g., `["ADMO","ED-Operations"]`). **Mandatory = Yes**
+`(1)` **messageId** (`name`: messageId, `type`: expression, `value`: _name of messaga_, **Mandatory = Yes** )
+	messageId is the name of the message used for your email notification process
+
+`(2)` **category** (`name`: category, `type`: expression, `value`: _category value_, **Mandatory = Yes** )
+	category is the input parameter used in the email tempalate DMN which is used email notification process
+
+`(3)` **groupsOnly** (`name`: groupsOnly, `type`: expression, `value`: _number of days_, **Mandatory = Yes** )
+	If set, this flag ensures the email is sent *only* to **emailGroups**
+
+`(4)` **emailGroups** (`name`: emailGroups, `type`: expression, `value`: _number of days_, **Mandatory = No** )
+	An array of email group names (e.g., `["ADMO","ED-Operations"]`).
+
 
 #### How to Use
 

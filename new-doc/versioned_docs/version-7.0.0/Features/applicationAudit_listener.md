@@ -6,11 +6,13 @@ sidebar_class_name: hidden
 
 ---
 
-**org.camunda.bpm.extension.hooks.listeners.ApplicationAuditListener**
+### Java Class
+ 
+`org.camunda.bpm.extension.hooks.listeners.ApplicationAuditListener`
 
-This component can be used on any task or execution event. Upon configuration, it sends the values of Camunda variables `applicationStatus` and `formUrl` to the formsflow.ai system to capture audit history.
+This Listener can be used on any task or execution event. Upon configuration, it sends the values of Camunda variables `applicationStatus` and `formUrl` to the formsflow.ai system to capture audit history.
 
-> **Note**: Use this listener only when creating an audit history without updating the application status.
+> **Note**: Use this listener only when creating an audit history without updating the application status field inside the form.
 
 ### Type
 

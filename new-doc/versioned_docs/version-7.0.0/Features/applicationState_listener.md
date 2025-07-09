@@ -6,11 +6,13 @@ sidebar_class_name: hidden
 
 ---
 
-**org.camunda.bpm.extension.hooks.listeners.ApplicationStateListener**
+### Java Class
+ 
+`org.camunda.bpm.extension.hooks.listeners.ApplicationStateListener`
 
-This component can be used on any task or execution listener event. Upon configuration, it performs the following actions:
+This Listener can be used on any task or execution listener event. Upon configuration, it performs the following actions:
 
-1. Syncs the formsflow.ai system with the active status from Camunda.
+1. Syncs the formsflow.ai system with the active `applicationStatus` from Camunda.
 2. Sends Camunda variables `applicationStatus` and `formUrl` to formsflow.ai for audit history capture.
 
 ### Type

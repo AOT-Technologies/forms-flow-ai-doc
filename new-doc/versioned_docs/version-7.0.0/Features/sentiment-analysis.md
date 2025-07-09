@@ -9,7 +9,7 @@ Sentiment analysis reveals how customers feel about products, services, or other
 
 ### Data Analysis API
 
-The Data Analysis API is used to analyze customer sentiments, identifying whether they are positive, negative, or neutral.
+The `Data Analysis` API is used to analyze customer sentiments, identifying whether they are positive, negative, or neutral.
 
 Make sure your current working directory is `cd {Your Directory}/forms-flow-ai/forms-flow-data-analysis-api`.
 

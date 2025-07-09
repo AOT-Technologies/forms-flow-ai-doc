@@ -10,7 +10,7 @@ slug: /form-adapter
 formsflow.ai supports storing form submission data in external systems, allowing integration with databases other than MongoDB. When this feature is enabled, MongoDB is used only to store form definitions, while submission data is handled externally.
 
 ## Overview
-
+=======
 To enable this functionality, you must provide a REST API that interacts with your preferred database. This API should implement the necessary endpoints to support create, read, update, and delete operations on submission data.
 
 A reference implementation is available here:  

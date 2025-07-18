@@ -5,10 +5,11 @@ sidebar_class_name: hidden
 # Form BPM Filtered Data Pipeline Listener
 
 ---
+### Java Class
+ 
+`org.camunda.bpm.extension.hooks.listeners.FormBPMFilteredDataPipelineListener`
 
-**org.camunda.bpm.extension.hooks.listeners.FormBPMFilteredDataPipelineListener**
-
-This component can be used on any task or execution listener event. Upon configuration, it copies specific data from Formio forms to Camunda variables.
+This listener can be used on any task or execution listener event. Upon configuration, it copies specific data from Formio forms to Camunda variables.
 
 ### Type
 

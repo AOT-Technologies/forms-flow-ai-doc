@@ -1,24 +1,29 @@
 ---
-sidebar_position: 17
+sidebar_position: 18
+slug: /drafts
 ---
 
-# Forms: Drafts
+# Form: Drafts
 
 ---
 
-Draft feature has been implemented to save and track unfinished applications.
+The draft feature allows users to save and resume incomplete form submissions, enabling them to track and complete applications at a later time.
 
-#### Use case:
 
-1. If there is a large form to submit and the user does not have the sufficient information at the time of filling.
-2. If a power failure or network failure happens during form filling, data might be lost in such cases. These circumstances can be avoided by saving the form as draft.
-3. Users have the option to save a draft and submit the form later.
+## Use Case
 
-#### Features:
+The draft feature is useful in the following scenarios:
 
-1. The draft feature is totally customizable. By altering the configuration, this feature can be disabled if a given installation doesn't require it.
-2. The polling rate is also configurable.
-3. Works for anonymous users and multitenant environments.
+1. When the form is large and the user does not have all the required information at the time of filling it out.
+2. In the event of a power outage or network failure during form completion, saving as a draft helps prevent data loss.
+3. Users can save their progress as a draft and return later to complete and submit the form.
+
+## Features
+
+1. **Customizable**: The draft feature can be enabled or disabled through configuration, depending on the needs of the installation.
+2. **Configurable Polling Rate**: The frequency at which draft data is saved can be adjusted.
+3. **Supports Anonymous and Multi-Tenant Users**: Draft saving works for both unauthenticated users and across multi-tenant environments.
+
 
 ### 1. Autosave of submission data
 

@@ -1,32 +1,37 @@
 ---
 sidebar_position: 12
+slug: /email-connector
 ---
 
-# BPMN Email Connector
+# Flow: Email Connector
 
 ---
 
 ### Send an Email from a Flow
 
-The following steps explain how to configure and use the email connector (via `mail-send`) in a BPMN flow.
+The following steps explain how to configure and use the email connector (via `mail-send` connector) in a BPMN flow.
 
 1. #### Flow
-   Launch your BPMN Modeler and open the flow where you want to send an email. Insert or select a **Service Task** in the workflow where the email should be sent.
+   Launch your BPMN Modeler and open the flow where you want to send an email. Insert or select a `Service Task` in the flow where the email should be sent.
 
 2. #### Set the Service Task to Use a Connector
    Select the Service Task and open the Properties/Details panel. Under **Implementation**:
    - Choose **Type** as `Connector`.
    - Set the **Connector ID** to `mail-send` (or your engine-specific ID).
+   
+	Select the `Service Task` and open the `Properties panel` :
+	- Goto `Implementation > Type` and set the value to `Connector`
+	- Set `Connector Id` as `mail-send` 
 
    *Reference Screenshot:*
 
    ![Image](/img/7.0.0/bpm/email.png)
 
 3. #### Configure Connector Inputs
-   Under **Connector inputs**, define parameters for the email connector. Common inputs include **to**, **subject**, and **html** or **text**. You can also configure additional parameters like **cc**, **bcc**, **attachments**, and so on.
+   Under `Connector inputs`, define parameters for the email connector. Common inputs include `to`, `subject`, and `html` or `text`. You can also configure additional parameters like `cc`, `bcc`, `attachments`, and so on. 
 
 4. #### Save and Deploy
-   When all required inputs are set, ensure your BPMN model shows **0 Errors, 0 Warnings**. Save and deploy the process to your BPM engine.
+   When all required inputs are set, ensure your BPMN model shows **0 Errors, 0 Warnings**, save and publish.
 
 5. #### Test the Flow
    Run the process. When the flow reaches the **Send Email** Service Task, the engine will invoke the `mail-send` connector with your specified parameters. Verify the recipient’s inbox to confirm success.

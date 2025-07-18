@@ -1,16 +1,16 @@
 ---
-sidebar_position: 20
+sidebar_position: 21
+slug: /form-rbac
 ---
 
-# Role Based Access Control for forms
+# Form: Role Based Access Control (RBAC)
 
 ---
 
-formsflow.ai introduces the ability for designers to set permissions for forms, catering to both designers and client users. This functionality provides fine-grained control over the visibility of forms based on user roles.
+formsflow.ai allows form designers to configure detailed access permissions for each form. This feature provides precise control over who can view or interact with a form based on user roles. Designers can define visibility and submission rights by assigning roles having the right permissions. This ensures that only authorized users have access to relevant forms and associated workflows.
 
-With this feature, designers using formsflow.ai can define specific permissions with each form they create. They have the flexibility to determine which roles can view and interact with a particular form. By configuring these permissions, designers can ensure that only authorized individuals or user roles can access and work with the form.
+By aligning form access with user roles, this feature improves security, simplifies user experience, and enables a more tailored and controlled environment for both internal and external users
 
-Overall, this feature enhances the flexibility and control available to designers within formsflow.ai, empowering them to manage permissions and determine who can interact with their forms. It ensures that the visibility of forms aligns with the assigned roles, creating a more secure and tailored environment for both designers and client users.
 
 1. Log in as a designer user and create a form (layout + flow), then save it.
 
@@ -68,4 +68,50 @@ Overall, this feature enhances the flexibility and control available to designer
 
 3. Publish and save the form for client users.
 
-**Note**: _If existing forms are to be listed for clients, you need to migrate the existing Camunda authorizations. For this, you have to run a bash script inside the FormsFlow web API. If you need to run this script in the instance or server, such as a Kubernetes cluster or Nginx, you have to access the Docker container of the FormsFlow web API and execute the bash script called "migration.sh". Alternatively, if you are setting up the environment locally and running the Docker container locally, you can get inside the FormsFlow web API container and run the "migration.sh" command. In the case of running the web API with Flask locally, you should activate the virtual environment and run the bash script within it. You can create the virtual environment by following the instructions provided in the Makefile inside the FormsFlow web API._
+
+## Migrating Existing Camunda Authorizations for Form Visibility
+
+To display existing forms to end users, you must migrate the associated Camunda authorizations. This is done by executing a script named `migration.sh` within the `formsflow Web API` component.
+
+### Instructions
+
+#### 1. Containerized Environment (e.g. Kubernetes or Nginx)
+
+- Access the Docker container running the `formsflow Web API`.
+- Run the following command inside the container:
+
+  ```bash
+  ./migration.sh
+  ```
+
+#### 2. Local Docker Setup
+
+- Enter the `formsflow Web API` container:
+
+  ```bash
+  docker exec -it <container_name> /bin/bash
+  ```
+
+- Run the migration script:
+
+  ```bash
+  ./migration.sh
+  ```
+
+#### 3. Local Flask Development Setup
+
+- Navigate to the `formsflow Web API` directory.
+- Set up the virtual environment by following the instructions in the `Makefile`.
+- Activate the virtual environment:
+
+  ```bash
+  source venv/bin/activate
+  ```
+
+- Run the migration script:
+
+  ```bash
+  ./migration.sh
+  ```
+
+> **Note**: Replace `<container_name>` with the actual name of your running container.

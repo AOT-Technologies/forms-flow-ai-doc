@@ -1,14 +1,15 @@
 ---
-sidebar_position: 23
+sidebar_position: 14
+slug: /rpa
 ---
 
-# Integrating Robocorp’s RPA Solution with formsflow.ai
+# Workflow: RPA Integration
 
 ---
 
 ## Boosting Camunda’s Workflows with Robots
 
-formsflow.ai is a completely free and open-source framework built and maintained by the AOT Technologies team to integrate intelligent forms, decision-making workflows, and powerful analytics. While working with various clients who needed forms and workflow management, the team recognized the usefulness of triggering external tasks from outside of the formsflow.ai ecosystem.
+While working with various clients who needed forms and workflow management, the team recognized the usefulness of triggering external tasks from outside of the formsflow.ai ecosystem.
 
 For creating and executing decision-making workflows, formsflow.ai uses a powerful Camunda BPMN, which supports external service tasks that can be extended to automate tasks. formsflow.ai makes use of this powerful external task client to process the robot’s instructions and return a response. That’s how RPA’s integration with formsflow.ai came into existence.
 

@@ -1,23 +1,26 @@
 ---
-sidebar_position: 21
+sidebar_position: 23
+slug: /i8n
 ---
 
-# Internationalization
+# Web: Internationalization
 
 ---
 
-This feature enables the user to add new language according to their preference. Currently we are providing you with six languages:
+This feature enables the user to add new language according to their preference. Currently we are providing these languages out of the box:
 
-- English
-- Chinese
-- Portuguese
-- French
 - Bulgarian
+- Chinese
+- English
+- French
 - German
+- Portuguese
+- Spanish
 
-#### To Add a New Language
+### Add a New Language
+This require the user to fork the github repo and then include your language pack as per the guideline below:
 
-- Select 'resourceBundles' folder from `forms-flow-web/src`.
+- Select `resourceBundles` folder from `forms-flow-web/src`.
 - Create a folder structure as shown below:
 
   ![Image](/img/7.0.0/image-(20).png)
@@ -76,5 +79,4 @@ export default i18n;
 
 - Open `forms-flow-api/src/formsflow_api/utils/translations/translations.py`, copy any set of translations, translate the values and paste it back to the file with required language key.
 - You should add the proposed name and value of the language to `forms-flow-web/public/config/languageData.json`.
-- Open http://localhost:3000 to see the changes.
-- Internationalization is now done.
+- Build the new image and deploy it.

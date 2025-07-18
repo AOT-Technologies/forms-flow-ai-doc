@@ -1,4 +1,5 @@
 ---
+title: Usage Instructions with Example
 sidebar_position: 5
 ---
 
@@ -6,97 +7,133 @@ sidebar_position: 5
 
 ---
 
-### Set Up Designer, Client And Reviewer Permissions
+This page walks through a typical **formsflow.ai** use case for a municipality processing business licence applications. It covers the full lifecycle, from form creation to application submission, review, and approval.
 
-- In Manage > Roles you can create "Designers" role and check "Create Form, workflow designs" permission.
+## What You Will Learn
 
-  ![Image](/img/7.0.0/Screenshot-2024-12-16-143730.png)
+- Setting up users and roles
+- Designing an application form
+- Submitting an application
+- Reviewing and approving submissions
+- Viewing application metrics and insights
 
-- Then create "Client" role and check "Create submissions" permission.
+---
 
-  ![Image](/img/7.0.0/Screenshot-2024-12-16-144105.png)
+## Actors in This Use Case
 
-- In the similar manner you can create "Reviewer" role and check "Access to tasks" and "Can assign, re-assign and work on tasks" permission, as well as "Access to create filters", "Access to view filters" and any others if needed.
+- **End User**      : A citizen or business submitting an application
+- **Business User** : City staff responsible for reviewing applications
+- **Designer User** : City staff responsible for form & flow design
 
-  ![Image](/img/7.0.0/Screenshot-2025-01-10-125253.png)
+---
 
-- Now you can go to Manage > Users to assign the roles to specific users by clicking "Add Role" and clicking on the roles ( /designers, /client and /reviewer ).
+## 1. Setting Up Users and Roles
 
-  ![Image](/img/7.0.0/Screenshot-2024-12-16-155207.png)
+Users and role management is handled using `Manage > Users` & `Manage > Roles`
+> Refer [Roles and Permissions](../general-information/roles%20and%20permissions.md) for more information about roles and permission.
 
-### Designer Steps
+### Roles
+These are the roles that will be created:
+Role                | Privileges                                                                |
+--------------------|---------------------------------------------------------------------------|
+formsflow-designer  | Can access the form design interface ( `Designer User` )                  |
+formsflow-reviewer  | Can access task list, forms, metrics, and insights ( `Business User` )    |
+formsflow-client    | Can access and submit forms ( `End User` )                                |
 
-- Log in to FormsFlow with the cridetials of the user you have assigned the Designers role to.
-- After the login is successful you will be able to Create / Import / Export / View / Edit / Delete forms.
+### Users
 
-  ![Image](/img/7.0.0/Screenshot-2024-11-21-162816.png)
+| Name          | Role               |
+|---------------|---------------------|
+| Peter Watts   | formsflow-designer  |
+| Nancy Smith   | formsflow-reviewer  |
+| David Langer  | formsflow-client    |
 
-- A new form can be created by a few methods: building a new form, importing an existing form from a file, using an existing template, or using AI.
+### User Setup Steps
 
-  **- Create a New Form**
+1. Create users in formsflow using `Self-Registration Method` explained [here](../Features/Management.md#2-direct-user-creation-in-keycloak)
+2. Assing [Roles](#roles) to Users using `Manage > Roels` page.
 
-  1. Click on New Form Button. In the popup select "Build". In the next popup provide a name and a description (optional), as well as you can allow the creation of a form with multiple pages. Once done click "Save and Edit Form"
-  2. Form editor opens up.
-  3. Drag and drop the required components, to build the form's layout.
+---
 
-     ![Image](/img/7.0.0/Screenshot-2024-11-22-095740.png)
+## 2. Designing a Business Licence Form
 
-  4. Once done, save your layout changes (by clicking "Save Changes" button) and switch to the form's flow by clicking large "Flow" button on the right.
+### Performed by: Peter Watts (Designer User)
+>There are two option `(a)` Import existing form `(b)` Build a new form.
 
-     ![Image](/img/7.0.0/Screenshot-2024-11-21-164314.png)
+#### Import a form
+1. Download the [business-license-example.json](https://github.com/AOT-Technologies/forms-flow-ai-examples/blob/main/forms-examples/business-license-example.json) from this Github repo. 
+1. Log in as `Peter Watts` to your formsflowa.i instance.
+2. From `Design > Form` page click **New Form**.
+3. Click **Import** and then select business-license-example.json downaloaded as part of step #1.
+4. Click **Confirm and Edit form**. This will import the layout and flow components of the form.
+5. Click **Publish** to make the form available to end users.
 
-  5. Add the required actions and conditions by clicking on the "+" button in the flow's interface. Flows are a set of actions that will execute after someone submits the form.
-  6. Once done, save your flow changes (by clicking "Save Changes" button) then click "Publish" in the top bar on the right.
-  7. That's it! Your form is now live!
+#### Build a new form
+1. Refer this [video](https://www.youtube.com/watch?v=7oCILkkQK88) to see how to design a layout. 
+2. Clikc **Flow** and create the desired flow.
+3. Click **Publish**
 
-  **- Upload a form**
+---
 
-  1. A form in JSON format can be uploaded using the same "New Form" button.
+## 3. Submitting the Application
 
-  **- Use a template**
+#### Performed by: David Langer (End User)
 
-  1. To create a form starting from a templates, click "Use Template" in the New Form popup and select from available templates.
+1. Log in as `David Langer`
+2. Goto `Submit > Form`, identify the `Business License` form and click **Submit New**.
+3. Fill the form and click **Submit**
 
-  **- Use AI**
+#### To review submissions
 
-  1. To create a form using our AI assistant, click "Use AI" in the New Form popup and describe to the AI bot which fields you would like in your form.
+- Goto `Submit > Form`, click **Submissions** tab view all submissions.
+- Click **View Submitted Form** to open a read-only submission **OR**
+- Click the **View Details** to view tabs:
+  - **Details**: Generic metadata for submission
+  - **Forms**: read-only submission
+  - **History**: submission progress
+  - **Diagram**: shows BPMN workflow (based on user permission)
 
-We have [an example form](https://github.com/AOT-Technologies/forms-flow-ai-examples/blob/main/forms-examples/formio.zip) you can import.
+---
 
-### Client Steps
+## 4. Reviewing and Approving Submissions
 
-- Now log in to FormsFlow with user credentials for the client.
-- After the login is successful you will be able to View and Submit a form.
+### Performed by: Nancy Smith (Business User)
 
-  ![Image](/img/7.0.0/Screenshot-2024-11-22-100701.png)
+1. Go to `Review > Tasks`
+2. Click on the task showing on the left hand side. Correspoding form will open on the right hand side.
+3. Click **Assign to me**.
+4. `Approve` or `reject` the application using the provided options.
+5. Click **Submit**.
 
-- Pick your form and click "Submit New" button.
+>Review statuses can be configured in the flow designer.
 
-  ![Image](/img/7.0.0/Screenshot-2024-11-22-101031.png)
+### Application Status Update
 
-- Once the form is filled in and submitted, its flow will start executing.
-- If you have a "Create task" as one of the actions in this form's flow you can now log out of the client's account and log in as a reviewer.
+- Approved or rejected status will be shown in the **History** tab.
+- End user can also see the updated status.
+- Each history entry can be opened to view the form state at that step.
 
-### Reviewer Steps
+---
 
-- Log in to formsflow with valid [default user credentials for the reviewer](default user credential.html).
+## 5. Viewing Metrics and Insights
 
-  ![Image](/img/7.0.0/Screenshot-2024-11-22-103146.png)
+### Metrics Dashboard
 
-- You can View the task and the submission by clicking on one of the card on the left.
+- Displays a pie chart of application statuses over time.
+- Only accessible to reviewer users.
 
-  ![Image](/img/7.0.0/Screenshot-2024-11-22-103418.png)
+### Insights Dashboard
 
-- On the task details page you can see three sections - **Form**, **History**, **Diagram**.
+- Displays interpreted application data.
+- Configurable via **Redash**.
+- Supports graphical dashboards for application analytics.
 
-  ![Image](/img/7.0.0/Screenshot-2024-11-22-103858.png)
+---
 
-  ![Image](/img/7.0.0/Screenshot-2024-11-22-103913.png)
+## Need Help?
 
-  ![Image](/img/7.0.0/Screenshot-2024-11-22-103933.png)
-
-- In the top section you can claim the task by assigning it to yourself.
-
-  ![Image](/img/7.0.0/Screenshot-2024-11-22-112741.png)
-
-- Fill in the section that is there for the reviewer (usually on the bottom of the form) and pass it on to the next and submit, which will pass it onto the next action in the flow.
+- 📧 [Contact Us](mailto:info@formsflow.ai)
+- 🧪 [Try a Free 14-Day Test Instance](https://formsflow.ai/try-it-now/)
+- 📄 [Installation Docs](https://aot-technologies.github.io/forms-flow-installation-doc)
+- 🛠️ [Source Code on GitHub](https://github.com/AOT-Technologies/forms-flow-ai)
+- 🤝 [Partner with Us](https://formsflow.ai/partners/)

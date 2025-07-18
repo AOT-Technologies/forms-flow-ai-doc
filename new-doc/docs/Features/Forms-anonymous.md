@@ -1,29 +1,32 @@
 ---
-sidebar_position: 15
+sidebar_position: 16
+slug: /anonymous-form
 ---
 
-# Anonymous Forms
+# Form: Anonymous (Public)
 
 ---
 
-An anonymous form allows users to submit form entries anonymously. Users can access the form using the form URL without login to the application.
+Anonymous (public) forms allow users to submit entries without logging into the application. These forms can be accessed directly through a shared URL.
 
-Below steps describes how you can design a form anonymous.
+Follow the steps below to enable anonymous submission for a form:
 
-1. Create a new form or edit an already created form under Design > Forms.
+## Steps to Enable Anonymous Access
 
-2. After you are satified with the layout and the flow, click on the **Settings** button in the top bar.
+1. Create a new form or edit an existing one by navigating to `Design > Forms`.
 
-3. In the Settings popup scroll down to **Who Can Create Submissions**.
+2. After finalizing the form layout and flow, click the **Settings** button in the top bar.
+
+3. In the Settings popup, scroll down to the **Who Can Create Submissions** section.
 
    ![Image](/img/7.0.0/Screenshot-2024-11-25-170245.png)
 
-4. Check or make sure **Anonymous users** checkbox is selected
+4. Ensure the **Anonymous users** checkbox is selected.
 
-   **Do not forget to click "Save Changes"**
+   > **Important**: Click **Save Changes** to apply the setting.
 
-   **Note**: _Forms will not be available to anonymous users if they are not published._
+   > **Note**: The form must be published for anonymous users to access it.
 
-5. Then you can share the URL to allow other users to submit anonymous forms by scrolling down and copying the form's **URL Path**
+5. To share the form, scroll down and copy the **URL Path**. Share this link with users to allow anonymous submissions.
 
    ![Image](/img/7.0.0/Screenshot-2024-11-25-170535.png)

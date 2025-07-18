@@ -1,43 +1,55 @@
 ---
-sidebar_position: 16
+sidebar_position: 17
+slug: /custome-components
 ---
 
-# Custom Components
+# Form: Custom Components
 
 ---
 
-One of the more powerful features of the formsflow.ai platform is the ability to create your own custom form components. The process of creating a custom component involves extending a base class of the component that is "closest" to the implementation you desire, and then override methods or introduce new methods that will implement your custom logic. All of the existing components within the platform also use this same method, so you can see the multitude of examples by inspecting how the base components for the Forms-flow renderer are implemented.
+One of the powerful features of the formsflow.ai platform is the ability to create custom form components. This is done by extending a base component class that closely matches the functionality you want to build. You can override existing methods or introduce new ones to implement your specific logic.
 
-In order to create the best components, it is important to understand the critical methods used to define a new component. They are as follows.
+All default components in the platform are implemented this way, so you can refer to them as examples by reviewing the source code of the Formsflow renderer.
 
 ## Extending Components
 
-Every custom component will derive from a base class, whose behaviour is closest to the behaviour of the component you wish to create. It is possible to extend any other component within the Form.io renderer and a list of all of these components and their classes can be found [here](https://github.com/formio/formio.js/tree/master/src/components).
+Every custom component must inherit from a base class that aligns closely with the behavior and data model of your intended component. You can extend any existing component available in the [Form.io renderer](https://github.com/formio/formio.js/tree/master/src/components).
 
-Because of this, the first task in building a custom component is to determine which component most closely resembles the behaviour and data model of the component you are looking to achieve. For example, if you wish to build a multi-button select component, it may be best to start with a radio component since this is the component that most closely resembles the behaviour of the component you wish to create.
+### Choosing a Base Component
 
-If you are unsure, then it is also fine to derive from the "core" components which serve as the base for all other components within the renderer. These core components are as follows.
+Start by identifying which existing component most closely matches the functionality you want. For example, to build a multi-button selection component, it is recommended to extend the `RadioComponent` because it has similar selection behavior.
 
-| Class | Extends | Description |
-|-------|---------|-------------|
-| Component | Element | Base component class |
-| Field | Component | Component that derives from Component class that implements a "field" render template |
-| Multivalue | Field | A component that is able to implement the "multiple" configuration allowing for multiple inputs for this field type. |
-| Input | Multivalue | A component type that implements an HTML value input. |
+If no existing component aligns closely enough, you can derive from one of the core classes. These core classes form the foundation of all components in the Form.io renderer:
 
-Each of the components can be extended by first referencing them from the Components.components object, and then extending them as follows.
+| Class       | Extends     | Description                                                                 |
+|-------------|-------------|-----------------------------------------------------------------------------|
+| `Component` | `Element`   | Base class for all components.                                              |
+| `Field`     | `Component` | Adds rendering logic for form fields.                                       |
+| `Multivalue`| `Field`     | Supports multiple values for a single component.                            |
+| `Input`     | `Multivalue`| Implements HTML input behavior for user interaction.                        |
+
+### How to Extend
+
+To extend a component, reference it from the `Components.components` object and define your custom class as follows:
 
 ```javascript
 const Input = Formio.Components.components.input;
+
 class MyInput extends Input {
-  // Custom logic here
+  // Override or define your methods here
 }
 ```
+You can now register this custom component and use it in your form schema.
 
-For the most generic components, it is fine to derive from "Component", but in most value components, you may wish to derive from the Input component.
+For generic use cases, you can derive your custom component from the `Component` base class. However, if your component is expected to handle user input or form values, it is recommended to extend the `Input` class, which provides built-in support for value management and input behavior.
 
 ## Component Methods
-Once you derive from a base component, the next step is to define methods that either override base behaviour or introduce new behaviour into the component class. It is recommended to look at the source code of your "base" component and the classes that it extends to understand what methods you have available to you, but the majority of all behaviour can be achieved by implementing some of the following methods.
+
+After extending a base component, the next step is to define methods that either override default behavior or add new functionality to your custom component.
+
+To understand which methods are available, review the source code of the base component you are extending, along with its parent classes. This will give you insight into what functionality is inherited and what can be customized.
+
+Most component behavior can be controlled or modified by implementing the following commonly used methods:
 
 ```javascript
 const Input = Formio.Components.components.input;

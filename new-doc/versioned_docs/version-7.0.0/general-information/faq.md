@@ -25,7 +25,7 @@ Design a notification task in your Camunda workflow. Within that task, you can d
 Yes. Starting with version 5.0.0, formsflow.ai supports a form adapter feature. You can push submission data to a custom REST endpoint, which then integrates with any database you choose. Some custom work may be required to connect to non-default databases.
 
 **Can I embed formsflow.ai into my own website?**  
-You can [embed](https://aot-technologies.github.io/forms-flow-ai-doc/Features/Forms-hybrid-embedding) individual forms for anonymous or authenticated use. However, the full portal experience (with workflows and dashboards) requires its own application instance.
+You can [embed](../Features/Forms-hybrid-embedding.md) individual forms for anonymous or authenticated use. However, the full portal experience (with workflows and dashboards) requires its own application instance.
 
 ## User Interface
 
@@ -33,7 +33,7 @@ You can [embed](https://aot-technologies.github.io/forms-flow-ai-doc/Features/Fo
 Yes. All front-end text can be translated by supplying the appropriate localization files.
 
 **Can I customize the look and feel of the interface?**  
-Yes. You have full control over [theming] (https://aot-technologies.github.io/forms-flow-ai-doc/Features/Custom%20Theme) and styles at the code level.
+Yes. You have full control over [theming](../Features/Custom%20Theme.md) and styles at the code level.
 
 **Are public-facing forms available?**  
 Yes, they are called anonymous forms.

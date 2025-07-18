@@ -1,20 +1,35 @@
 ---
-sidebar_position: 14
+sidebar_position: 15
+slug: /form-adapter
 ---
 
-# Forms: Adapter
+# Form: Adapter
 
 ---
 
-formsflow.ai supports submission data to be stored and served using external system. This feature can be used for submission datastore to different database than MongoDB. If this feature is enabled MongoDB will be used only for form definition data. A Rest API is needed to support this where customer can add this Rest API to their choice of database and provide the required endpoints. A reference implementation can be found [here](https://github.com/AOT-Technologies/forms-flow-ai-submissions/tree/develop/forms-flow-submissions).
+formsflow.ai supports storing form submission data in external systems, allowing integration with databases other than MongoDB. When this feature is enabled, MongoDB is used only to store form definitions, while submission data is handled externally.
 
-This feature needs to be configured during installation. Refer to [Installation Documentation](https://aot-technologies.github.io/forms-flow-installation-eks/docs/next/windows) for help.
+## Overview
+=======
+To enable this functionality, you must provide a REST API that interacts with your preferred database. This API should implement the necessary endpoints to support create, read, update, and delete operations on submission data.
 
-Form Adapter uses custom submission URLs to create, submit, get and edit submissions within a form to the preferred database. These URLs follow the same URL pattern as the formio submission URL.
+A reference implementation is available here:  
+[forms-flow-ai-submissions repository](https://github.com/AOT-Technologies/forms-flow-ai-submissions/tree/develop/forms-flow-submissions)
+
+## How It Works
+
+The Form Adapter uses custom submission URLs that follow the same pattern as Form.io submission endpoints. These URLs allow the form to:
+
+- Create a new submission
+- Submit form data
+- Retrieve a submission
+- Edit an existing submission
+
+This enables flexible integration with external data stores while maintaining compatibility with the formsflow.ai platform.
 
 ### Create Custom Form Submission
 
-*POST*
+*POST* 
 
 `{{CUSTOM_SUBMISSION_URL}}/form/<formid>/submission`
 

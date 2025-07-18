@@ -1,8 +1,9 @@
 ---
-sidebar_position: 19
+sidebar_position: 20
+slug: /embed
 ---
 
-# Hybrid form Embedding
+# Form: Hybrid Embedding
 
 ---
 

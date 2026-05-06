@@ -39,7 +39,6 @@ jobs:
 
       - name: Install dependencies and build
         run: |
-          cd new-doc
           npm ci
           npm run build
 
@@ -50,7 +49,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload built static site
-          path: './new-doc/build'
+          path: './build'
 
       - name: Deploy to GitHub Pages
         id: deployment

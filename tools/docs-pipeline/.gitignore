@@ -1,0 +1,5 @@
+# Pipeline working files. The inventory export carries internal sources and
+# must never be committed to this public repo.
+build/
+input/
+*.csv

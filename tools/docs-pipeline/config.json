@@ -1,0 +1,54 @@
+{
+  "$comment": "Docs pipeline config. One entry per feature (one docs folder). 'capability' matches the inventory's capability column.",
+  "instance": {
+    "id": "user-guide",
+    "routeBasePath": "user-guide",
+    "versionsFile": "user-guide_versions.json",
+    "versionedDocsDir": "user-guide_versioned_docs",
+    "versionedSidebarsDir": "user-guide_versioned_sidebars",
+    "sidebarId": "userGuideSidebar"
+  },
+  "releases": {
+    "8.4": { "version": "8.4.0", "label": "8.4" }
+  },
+  "features": [
+    {
+      "key": "offline-submissions",
+      "capability": "offline-submissions",
+      "title": "Offline form submissions",
+      "position": 1
+    },
+    {
+      "key": "ai-assisted-submissions",
+      "capability": "ai-submissions",
+      "title": "AI-assisted submissions",
+      "position": 2
+    },
+    {
+      "key": "application-styling",
+      "capability": "app-styling",
+      "title": "Application styling",
+      "position": 3
+    },
+    {
+      "key": "form-governance",
+      "capability": "governed-content",
+      "title": "Form governance",
+      "position": 4
+    }
+  ],
+  "codeRepos": [
+    { "name": "forms-flow-ai-ee", "ref": "origin/develop", "public": false },
+    { "name": "forms-flow-ai-micro-front-ends", "ref": "origin/develop", "public": true },
+    { "name": "forms-flow-ai", "ref": "origin/develop", "public": true },
+    { "name": "forms-flow-ai-deployment", "ref": "origin/main", "public": true }
+  ],
+  "lint": {
+    "bannedWords": ["delve", "landscape", "synergy", "leverage", "robust", "streamline", "cutting-edge", "seamless", "seamlessly", "empower", "unlock", "game-changer", "effortlessly", "revolutionize", "harness", "elevate", "in today's"],
+    "internalPatterns": [
+      "confluence", "atlassian", "figma", "\\bjira\\b", "\\bFWF-\\d+", "code sweep", "live test pending", "code reading",
+      "forms-flow-ai-ee/", "\\.claude/", "action inventory", "action_id", "\\[NEED", "TODO", "TBD", "⚑"
+    ],
+    "maxWordsPerPage": 1600
+  }
+}

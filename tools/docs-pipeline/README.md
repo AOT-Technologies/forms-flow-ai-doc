@@ -1,6 +1,6 @@
 # User-guide docs pipeline
 
-Generates the formsflow.ai **user guide** (the `user-guide` docs instance, served at `/user-guide/`) from the product team's **action inventory**: one row per thing a user can do, with its permission, where it is in the UI, its prerequisites, limits and notes.
+Generates formsflow.ai user-guide pages for new features from the product team's **action inventory**: one row per thing a user can do, with its permission, where it is in the UI, its prerequisites, limits and notes.
 
 The pipeline drafts. People decide. Nothing it writes merges without review by Product (accuracy against intended behaviour, clarity, voice) and then a developer (technical correctness).
 
@@ -25,8 +25,11 @@ action inventory (Google Sheet)
 5. lint      deterministic   coverage, brand, banned words, internal leakage, beta notice,
                              links, page length
    ▼
-6. publish   deterministic   copy into user-guide_versioned_docs/version-<x>/<feature>/,
-                             register the version, then `npm run build` and open a PR per feature
+6. publish   deterministic   copy into docs/<feature>/ (the unreleased "Next" docs),
+                             then `npm run build` and open a PR per feature
+   ▼
+7. cut       Docusaurus      once the release's features are merged:
+                             npm run docusaurus docs:version <version>
 ```
 
 Only steps 2–4 use a model. Everything a reader could check mechanically (who can do what, where it is, which editions) comes straight from the inventory in the generated reference page.
@@ -48,7 +51,7 @@ node tools/docs-pipeline/run.mjs prompt --release 8.4 --feature offline-submissi
 # 5. lint (exits non-zero on errors)
 node tools/docs-pipeline/run.mjs lint --release 8.4
 
-# 6. publish into the versioned docs, then build (broken links fail the build)
+# 6. publish into docs/<feature>/, then build (broken links fail the build)
 node tools/docs-pipeline/run.mjs publish --release 8.4 --feature offline-submissions
 npm run build
 ```
@@ -75,11 +78,15 @@ Working files go to `tools/docs-pipeline/build/<release>/<feature>/` (git-ignore
 
 The inventory lists prerequisites **one step back**: only what you do immediately before an action, not the whole chain. `,` means all of these, `|` means any one, parentheses group, `—` means none. Extract uses this to order actions within a feature; prerequisites in other features are named in the text but not linked until those features are documented.
 
-## Adding a release
+## Versioning
 
-1. Add the release to `config.json` (`"8.5": { "version": "8.5.0", "label": "8.5" }`) and any new features.
-2. Copy the previous version folder to start from: `user-guide_versioned_docs/version-8.4.0` → `version-8.5.0` (and its sidebar file), so unchanged features carry forward.
-3. Run the pipeline for the features that changed, then `publish`. Update `lastVersion` and `versions` in `docusaurus.config.js`.
+The pipeline follows the site's standard [Docusaurus versioning](https://docusaurus.io/docs/versioning). `publish` writes only to `docs/`, which is the unreleased "Next" version. Released versions under `versioned_docs/` are snapshots and are never edited by hand or by the pipeline.
+
+To release a version:
+
+1. Add the release to `config.json` (`"8.5": { "version": "8.5.0", "label": "8.5" }`) and any new features. Give each feature a `position` after the existing top-level categories.
+2. Run the pipeline for each feature, review, and merge each feature PR into `docs/`.
+3. When every feature for the release is merged, cut the version from the site root: `npm run docusaurus docs:version 8.5.0`. This snapshots all of `docs/` into `versioned_docs/version-8.5.0/`, adds its sidebar, and lists it first in `versions.json`, which makes it the default version.
 
 ## What lint enforces
 

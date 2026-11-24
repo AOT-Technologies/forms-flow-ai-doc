@@ -36,6 +36,22 @@ const config = {
     locales: ['en'],
   },
 
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        // v7 pages used to be the default version at the site root. Keep their
+        // old links working by redirecting /<page> to /7.0.0/<page>.
+        createRedirects(existingPath) {
+          if (existingPath.startsWith('/7.0.0/') && existingPath !== '/7.0.0/') {
+            return [existingPath.replace('/7.0.0/', '/')];
+          }
+          return undefined;
+        },
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
@@ -44,6 +60,14 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           routeBasePath: '/',
+          // docs/ is the v8 documentation set and the default version.
+          // 7.0.0 and 6.0.2 are frozen in versioned_docs/. v8 is not copied per
+          // minor release; pages say which release added a feature instead.
+          lastVersion: 'current',
+          versions: {
+            current: {label: '8.x', banner: 'none'},
+            '7.0.0': {banner: 'none'},
+          },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:

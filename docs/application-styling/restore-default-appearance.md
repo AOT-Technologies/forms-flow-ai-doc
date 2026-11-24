@@ -8,6 +8,8 @@ actions: [app-styling.restore-default]
 
 # Restore the default appearance
 
+<span className="badge badge--secondary">Added in 8.4</span>
+
 Undo all your application styling at once and go back to the standard formsflow.ai look. When you're done, the menu shows the formsflow.ai logo with no display name, and buttons are rounded.
 
 ## Before you start

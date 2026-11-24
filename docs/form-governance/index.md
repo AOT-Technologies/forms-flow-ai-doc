@@ -8,6 +8,8 @@ actions: []
 
 # Form governance
 
+<span className="badge badge--secondary">Added in 8.4</span>
+
 Forms often need wording that only one team is allowed to write: a privacy notice, a retention statement, a consent clause. When each form designer copies that wording by hand, it drifts, goes out of date, or goes missing, and the process behind the form collects data without the notice your policy requires.
 
 Form governance in formsflow.ai fixes this with governed content. A policy owner writes the approved wording once, as a governed content block. formsflow places required blocks on new forms and locks them, so designers can move a block but can't edit or remove it. Designers add optional blocks where they fit. The forms that start your workflows carry approved wording instead of hand-typed copies.

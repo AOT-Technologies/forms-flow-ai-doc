@@ -5,7 +5,7 @@
 //   prompt   brief + skill  -> build/<release>/<feature>/<stage>-prompt.md   (stage: writer | verifier | editor)
 //   draft    runs writer -> verifier -> editor through `claude -p` (needs the Claude Code CLI)
 //   lint     deterministic checks on build/<release>/<feature>/pages
-//   publish  copies pages into docs/<feature>/ (the next version); cut the release with docs:version
+//   publish  copies pages into docs/<feature>/ (the v8 set) and adds an "Added in <release>" label
 //
 // See README.md for the full flow and the review rules.
 
@@ -197,7 +197,7 @@ function promptFor(f, stage) {
     '---',
     '',
     `Working directory: the docs site root. Write pages to \`${out}/\`. Write review notes to \`${notes}\`.`,
-    `Docs version: ${rel.version} (label ${rel.label}). Pages publish to ${config.docs.docsDir}/<feature>/ and ship in that version when it is cut with docs:version.`,
+    `Docs version: ${rel.version} (label ${rel.label}). Pages publish to ${config.docs.docsDir}/<feature>/ (the v8 set, not copied per minor release). Publish labels each page "Added in ${rel.label}"; don't write that label yourself.`,
     '',
     b,
   ].join('\n');
@@ -321,10 +321,22 @@ async function lint() {
 }
 
 // ---------- publish ----------
-// Copies pages into docs/<feature>/, the unreleased ("Next") docs. The release is cut
-// afterwards with Docusaurus's own command, which snapshots docs/ into versioned_docs/:
-//   npm run docusaurus docs:version <version>
-// Never write into versioned_docs/ directly.
+// Copies pages into docs/<feature>/, the v8 documentation set, and labels each page
+// with the release that added the feature. v8 is not copied per minor release
+// (see README.md, "Versioning"). Never write into versioned_docs/.
+const RELEASE_BADGE = /^<span className="badge badge--secondary">Added in [^<]+<\/span>\r?\n(\r?\n)?/m;
+
+// Puts the "Added in <release>" label under the page's H1 (or after the front
+// matter if there is no H1). Idempotent: an existing label is replaced.
+function addReleaseBadge(text, label) {
+  const badge = `<span className="badge badge--secondary">Added in ${label}</span>\n\n`;
+  const t = text.replace(RELEASE_BADGE, '');
+  if (/^# .*$/m.test(t)) return t.replace(/^(# .*)\r?\n(\r?\n)?/m, (_, h) => `${h}\n\n${badge}`);
+  const fm = t.match(/^---\r?\n[\s\S]*?\r?\n---\r?\n(\r?\n)?/);
+  const at = fm ? fm[0].length : 0;
+  return t.slice(0, at) + badge + t.slice(at);
+}
+
 async function publish() {
   const docsRoot = path.join(SITE, config.docs.docsDir);
   for (const f of features) {
@@ -333,10 +345,13 @@ async function publish() {
     const dest = path.join(docsRoot, f.key);
     fs.rmSync(dest, { recursive: true, force: true });
     fs.cpSync(pagesDir(f), dest, { recursive: true });
-    console.log(`✓ ${f.key} -> ${path.relative(SITE, dest)}`);
+    for (const name of fs.readdirSync(dest).filter((n) => n.endsWith('.md'))) {
+      const file = path.join(dest, name);
+      fs.writeFileSync(file, addReleaseBadge(fs.readFileSync(file, 'utf8'), f.addedIn || rel.label));
+    }
+    console.log(`✓ ${f.key} -> ${path.relative(SITE, dest)} (Added in ${f.addedIn || rel.label})`);
   }
   console.log('Next: npm run build (broken links fail the build), then open the PR.');
-  console.log(`When every ${rel.label} feature is merged: npm run docusaurus docs:version ${rel.version}`);
 }
 
 // ---------- dispatch (last, so every const above is initialised) ----------

@@ -8,6 +8,8 @@ actions: [app-styling.view-branding]
 
 # See your organization's logo and name in the app
 
+<span className="badge badge--secondary">Added in 8.4</span>
+
 When an administrator sets your organization's logo and display name, formsflow.ai shows them at the top of the menu. This page explains where to find them and why they might not show.
 
 ## Before you start

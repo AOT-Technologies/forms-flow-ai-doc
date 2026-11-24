@@ -8,6 +8,8 @@ actions: [app-styling.open, app-styling.set-display-name, app-styling.choose-but
 
 # Set your organization's display name and button style
 
+<span className="badge badge--secondary">Added in 8.4</span>
+
 Put your organization's name in the formsflow.ai menu and match the app's buttons to your house style. When you're done, everyone who signs in sees your name under the logo and your chosen button shape across the app.
 
 ## Before you start

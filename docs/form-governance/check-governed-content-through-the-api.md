@@ -8,6 +8,8 @@ actions: [governed-content.form-status]
 
 # Check a form's governed content through the API
 
+<span className="badge badge--secondary">Added in 8.4</span>
+
 Use the formsflow.ai REST API to audit a form: which governed content blocks it carries, whether each one is the latest version, and which required blocks it's missing. The web app doesn't show this view.
 
 ## Before you start

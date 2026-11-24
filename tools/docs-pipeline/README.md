@@ -25,11 +25,8 @@ action inventory (Google Sheet)
 5. lint      deterministic   coverage, brand, banned words, internal leakage, beta notice,
                              links, page length
    ▼
-6. publish   deterministic   copy into docs/<feature>/ (the unreleased "Next" docs),
-                             then `npm run build` and open a PR per feature
-   ▼
-7. cut       Docusaurus      once the release's features are merged:
-                             npm run docusaurus docs:version <version>
+6. publish   deterministic   copy into docs/<feature>/ (the v8 set), label each page
+                             "Added in <release>", then `npm run build` and open a PR per feature
 ```
 
 Only steps 2–4 use a model. Everything a reader could check mechanically (who can do what, where it is, which editions) comes straight from the inventory in the generated reference page.
@@ -80,13 +77,17 @@ The inventory lists prerequisites **one step back**: only what you do immediatel
 
 ## Versioning
 
-The pipeline follows the site's standard [Docusaurus versioning](https://docusaurus.io/docs/versioning). `publish` writes only to `docs/`, which is the unreleased "Next" version. Released versions under `versioned_docs/` are snapshots and are never edited by hand or by the pipeline.
+`docs/` is the **v8 documentation set**: the default version, labelled **8.x**, served at the site root. It contains only pages written for v8. The v7 and v6 docs stay frozen in `versioned_docs/version-7.0.0/` and `version-6.0.2/`, and their old root links redirect to `/7.0.0/...`.
 
-To release a version:
+v8 is **not** copied per minor release. Instead, each feature in `config.json` has an `addedIn` release, and `publish` puts an "Added in <release>" label under every page's heading. Don't run `docs:version` for 8.x minor releases.
 
-1. Add the release to `config.json` (`"8.5": { "version": "8.5.0", "label": "8.5" }`) and any new features. Give each feature a `position` after the existing top-level categories.
-2. Run the pipeline for each feature, review, and merge each feature PR into `docs/`.
-3. When every feature for the release is merged, cut the version from the site root: `npm run docusaurus docs:version 8.5.0`. This snapshots all of `docs/` into `versioned_docs/version-8.5.0/`, adds its sidebar, and lists it first in `versions.json`, which makes it the default version.
+To document a new release's features:
+
+1. Add the release to `config.json` (`"8.5": { "version": "8.5.0", "label": "8.5" }`) and each new feature with `"addedIn": "8.5"` and a `position` after the existing categories.
+2. Run the pipeline for each feature, review, and merge each feature PR.
+3. When a feature changes in a later release, regenerate it with the new release. Keep its `addedIn`, and describe the change on the page.
+
+Freeze v8 with `npm run docusaurus docs:version 8.x` only when v9 documentation starts, or if a specific 8.x release needs its own frozen docs.
 
 ## What lint enforces
 

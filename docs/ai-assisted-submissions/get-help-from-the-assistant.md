@@ -8,6 +8,8 @@ actions: [ai-submissions.open-assistant, ai-submissions.ask-question, ai-submiss
 
 # Get help from the AI assistant while filling in a form
 
+<span className="badge badge--secondary">Added in 8.4</span>
+
 :::info Beta
 AI-assisted submissions is in beta in formsflow.ai 8.4. Behaviour may change in a later release.
 :::

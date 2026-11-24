@@ -8,6 +8,8 @@ actions: [governed-content.view-library, governed-content.create-block]
 
 # Create a governed content block
 
+<span className="badge badge--secondary">Added in 8.4</span>
+
 Write approved wording once in formsflow.ai, and it reaches your organization's forms as a locked block that designers can't change. A required block goes on every new form; an optional block is there for designers to add where it fits.
 
 ## Before you start

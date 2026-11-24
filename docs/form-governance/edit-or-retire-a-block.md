@@ -8,6 +8,8 @@ actions: [governed-content.edit-block, governed-content.retire-block, governed-c
 
 # Edit or retire a governed content block
 
+<span className="badge badge--secondary">Added in 8.4</span>
+
 Policies change. In formsflow.ai you update the approved wording in one place, the governed content library, or retire a block when your organization no longer needs it on its forms.
 
 ## Before you start

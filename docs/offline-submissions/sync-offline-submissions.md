@@ -8,6 +8,8 @@ actions: [offline.view-sync-status, offline.sync-now, offline.change-sync-mode, 
 
 # Sync your submissions and fix problems
 
+<span className="badge badge--secondary">Added in 8.4</span>
+
 :::info Beta
 Offline form submissions is in beta in formsflow.ai 8.4. Behaviour may change in a later release.
 :::

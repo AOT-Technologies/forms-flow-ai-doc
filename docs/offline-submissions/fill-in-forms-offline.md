@@ -8,6 +8,8 @@ actions: [offline.fill-form-offline, offline.save-after-failed-submit, offline.s
 
 # Fill in a form without a connection
 
+<span className="badge badge--secondary">Added in 8.4</span>
+
 :::info Beta
 Offline form submissions is in beta in formsflow.ai 8.4. Behaviour may change in a later release.
 :::

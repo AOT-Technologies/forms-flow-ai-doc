@@ -8,6 +8,8 @@ actions: [ai-submissions.edit-context-text, ai-submissions.upload-document, ai-s
 
 # Give the assistant knowledge about your form
 
+<span className="badge badge--secondary">Added in 8.4</span>
+
 :::info Beta
 AI-assisted submissions is in beta in formsflow.ai 8.4. Behaviour may change in a later release.
 :::

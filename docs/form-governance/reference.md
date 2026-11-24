@@ -8,6 +8,8 @@ generated: true
 
 # Form governance: reference
 
+<span className="badge badge--secondary">Added in 8.4</span>
+
 This page lists every form governance action in formsflow.ai 8.4, the permission each one needs, and where to find it.
 
 ## Availability

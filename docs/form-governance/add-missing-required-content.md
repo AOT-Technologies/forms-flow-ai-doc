@@ -8,6 +8,8 @@ actions: [governed-content.publish-check]
 
 # Add missing required content before publishing
 
+<span className="badge badge--secondary">Added in 8.4</span>
+
 In formsflow.ai, **Publish** stays disabled on a form that's missing your organization's required wording. When a form lacks a required governed content block, you add it in one step, and the form publishes with the approved notices in place.
 
 ## Before you start

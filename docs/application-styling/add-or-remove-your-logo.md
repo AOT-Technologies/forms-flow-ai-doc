@@ -8,6 +8,8 @@ actions: [app-styling.upload-logo, app-styling.delete-logo]
 
 # Add or remove your organization's logo
 
+<span className="badge badge--secondary">Added in 8.4</span>
+
 Replace the formsflow.ai logo at the top of the menu with your organization's own, so people know whose forms and workflows they're working in. When you're done, everyone sees your logo in the expanded sidebar and the mobile menu.
 
 ## Before you start

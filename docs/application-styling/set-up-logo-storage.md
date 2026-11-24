@@ -8,6 +8,8 @@ actions: [app-styling.configure-logo-storage]
 
 # Set up logo storage (self-hosted)
 
+<span className="badge badge--secondary">Added in 8.4</span>
+
 On a self-hosted formsflow.ai installation, an administrator can upload your organization's logo only after you give the formsflow API somewhere to store it. When you're done, logo upload is turned on in **Manage › Appearance**.
 
 ## Before you start

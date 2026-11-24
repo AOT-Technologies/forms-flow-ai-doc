@@ -8,6 +8,8 @@ actions: [governed-content.required-on-form, governed-content.reposition-block, 
 
 # Use governed content on a form
 
+<span className="badge badge--secondary">Added in 8.4</span>
+
 In formsflow.ai, the wording your organization requires, like a privacy notice, arrives on your form already approved and locked. You decide where it sits and which optional blocks to add, and the form starts its workflow with the right notices in place.
 
 ## Before you start

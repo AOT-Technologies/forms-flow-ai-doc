@@ -8,6 +8,8 @@ actions: []
 
 # Application styling
 
+<span className="badge badge--secondary">Added in 8.4</span>
+
 People who use formsflow.ai every day to design forms, run workflows and work on tasks should know they're in your organization's tool. Application styling lets an administrator put your organization's display name and logo in the app's menu and choose rounded or square buttons, with no code and no redeployment.
 
 ## How it works

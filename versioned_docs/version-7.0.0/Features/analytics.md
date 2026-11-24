@@ -33,4 +33,4 @@ Here is some [sample queries](./redash_queries.md) for managing form data.
 
 ### Dashboard Permissions
 
-See the [Dashboard Management](/admin-module#dashboard-management) guide for instructions on assigning user access to dashboards.  
+See the [Dashboard Management](./Management.md#dashboard-management) guide for instructions on assigning user access to dashboards.  

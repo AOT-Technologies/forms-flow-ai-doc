@@ -2,7 +2,7 @@
   "$comment": "Docs pipeline config. One entry per feature (one docs folder). 'capability' matches the inventory's capability column.",
   "docs": {
     "docsDir": "docs",
-    "$comment": "Feature pages publish into docs/<feature>/ (the unreleased \"Next\" version). Cut the release with `npm run docusaurus docs:version <version>` once its features are merged."
+    "$comment": "Feature pages publish into docs/<feature>/, the v8 documentation set (the default version, labelled 8.x). v8 is not copied per minor release: each feature keeps the release that added it in addedIn, and publish labels every page with it."
   },
   "releases": {
     "8.4": {
@@ -15,25 +15,29 @@
       "key": "offline-submissions",
       "capability": "offline-submissions",
       "title": "Offline form submissions",
-      "position": 4
+      "position": 4,
+      "addedIn": "8.4"
     },
     {
       "key": "ai-assisted-submissions",
       "capability": "ai-submissions",
       "title": "AI-assisted submissions",
-      "position": 5
+      "position": 5,
+      "addedIn": "8.4"
     },
     {
       "key": "application-styling",
       "capability": "app-styling",
       "title": "Application styling",
-      "position": 6
+      "position": 6,
+      "addedIn": "8.4"
     },
     {
       "key": "form-governance",
       "capability": "governed-content",
       "title": "Form governance",
-      "position": 7
+      "position": 7,
+      "addedIn": "8.4"
     }
   ],
   "codeRepos": [

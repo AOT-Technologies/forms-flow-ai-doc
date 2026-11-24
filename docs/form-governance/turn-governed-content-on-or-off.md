@@ -8,6 +8,8 @@ actions: [governed-content.toggle]
 
 # Turn governed content on or off
 
+<span className="badge badge--secondary">Added in 8.4</span>
+
 Governed content is off by default in formsflow.ai. Turn it on so your policy owners can create the approved wording, like privacy notices, that goes on your organization's forms.
 
 ## Before you start

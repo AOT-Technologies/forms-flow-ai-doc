@@ -1,0 +1,101 @@
+{
+  "$comment": "Docs pipeline config. One entry per feature (one docs folder). 'capability' matches the inventory's capability column.",
+  "docs": {
+    "docsDir": "docs",
+    "$comment": "Feature pages publish into docs/<feature>/ (the unreleased \"Next\" version). Cut the release with `npm run docusaurus docs:version <version>` once its features are merged."
+  },
+  "releases": {
+    "8.4": {
+      "version": "8.4.0",
+      "label": "8.4"
+    }
+  },
+  "features": [
+    {
+      "key": "offline-submissions",
+      "capability": "offline-submissions",
+      "title": "Offline form submissions",
+      "position": 4
+    },
+    {
+      "key": "ai-assisted-submissions",
+      "capability": "ai-submissions",
+      "title": "AI-assisted submissions",
+      "position": 5
+    },
+    {
+      "key": "application-styling",
+      "capability": "app-styling",
+      "title": "Application styling",
+      "position": 6
+    },
+    {
+      "key": "form-governance",
+      "capability": "governed-content",
+      "title": "Form governance",
+      "position": 7
+    }
+  ],
+  "codeRepos": [
+    {
+      "name": "forms-flow-ai-ee",
+      "ref": "origin/develop",
+      "public": false
+    },
+    {
+      "name": "forms-flow-ai-micro-front-ends",
+      "ref": "origin/develop",
+      "public": true
+    },
+    {
+      "name": "forms-flow-ai",
+      "ref": "origin/develop",
+      "public": true
+    },
+    {
+      "name": "forms-flow-ai-deployment",
+      "ref": "origin/main",
+      "public": true
+    }
+  ],
+  "lint": {
+    "bannedWords": [
+      "delve",
+      "landscape",
+      "synergy",
+      "leverage",
+      "robust",
+      "streamline",
+      "cutting-edge",
+      "seamless",
+      "seamlessly",
+      "empower",
+      "unlock",
+      "game-changer",
+      "effortlessly",
+      "revolutionize",
+      "harness",
+      "elevate",
+      "in today's"
+    ],
+    "internalPatterns": [
+      "confluence",
+      "atlassian",
+      "figma",
+      "\\bjira\\b",
+      "\\bFWF-\\d+",
+      "code sweep",
+      "live test pending",
+      "code reading",
+      "forms-flow-ai-ee/",
+      "\\.claude/",
+      "action inventory",
+      "action_id",
+      "\\[NEED",
+      "TODO",
+      "TBD",
+      "⚑"
+    ],
+    "maxWordsPerPage": 1600
+  }
+}

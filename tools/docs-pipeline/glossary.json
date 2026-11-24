@@ -1,0 +1,38 @@
+[
+  {
+    "term": "Service worker",
+    "explanation": "A small helper script the browser keeps alongside the formsflow web app. It saves a copy of the app's own files: the page layout, scripts and styles. That lets the app open even with no connection. It doesn't store any form answers, and it never saves calls to the server. (The answers and drafts sit in the browser's own storage, IndexedDB, which is separate.)",
+    "alsoCalled": "worker.js in forms-flow-web-root-config",
+    "capability": "offline-submissions"
+  },
+  {
+    "term": "Envoy edge",
+    "explanation": "The front door for submissions that were saved offline. Every one of them comes in through it. It checks that the request comes from someone who is signed in and from the formsflow web app, and turns away anything too large. It then passes the submission inside. \"Envoy\" is the name of the open-source software it's built on, and \"edge\" means it sits at the boundary between the internet and the formsflow servers.",
+    "alsoCalled": "forms-flow-edge-ee image; REACT_APP_OFFLINE_EDGE_URL",
+    "capability": "offline-submissions"
+  },
+  {
+    "term": "Offline bridge",
+    "explanation": "The reception desk just behind the front door. It takes each submission and checks it is readable and complete. It puts it in the queue and tells the device \"received\". It doesn't save the form itself. It also answers the device when the device asks \"did my submission go through yet?\"",
+    "alsoCalled": "forms-flow-bridge-ee image; formsflow_offline_bridge",
+    "capability": "offline-submissions"
+  },
+  {
+    "term": "NATS queue",
+    "explanation": "A waiting line for submissions. The bridge drops each submission into it, and the worker takes them out one at a time. If the worker is busy or something downstream is down, the submissions wait safely here instead of being lost. NATS is the name of the open-source queueing software, and the queue's contents are encrypted on disk.",
+    "alsoCalled": "forms-flow-queue-ee (NATS JetStream); compose profile offline-queue",
+    "capability": "offline-submissions"
+  },
+  {
+    "term": "Worker",
+    "explanation": "The part that does the real work. It takes a submission from the queue and saves it in formsflow exactly as an online submission would be saved. Then it starts the workflow on the submitter's behalf. If something fails, it tries again later, for up to 24 hours. It runs in the background on the server, with no screen of its own.",
+    "alsoCalled": "forms-flow-offline-worker-ee image; offline_consumer",
+    "capability": "offline-submissions"
+  },
+  {
+    "term": "MinIO storage",
+    "explanation": "An overflow store for submissions that can't sit in the queue. It keeps two kinds: submissions too large for the queue, which only takes messages up to about 1 MB; and submissions that arrived while the queue was unavailable. These are kept here until the worker can handle them. MinIO is open-source software that stores files the way Amazon S3 does. Unlike the queue, its contents are not encrypted on disk.",
+    "alsoCalled": "forms-flow-objectstore-ee image",
+    "capability": "offline-submissions"
+  }
+]

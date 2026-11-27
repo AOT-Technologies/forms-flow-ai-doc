@@ -2,21 +2,23 @@
 title: Form governance
 sidebar_label: Overview
 sidebar_position: 1
-description: How governed content puts approved wording, like privacy and retention notices, on your organization's forms and keeps designers from changing it.
+description: How governed content puts approved wording, like privacy and consent notices, on your organization's forms and stops designers from changing it.
 actions: []
 ---
 
 # Form governance
 
-Forms often need wording that only one team is allowed to write: a privacy notice, a retention statement, a consent clause. When each form designer copies that wording by hand, it drifts, goes out of date, or goes missing, and the process behind the form collects data without the notice your policy requires.
+Some wording on a form belongs to one team: a privacy notice, a records retention statement, a consent clause. When each form designer types or pastes that wording by hand, it drifts from the approved version or goes missing, and the workflow behind the form collects data without the notice your policy requires.
 
-Form governance in formsflow.ai fixes this with governed content. A policy owner writes the approved wording once, as a governed content block. formsflow places required blocks on new forms and locks them, so designers can move a block but can't edit or remove it. Designers add optional blocks where they fit. The forms that start your workflows carry approved wording instead of hand-typed copies.
+Form governance in formsflow.ai keeps that wording in one place. A policy owner writes it once, as a governed content block, in your organization's library.
+
+Required blocks go onto every new form built in the form builder, locked so designers can move them but can't change or delete them. Optional blocks are there for designers to add where they fit. The forms that start your workflows carry the approved wording, not a hand-typed copy.
 
 ## How it works
 
 ### Governed content blocks
 
-A governed content block is a piece of approved wording stored in your organization's library, under **Manage › Content**. Each block has:
+A governed content block is a piece of approved wording stored in the library under **Manage › Content**. Each block has:
 
 - **Name**: identifies the block in the library. It isn't shown on forms.
 - **Heading** (optional): shown to the people filling in the form, above the body.
@@ -27,52 +29,64 @@ A governed content block is a piece of approved wording stored in your organizat
 
 ### Required and optional content
 
-- Required content goes on every new form created in the form builder. Designers can't edit, copy or remove it.
-- Optional content is available to designers. They switch it on or off for each form from the form's **Content** tab.
+- Required content is added to each new form when it's created in the form builder: from scratch, with AI, or from a template. Designers can't edit, copy or remove it.
+- Optional content is offered to designers on each form's **Content** tab. They switch a block on to add it to the form, or off to take it away.
 
 ### Locked blocks
 
-On a form, a governed block is locked. In the builder it shows a **Governed** strip with its owner and policy reference and the label **Locked**. Designers can drag it to a new position. They can't change its wording.
+On a form, a governed block is locked. In the builder it carries a strip that reads **Governed**, names its owner and policy reference, and shows **Locked**. Designers can drag it to a new position. Nobody can change its wording in the builder, whatever their role.
+
+### Each form keeps its own copy
+
+When a block is added to a form, the form gets a copy of the block's wording at that moment. Editing the block in the library later doesn't change forms that already carry it. A form gets the new wording only when the block is added to it again: on a new form, when a designer adds missing required content, or when a designer switches an optional block off, saves the form, and switches the block back on.
 
 ### Content versions
 
-Each block has a version number that goes up whenever its content changes.
+Each block has a version number that goes up when its heading, body, owner or policy reference changes. Changing only the name or type doesn't change the version. The web app doesn't show the version; the REST API reports it, along with whether a form's copy is out of date.
 
 ### Retired blocks
 
-When wording is no longer needed, you retire the block. Retiring can't be undone. A retired block stays on each form, including live forms, until that form is next saved; saving the form removes it.
+When wording is no longer needed, a policy owner retires the block. Retiring can't be undone. The block stays in the library, marked **Retired**, and stays on each form that carries it until that form is next saved.
+
+### Turning governed content on and off
+
+An administrator turns governed content on or off for the organization. The switch controls the library only: while it's off, nobody can create, edit or retire blocks in the web app.
+
+Forms keep working with the blocks you already have. New forms still get required content, the form's **Content** tab still shows, and forms missing required content still can't be published from the web app.
 
 ## Who does what
 
 | Role | What they do | Permission |
 | --- | --- | --- |
-| Administrator | Turns governed content on or off for the organization | **Manage › Organization (Billing)** and **Manage › Governed content** |
+| Administrator | Turns governed content on or off for the organization | **Manage › Organization (Billing)** and **Manage › Governed content** (both) |
 | Policy owner | Creates, edits and retires blocks in the library | **Manage › Governed content** |
-| Form designer | Positions required blocks and adds optional blocks on forms | **Design › Manage forms & flows you create and that are shared with you** |
-| Developer | Reads which blocks a form carries through the REST API | **Design › View forms & flows**, **Design › Manage forms & flows you create and that are shared with you**, or **Manage › Governed content** |
+| Form designer | Positions required blocks, adds optional blocks, and adds missing required content before publishing | **Design › Manage forms & flows you create and that are shared with you** |
+| Developer | Reads which blocks a form carries through the REST API | Any one of **Design › View forms & flows**, **Design › Manage forms & flows you create and that are shared with you**, or **Manage › Governed content** |
 
-A user can do an action if any of their roles grants the permission.
+A user can do an action if any of their roles grants the permission it needs.
 
 ## What you need
 
 - Edition: Go, Professional or Enterprise.
-- Deployment: SaaS or self-hosted. Self-hosted installs need the environment variable `ENABLE_FORM_GOVERNANCE=true`.
-- Setting: governed content is off by default. An administrator turns it on under **Manage › Organization › Governed Content**.
+- Deployment: SaaS or self-hosted. On self-hosted installs, the library and the Organization setting appear only when the deployment sets `ENABLE_FORM_GOVERNANCE=true`. The form builder and the REST API work the same with or without it.
+- Setting: on multi-tenant installs, governed content is off until an administrator turns it on under **Manage › Organization › Governed Content**. On single-tenant installs, it's on whenever the deployment enables form governance.
 
 ## Known limits
 
 - The library doesn't show which forms carry a block.
-- The **Manage** menu in the sidebar shows only for users who can manage users, roles or dashboards. If **Manage › Governed content** is your only Manage permission, open the Content page by its address, which ends in `/admin/content`.
-- Required content is added when a form is created in the builder. Forms that existed before a required block was created don't get it automatically. Designers add it from an alert on the form before they can publish.
-- The lock applies in the builder and when a form is saved. Imported forms aren't checked.
-- The form's **Content** tab doesn't list retired blocks. Until the form is saved, the builder shows a retired block like any other governed block.
-- On single-tenant installs, the on/off switch shows but its setting can't be saved.
+- The **Manage** menu in the sidebar shows only for users who can manage users, roles or dashboards. If **Manage › Governed content** is your only Manage permission, open the library by its address: `/admin/content`, or `/tenant/<tenantKey>/admin/content` on multi-tenant installs.
+- Importing a form with **Upload an existing form** doesn't add required content, and imported forms aren't checked for changes to governed blocks.
+- A new required block doesn't reach forms that already exist. Designers add it from a banner on each unpublished form before they can publish it. Published forms don't get it until someone unpublishes them.
+- A published form can't be saved, so a retired block stays on it until someone unpublishes and saves the form.
+- The publish check runs in the web app only. Publishing through the REST API doesn't check for required content.
 
 ## Next steps
 
 - [Turn governed content on or off](./turn-governed-content-on-or-off.md)
 - [Create a governed content block](./create-a-governed-content-block.md)
-- [Edit or retire a governed content block](./edit-or-retire-a-block.md)
-- [Use governed content on a form](./use-governed-content-on-a-form.md)
-- [Add missing required content before publishing](./add-missing-required-content.md)
+- [Change a block's wording](./change-a-blocks-wording.md)
+- [Retire a governed content block](./retire-a-block.md)
+- [Place required content on a new form](./place-required-content-on-a-new-form.md)
+- [Add or remove optional content on a form](./add-or-remove-optional-content.md)
+- [Bring an existing form up to date with your organization's content](./bring-a-form-up-to-date.md)
 - [Check a form's governed content through the API](./check-governed-content-through-the-api.md)

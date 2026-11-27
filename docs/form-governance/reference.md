@@ -27,7 +27,7 @@ Permissions are named as they appear on the role editor in **Manage › Roles**.
 | Edit a block's wording | Manage › Governed content | Manage › Content › Edit | formsflow.ai web app, REST API |
 | Retire a block | Manage › Governed content | Manage › Content › Edit ▾ › Retire; or Manage › Content › Edit › Retire block | formsflow.ai web app, REST API |
 | View a retired block | Manage › Governed content | Manage › Content › View | formsflow.ai web app, REST API |
-| Get required content on a new form | Design › Manage forms & flows you create and that are shared with you | Build › Forms › Create New Form › Builder | formsflow.ai web app |
+| Get required content on a new form | Design › Manage forms & flows you create and that are shared with you | Build › Forms › Create New Form › Create a form or flow from scratch using Form Builder › Builder | formsflow.ai web app |
 | Move a governed block on a form | Design › Manage forms & flows you create and that are shared with you | Build › Forms › &lt;form&gt; › Form › Builder | formsflow.ai web app |
 | Add or remove optional content on a form | Design › Manage forms & flows you create and that are shared with you | Build › Forms › &lt;form&gt; › Form › Content | formsflow.ai web app |
 | Remove retired content from a form when it's saved | Design › Manage forms & flows you create and that are shared with you | Build › Forms › &lt;form&gt; › Save | formsflow.ai web app, REST API |

@@ -67,7 +67,13 @@ Use the flow-style list for `actions` exactly as shown. `index.md` uses `actions
 ## Things to know
 
 - <limits from the brief that affect this task, written as plain facts>
+
+## Next step
+
+<One line linking the task that usually comes next in the brief's prerequisite order, if there is one in this feature.>
 ```
+
+If a step can lose the reader's work (logging out, clearing browser data, deleting a draft), put that fact in a `:::warning` right after the step, not only in "Things to know".
 
 ## Writing rules
 
@@ -80,6 +86,12 @@ Use the flow-style list for `actions` exactly as shown. `index.md` uses `actions
 - Name permissions exactly as the brief does. A user has an action if any of their roles grants that permission.
 - Don't use: delve, landscape, synergy, leverage, robust, streamline, cutting-edge, seamless, empower, unlock, effortless. No hype, no "simply", no "just".
 - MDX: escape `<` and `{` in prose (write `&lt;form&gt;` or put the text in backticks). Paths like `Build › Forms › <form>` go in prose as **Build › Forms ›** *your form*.
+- **State the condition.** When the brief says behaviour depends on a setting, a mode, a deployment variable or the connection (for example "with sync set to ask first", "only when the deployment enables automatic sync"), say so wherever the page describes that behaviour. Never quote a message as a promise when the brief says the behaviour differs from it: describe what happens, and leave the message out or qualify it.
+- **Name the message type the brief gives:** toast, banner, dialog, note, or the browser's own confirm box. If the brief doesn't say, write "message".
+- **No placeholders.** When a message contains `{{time}}`, `{{count}}` or similar, quote it with a realistic example value: "Last sent at 2:45 PM today.", "3 forms sent." Lint fails on `{{…}}`.
+- **Every failure state gets a next step.** When a page describes something the reader can't fix by retrying (refused, used up its tries, waited too long), say what they can do next, from the brief. If the brief gives none, say so in the review notes instead of leaving a dead end.
+- **One name per action:** use the UI label from the brief's nav path for the action in the body ("Make available offline"), and keep the page title in the reader's words.
+- **Technical terms stay on technical pages.** Terms the brief lists under "Technical terms" go only on self-hosted administrator and developer pages, and only where the reader needs them for the task. Defaults the brief marks as configurable ("24 hours by default (`OFFLINE_QUEUE_MAX_HOURS`)") are stated as defaults on those pages and as plain numbers ("up to 24 hours") on user pages.
 
 ## What never goes on a page
 
@@ -87,7 +99,7 @@ These pages are public. Keep all of this out of them:
 
 - Where a fact came from: Confluence, Figma, Jira keys (FWF-…), "code sweep", the inventory, people's names.
 - Links to or file paths from private repositories. Don't link to source code at all.
-- Behaviour the brief marks as **"Code reading, live test pending"**, **unverified**, or that contradicts the UI's own wording. Don't state it as fact and don't guess. Leave it off the page and record it in the review notes.
+- Behaviour the brief marks as **"Code reading, live test pending"**, **unverified**, or that contradicts the UI's own wording. Don't state it as fact and don't guess. Leave it off the page and record it in the review notes. This covers a message the brief says is misleading in some conditions: don't quote it as true in any of them.
 - `[NEED: …]`, TODO, TBD, or questions to the reviewer. Those go in the review notes.
 - Prices, plan limits or roadmap promises the brief doesn't state.
 

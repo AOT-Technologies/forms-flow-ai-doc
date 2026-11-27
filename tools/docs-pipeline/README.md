@@ -70,8 +70,8 @@ Working files go to `tools/docs-pipeline/build/<release>/<feature>/` (git-ignore
 ## Inputs
 
 - **Inventory CSV.** Export the *Inventory* tab of "formsflow.ai V8.3+ Docs — Action Inventory". Columns used: `action_id, action, purpose, capability, permissions, surfaces, nav_path, edition, deployment, status, prerequisites, concepts, limitations, notes, existing_doc, release`. `source` and `owner` are dropped at extract. The CSV is git-ignored because it names internal sources; never commit it here.
-- **`config.json`.** Releases (inventory release → docs version), features (folder key → inventory capability), the code repos the verifier reads, and lint lists.
-- **`glossary.json`.** Plain-language terms from the inventory's *Glossary* tab, keyed by capability.
+- **`config.json`.** Releases (inventory release → docs version), features (folder key → inventory capability), the code repos the verifier reads, and lint lists. Pin each code repo's `ref` to a full commit SHA from the AOT-Technologies repo before a run, not a branch name: a branch ref resolves to whatever your local clone last fetched, and a fork's `origin` can be far behind.
+- **`glossary.json`.** Plain-language terms from the inventory's *Glossary* tab, keyed by capability. `audience` is `user` for words people see in the app (they go on the generated reference page) or `technical` for infrastructure (the writer uses them only on self-hosted and developer pages).
 - **`skills/`.** The writer, verifier and editor instructions. Change these to change the output; don't hand-edit generated pages to work around a skill.
 
 ### Prerequisites rule

@@ -36,26 +36,31 @@
       "position": 7
     }
   ],
+  "$codeReposComment": "Pin each repo to a full commit SHA from the AOT-Technologies repo, not a branch name: a branch ref resolves to whatever the local clone last fetched (a fork's origin can be months behind). Update the pins before each run and record them in verify-report.md.",
   "codeRepos": [
     {
       "name": "forms-flow-ai-ee",
-      "ref": "origin/develop",
-      "public": false
+      "ref": "69f88bfaea88545f0ea2eea24e5f042bbddf2a15",
+      "public": false,
+      "pinned": "AOT-Technologies develop, 2026-11-25"
     },
     {
       "name": "forms-flow-ai-micro-front-ends",
-      "ref": "origin/develop",
-      "public": true
+      "ref": "f8d23a49f64c8a000e1407ca42ac9c31308a4182",
+      "public": true,
+      "pinned": "AOT-Technologies develop, 2026-11-24"
     },
     {
       "name": "forms-flow-ai",
-      "ref": "origin/develop",
-      "public": true
+      "ref": "c825f95c6c24ce2a51efcb78bb8c28edaea97675",
+      "public": true,
+      "pinned": "AOT-Technologies develop, 2026-11-18"
     },
     {
       "name": "forms-flow-ai-deployment",
-      "ref": "origin/main",
-      "public": true
+      "ref": "1ef18303647c27144e80cd385a48497dacd5d975",
+      "public": true,
+      "pinned": "AOT-Technologies main, 2026-09-30"
     }
   ],
   "lint": {

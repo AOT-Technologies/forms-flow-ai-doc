@@ -44,6 +44,10 @@ function die(msg) { console.error(`error: ${msg}`); process.exit(1); }
 function write(file, text) { fs.mkdirSync(path.dirname(file), { recursive: true }); fs.writeFileSync(file, text); }
 function mdx(s) { return String(s ?? '').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\{/g, '\\{').replace(/\}/g, '\\}').replace(/\|/g, '\\|'); }
 function isUnverified(row) { return /live test pending|code reading|unverified|not yet confirmed/i.test(`${row.limitations} ${row.notes}`); }
+// Glossary audience: "user" terms (what people see in the app) go on the generated reference page;
+// "technical" terms (infrastructure) belong only on self-hosted and developer pages.
+function termsFor(f) { return glossary.filter((g) => g.capability === f.capability); }
+function isTechnical(t) { return t.audience === 'technical'; }
 
 const SURFACE_LABEL = { UI: 'formsflow.ai web app', API: 'REST API', MCP: 'MCP connector', 'config/CLI': 'Deployment configuration', Redash: 'Analytics (Redash)' };
 function surfacesOf(row) { return row.surfaces.split(',').map((s) => s.trim()).filter(Boolean); }
@@ -103,7 +107,7 @@ async function extract() {
 }
 
 function brief(f, actions, problems) {
-  const terms = glossary.filter((g) => g.capability === f.capability);
+  const terms = termsFor(f);
   const statuses = [...new Set(actions.map((a) => a.status))];
   const lines = [
     `# Brief: ${f.title} (formsflow.ai ${rel.label})`,
@@ -125,9 +129,16 @@ function brief(f, actions, problems) {
     if (a.prerequisites_elsewhere.length) lines.push(`- **prerequisites outside this feature (not documented in this version yet; name them, don't link):** ${a.prerequisites_elsewhere.map((p) => `${p.action} (${p.capability})`).join('; ')}`);
     lines.push('');
   }
-  if (terms.length) {
-    lines.push('## Glossary for this feature', '');
-    for (const t of terms) lines.push(`- **${t.term}:** ${t.explanation} _(also called: ${t.alsoCalled})_`);
+  const userTerms = terms.filter((t) => !isTechnical(t));
+  const techTerms = terms.filter(isTechnical);
+  if (userTerms.length) {
+    lines.push('## Glossary for this feature: terms people see in the app', '', 'Use these words, with these meanings, on every page. They also appear on the generated reference page.', '');
+    for (const t of userTerms) lines.push(`- **${t.term}:** ${t.explanation} _(also called: ${t.alsoCalled})_`);
+    lines.push('');
+  }
+  if (techTerms.length) {
+    lines.push('## Technical terms (self-hosted and developer pages only)', '', 'Explain these only on pages for self-hosted administrators or developers, and only where the reader needs them to do the task. Keep them off pages for designers, administrators working in the app, and submitters.', '');
+    for (const t of techTerms) lines.push(`- **${t.term}:** ${t.explanation} _(also called: ${t.alsoCalled})_`);
     lines.push('');
   }
   lines.push('## Code to verify against', '', 'Read-only. Use `git -C <repo> grep <pattern> <ref>` and `git -C <repo> show <ref>:<path>`; these are the refs the release is built from.', '');
@@ -143,7 +154,7 @@ function referencePage(f, actions) {
   const beta = actions.some((a) => a.status === 'beta');
   const editions = [...new Set(actions.flatMap((a) => a.edition.split(',').map((s) => s.trim()).filter(Boolean)))];
   const selfHostedOnly = actions.filter((a) => a.deployment === 'Self-hosted');
-  const terms = glossary.filter((g) => g.capability === f.capability);
+  const terms = termsFor(f).filter((t) => !isTechnical(t));
   const out = [
     '---',
     `title: "${f.title}: reference"`,
@@ -283,6 +294,8 @@ function lintFeature(f, dir) {
       if (m) errors.push(`${where}: internal or unfinished marker "${m[0]}" must not ship`);
     }
     if (/<Tabs|<details/i.test(body)) errors.push(`${where}: tabs/collapsibles hide content from agents; use headings`);
+    // Translation placeholders mean nothing to a reader: quote messages with an example value.
+    for (const m of body.matchAll(/\{\{\s*[\w.]+\s*\}\}|\\\{\\\{\s*[\w.]+\s*\\\}\\\}/g)) errors.push(`${where}: placeholder "${m[0]}" in a quoted message; use an example value (for example "Last sent at 2:45 PM today.")`);
     if (/—/.test(prose.replace(/^\|.*\|$/gm, ''))) warnings.push(`${where}: em dashes in prose (editor pass should remove most)`);
     if (beta && !/:::(info|caution|warning|note)\s+Beta/i.test(body)) errors.push(`${where}: feature is beta; page needs the ":::info Beta" notice`);
 

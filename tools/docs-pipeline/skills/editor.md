@@ -27,5 +27,7 @@ Apply to every page in the output folder except the generated `reference.md`.
 - First product mention on each page is still "formsflow.ai".
 - Every numbered step is still one action.
 - Headings still make sense on their own (agents pull sections out of context).
+- Conditions survive the edit. "With sync set to Ask first, …" is a fact, not filler: never shorten a sentence by dropping the condition it states.
+- `:::warning` admonitions stay where they are, next to the step they warn about.
 
 Append a short "Editor pass" section to the review notes: anything you left because fixing it would have changed meaning.

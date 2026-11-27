@@ -1,38 +1,107 @@
 [
   {
+    "term": "Carrying",
+    "explanation": "The forms saved on your device so you can open and fill them in without a connection. You carry a form after you select Make available offline, and it stays on the device until you remove it.",
+    "alsoCalled": "offline copy; form pack",
+    "capability": "offline-submissions",
+    "audience": "user"
+  },
+  {
+    "term": "Offline mode",
+    "explanation": "The state where formsflow works only with the forms you carry. It turns on by itself when formsflow can't reach the server, and off again when the connection returns. You can also turn it on yourself before you go somewhere with a poor connection; then it stays on until you turn it off or log out.",
+    "alsoCalled": "—",
+    "capability": "offline-submissions",
+    "audience": "user"
+  },
+  {
+    "term": "Sync",
+    "explanation": "How your device sends what is waiting on it to formsflow. Depending on the sync mode, it happens on its own when the connection returns, or when you select Sync now.",
+    "alsoCalled": "outbox sender",
+    "capability": "offline-submissions",
+    "audience": "user"
+  },
+  {
+    "term": "Sent",
+    "explanation": "A submission is sent once formsflow has received it. The server then saves it and starts the form's workflow on the submitter's behalf.",
+    "alsoCalled": "—",
+    "capability": "offline-submissions",
+    "audience": "user"
+  },
+  {
+    "term": "Waiting to sync",
+    "explanation": "Submissions saved on this device that formsflow hasn't received yet, including ones the device is still retrying.",
+    "alsoCalled": "outbox",
+    "capability": "offline-submissions",
+    "audience": "user"
+  },
+  {
+    "term": "Needs attention",
+    "explanation": "Submissions that couldn't get through on their own: the server refused them, they came back incomplete, or the form changed after they were filled in. Each one needs you to open it.",
+    "alsoCalled": "—",
+    "capability": "offline-submissions",
+    "audience": "user"
+  },
+  {
+    "term": "Incomplete submission",
+    "explanation": "A submission saved offline while a required question was hidden because it needed a connection. You answer those questions online and submit it again.",
+    "alsoCalled": "—",
+    "capability": "offline-submissions",
+    "audience": "user"
+  },
+  {
+    "term": "Refused submission",
+    "explanation": "A submission the server won't save as it is. You can view its answers, and Contact support opens an email to support with its details.",
+    "alsoCalled": "—",
+    "capability": "offline-submissions",
+    "audience": "user"
+  },
+  {
+    "term": "Draft on this device",
+    "explanation": "A draft saved while working offline. It stays only on this device and never becomes a draft on the server. Logging out or clearing your browser data deletes it.",
+    "alsoCalled": "local draft",
+    "capability": "offline-submissions",
+    "audience": "user"
+  },
+  {
     "term": "Service worker",
     "explanation": "A small helper script the browser keeps alongside the formsflow web app. It saves a copy of the app's own files: the page layout, scripts and styles. That lets the app open even with no connection. It doesn't store any form answers, and it never saves calls to the server. (The answers and drafts sit in the browser's own storage, IndexedDB, which is separate.)",
     "alsoCalled": "worker.js in forms-flow-web-root-config",
-    "capability": "offline-submissions"
+    "capability": "offline-submissions",
+    "audience": "technical"
   },
   {
     "term": "Envoy edge",
-    "explanation": "The front door for submissions that were saved offline. Every one of them comes in through it. It checks that the request comes from someone who is signed in and from the formsflow web app, and turns away anything too large. It then passes the submission inside. \"Envoy\" is the name of the open-source software it's built on, and \"edge\" means it sits at the boundary between the internet and the formsflow servers.",
+    "explanation": "The front door for submissions that were saved offline in the formsflow web app. Every one of them comes in through it; submissions sent through the REST API go straight to the formsflow API instead. It checks that the request comes from someone who is signed in and from the formsflow web app, and turns away anything too large. It then passes the submission inside. \"Envoy\" is the name of the open-source software it's built on, and \"edge\" means it sits at the boundary between the internet and the formsflow servers.",
     "alsoCalled": "forms-flow-edge-ee image; REACT_APP_OFFLINE_EDGE_URL",
-    "capability": "offline-submissions"
+    "capability": "offline-submissions",
+    "audience": "technical"
   },
   {
     "term": "Offline bridge",
     "explanation": "The reception desk just behind the front door. It takes each submission and checks it is readable and complete. It puts it in the queue and tells the device \"received\". It doesn't save the form itself. It also answers the device when the device asks \"did my submission go through yet?\"",
     "alsoCalled": "forms-flow-bridge-ee image; formsflow_offline_bridge",
-    "capability": "offline-submissions"
+    "capability": "offline-submissions",
+    "audience": "technical"
   },
   {
     "term": "NATS queue",
-    "explanation": "A waiting line for submissions. The bridge drops each submission into it, and the worker takes them out one at a time. If the worker is busy or something downstream is down, the submissions wait safely here instead of being lost. NATS is the name of the open-source queueing software, and the queue's contents are encrypted on disk.",
+    "explanation": "A waiting line for submissions. The bridge drops each submission into it, and the worker takes them out a few at a time (4 at once by default). If the worker is busy or something downstream is down, the submissions wait safely here instead of being lost. NATS is the name of the open-source queueing software, and the queue's contents are encrypted on disk.",
     "alsoCalled": "forms-flow-queue-ee (NATS JetStream); compose profile offline-queue",
-    "capability": "offline-submissions"
+    "capability": "offline-submissions",
+    "audience": "technical"
   },
   {
     "term": "Worker",
-    "explanation": "The part that does the real work. It takes a submission from the queue and saves it in formsflow exactly as an online submission would be saved. Then it starts the workflow on the submitter's behalf. If something fails, it tries again later, for up to 24 hours. It runs in the background on the server, with no screen of its own.",
+    "explanation": "The part that does the real work. It takes a submission from the queue and saves it in formsflow exactly as an online submission would be saved. Then it starts the workflow on the submitter's behalf. If something fails, it tries again later, for up to 24 hours by default, counted from its first failed try. Submissions it can't save yet, for example while offline submission is turned off for the organization, wait up to 6 days instead. It runs in the background on the server, with no screen of its own.",
     "alsoCalled": "forms-flow-offline-worker-ee image; offline_consumer",
-    "capability": "offline-submissions"
+    "capability": "offline-submissions",
+    "audience": "technical"
   },
   {
     "term": "MinIO storage",
-    "explanation": "An overflow store for submissions that can't sit in the queue. It keeps two kinds: submissions too large for the queue, which only takes messages up to about 1 MB; and submissions that arrived while the queue was unavailable. These are kept here until the worker can handle them. MinIO is open-source software that stores files the way Amazon S3 does. Unlike the queue, its contents are not encrypted on disk.",
+    "explanation": "An overflow store for submissions that can't sit in the queue. It keeps two kinds: submissions too large for the queue, which only takes messages up to about 1 MB; and submissions that arrived while the queue was unavailable. These are kept here until the worker can handle them, and deleted by default after 8 days (too large for the queue) or 30 days (arrived while the queue was unavailable). MinIO is open-source software that stores files the way Amazon S3 does. Unlike the queue, its contents are not encrypted on disk.",
     "alsoCalled": "forms-flow-objectstore-ee image",
-    "capability": "offline-submissions"
+    "capability": "offline-submissions",
+    "audience": "technical"
   }
 ]

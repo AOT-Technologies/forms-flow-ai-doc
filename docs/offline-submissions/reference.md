@@ -30,17 +30,17 @@ Permissions are named as they appear on the role editor in **Manage › Roles**.
 | Choose whether submissions sync automatically by default | Manage › Organization (Billing) | Manage › Organization › Offline Submission › Automatic sync | formsflow.ai web app, REST API |
 | Allow offline submissions on a form | Design › Manage forms & flows you create and that are shared with you | Build › Forms › &lt;form&gt; › Form › Settings › Form Permissions › Who Can Create Submissions | formsflow.ai web app, REST API |
 | Preview how a form works offline | Design › Manage forms & flows you create and that are shared with you | Build › Forms › &lt;form&gt; › Preview › Offline | formsflow.ai web app |
-| Make a form available offline | Submit › Manage submissions (create, save drafts, resubmit) | Submit › Forms › &lt;form row&gt; › Submit ▾ › Make available offline | formsflow.ai web app, REST API |
+| Make a form available offline | Submit › Manage submissions (create, save drafts, resubmit) | Submit › Forms › &lt;form row&gt; › Submit ▾ › Make available offline | formsflow.ai web app |
 | Remove a form from this device | Submit › Manage submissions (create, save drafts, resubmit) | Submit › Forms › &lt;form row&gt; › Submit ▾ › Remove from offline; or Submit › Offline › Carrying › Remove | formsflow.ai web app |
 | Turn offline mode on or off | Submit › Manage submissions (create, save drafts, resubmit) | Submit › Offline › Offline mode | formsflow.ai web app |
 | Fill in a form and save it on this device | Submit › Manage submissions (create, save drafts, resubmit) | Submit › Forms › &lt;form taken offline&gt; › Save to offline | formsflow.ai web app |
 | Save a submission on this device after a failed submit | Submit › Manage submissions (create, save drafts, resubmit) | Form › Submit (no answer from the server) › Save to offline | formsflow.ai web app |
 | Save a draft on this device | Submit › Manage submissions (create, save drafts, resubmit) | Form (offline) › Save draft | formsflow.ai web app |
-| Continue a draft saved on this device | Submit › Manage submissions (create, save drafts, resubmit) | Submit › Offline › Drafts on this device › Continue; or Submit › &lt;form&gt; › Continue | formsflow.ai web app |
+| Continue a draft saved on this device | Submit › Manage submissions (create, save drafts, resubmit) | Submit › Offline › Drafts on this device › Continue; or Submit › Forms › &lt;form row&gt; › Submit ▾ › View Submissions › Continue | formsflow.ai web app |
 | Delete a draft saved on this device | Submit › Manage submissions (create, save drafts, resubmit) | Submit › Offline › Drafts on this device › Delete | formsflow.ai web app |
 | See what is waiting, syncing and sent | Submit › Manage submissions (create, save drafts, resubmit) | Submit › Offline | formsflow.ai web app |
-| Sync waiting submissions now | Submit › Manage submissions (create, save drafts, resubmit) | Submit › Offline › Waiting to sync › Sync now; or the 'back online' banner › Sync now | formsflow.ai web app, REST API |
-| Change when this device syncs | Submit › Manage submissions (create, save drafts, resubmit) | Submit › Offline › Sync: … › Change | formsflow.ai web app |
+| Sync waiting submissions now | Submit › Manage submissions (create, save drafts, resubmit) | Submit › Offline › Waiting to sync › Sync now; or the 'back online' banner › Sync now | formsflow.ai web app |
+| Change when this device syncs | Submit › Manage submissions (create, save drafts, resubmit) | Submit › Offline › Sync: … › Change (split button) | formsflow.ai web app |
 | Open a submission that needs attention | Submit › Manage submissions (create, save drafts, resubmit) | Submit › Offline › Needs attention › Open | formsflow.ai web app |
 | Finish a submission that came back incomplete | Submit › Manage submissions (create, save drafts, resubmit) | Submit › Offline › Needs attention › Open | formsflow.ai web app |
 | View a submission the server refused | Submit › Manage submissions (create, save drafts, resubmit) | Submit › Offline › Needs attention › Open (refused) | formsflow.ai web app |
@@ -50,20 +50,29 @@ Permissions are named as they appear on the role editor in **Manage › Roles**.
 
 ## Terms
 
-**Service worker**
-: A small helper script the browser keeps alongside the formsflow web app. It saves a copy of the app's own files: the page layout, scripts and styles. That lets the app open even with no connection. It doesn't store any form answers, and it never saves calls to the server. (The answers and drafts sit in the browser's own storage, IndexedDB, which is separate.)
+**Carrying**
+: The forms saved on your device so you can open and fill them in without a connection. You carry a form after you select Make available offline, and it stays on the device until you remove it.
 
-**Envoy edge**
-: The front door for submissions that were saved offline. Every one of them comes in through it. It checks that the request comes from someone who is signed in and from the formsflow web app, and turns away anything too large. It then passes the submission inside. "Envoy" is the name of the open-source software it's built on, and "edge" means it sits at the boundary between the internet and the formsflow servers.
+**Offline mode**
+: The state where formsflow works only with the forms you carry. It turns on by itself when formsflow can't reach the server, and off again when the connection returns. You can also turn it on yourself before you go somewhere with a poor connection; then it stays on until you turn it off or log out.
 
-**Offline bridge**
-: The reception desk just behind the front door. It takes each submission and checks it is readable and complete. It puts it in the queue and tells the device "received". It doesn't save the form itself. It also answers the device when the device asks "did my submission go through yet?"
+**Sync**
+: How your device sends what is waiting on it to formsflow. Depending on the sync mode, it happens on its own when the connection returns, or when you select Sync now.
 
-**NATS queue**
-: A waiting line for submissions. The bridge drops each submission into it, and the worker takes them out one at a time. If the worker is busy or something downstream is down, the submissions wait safely here instead of being lost. NATS is the name of the open-source queueing software, and the queue's contents are encrypted on disk.
+**Sent**
+: A submission is sent once formsflow has received it. The server then saves it and starts the form's workflow on the submitter's behalf.
 
-**Worker**
-: The part that does the real work. It takes a submission from the queue and saves it in formsflow exactly as an online submission would be saved. Then it starts the workflow on the submitter's behalf. If something fails, it tries again later, for up to 24 hours. It runs in the background on the server, with no screen of its own.
+**Waiting to sync**
+: Submissions saved on this device that formsflow hasn't received yet, including ones the device is still retrying.
 
-**MinIO storage**
-: An overflow store for submissions that can't sit in the queue. It keeps two kinds: submissions too large for the queue, which only takes messages up to about 1 MB; and submissions that arrived while the queue was unavailable. These are kept here until the worker can handle them. MinIO is open-source software that stores files the way Amazon S3 does. Unlike the queue, its contents are not encrypted on disk.
+**Needs attention**
+: Submissions that couldn't get through on their own: the server refused them, they came back incomplete, or the form changed after they were filled in. Each one needs you to open it.
+
+**Incomplete submission**
+: A submission saved offline while a required question was hidden because it needed a connection. You answer those questions online and submit it again.
+
+**Refused submission**
+: A submission the server won't save as it is. You can view its answers, and Contact support opens an email to support with its details.
+
+**Draft on this device**
+: A draft saved while working offline. It stays only on this device and never becomes a draft on the server. Logging out or clearing your browser data deletes it.

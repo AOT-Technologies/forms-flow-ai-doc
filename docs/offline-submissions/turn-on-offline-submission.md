@@ -12,7 +12,7 @@ actions: [offline.toggle-org, offline.set-default-sync]
 Offline form submissions is in beta in formsflow.ai 8.4. Behaviour may change in a later release.
 :::
 
-Turn on offline submission so the people in your organization can take forms offline, fill them in without a connection, and have each submission start its workflow once it syncs. You also choose whether submissions sync on their own or wait for the submitter.
+Turn on offline submission in formsflow.ai so the people in your organization can take forms offline and fill them in without a connection. Each submission starts its workflow once it syncs. You can also choose whether submissions sync on their own when the connection returns, or wait for the submitter.
 
 ## Before you start
 
@@ -24,31 +24,37 @@ Turn on offline submission so the people in your organization can take forms off
 
 1. Go to **Manage › Organization**.
 2. Find the **Offline Submission** section.
-3. Select the switch labelled **Offline submission is on** or **Offline submission is off**. It saves straight away.
+3. Select the switch. It saves straight away, with no confirmation.
 
-When it's on, the switch reads **Offline submission is on**, with the help text "Submitters can take forms offline and fill them in without a connection." When it's off, it reads **Offline submission is off**.
+The switch reads **Offline submission is on** or **Offline submission is off**. In both states, the help text reads "Submitters can take forms offline and fill them in without a connection."
 
 ## Choose the default sync mode
 
-The default decides what happens when a submitter's connection returns.
+The default decides what happens on submitters' devices when the connection returns. This setting is shown only when your installation allows automatic sync.
 
 1. Go to **Manage › Organization**.
-2. Find the **Offline Submission** section.
-3. Select the switch labelled **Automatic sync is on** or **Automatic sync is off**. It saves straight away.
+2. In the **Offline Submission** section, find **Automatic sync**.
+3. Select the switch. It saves straight away.
 
 - **Automatic sync is on:** "Submissions sync on their own when the connection returns. Each submitter can change this on their own device."
-- **Automatic sync is off:** "Submitters are asked before anything syncs, so a backlog does not go all at once. Each submitter can change this on their own device."
+- **Automatic sync is off:** "Submitters are asked before anything syncs, so a backlog does not go all at once. Each submitter can change this on their own device." The default is **Ask first**: submissions wait on each device until the submitter selects **Sync now**, unless the submitter has changed this on their device.
 
 ## Check that it worked
 
-After the change, formsflow shows the toast **Saved**. Submitters see the change at their next sign-in or when they reconnect.
+A **Saved** toast appears and the switch shows the new state. Your own browser follows the change straight away. Other users get it the next time they open formsflow.ai while online, or when their connection returns.
+
+If the change can't be saved, a toast reads "The setting could not be saved. Please try again." Select the switch again.
 
 ## Things to know
 
 - Offline submission is off by default.
-- The switches save with no confirmation, including when you turn offline submission off.
-- While offline submission is off, new offline submissions aren't accepted. Submissions the server has already received wait for up to 6 days. Data already on submitters' devices stays there.
-- The automatic sync setting is shown only when the installation also turns on automatic sync. Without it, every submitter is on **Ask first** and can't change it.
-- The automatic sync setting is disabled while offline submission is off. Turning offline submission off also turns automatic sync off.
-- Submitters can override the default on their own device. You can't stop that.
+- When you turn offline submission off, the web app stops sending, so submissions keep waiting on submitters' devices. Submissions that reach the server anyway, and any it already had, are held for up to 6 days by default. After that, they fail. Once offline submission is on again, they're listed under **Needs attention** on the submitter's device, where **Contact support** is the next step. Submissions and drafts already on devices stay there.
+- **Automatic sync** is disabled while offline submission is off. Turning offline submission off also turns automatic sync off.
+- Without automatic sync on the installation, every submitter is on **Ask first** and can't change it.
+- Submitters can override the default sync mode on their own device. You can't stop that.
 - The **Offline Submission** section is shown only when the installation has offline submission turned on.
+- If **Manage › Organization (Billing)** is a user's only **Manage** permission, the **Manage** menu doesn't show for them. They need the page's address to open it.
+
+## Next step
+
+[Allow a form to be submitted offline](./allow-offline-on-a-form.md).
